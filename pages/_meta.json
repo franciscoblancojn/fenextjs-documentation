@@ -1,7 +1,5 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
     "type": "page"
@@ -12,5 +10,31 @@
     "href": "https://twitter.com/shuding_",
     "newWindow": true
   },
-  "input": "Input"
+  "component":{
+    "title":"Components"
+  },
+  "error":{
+    "title":"Error"
+  },
+  "firebase":{
+    "title":"Firebase"
+  },
+  "function":{
+    "title":"Function"
+  },
+  "hook":{
+    "title":"Hooks"
+  },
+  "img-placeholder":{
+    "title":"Image placeholder"
+  },
+  "interface":{
+    "title":"Interfaces"
+  },
+  "svg":{
+    "title":"Svg"
+  },
+  "vaidator":{
+    "title":"Vaidator"
+  }
 }
