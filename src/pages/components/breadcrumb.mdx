@@ -1,0 +1,48 @@
+# Breadcrumb
+
+El componente Breadcrumb es una representación visual de una lista de enlaces que proporcionan una navegación jerárquica en una aplicación web. Cada enlace en la lista se muestra con una etiqueta "a" que permite redirigir al usuario a la URL especificada.
+
+### Importacion
+
+Para importar el componente Breadcrumb, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Breadcrumb, BreadcrumbProps } from "fenextjs/cjs/component/Breadcrumb";
+```
+
+or
+
+```tsx copy
+import { Breadcrumb, BreadcrumbProps } from "fenextjs-component/cjs/Breadcrumb";
+```
+
+### Parametros
+
+| Parametro |   Tipo    | Requerido | Default | Descripcion                        |
+| --------- | :-------: | :-------: | :-----: | :--------------------------------- |
+| children  | ReactNode |    no     |         | Contenido del componente           |
+| className |  string   |    no     |   ""    | Clase personalizada del componente |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/box-box--index)
+
+### Usos
+
+- Uso básico del componente Box
+
+```tsx copy
+<Box>
+  <h2>Contenido dentro del Box</h2>
+  <p>Este es un párrafo dentro del Box.</p>
+</Box>
+```
+
+- Box con clase de estilo personalizada
+
+```tsx copy
+<Box className="custom-box">
+  <h2>Contenido personalizado dentro del Box</h2>
+  <p>Este es otro párrafo dentro del Box con estilos personalizados.</p>
+</Box>
+```
