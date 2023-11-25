@@ -10,8 +10,9 @@
     "href": "https://twitter.com/shuding_",
     "newWindow": true
   },
-  "component":{
-    "title":"Components"
+  "components":{
+    "title":"Componentes",
+    "index":"Introduction"
   },
   "error":{
     "title":"Error"
