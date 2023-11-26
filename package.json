@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/franciscoblancojn/fenextjs-documentation#readme",
   "dependencies": {
+    "fenextjs": "^1.2.23",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",

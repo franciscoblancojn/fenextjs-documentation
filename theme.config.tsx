@@ -13,6 +13,7 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Fenextjs",
   },
+  
 };
 
 export default config;

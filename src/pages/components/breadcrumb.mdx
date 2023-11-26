@@ -1,6 +1,19 @@
+import { Breadcrumb, BreadcrumbProps } from "fenextjs-component/cjs/Breadcrumb";
+import 'fenextjs-component/styles/index.css';
+
 # Breadcrumb
 
 El componente Breadcrumb es una representación visual de una lista de enlaces que proporcionan una navegación jerárquica en una aplicación web. Cada enlace en la lista se muestra con una etiqueta "a" que permite redirigir al usuario a la URL especificada.
+
+### Ejemplo
+
+<Breadcrumb
+  links={[
+    { href: "/", children: "Home" },
+    { href: "/products", children: "Products" },
+    { href: "/products/category", children: "Category" },
+  ]}
+/>
 
 ### Importacion
 
@@ -16,14 +29,15 @@ o
 import { Breadcrumb, BreadcrumbProps } from "fenextjs-component/cjs/Breadcrumb";
 ```
 
+
 ### Parametros
 
-| Parametro     |         Tipo          | Requerido | Default | Descripcion                        |
-| ------------- | :-------------------: | :-------: | :-----: | :--------------------------------- |
+| Parametro     |                                 Tipo                                  | Requerido | Default | Descripcion                        |
+| ------------- | :-------------------------------------------------------------------: | :-------: | :-----: | :--------------------------------- |
 | links         | [BreadcrumbLinkProps[]](#parametros-de-los-links-breadcrumblinkprops) |    si     |         | Lista de links para el componente  |
-| className     |        string         |    no     |   ""    | Clase personalizada del componente |
-| classNameItem |        string         |    no     |   ""    | Clase personalizada de los items   |
-| classNameLink |        string         |    no     |   ""    | Clase personalizada de los links   |
+| className     |                                string                                 |    no     |   ""    | Clase personalizada del componente |
+| classNameItem |                                string                                 |    no     |   ""    | Clase personalizada de los items   |
+| classNameLink |                                string                                 |    no     |   ""    | Clase personalizada de los links   |
 
 ### Parametros de los links (BreadcrumbLinkProps)
 
@@ -66,7 +80,7 @@ const breadcrumbLinks = [
 />;
 ```
 
-- Breadcrumb con evento de clic personalizado
+- Breadcrumb con evento de click personalizado
 
 ```tsx copy
 const breadcrumbLinks = [
