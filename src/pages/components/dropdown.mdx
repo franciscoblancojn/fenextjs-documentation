@@ -1,0 +1,64 @@
+import { Iframe } from "../../../components/Iframe";
+
+# DropDown
+
+El componente DropDown es un componente que muestra un seudo submenu.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=dropdown-dropdown--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente DropDown, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { DropDown, DropDownProps } from "fenextjs/cjs/component/DropDown";
+```
+
+o
+
+```tsx copy
+import { DropDown, DropDownProps } from "fenextjs-component/cjs/DropDown";
+```
+
+### Parametros
+
+| Propiedad     |           Tipo            | Requerido | Default | Descripción                                                            |
+| ------------- | :-----------------------: | :-------: | :-----: | :--------------------------------------------------------------------- |
+| loader        |          boolean          |    no     |         | Indica si el DropDown está actualmente en estado de carga.             |
+| disabled      |          boolean          |    no     |         | Indica si el DropDown está deshabilitado o no.                         |
+| defaultActive |          boolean          |    no     |         | Indica si el DropDown está activo por defecto para mostrar.            |
+| active        |          boolean          |    no     |         | Indica si el DropDown está activo para mostrar.                        |
+| name          |          string           |    no     |         | El nombre para el DropDown.                                            |
+| type          |   "radio" \| "checkbox"   |    no     |         | Tipo de collapse. Puede ser "radio" o "checkbox".                      |
+| show          |   "checked" \| "focus"    |    no     |         | Tipo de forma para mostrar el collapse. Puede ser "checked" o "focus". |
+| header        |         ReactNode         |    sí     |         | Encabezado del DropDown.                                               |
+| onChange      | (value: boolean) => void  |    no     |         | Función de cambio del DropDown.                                        |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/dropdown-dropdown--index)
+
+### Usos
+
+- Uso básico del componente DropDown
+
+```tsx copy
+<DropDown
+  loader={false}
+  disabled={false}
+  defaultActive={false}
+  active={true}
+  name="exampleCollapse"
+  status="ok"
+  type="checkbox"
+  show="focus"
+  header={<HeaderComponent />}
+  onChange={(value) =>
+    console.log(`Collapse cambiado a ${value ? "activo" : "inactivo"}`)
+  }
+>
+  Contenido del DropDown
+</DropDown>
+```
