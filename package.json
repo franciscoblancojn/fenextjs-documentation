@@ -5,7 +5,23 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "prettier": "npx prettier src '!**/*.stories.tsx' --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "fle": "npm run format && npm run lint && npm run export",
+    "flb": "npm run format && npm run lint && npm run build",
+
+    "bun-i": "bun i",
+    "remove-bun-lockb": "rm -r bun.lockb",
+    "remove-node-module": "rm -r node_modules",
+    "remove": "npm run remove-node-module && npm run remove-bun-lockb",
+    "update-package": "ncu -u !next",
+    "update": "npm run update-package && npm run remove && npm run bun-i && npm run flb",
+    "u": "npm run update"
   },
   "repository": {
     "type": "git",
@@ -18,7 +34,8 @@
   },
   "homepage": "https://github.com/franciscoblancojn/fenextjs-documentation#readme",
   "dependencies": {
-    "fenextjs": "^1.2.23",
+    "eslint": "^8.56.0",
+    "fenextjs": "^1.4.15",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
@@ -26,7 +43,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "18.11.10",
-    "typescript": "^4.9.3"
+    "@types/node": "20.10.5",
+    "typescript": "^5.3.3",
+    "npm-check-updates": "^16.14.12",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0"
   }
 }

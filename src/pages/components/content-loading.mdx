@@ -1,4 +1,4 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "../../components/Iframe";
 
 # ContentLoading
 
@@ -46,11 +46,7 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Uso básico del componente ContentLoading
 
 ```tsx copy
-<ContentLoading
-  componentLoader={<CustomLoader />}
-  loader={true}
-  isPage={false}
->
+<ContentLoading componentLoader={<CustomLoader />} loader={true} isPage={false}>
   {/* Contenido del componente */}
 </ContentLoading>
 ```

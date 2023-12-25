@@ -10,32 +10,32 @@
     "href": "https://twitter.com/shuding_",
     "newWindow": true
   },
-  "components":{
-    "title":"Componentes",
-    "index":"Introduction"
+  "components": {
+    "title": "Componentes",
+    "index": "Introduction"
   },
-  "error":{
-    "title":"Error"
+  "error": {
+    "title": "Error"
   },
-  "firebase":{
-    "title":"Firebase"
+  "firebase": {
+    "title": "Firebase"
   },
-  "function":{
-    "title":"Function"
+  "function": {
+    "title": "Function"
   },
-  "hook":{
-    "title":"Hooks"
+  "hook": {
+    "title": "Hooks"
   },
-  "img-placeholder":{
-    "title":"Image placeholder"
+  "img-placeholder": {
+    "title": "Image placeholder"
   },
-  "interface":{
-    "title":"Interfaces"
+  "interface": {
+    "title": "Interfaces"
   },
-  "svg":{
-    "title":"Svg"
+  "svg": {
+    "title": "Svg"
   },
-  "vaidator":{
-    "title":"Vaidator"
+  "vaidator": {
+    "title": "Vaidator"
   }
 }
