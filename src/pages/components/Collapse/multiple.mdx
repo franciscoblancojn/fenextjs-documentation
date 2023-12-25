@@ -1,0 +1,60 @@
+import { Iframe } from "../../../../components/Iframe";
+
+# CollapseMultiple
+
+El componente CollapseMultiple es un componente que muestra multiples contenidos colapsados y headers para interactuar con los contenidos.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=collapse-multiple--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente CollapseMultiple, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  CollapseMultiple,
+  CollapseMultipleProps,
+} from "fenextjs/cjs/component/Collapse/Multiple";
+```
+
+o
+
+```tsx copy
+import {
+  CollapseMultiple,
+  CollapseMultipleProps,
+} from "fenextjs-component/cjs/Collapse/Multiple";
+```
+
+### Parametros
+
+| Propiedad     |         Tipo          | Requerido | Default | Descripción                                                                        |
+| ------------- | :-------------------: | :-------: | :-----: | :--------------------------------------------------------------------------------- |
+| name          |        string         |    sí     |         | El nombre para el componente.                                                      |
+| type          | "radio" \| "checkbox" |    sí     |         | Tipo de collapse. Puede ser "radio" o "checkbox".                                  |
+| items         |  CollapseBaseProps[]  |    no     |         | Elementos del Collapse.                                                            |
+| defaultActive |  number \| number[]   |    no     |         | Estado activo por defecto del Collapse. Puede ser un número o un array de números. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/collapse-multiple--index)
+
+### Usos
+
+- Uso básico del componente CollapseMultiple
+
+```tsx copy
+<CollapseMultiple
+  name="exampleCollapse"
+  type="checkbox"
+  items={[
+    { disabled: false, defaultActive: true, header: "Item 1" },
+    { disabled: true, defaultActive: false, header: "Item 2" },
+    // Agrega más elementos según sea necesario
+  ]}
+>
+  Contenido del CollapseMultiple
+</CollapseMultiple>
+```

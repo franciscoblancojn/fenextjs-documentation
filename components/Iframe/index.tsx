@@ -8,6 +8,7 @@ export const Iframe = ({src}:IframeProps) => {
             style={{
                 width:"100%",
                 border:0,
+                minHeight:"30dvh",
             }}
         />
     </>
