@@ -1,13 +1,12 @@
-import {Iframe } from "../../../components/Iframe";
-
+import { Iframe } from "../../../components/Iframe";
 
 # Back
 
 El componente Back es una representación visual de un botón de retroceso (atrás) que permite al usuario navegar a la página anterior en la historia del navegador, utilizar la funcionalidad de Next.js Router, redirigir a una URL específica o simplemente ejecutar una función personalizada al hacer clic en el botón.
 
-
 ### Ejemplo
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-back--index&viewMode=story"/>
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-back--index&viewMode=story" />
 
 ### Importacion
 
@@ -23,28 +22,24 @@ o
 import { Back, BackProps } from "fenextjs-component/cjs/Back";
 ```
 
-
-
-
-
 ### Parametros
 
-| Parametro           |               Tipo               | Requerido |                 Default                  | Descripcion                                                                                                                                                                                                     |
-| ------------------- | :------------------------------: | :-------: | :--------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| loader              |             boolean              |    no     |                  false                   | Si el componente esta en estado loader, con un indicardor de spiner y deshabilitada su funcionalidad                                                                                                            |
-| disabled            |             boolean              |    no     |                  false                   | Si el componente esta en estado disabled, por ende se deshabilita su funcionalidad                                                                                                                              |
-| onClick             |             function             |    no     |                                          | Funcion que se ejecuta por onClick en el componente, (solo se ejecuta si loader y disabled son false)                                                                                                           |
-| icon                |            ReactNode             |    no     | [Svg:PaginationPre](/svg/pagination-pre) | Icono del componente                                                                                                                                                                                            |
-| children            |            ReactNode             |    no     |                  "Back"                  | Contenido del componente                                                                                                                                                                                        |
-| typeOnBack          | "history" "router" "link" "none" |    no     |                "history"                 | Tipo de accion al ejecutar onClick en el componente                                                                                                                                                             |
-| link                |              string              |    no     |                    ""                    | El link a donde redireccionar si el campo typeOnBack = "link"                                                                                                                                                   |
-| useHistoryMinLenght |             boolean              |    no     |                  false                   | Si el componente esta en estado useHistoryMinLenght, se verificara el valor de "window.history.length" para que sea mayor al parametro "minLenght", si la condicion no se cumple, el componente no se renderisa |
-| minLenght           |              number              |    no     |                    2                     | El valor de comparacion en caso de que "useHistoryMinLenght" sea true, la validacion para que <strong>no se renderice</strong> el componente es: window.history.length < minLenght                              |
-| className           |              string              |    no     |                    ""                    | Clase personalizada del componente                                                                                                                                                                              |
-| classNameDisabled   |              string              |    no     |                    ""                    | Clase personalizada del componente cuando esta en estado disabled                                                                                                                                               |
-| classNameIcon       |              string              |    no     |                    ""                    | Clase personalizada del icono                                                                                                                                                                                   |
-| classNameContent    |              string              |    no     |                    ""                    | Clase personalizada del contenido                                                                                                                                                                               |
-| classNameLoader     |              string              |    no     |                    ""                    | Clase personalizada del componente cuando esta en estado loader                                                                                                                                                  |
+| Parametro           |                  Tipo                  | Requerido |                 Default                  | Descripcion                                                                                                                                                                                                     |
+| ------------------- | :------------------------------------: | :-------: | :--------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| loader              |                boolean                 |    no     |                  false                   | Si el componente esta en estado loader, con un indicardor de spiner y deshabilitada su funcionalidad                                                                                                            |
+| disabled            |                boolean                 |    no     |                  false                   | Si el componente esta en estado disabled, por ende se deshabilita su funcionalidad                                                                                                                              |
+| onClick             |                function                |    no     |                                          | Funcion que se ejecuta por onClick en el componente, (solo se ejecuta si loader y disabled son false)                                                                                                           |
+| icon                |               ReactNode                |    no     | [Svg:PaginationPre](/svg/pagination-pre) | Icono del componente                                                                                                                                                                                            |
+| children            |               ReactNode                |    no     |                  "Back"                  | Contenido del componente                                                                                                                                                                                        |
+| typeOnBack          | "history" \|"router" \|"link" \|"none" |    no     |                "history"                 | Tipo de accion al ejecutar onClick en el componente                                                                                                                                                             |
+| link                |                 string                 |    no     |                    ""                    | El link a donde redireccionar si el campo typeOnBack = "link"                                                                                                                                                   |
+| useHistoryMinLenght |                boolean                 |    no     |                  false                   | Si el componente esta en estado useHistoryMinLenght, se verificara el valor de "window.history.length" para que sea mayor al parametro "minLenght", si la condicion no se cumple, el componente no se renderisa |
+| minLenght           |                 number                 |    no     |                    2                     | El valor de comparacion en caso de que "useHistoryMinLenght" sea true, la validacion para que <strong>no se renderice</strong> el componente es: window.history.length < minLenght                              |
+| className           |                 string                 |    no     |                    ""                    | Clase personalizada del componente                                                                                                                                                                              |
+| classNameDisabled   |                 string                 |    no     |                    ""                    | Clase personalizada del componente cuando esta en estado disabled                                                                                                                                               |
+| classNameIcon       |                 string                 |    no     |                    ""                    | Clase personalizada del icono                                                                                                                                                                                   |
+| classNameContent    |                 string                 |    no     |                    ""                    | Clase personalizada del contenido                                                                                                                                                                               |
+| classNameLoader     |                 string                 |    no     |                    ""                    | Clase personalizada del componente cuando esta en estado loader                                                                                                                                                 |
 
 ### Redireccionamiento
 
@@ -56,7 +51,6 @@ Dependiendo de el valor typeOnBack la redirecion se ejecutara de forma distrinta
 | router     | router.back()     | Redirección a la página anterior mediante Next.js Router            |
 | link       | router.push(link) | Rdirección a la url mediante Next.js Router                         |
 | none       | none              | No se redirecciona                                                  |
-
 
 ### Storybook
 
