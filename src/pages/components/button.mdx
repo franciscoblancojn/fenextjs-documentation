@@ -1,5 +1,4 @@
-import { Button, ButtonProps } from "fenextjs-component/cjs/Button";
-import "fenextjs-component/styles/index.css";
+import {Iframe } from "../../../components/Iframe";
 
 # Button
 
@@ -7,7 +6,8 @@ El componente Button es un componente versátil que representa un botón interac
 
 ### Ejemplo
 
-<Button>Click Me</Button>
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-button--index&viewMode=story"/>
+
 
 ### Importacion
 
@@ -52,46 +52,46 @@ const handleButtonClick = () => {
 };
 <Button onClick={handleButtonClick}>Click Me</Button>;
 ```
-<Button onClick={()=>{console.log("Button clicked!")}}>Click Me</Button>
+
 
 - Button con clase de estilo personalizada
 
 ```tsx copy
 <Button className="custom-button">Custom Button</Button>
 ```
-<Button className="custom-button">Custom Button</Button>
+
 
 - Button con loadding
 
 ```tsx copy
 <Button loader={true}>Loadding....</Button>
 ```
-<Button loader={true}>Loadding....</Button>
+
 
 - Button deshabilitado
 
 ```tsx copy
 <Button disabled={true}>Disabled Button</Button>
 ```
-<Button disabled={true}>Disabled Button</Button>
+
 
 - Button como un contenedor "div"
 
 ```tsx copy
 <Button isBtn={false}>Div Button</Button>
 ```
-<Button isBtn={false}>Div Button</Button>
+
 
 - Button con tamaño personalizado
 
 ```tsx copy
 <Button size="extra-strong">Extra Strong Button</Button>
 ```
-<Button size="extra-strong">Extra Strong Button</Button>
+
 
 - Button a lo ancho
 
 ```tsx copy
 <Button full={true}>Full Width Button</Button>
 ```
-<Button full={true}>Full Width Button</Button>
+
