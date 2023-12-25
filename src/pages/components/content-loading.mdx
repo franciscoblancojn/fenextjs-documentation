@@ -1,0 +1,56 @@
+import { Iframe } from "../../../components/Iframe";
+
+# ContentLoading
+
+El componente ContentLoading es un componente que muestra el contenido o un loader personalizado.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=contentloading-contentloading--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente ContentLoading, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  ContentLoading,
+  ContentLoadingProps,
+} from "fenextjs/cjs/component/ContentLoading";
+```
+
+o
+
+```tsx copy
+import {
+  ContentLoading,
+  ContentLoadingProps,
+} from "fenextjs-component/cjs/ContentLoading";
+```
+
+### Parametros
+
+| Propiedad       |   Tipo    | Requerido |      Default       | Descripción                                      |
+| --------------- | :-------: | :-------: | :----------------: | :----------------------------------------------- |
+| children        | ReactNode |    no     |                    | Contenido del componente.                        |
+| componentLoader | ReactNode |    no     | `<LoaderSpinner/>` | Componente utilizado como cargador.              |
+| loader          |  boolean  |    no     |      `false`       | Indica si el componente está en estado de carga. |
+| isPage          |  boolean  |    no     |      `false`       | Indica si el componente es una página completa.  |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/contentloading-contentloading--index)
+
+### Usos
+
+- Uso básico del componente ContentLoading
+
+```tsx copy
+<ContentLoading
+  componentLoader={<CustomLoader />}
+  loader={true}
+  isPage={false}
+>
+  {/* Contenido del componente */}
+</ContentLoading>
+```
