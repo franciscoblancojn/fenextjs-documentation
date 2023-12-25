@@ -1,0 +1,45 @@
+import { Iframe } from "../../../components/Iframe";
+
+# Container
+
+El componente Container es un componente que muestra el contenido encapsulado en contenedor.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-container--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Container, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Container, ContainerProps } from "fenextjs/cjs/component/Container";
+```
+
+o
+
+```tsx copy
+import { Container, ContainerProps } from "fenextjs-component/cjs/Container";
+```
+
+### Parametros
+
+| Propiedad        |   Tipo    | Requerido | Default | Descripción                                                   |
+| ---------------- | :-------: | :-------: | :-----: | :------------------------------------------------------------ |
+| customSize       |  number   |    no     |         | Tamaño personalizado del contenedor en unidades de 16 \* rem. |
+| usePaddingInline |  boolean  |    no     |         | Usar relleno en línea en el contenedor.                       |
+| children         | ReactNode |    no     |         | Contenido del contenedor.                                     |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-container--index)
+
+### Usos
+
+- Uso básico del componente Container
+
+```tsx copy
+<Container>
+  {/* Contenido del Container */}
+</Container>
+```
