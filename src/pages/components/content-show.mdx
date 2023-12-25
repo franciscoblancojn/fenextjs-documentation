@@ -1,0 +1,48 @@
+import { Iframe } from "../../../components/Iframe";
+
+# ContentShow
+
+El componente ContentShow es un componente que muestra u oculta el contenido con estilos.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=contentshow-contentshow--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente ContentShow, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  ContentShow,
+  ContentShowProps,
+} from "fenextjs/cjs/component/ContentShow";
+```
+
+o
+
+```tsx copy
+import {
+  ContentShow,
+  ContentShowProps,
+} from "fenextjs-component/cjs/ContentShow";
+```
+
+### Parametros
+
+| Propiedad |   Tipo    | Requerido | Default | Descripción                                 |
+| --------- | :-------: | :-------: | :-----: | :------------------------------------------ |
+| children  | ReactNode |    no     |         | Contenido del componente.                   |
+| show      |  boolean  |    no     |         | Indica si el contenido debe mostrarse o no. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/contentshow-contentshow--index)
+
+### Usos
+
+- Uso básico del componente ContentShow
+
+```tsx copy
+<ContentShow show={true}>{/* Contenido del componente */}</ContentShow>
+```
