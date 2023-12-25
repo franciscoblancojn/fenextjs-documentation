@@ -1,0 +1,50 @@
+import { Iframe } from "../../../components/Iframe";
+
+# Copy
+
+El componente Copy es un componente que muestra contenido que al hacer click copia un texto definido.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=copy-copy--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Copy, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Copy, CopyProps } from "fenextjs/cjs/component/Copy";
+```
+
+o
+
+```tsx copy
+import { Copy, CopyProps } from "fenextjs-component/cjs/Copy";
+```
+
+### Parametros
+
+| Propiedad      |          Tipo          | Requerido | Default | Descripción                                        |
+| -------------- | :--------------------: | :-------: | :-----: | :------------------------------------------------- |
+| text           |         string         |    no     |         | El texto para copiar.                              |
+| children       |       ReactNode        |    no     |         | Contenido del componente.                          |
+| onClickForCopy | (text: string) => void |    no     |         | Función a ejecutar al hacer clic para copiar.      |
+| notification   | NotificationDataProps  |    no     |         | Datos para la notificación asociada al componente. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/copy-copy--index)
+
+### Usos
+
+- Uso básico del componente Copy
+
+```tsx copy
+<Copy
+  text="Texto a copiar"
+  onClickForCopy={(text) => console.log(`Texto copiado: ${text}`)}
+  notification={{ type: "info", message: "Texto copiado exitosamente" }}
+>
+  {/* Contenido del componente */}
+</Copy>
+```
