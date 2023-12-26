@@ -1,0 +1,51 @@
+import { Iframe } from "../../../components/Iframe";
+
+# ItemMenu
+
+El componente ItemMenu es un componente que muestra un elemento del menu.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=header-itemmenu--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente ItemMenu, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  ItemMenu,
+  ItemMenuProps,
+} from "fenextjs/cjs/component/Header/ItemMenu";
+```
+
+o
+
+```tsx copy
+import {
+  ItemMenu,
+  ItemMenuProps,
+} from "fenextjs-component/cjs/Header/ItemMenu";
+```
+
+### Parametros
+
+| Parametro     |             Tipo              | Requerido | Default | Descripcion                                                          |
+| ------------- | :---------------------------: | :-------: | :-----: | :------------------------------------------------------------------- |
+| url           |           `string`            |    Sí     |         | URL de la página en el elemento del menú.                            |
+| text          |          `ReactNode`          |    Sí     |         | Texto de la página en el elemento del menú.                          |
+| icon          |          `ReactNode`          |    No     |         | Icono de la página en el elemento del menú.                          |
+| subItems      | `Omit<ItemMenuProps, "_t">[]` |    No     |         | Subpáginas en el elemento del menú.                                  |
+| defaultActive |           `boolean`           |    No     |         | Indica si el elemento del menú está por defecto activo para mostrar. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/header-itemmenu--index)
+
+### Usos
+
+- Uso básico del componente ItemMenu
+
+```tsx copy
+<ItemMenu url="/" text="Link" />
+```
