@@ -1,0 +1,62 @@
+import { Iframe } from "../../components/Iframe";
+
+# Img
+
+El componente Img es un componente que muestra una imagen con configuraciones especiales.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=img-img--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Img, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Img, ImgProps } from "fenextjs/cjs/component/Img";
+```
+
+o
+
+```tsx copy
+import { Img, ImgProps } from "fenextjs-component/cjs/Img";
+```
+
+### Parametros
+
+| Parametro        |                                          Tipo                                          | Requerido | Default | Descripcion                                              |
+| ---------------- | :------------------------------------------------------------------------------------: | :-------: | :-----: | :------------------------------------------------------- |
+| id               |                                  `string` \| `number`                                  |    No     |         | El ID de la imagen.                                      |
+| name             |                                        `string`                                        |    No     |         | El nombre de la imagen.                                  |
+| src              |                                        `string`                                        |    Sí     |         | URL de la imagen.                                        |
+| srcMin1920       |                                        `string`                                        |    No     |         | URL de la imagen para tamaño 1920px o superior.          |
+| srcMin1680       |                                        `string`                                        |    No     |         | URL de la imagen para tamaño 1680px o superior.          |
+| srcMin1440       |                                        `string`                                        |    No     |         | URL de la imagen para tamaño 1440px o superior.          |
+| srcMin1024       |                                        `string`                                        |    No     |         | URL de la imagen para tamaño 1024px o superior.          |
+| srcMin992        |                                        `string`                                        |    No     |         | URL de la imagen para tamaño 992px o superior.           |
+| srcMin768        |                                        `string`                                        |    No     |         | URL de la imagen para tamaño 768px o superior.           |
+| srcMin575        |                                        `string`                                        |    No     |         | URL de la imagen para tamaño 575px o superior.           |
+| srcThumbnail_200 |                                        `string`                                        |    No     |         | URL de la imagen para miniatura de 200x200px o superior. |
+| srcThumbnail_100 |                                        `string`                                        |    No     |         | URL de la imagen para miniatura de 100x100px o superior. |
+| imgIf404         |                                        `string`                                        |    No     |         | URL de la imagen si no se carga la imagen principal.     |
+| layers           | `Pick<React.CSSProperties, "background" \| "mixBlendMode" \| "filter" \| "opacity">[]` |    No     |         | Capas para la imagen.                                    |
+| onErrorImg       |                 `(e: SyntheticEvent<HTMLImageElement, Event>) => void`                 |    No     |         | Función a llamar en caso de error al cargar la imagen.   |
+| onClick          |                                      `() => void`                                      |    No     |         | Función a llamar al hacer clic en la imagen.             |
+| loader           |                                       `boolean`                                        |    No     |         | Indica si la imagen está actualmente en estado de carga. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/img-img--index)
+
+### Usos
+
+- Uso básico del componente Img
+
+```tsx copy
+<Img
+  name="Img"
+  src="https://www.aerocivil.gov.co/Style%20Library/CEA/img/01.jpg"
+  srcMin768="https://www.aerocivil.gov.co/Style%20Library/CEA/img/02.jpg"
+  srcMin1024="https://www.aerocivil.gov.co/Style%20Library/CEA/img/03.jpg"
+/>
+```
