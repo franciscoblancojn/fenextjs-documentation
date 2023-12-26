@@ -12,7 +12,7 @@
     "lint": "npx eslint src",
     "lint:fix": "npm run lint -- --fix",
     "format": "npm run prettier:fix && npm run lint:fix",
-    "fle": "npm run format && npm run lint && npm run export",
+    "fle": "npm run flb && npm run export",
     "flb": "npm run format && npm run lint && npm run build",
 
     "bun-i": "bun i",
