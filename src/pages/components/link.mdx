@@ -1,0 +1,48 @@
+import { Iframe } from "../../components/Iframe";
+
+# Link
+
+El componente Link es un componente que muestra un link \<a\>.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-link--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Link, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Link, LinkProps } from "fenextjs/cjs/component/Link";
+```
+
+o
+
+```tsx copy
+import { Link, LinkProps } from "fenextjs-component/cjs/Link";
+```
+
+### Parametros
+
+| Parametro |                        Tipo                         | Requerido | Default | Descripcion                                                         |
+| --------- | :-------------------------------------------------: | :-------: | :-----: | :------------------------------------------------------------------ |
+| children  |                     `ReactNode`                     |    No     |         | Contenido del enlace.                                               |
+| href      |         `LinkNextProps['href']` \| `string`         |    Sí     |         | La URL del enlace.                                                  |
+| as        |                `LinkNextProps['as']`                |    No     |         | El valor de `as` para el enlace Next.js.                            |
+| replace   |             `LinkNextProps['replace']`              |    No     |         | Indica si el enlace debe reemplazar la entrada del historial.       |
+| scroll    |              `LinkNextProps['scroll']`              |    No     |         | Controla si el enlace debe activar el desplazamiento suave.         |
+| shallow   |             `LinkNextProps['shallow']`              |    No     |         | Habilita la navegación superficial para el enlace.                  |
+| passHref  |             `LinkNextProps['passHref']`             |    No     |         | Indica si se debe pasar la propiedad `href` al componente enlazado. |
+| target    | `AnchorHTMLAttributes<HTMLAnchorElement>['target']` |    No     |         | Define la propiedad `target` del enlace HTML.                       |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-link--index)
+
+### Usos
+
+- Uso básico del componente Link
+
+```tsx copy
+<Link href="#">Hola</Link>
+```
