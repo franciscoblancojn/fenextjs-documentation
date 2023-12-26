@@ -1,0 +1,72 @@
+import { Iframe } from "../../components/Iframe";
+
+# LavaLamp
+
+El componente LavaLamp es un componente que muestra background simulando una lampara de lava.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=lavalamp-lavalamp--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente LavaLamp, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { LavaLamp, LavaLampProps } from "fenextjs/cjs/component/LavaLamp";
+```
+
+o
+
+```tsx copy
+import { LavaLamp, LavaLampProps } from "fenextjs-component/cjs/LavaLamp";
+```
+
+### Parametros
+
+| Parametro     |            Tipo            | Requerido | Default | Descripcion                                                       |
+| ------------- | :------------------------: | :-------: | :-----: | :---------------------------------------------------------------- |
+| nItems        |          `number`          |    No     |         | Número de elementos.                                              |
+| styles        |      `CSSProperties`       |    No     |         | Estilos generales para los elementos.                             |
+| ranges        | `LavaLampRangeStylesProps` |    No     |         | Estilos específicos para diferentes rangos en la lámpara de lava. |
+| stylesElement | `LavaLampStylesElement[]`  |    No     |         | Estilos para elementos individuales en la lámpara de lava.        |
+
+#### LavaLampStylesElement
+
+| Propiedad               |                    Tipo                    | Descripcion                                               |
+| ----------------------- | :----------------------------------------: | :-------------------------------------------------------- |
+| borderRadius            |      `CSSProperties['borderRadius']`       | El radio de borde del elemento.                           |
+| aspectRatio             |       `CSSProperties['aspectRatio']`       | La relación de aspecto del elemento.                      |
+| width                   |          `CSSProperties['width']`          | El ancho del elemento.                                    |
+| background              |       `CSSProperties['background']`        | El fondo del elemento.                                    |
+| animationTimingFunction | `CSSProperties['animationTimingFunction']` | La función de temporización de la animación del elemento. |
+
+#### LavaLampRangeStylesProps
+
+| Parametro |              Tipo              | Requerido | Default | Descripcion                                           |
+| --------- | :----------------------------: | :-------: | :-----: | :---------------------------------------------------- |
+| top       | `LavaLampGetNumberRandomProps` |    No     |         | Rango para el estilo `top` (posición vertical).       |
+| left      | `LavaLampGetNumberRandomProps` |    No     |         | Rango para el estilo `left` (posición horizontal).    |
+| scale     | `LavaLampGetNumberRandomProps` |    No     |         | Rango para el estilo `scale` (escala).                |
+| moveX     | `LavaLampGetNumberRandomProps` |    No     |         | Rango para el estilo `moveX` (movimiento horizontal). |
+| moveY     | `LavaLampGetNumberRandomProps` |    No     |         | Rango para el estilo `moveY` (movimiento vertical).   |
+| time      | `LavaLampGetNumberRandomProps` |    No     |         | Rango para el estilo `time` (tiempo de animación).    |
+
+#### LavaLampGetNumberRandomProps
+
+| Parametro |   Tipo   | Requerido | Default | Descripcion                                        |
+| --------- | :------: | :-------: | :-----: | :------------------------------------------------- |
+| min       | `number` |    Sí     |         | El número mínimo para generar un número aleatorio. |
+| max       | `number` |    Sí     |         | El número máximo para generar un número aleatorio. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/lavalamp-lavalamp--index)
+
+### Usos
+
+- Uso básico del componente LavaLamp
+
+```tsx copy
+<LavaLamp />
+```
