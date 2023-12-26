@@ -1,0 +1,47 @@
+import { Iframe } from "../../components/Iframe";
+
+# GridGallery
+
+El componente GridGallery es un componente que sirve para mostrar una grid de componentes.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=gridgallery-gridgallery--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente GridGallery, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  GridGallery,
+  GridGalleryProps,
+} from "fenextjs/cjs/component/GridGallery";
+```
+
+o
+
+```tsx copy
+import {
+  GridGallery,
+  GridGalleryProps,
+} from "fenextjs-component/cjs/GridGallery";
+```
+
+### Parametros
+
+| Parametro |        Tipo         | Requerido | Default | Descripcion                       |
+| --------- | :-----------------: | :-------: | :-----: | :-------------------------------- |
+| items     | `React.ReactNode[]` |    Sí     |         | Los elementos para el componente. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/gridgallery-gridgallery--index)
+
+### Usos
+
+- Uso básico del componente GridGallery
+
+```tsx copy
+<GridGallery items={[<>Elemento 1</>, <>Elemento 2</>, <>Elemento 3</>]} />
+```
