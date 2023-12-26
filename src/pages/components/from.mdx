@@ -1,0 +1,48 @@
+import { Iframe } from "../../components/Iframe";
+
+# From
+
+El componente From es un componente que sirve para gestionar formularios.
+
+
+### Importacion
+
+Para importar el componente From, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { From, FromProps } from "fenextjs/cjs/component/From";
+```
+
+o
+
+```tsx copy
+import { From, FromProps } from "fenextjs-component/cjs/From";
+```
+
+### Parametros
+
+| Parametro        | Tipo                                              | Requerido | Default | Descripcion                                                                       |
+| ---------------- | ------------------------------------------------- | --------- | ------- | --------------------------------------------------------------------------------- |
+| id               | `string`                                          | No        |         | El ID del formulario.                                                             |
+| data             | `D`                                               | Sí        |         | Los datos iniciales del formulario.                                               |
+| onSubmit         | `RequestProps<D, R, E, T>`                        | No        |         | Función para manejar la presentación del formulario.                              |
+| onAfterSubmit    | `(data: RequestResultDataProps<R, E, T>) => void` | No        |         | Función a llamar después de una presentación exitosa del formulario.              |
+| disabled         | `boolean`                                         | No        |         | Indica si el formulario está deshabilitado.                                       |
+| onChangeDisable  | `(disabled: boolean) => void`                     | No        |         | Función a llamar cuando cambia el estado deshabilitado del formulario.            |
+| loader           | `boolean`                                         | No        |         | Indica si se debe mostrar un cargador mientras el formulario se está presentando. |
+| onChangeLoader   | `(disabled: boolean) => void`                     | No        |         | Función a llamar cuando cambia el estado del cargador del formulario.             |
+| yup              | `ObjectSchema<AnyObject, AnyObject, any, "">`     | No        |         | El esquema Yup a utilizar para la validación del formulario.                      |
+| validateAfterYup | `RequestProps<D, R, E, T>`                        | No        |         | Función para manejar la validación del formulario después de validar con Yup.     |
+| className        | `string`                                          | No        | `""`    | Clase CSS para aplicar al elemento del formulario.                                |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-form--index)
+
+### Usos
+
+- Uso básico del componente From
+
+```tsx copy
+<From>Contenido del From</From>
+```
