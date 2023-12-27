@@ -1,0 +1,49 @@
+import { Iframe } from "../../components/Iframe";
+
+# Modal
+
+El componente Modal es un componente que muestra una modal.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=modal-modal--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Modal, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Modal, ModalProps } from "fenextjs/cjs/component/Modal/Modal";
+```
+
+o
+
+```tsx copy
+import { Modal, ModalProps } from "fenextjs-component/cjs/Modal/Modal";
+```
+
+### Parametros
+
+| Parametro                |                                       Tipo                                       | Requerido | Default | Descripcion                                   |
+| ------------------------ | :------------------------------------------------------------------------------: | :-------: | :-----: | :-------------------------------------------- |
+| children                 |                                   `ReactNode`                                    |    Sí     |         | Contenido del modal.                          |
+| type                     | ` "top" \| "left" \| "right" \| "bottom" \| "center" \| "full" \| "layout-grid"` |    No     |         | Tipo de modal.                                |
+| active                   |                                    `boolean`                                     |    No     |         | Indica si el modal está activo.               |
+| onClose                  |                                   `() => void`                                   |    No     |         | Función a llamar cuando se cierra el modal.   |
+| \_t                      |                                     `string`                                     |    No     |         | Propiedad de internacionalización.            |
+| ElementActionModalActive |                                   `ReactNode`                                    |    No     |         | Elemento con `onClick` para activar el modal. |
+| onActive                 |                                   `() => void`                                   |    No     |         | Función a llamar cuando se activa el modal.   |
+| className                |                                     `string`                                     |    No     |         | Clase personalizada para el modal.            |
+| style                    |                                 `CSSProperties`                                  |    No     |         | Estilos personalizados para el modal.         |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/modal-modal--index)
+
+### Usos
+
+- Uso básico del componente Modal
+
+```tsx copy
+<Modal />
+```

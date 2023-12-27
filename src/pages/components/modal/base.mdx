@@ -1,0 +1,43 @@
+import { Iframe } from "../../../components/Iframe";
+
+# ModalBase
+
+El componente ModalBase es un componente que muestra una modal.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=modal-modalbase--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente ModalBase, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { ModalBase, ModalBaseProps } from "fenextjs/cjs/component/Modal/Base";
+```
+
+o
+
+```tsx copy
+import { ModalBase, ModalBaseProps } from "fenextjs-component/cjs/Modal/Base";
+```
+
+### Parametros
+
+| Parametro |                                       Tipo                                       | Requerido | Default | Descripcion                                 |
+| --------- | :------------------------------------------------------------------------------: | :-------: | :-----: | :------------------------------------------ |
+| active    |                                    `boolean`                                     |    No     |         | Indica si el modal está activo.             |
+| type      | ` "top" \| "left" \| "right" \| "bottom" \| "center" \| "full" \| "layout-grid"` |    No     |         | Tipo de modal.                              |
+| onClose   |                                   `() => void`                                   |    No     |         | Función a llamar cuando se cierra el modal. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/modal-modalbase--index)
+
+### Usos
+
+- Uso básico del componente ModalBase
+
+```tsx copy
+<ModalBase />
+```
