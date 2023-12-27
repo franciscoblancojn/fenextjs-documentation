@@ -1,0 +1,42 @@
+import { Iframe } from "../../../components/Iframe";
+
+# LoaderLine
+
+El componente LoaderLine es un componente que muestra un loader de linea simple.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-line--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente LoaderLine, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { LoaderLine, LoaderLineProps } from "fenextjs/cjs/component/Loader/Line";
+```
+
+o
+
+```tsx copy
+import { LoaderLine, LoaderLineProps } from "fenextjs-component/cjs/Loader/Line";
+```
+
+### Parametros
+
+| Parametro           |   Tipo   | Requerido | Default | Descripcion                     |
+| ------------------- | :------: | :-------: | :-----: | :------------------------------ |
+| height              | `number` |    No     |         | Altura de la linea              |
+| classNameLoaderLine | `string` |    No     |         | Clase personalizada del loader. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/loader-line--index)
+
+### Usos
+
+- Uso básico del componente LoaderLine
+
+```tsx copy
+<LoaderLine />
+```
