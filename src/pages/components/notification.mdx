@@ -1,0 +1,49 @@
+import { Iframe } from "../../components/Iframe";
+
+# Notification
+
+El componente Notification es un componente que muestra una notificacion.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=notification-notification--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Notification, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  Notification,
+  NotificationProps,
+} from "fenextjs/cjs/component/Notification";
+```
+
+o
+
+```tsx copy
+import {
+  Notification,
+  NotificationProps,
+} from "fenextjs-component/cjs/Notification";
+```
+
+### Parametros
+
+| Parametro |           Tipo           | Requerido | Default | Descripcion                                                             |
+| --------- | :----------------------: | :-------: | :-----: | :---------------------------------------------------------------------- |
+| children  |       `ReactNode`        |    No     |         | Contenido de la notificación.                                           |
+| type      | `RequestResultTypeProps` |    No     |         | Tipo de notificación. Puede ser `success`, `error`, `info` o `warning`. |
+| \_t       |         `string`         |    No     |         | Propiedad de internacionalización.                                      |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/notification-notification--index)
+
+### Usos
+
+- Uso básico del componente Notification
+
+```tsx copy
+<Notification />
+```

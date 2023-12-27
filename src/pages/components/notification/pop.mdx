@@ -1,0 +1,51 @@
+import { Iframe } from "../../../components/Iframe";
+
+# NotificationPop
+
+El componente NotificationPop es un componente que muestra una notificacion que se activa con el hook useNotification.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=notification-notificationpop--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente NotificationPop, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  NotificationPop,
+  NotificationPopProps,
+} from "fenextjs/cjs/component/Notification/Pop";
+```
+
+o
+
+```tsx copy
+import {
+  NotificationPop,
+  NotificationPopProps,
+} from "fenextjs-component/cjs/Notification/Pop";
+```
+
+### Parametros
+
+| Parametro |            Tipo             | Requerido | Default | Descripcion                                                      |
+| --------- | :-------------------------: | :-------: | :-----: | :--------------------------------------------------------------- |
+| \_t       |          `string`           |    No     |         | Propiedad de internacionalización.                               |
+| typePop   |      `"top" \| "down"`      |    No     |         | Tipo de notificación emergente. Puede ser `top` o `down`.        |
+| position  | `NotificationPositionProps` |    No     |         | Posición de la notificación emergente.                           |
+| timeout   |          `number`           |    No     |         | Duración en milisegundos para mostrar la notificación emergente. |
+| className |          `string`           |    No     |         | Clase personalizada para la notificación emergente.              |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/notification-notificationpop--index)
+
+### Usos
+
+- Uso básico del componente NotificationPop
+
+```tsx copy
+<NotificationPop />
+```
