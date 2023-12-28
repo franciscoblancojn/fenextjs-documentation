@@ -1,0 +1,54 @@
+import { Iframe } from "../../../components/Iframe";
+
+# PaginationItemPage
+
+El componente PaginationItemPage es un componente que muestra una paginacion con solo los items(paginas) disponibles.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=pagination-paginationitempage--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente PaginationItemPage, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  PaginationItemPage,
+  PaginationItemPageProps,
+} from "fenextjs/cjs/component/Pagination/PaginationItemPage";
+```
+
+o
+
+```tsx copy
+import {
+  PaginationItemPage,
+  PaginationItemPageProps,
+} from "fenextjs-component/cjs/Pagination/PaginationItemPage";
+```
+
+### Parametros
+
+| Parametro                                      |        Tipo        | Requerido | Default | Descripcion                                           |
+| ---------------------------------------------- | :----------------: | :-------: | :-----: | :---------------------------------------------------- |
+| _t                                             |      `string`      |    No     |         | Propiedad de internacionalización.                    |
+| defaultPage                                    |      `number`      |    No     |         | Página predeterminada a mostrar al cargar el componente. |
+| nItems                                         |      `number`      |    Sí     |         | Número total de elementos para paginar.               |
+| nItemsPage                                     |      `number`      |    No     |         | Número de elementos para mostrar por página.          |
+| disabled                                       |      `boolean`     |    No     |         | Indica si el componente está deshabilitado.           |
+| hiddenIfNItemsSmallerThanOrEqualNItemsPage     |      `boolean`     |    No     |  false  | Ocultar la paginación si `nItems` es menor o igual que `nItemsPage`. |
+| onChangePage                                   | `(page: number) => void` | No |         | Función de devolución de llamada que se llama cuando cambia la página. |
+
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/pagination-paginationitempage--index)
+
+### Usos
+
+- Uso básico del componente PaginationItemPage
+
+```tsx copy
+<PaginationItemPage />
+```

@@ -1,0 +1,51 @@
+import { Iframe } from "../../../components/Iframe";
+
+# Pagination
+
+El componente Pagination es un componente que muestra una paginacion.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=pagination-pagination--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Pagination, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Pagination, PaginationProps } from "fenextjs/cjs/component/Pagination";
+```
+
+o
+
+```tsx copy
+import { Pagination, PaginationProps } from "fenextjs-component/cjs/Pagination";
+```
+
+### Parametros
+
+| Parametro                                  |                Tipo                | Requerido | Default | Descripcion                                                                       |
+| ------------------------------------------ | :--------------------------------: | :-------: | :-----: | :-------------------------------------------------------------------------------- |
+| \_t                                        |              `string`              |    No     |         | Propiedad de internacionalización.                                                |
+| defaultPage                                |              `number`              |    No     |         | Página predeterminada a mostrar al cargar el componente.                          |
+| nItems                                     |              `number`              |    Sí     |         | Número total de elementos para paginar.                                           |
+| nItemsPage                                 |              `number`              |    No     |         | Número de elementos para mostrar por página.                                      |
+| disabled                                   |             `boolean`              |    No     |         | Indica si el componente está deshabilitado.                                       |
+| hiddenIfNItemsSmallerThanOrEqualNItemsPage |             `boolean`              |    No     |  false  | Ocultar la paginación si `nItems` es menor o igual que `nItemsPage`.              |
+| onChangePage                               |      `(page: number) => void`      |    No     |         | Función de devolución de llamada que se llama cuando cambia la página.            |
+| listNpage                                  | `InputSelectBaseProps['options']`  |    No     |         | Lista de opciones para seleccionar el número de páginas.                          |
+| onChangeNPage                              | `InputSelectBaseProps['onChange']` |    No     |         | Función de devolución de llamada cuando cambia el número de páginas seleccionado. |
+| showItemPage                               |             `boolean`              |    No     |         | Indica si se debe mostrar la paginación de ítems por página.                      |
+| showNPage                                  |             `boolean`              |    No     |         | Indica si se debe mostrar la paginación del número de páginas.                    |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/pagination-pagination--index)
+
+### Usos
+
+- Uso básico del componente Pagination
+
+```tsx copy
+<Pagination />
+```
