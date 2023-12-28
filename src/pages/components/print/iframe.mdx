@@ -1,0 +1,55 @@
+import { Iframe } from "../../../components/Iframe";
+
+# PrintIframe
+
+El componente PrintIframe es un componente que muestra un iframe que se usa para imprimir una pagina.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=print-iframe--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente PrintIframe, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  PrintIframe,
+  PrintIframeProps,
+} from "fenextjs/cjs/component/Print/Iframe";
+```
+
+o
+
+```tsx copy
+import {
+  PrintIframe,
+  PrintIframeProps,
+} from "fenextjs-component/cjs/Print/Iframe";
+```
+
+### Parametros
+
+| Parametro     |                       Tipo                       | Requerido | Default | Descripcion                                            |
+| ------------- | :----------------------------------------------: | :-------: | :-----: | :----------------------------------------------------- |
+| urlBase       |                     `string`                     |    No     |         | URL base para construir la URL completa para imprimir. |
+| url           |                     `string`                     |    Sí     |         | URL completa para imprimir.                            |
+| data          |                       `T`                        |    No     |         | Datos a pasar al componente de impresión.              |
+| delayForPrint |                     `number`                     |    No     |         | Retraso en milisegundos antes de imprimir.             |
+| onComponent   | `(data: PrintIframeComponentProps) => ReactNode` |    Sí     |         | Función que devuelve el componente a imprimir.         |
+| \_t           |                     `string`                     |    No     |         | Propiedad de internacionalización.                     |
+| onBeforePrint |         `() => void` or `Promise<void>`          |    No     |         | Función que se ejecuta antes de imprimir.              |
+| onAfterPrint  |         `() => void` or `Promise<void>`          |    No     |         | Función que se ejecuta después de imprimir.            |
+| onPrintError  |             `(error: Error) => void`             |    No     |         | Función que se ejecuta en caso de error de impresión.  |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/print-iframe--index)
+
+### Usos
+
+- Uso básico del componente PrintIframe
+
+```tsx copy
+<PrintIframe />
+```
