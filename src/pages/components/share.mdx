@@ -1,0 +1,46 @@
+import { Iframe } from "../../components/Iframe";
+
+# Share
+
+El componente Share es un componente que muestra una forma de comporatir un texto en redes sociales.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=share-share--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Share, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Share, ShareProps } from "fenextjs/cjs/component/Share";
+```
+
+o
+
+```tsx copy
+import { Share, ShareProps } from "fenextjs-component/cjs/Share";
+```
+
+### Parametros
+
+| Parametro     |       Tipo        | Requerido | Default | Descripcion                                                      |
+| ------------- | :---------------: | :-------: | :-----: | :--------------------------------------------------------------- |
+| \_t           |     `string`      |    No     |         | Propiedad de internacionalización.                               |
+| ButtonProps   |   `ButtonProps`   |    No     |         | Propiedades del botón para el componente.                        |
+| TitleProps    |   `TitleProps`    |    No     |         | Propiedades del título para el componente.                       |
+| share         |     `string`      |    No     |         | Texto para compartir en el componente.                           |
+| shareList     | `ShareListType[]` |    No     |         | Lista de opciones de compartir para el componente.               |
+| showShareCopy |     `boolean`     |    No     |  true   | Indica si se debe mostrar el texto para copiar en el componente. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/share-share--index)
+
+### Usos
+
+- Uso básico del componente Share
+
+```tsx copy
+<Share />
+```
