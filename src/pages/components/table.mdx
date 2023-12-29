@@ -1,0 +1,64 @@
+import { Iframe } from "../../components/Iframe";
+
+# Table
+
+El componente Table es un componente que muestra una tabla con columnas y filas personalizadas.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=table-table--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Table, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Table, TableProps } from "fenextjs/cjs/component/Table";
+```
+
+o
+
+```tsx copy
+import { Table, TableProps } from "fenextjs-component/cjs/Table";
+```
+
+### Parametros
+
+| Parametro      |                           Tipo                            | Requerido | Default | Descripcion                                                                     |
+| -------------- | :-------------------------------------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------ |
+| \_t            |                         `string`                          |    No     |         | Propiedad de internacionalización.                                              |
+| name           |                         `string`                          |    Sí     |         | Nombre de la tabla.                                                             |
+| items          |                      `T[]` (arreglo)                      |    Sí     |         | Arreglo de objetos de datos para mostrar en la tabla.                           |
+| header         |               `TableHeader<T>[]` (arreglo)                |    Sí     |         | Configuración del encabezado de la tabla.                                       |
+| pagination     |               `PaginationProps` (opcional)                |    No     |         | Propiedades opcionales de paginación para la tabla.                             |
+| loader         |                         `boolean`                         |    No     |  false  | Indica si se debe mostrar un cargador mientras se cargan los datos de la tabla. |
+| typeLoader     |     `"spinner"                   \| "line"` (cadena)      |    No     | "line"  | Tipo de cargador a mostrar. Puede ser "spinner" o "line".                       |
+| useCheckbox    |                         `boolean`                         |    No     |  false  | Indica si se deben mostrar casillas de verificación en la tabla.                |
+| onChecked      |      `(items: T[]) => void` (función de devolución)       |    No     |         | Función de devolución de llamada al marcar elementos en la tabla.               |
+| onOrderBy      |   `{ id: keyof T; order: "ASC"          \|    "DESC" }`   |    No     |         | Función de devolución de llamada al ordenar la tabla.                           |
+| onShowHidden   | `{ id: keyof T; showHidden: "SHOW"       \|   "HIDDEN" }` |    No     |         | Función de devolución de llamada al mostrar u ocultar columnas en la tabla.     |
+| notResult      |                 `ReactNode` (nodo React)                  |    No     |         | Elemento React a mostrar cuando no hay resultados en la tabla.                  |
+| showPagination |                         `boolean`                         |    No     |  true   | Indica si se debe mostrar la paginación en la tabla.                            |
+
+#### TableHeader
+
+| Parametro         |                       Tipo                        | Requerido | Default | Descripcion                                                                                                                                                                               |
+| ----------------- | :-----------------------------------------------: | :-------: | :-----: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                |              `keyof T` (clave de T)               |    Sí     |         | Clave de propiedad en el objeto de datos que corresponde a esta columna de encabezado.                                                                                                    |
+| th                |          `React.ReactNode` (nodo React)           |    Sí     |         | Etiqueta a mostrar en la columna de encabezado.                                                                                                                                           |
+| parse             |  `(data: T) => any` (función de transformación)   |    No     |         | Función que se puede utilizar para transformar los datos antes de mostrarlos en la celda de la tabla. Esta función toma el objeto de datos para la fila y devuelve el valor transformado. |
+| columnOptions     |  `{ orderBy?: boolean; showHidden?: boolean; }`   |    No     |         | Opciones adicionales de la columna para la tabla.                                                                                                                                         |
+| defaultShowHidden | `"show"                     \| "hidden"` (cadena) |    No     | "show"  | Indica si la columna debe mostrarse o estar oculta de forma predeterminada. Puede ser "show" o "hidden".                                                                                  |
+| colNewTr          |                     `boolean`                     |    No     |  false  | Indica si la columna debe ocupar el 100% del ancho en una nueva fila.                                                                                                                     |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/table-table--index)
+
+### Usos
+
+- Uso básico del componente Table
+
+```tsx copy
+<Table />
+```

@@ -1,0 +1,56 @@
+import { Iframe } from "../../components/Iframe";
+
+# Steps
+
+El componente Steps es un componente que muestra una lista de items en por pasos.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?id=steps-steps--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Steps, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Steps, StepsProps } from "fenextjs/cjs/component/Steps";
+```
+
+o
+
+```tsx copy
+import { Steps, StepsProps } from "fenextjs-component/cjs/Steps";
+```
+
+### Parametros
+
+| Parametro            |                                             Tipo                                             | Requerido |   Default    | Descripcion                                                                                       |
+| -------------------- | :------------------------------------------------------------------------------------------: | :-------: | :----------: | :------------------------------------------------------------------------------------------------ | ------ | ----------------------------------------------------------------- |
+| \_t                  |                                           `string`                                           |    No     |              | Propiedad de internacionalización.                                                                |
+| items                | `{ label: React.ReactNode; icon?: React.ReactNode; content: React.ReactNode; status?: "none" |   "ok"    | "error" }[]` | Sí                                                                                                |        | Elementos de los pasos.                                           |
+| defaultStep          |                                           `number`                                           |    No     |      0       | Paso predeterminado para mostrar.                                                                 |
+| step                 |                                           `number`                                           |    No     |              | Paso actual para mostrar.                                                                         |
+| useArrowKey          |                                          `boolean`                                           |    No     |     true     | Indica si se deben utilizar las teclas de flecha para navegar entre pasos.                        |
+| useStep              |                                          `boolean`                                           |    No     |    false     | Indica si se deben mostrar los números de paso.                                                   |
+| btnPrev              |                                      `React.ReactNode`                                       |    No     |  "Previous"  | Contenido del botón anterior.                                                                     |
+| btnNext              |                                      `React.ReactNode`                                       |    No     |    "Next"    | Contenido del botón siguiente.                                                                    |
+| disabledBtnPrev      |                                          `boolean`                                           |    No     |    false     | Indica si el botón anterior está deshabilitado.                                                   |
+| disabledBtnNext      |                                          `boolean`                                           |    No     |    false     | Indica si el botón siguiente está deshabilitado.                                                  |
+| onPrev               |                               `(step: number) => Promise<void>                               |   void`   |      No      | Función de devolución de llamada al hacer clic en el botón anterior. Puede devolver una promesa.  |
+| onNext               |                               `(step: number) => Promise<void>                               |   void`   |      No      | Función de devolución de llamada al hacer clic en el botón siguiente. Puede devolver una promesa. |
+| onSetStep            |                                   `(step: number) => void`                                   |    No     |              | Función de devolución de llamada al establecer un paso específico.                                |
+| stepPos              |                                            `"top"                                            |  "left"   |   "right"`   | No                                                                                                | "left" | Posición de la lista de pasos. Puede ser "top", "left" o "right". |
+| showCurrentStepNStep |                                          `boolean`                                           |    No     |    false     | Indica si se debe mostrar el paso actual junto con el número total de pasos.                      |
+| useDogs              |                                          `boolean`                                           |    No     |    false     | Indica si se deben mostrar íconos de perro junto a los números de paso.                           |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/steps-steps--index)
+
+### Usos
+
+- Uso básico del componente Steps
+
+```tsx copy
+<Steps />
+```

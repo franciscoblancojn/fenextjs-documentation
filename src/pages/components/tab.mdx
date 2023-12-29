@@ -1,0 +1,58 @@
+import { Iframe } from "../../components/Iframe";
+
+# Tab
+
+El componente Tab es un componente que muestra una lista de tab con su respectivo contenido.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-tab--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Tab, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Tab, TabProps } from "fenextjs/cjs/component/Tab";
+```
+
+o
+
+```tsx copy
+import { Tab, TabProps } from "fenextjs-component/cjs/Tab";
+```
+
+### Parametros
+
+| Parametro                  |              Tipo              | Requerido | Default | Descripcion                                                                                 |
+| -------------------------- | :----------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------------------ |
+| \_t                        |            `string`            |    No     |         | Propiedad de internacionalización.                                                          |
+| items                      |        `TabItemProps[]`        |    No     |         | Array de objetos `TabItemProps` que representan las pestañas.                               |
+| onChange                   | `(item: TabItemProps) => void` |    No     |         | Función de devolución de llamada al cambiar de pestaña.                                     |
+| defaultTab                 |            `number`            |    No     |         | Índice de la pestaña que se mostrará por defecto.                                           |
+| beforeTabs                 |       `React.ReactNode`        |    No     |         | Componente antes de la lista de encabezados de pestañas.                                    |
+| afterTabs                  |       `React.ReactNode`        |    No     |         | Componente después de la lista de encabezados de pestañas.                                  |
+| tabScrollActive            |           `boolean`            |    No     |  false  | Indica si se deben mostrar todas las pestañas en un menú desplegable cuando hay demasiadas. |
+| validateTabOneHiddenHeader |           `boolean`            |    No     |  true   | Indica si, cuando hay solo una pestaña, se debe ocultar el encabezado.                      |
+
+#### TabItemProps
+
+| Parametro |       Tipo        | Requerido | Default | Descripcion                                               |
+| --------- | :---------------: | :-------: | :-----: | :-------------------------------------------------------- |
+| id        |     `string`      |    Sí     |         | Identificador único de la pestaña.                        |
+| head      | `React.ReactNode` |    Sí     |         | Contenido que se mostrará en el encabezado de la pestaña. |
+| body      | `React.ReactNode` |    Sí     |         | Contenido que se mostrará en el cuerpo de la pestaña.     |
+| beforeTab | `React.ReactNode` |    No     |         | Componente antes del encabezado de la pestaña.            |
+| afterTab  | `React.ReactNode` |    No     |         | Componente después del encabezado de la pestaña.          |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-tab--index)
+
+### Usos
+
+- Uso básico del componente Tab
+
+```tsx copy
+<Tab />
+```
