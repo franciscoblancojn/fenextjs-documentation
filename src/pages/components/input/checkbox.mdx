@@ -1,0 +1,55 @@
+import { Iframe } from "../../../components/Iframe";
+
+# InputCheckbox
+
+El componente InputCheckbox es un componente que muestra un checkbox personalizado.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcheckbox--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente InputCheckbox, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  InputCheckbox,
+  InputCheckboxProps,
+} from "fenextjs/cjs/component/Input/Checkbox";
+```
+
+o
+
+```tsx copy
+import {
+  InputCheckbox,
+  InputCheckboxProps,
+} from "fenextjs-component/cjs/Input/Checkbox";
+```
+
+### Parametros
+
+| Propiedad       |             Tipo              | Requerido | Default | Descripción                                                                                                                                                       |
+| --------------- | :---------------------------: | :-------: | :-----: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| label           |             `any`             |    No     |         | La etiqueta que se mostrará junto al checkbox.                                                                                                                    |
+| labelPosition   |      `"right" \| "left"`      |    No     |         | La posición de la etiqueta con respecto al checkbox. Puede ser "right" (derecha) o "left" (izquierda).                                                            |
+| name            |           `string`            |    No     |         | El atributo de nombre del elemento de entrada del checkbox.                                                                                                       |
+| onChange        |    `(e: boolean) => void`     |    No     |         | Una función de devolución de llamada para ejecutar cuando se cambia el estado del checkbox. Recibe un valor booleano que indica si el checkbox está marcado o no. |
+| defaultValue    |           `boolean`           |    No     |         | El valor predeterminado del checkbox cuando se renderiza por primera vez.                                                                                         |
+| useValue        |           `boolean`           |    No     |         | Un valor booleano que indica si se debe usar el atributo de valor del elemento de entrada del checkbox o no.                                                      |
+| value           |           `boolean`           |    No     |         | El valor del elemento de entrada del checkbox.                                                                                                                    |
+| disabled        |           `boolean`           |    No     |         | Un valor booleano que indica si el checkbox está desactivado o no.                                                                                                |
+| onValidateCheck | `() => Promise<void> \| void` |    No     |         | Una función de devolución de llamada para ejecutar cuando se valida el checkbox. Debe devolver una promesa o void.                                                |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/input-inputcheckbox--index)
+
+### Usos
+
+- Uso básico del componente InputCheckbox
+
+```tsx copy
+<InputCheckbox />
+```

@@ -35,7 +35,6 @@
   "homepage": "https://github.com/franciscoblancojn/fenextjs-documentation#readme",
   "dependencies": {
     "eslint": "^8.56.0",
-    "fenextjs": "^1.4.15",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
