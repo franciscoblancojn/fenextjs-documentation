@@ -1,0 +1,59 @@
+import { Iframe } from "../../../components/Iframe";
+
+# ScheduleWeekly
+
+El componente ScheduleWeekly es un componente que muestra un schedule por semana.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=schedule-scheduleweekly--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente ScheduleWeekly, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import {
+  ScheduleWeekly,
+  ScheduleWeeklyProps,
+} from "fenextjs/cjs/component/Schedule/Weekly";
+```
+
+o
+
+```tsx copy
+import {
+  ScheduleWeekly,
+  ScheduleWeeklyProps,
+} from "fenextjs-component/cjs/Schedule/Weekly";
+```
+
+### Parametros
+
+| Parametro             |                  Tipo                  | Requerido | Default | Descripcion                                                                                                                           |
+| --------------------- | :------------------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------------------------------------------------------------ |
+| \_t                   |                `string`                |    No     |         | Propiedad de internacionalización.                                                                                                    |
+| title                 |              `ReactNode`               |    No     |         | Título de la vista semanal.                                                                                                           |
+| defaultValue          |       `ScheduleWeeklyValueType`        |    No     |         | Valor predeterminado del campo de entrada.                                                                                            |
+| value                 |       `ScheduleWeeklyValueType`        |    No     |         | Valor actual del campo de entrada.                                                                                                    |
+| onChange              | `(v: ScheduleWeeklyValueType) => void` |    No     |         | Función de devolución de llamada para manejar cambios en el campo de entrada.                                                         |
+| minDate               |                 `Date`                 |    No     |         | Fecha mínima permitida para la selección.                                                                                             |
+| maxDate               |                 `Date`                 |    No     |         | Fecha máxima permitida para la selección.                                                                                             |
+| disabledDates         | `Date[]` or `(date: Date) => boolean`  |    No     |         | Fechas deshabilitadas para la selección. Puede ser una lista de fechas o una función que toma una fecha y devuelve un valor booleano. |
+| format                |                `string`                |    No     |         | Formato de fecha para mostrar y manejar la entrada. Puede usar tokens como 'yyyy', 'MM', 'dd', 'HH', 'mm', 'ss'.                      |
+| showTodayButton       |               `boolean`                |    No     |  true   | Indica si se debe mostrar el botón "Hoy".                                                                                             |
+| ButtonProps           |     `Omit<ButtonProps, "onClick">`     |    No     |         | Propiedades del botón para agregar elementos.                                                                                         |
+| CollapseMultipleProps | `Omit<CollapseMultipleProps, "items">` |    No     |         | Propiedades de `CollapseMultiple` para el campo de entrada.                                                                           |
+| onParseHeaderDay      |      `(v: DaysEnum) => ReactNode`      |    No     |         | Función de devolución de llamada para analizar el encabezado del día.                                                                 |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/schedule-scheduleweekly--index)
+
+### Usos
+
+- Uso básico del componente ScheduleWeekly
+
+```tsx copy
+<ScheduleWeekly />
+```
