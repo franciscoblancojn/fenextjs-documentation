@@ -1,0 +1,49 @@
+import { Iframe } from "../../components/Iframe";
+
+# Slider
+
+El componente Slider es un componente que muestra una lista de items en slider.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=slider-slider--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Slider, se puede hacer desde fenextjs o fenextjs-component
+
+```tsx copy
+import { Slider, SliderProps } from "fenextjs/cjs/component/Slider";
+```
+
+o
+
+```tsx copy
+import { Slider, SliderProps } from "fenextjs-component/cjs/Slider";
+```
+
+### Parametros
+
+| Parametro       |     Tipo      | Requerido | Default | Descripcion                                                 |
+| --------------- | :-----------: | :-------: | :-----: | :---------------------------------------------------------- |
+| \_t             |   `string`    |    No     |         | Propiedad de internacionalización.                          |
+| items           | `ReactNode[]` |    No     |         | Elementos del slider.                                       |
+| nItemsDesktop   |   `number`    |    No     |         | Número de elementos en el slider en escritorio.             |
+| nItemsTable     |   `number`    |    No     |         | Número de elementos en el slider en tablet.                 |
+| nItemsPhone     |   `number`    |    No     |         | Número de elementos en el slider en teléfono.               |
+| timeDelay       |   `number`    |    No     |         | Tiempo de retraso entre movimientos del slider.             |
+| timeAnimation   |   `number`    |    No     |         | Duración de la animación al mover el slider.                |
+| loop            |   `boolean`   |    No     |  true   | Indica si el slider debe hacer un bucle al llegar al final. |
+| separationItems |   `number`    |    No     |         | Separación entre elementos del slider.                      |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/slider-slider--index)
+
+### Usos
+
+- Uso básico del componente Slider
+
+```tsx copy
+<Slider />
+```
