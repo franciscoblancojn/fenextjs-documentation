@@ -1,5 +1,5 @@
 {
-  "index": "Introduction",
+  "index": "Introducción",
   "about": {
     "title": "About",
     "type": "page"
@@ -36,6 +36,6 @@
     "title": "Svg"
   },
   "vaidator": {
-    "title": "Vaidator"
+    "title": "Validator"
   }
 }
