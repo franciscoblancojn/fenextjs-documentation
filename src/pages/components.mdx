@@ -14,23 +14,27 @@ Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar
 #
 **Elementos**
   - 🅰️ Texto
-  - 🖼️ Imagenes
+  - 🖼️ Imágenes
   - ⌨️ Entradas de texto
-  - 📢 Comunicación         
+  - 📅 Fechas
+  - 📢 Comunicación
+  - 🗒️ Orden      
+  - 👑 Lujo   
 ##
-### **stucturales** 
+### **Estucturales** 
 
-#### ⚙️ Configuración :
+#### ⚙️ Configuración
 - **[Theme](/components/theme) >** El componente de Theme permite definir y aplicar un conjunto coherente de estilos y paletas de colores en toda la aplicación. Es fundamental para mantener la consistencia visual y para implementar fácilmente cambios de temas o modos (como claro/oscuro).
- 
 - **[Layout](/components/layout) >** Proporciona estructuras predeterminadas para el diseño de páginas.
     - **[Layout Grid Menu Left](/components/layout/layout-grid-menu-left) >** Organiza la página con un menú lateral a la izquierda, optimizando el uso del espacio y facilitando la navegación en la aplicación.
     - **[Layout Grid Menu Top](/components/layout/layout-grid-menu-top) >** Presenta un diseño con un menú en la parte superior, adecuado para aplicaciones con enfoque en la horizontalidad y accesibilidad rápida a diferentes secciones.
     - **[Layout Grid Menu TopLeft](/components/layout/layout-grid-menu-top-left) >** Combina ambas disposiciones, con menús tanto en la parte superior como en el lado izquierdo, proporcionando una estructura de navegación robusta y flexible para aplicaciones complejas o sitios web.
-
-#### 🟩 Forma :
+##
+#### 🟩 Forma
 
 - **[Header](/components/header) >** Cabecera de sitio o aplicación, incluye navegación y elementos clave de UI como logos, menús o controles de usuario.
+
+- **[User Profile](/components/user) >** 
 
 - **[Container](/components/container) >** Contenedor básico para alinear y organizar elementos, esencial en el diseño web responsivo y en la estandarización de layouts.
 
@@ -40,10 +44,12 @@ Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar
 
 - **[Two Col Sticky](/components/two-col-sticky) >** ste componente estructura la página en dos columnas, con una de ellas fija ("sticky") que permanece visible mientras se desplaza la otra. Es ideal para diseños que requieren una navegación constante o elementos de referencia, como menús laterales o dashboards con filtros.
 
+- **[ContentShow](/components/content-show) >** Mostrar contenido de manera condicional, ideal para interfaces dinámicas donde el contenido depende de ciertas condiciones o selecciones del usuario.
+
 ##
 ### **Navegación**
 
-#### 🍎 Usabilidad :
+#### 🍎 Usabilidad
 
 - **[Menu](/components/header/menu) >** El componente Menu actúa como el contenedor para un conjunto de ItemMenu o enlaces de navegación. Es esencial para la creación de barras de navegación, menús desplegables o paneles laterales, organizando las opciones de navegación de manera estructurada y coherente.
       -  [Button Menu](/components/header/button-menu) > Este componente es un botón interactivo diseñado para activar o desplegar un menú de navegación. Es ideal para interfaces que requieren menús compactos, especialmente en diseños responsivos o en aplicaciones móviles.
@@ -55,6 +61,8 @@ Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar
 
 - **[Button](/components/button) >** Elemento interactivo para acciones de usuario, como enviar formularios, abrir ventanas modales o activar funciones. Clave en cualquier interfaz interactiva.
 
+- **[Share](/components/share) >** El componente Share permite a los usuarios compartir contenido de la página en redes sociales o plataformas de mensajería. Es esencial en sitios que buscan aumentar su alcance y promover la interacción social.
+
 - **[Link](/components/link) >** Navegación interna o externa, fundamental en cualquier interfaz para conectar diferentes áreas o recursos. 
 
 - **[Tab](/components/tab)  >** Pestañas para organizar contenido en secciones, comunes en interfaces de configuración, perfiles de usuario o en áreas con múltiples categorías de contenido.
@@ -64,22 +72,25 @@ Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar
   -   [Pagination Page](/components/pagination/n-page) > Un componente de paginación que muestra un número determinado de páginas alrededor de la página actual, con opciones para avanzar hacia adelante y atrás. Este enfoque es ideal para conjuntos de datos grandes, donde mostrar todas las páginas a la vez puede ser abrumador o poco práctico. 
   -   [Pagination Item Page](/components/pagination/item-page) > Representa un elemento individual en un sistema de paginación. Cada ItemPage es un enlace a una página específica, permitiendo la navegación precisa dentro de un conjunto de datos o contenido paginado.
 
-#### 🔃 Carga :
+- **[Steps](/components/steps) >** El componente Steps es utilizado para mostrar una secuencia de pasos en un proceso, como en formularios de registro o procesos de compra. Ofrece una manera clara y visual de indicar el progreso a través de diferentes etapas, ayudando a los usuarios a comprender su posición actual y los pasos siguientes en un procedimiento.
+
+##
+#### 🔃 Carga
 
 - **[Loader](/components/loader) >** Indicadores de carga para procesos o cargas de contenido, mejoran la experiencia de
   -   [Loader Progress Line](/components/loader/line) > Este componente muestra una barra de progreso horizontal que se llena gradualmente para indicar el avance de una tarea o carga. Es ideal para procesos donde se puede determinar el progreso, como la carga de archivos o el envío de formularios.
   -   [Loader Spinner](/components/loader/spinner) > Un indicador circular o 'spinner' que gira para mostrar que una operación está en curso. Es ampliamente utilizado en aplicaciones y sitios web durante la espera de procesos que no tienen un tiempo de finalización definido, como la carga de datos desde un servidor.
   -   [Loader Skeleton](/components/loader/user) > Este loader simula la disposición del contenido antes de que se cargue completamente, usando líneas o formas en el lugar donde aparecerá el contenido real. Es efectivo para mejorar la experiencia del usuario durante la carga de páginas, reduciendo la percepción de espera y manteniendo la estructura visual de la página.
 - **[Content Loading](/components/content-loading) >** Indica el estado de carga del contenido, mejorando la experiencia del usuario en cargas asincrónicas o en espera de datos.
-
-#### ⌛ Progreso:
+##
+#### ⌛ Progreso
 - **[Progress](/components/progress) >** Un indicador visual para mostrar el progreso de una tarea o proceso. Puede ser utilizado en situaciones donde se necesite representar visualmente el avance, como en cargas de archivos, procesos de instalación o progreso de tareas.
 - **[Page Progress](/components/page-progress) >** Este componente es utilizado para mostrar el progreso de carga de una página completa. Es ideal para informar a los usuarios sobre el estado de carga de la página, especialmente en sitios web con contenido pesado o en aplicaciones web que requieren tiempo para cargar datos.
 - **[Progress Line](/components/progress/line) >** Es una variante del indicador de progreso que muestra una barra lineal. Se utiliza comúnmente para representar el progreso de manera simple y clara, como en el progreso de descargas o en barras de carga de formularios.
 - **[Progress Circle](/components/progress/circle) >** Este estilo muestra el progreso en un formato circular, lo que es ideal para espacios compactos o para una presentación estética más dinámica, como en dashboards o en interfaces de aplicaciones móviles.
 
 ##
-### Elementos
+### **Elementos**
 
 #### 🅰️ Texto
 
@@ -89,7 +100,12 @@ Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar
 
 - **[Tooltip](/components/tooltip) >** Proporciona información adicional en forma de texto emergente cuando el usuario pasa el cursor sobre un elemento. Ideal para explicar funciones de botones, iconos o para proporcionar detalles adicionales sin sobrecargar la interfaz.
 
-#### 🖼️ Imagenes
+- **[Copy](/components/copy) >** Funcionalidad para copiar texto al portapapeles, útil en interfaces donde los usuarios necesitan replicar información rápidamente, como en aplicaciones de código o datos.
+
+- **[Chronometer](/components/chronometer): >** Mide y muestra tiempo, ideal en aplicaciones de productividad, temporizadores de eventos o para seguimiento de actividades.
+
+##
+#### 🖼️ Imágenes
 
 - **[Img](/components/img) >** Componente para integrar y gestionar imágenes, clave en cualquier interfaz que requiera visualización de imágenes, como blogs, galerías o productos.
 
@@ -101,100 +117,80 @@ Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar
 
 - **[Slider](/components/img-slider) >** Carrusel de imágenes, popular en páginas de inicio, en presentaciones de productos o en portfolios.
 
-##
-#### 📢 Comunicación:
+- **[Media](/components/media/input) >** Este componente se enfoca en la integración y visualización de contenido multimedia, como imágenes, videos y audio, en la interfaz de usuario. Es perfecto para aplicaciones que requieren una manipulación intensiva de medios.
+  - [Media Input](/components/media/input) > Especializado en la carga y entrada de archivos multimedia. Facilita a los usuarios subir sus propios archivos de medios, siendo ideal para plataformas que permiten la personalización del contenido multimedia por parte del usuario.
 
+##
+#### 📢 Comunicación
+
+- **[Counter](/components/counter) >** Contador interactivo, común en carritos de compra, configuraciones de cantidad o en interfaces donde se requiere ajuste numérico.
 - **[Modal](/components/modal) >** Componente para crear ventanas emergentes o diálogos. Utilizado para mostrar información adicional, recolectar datos del usuario o proporcionar alertas y confirmaciones en un contexto sobreimpuesto al contenido principal.
 - **[Notification](/components/notification) >** Este componente se utiliza para mostrar mensajes breves al usuario. Esencial para proporcionar retroalimentación instantánea o alertas sobre acciones o cambios en el estado de la aplicación.
 - **[Notification Pop](/components/notification/pop) >** Una variante de notificación que aparece temporalmente en la pantalla, usualmente en una esquina, y se esconde automáticamente. Ideal para mensajes que no requieren una acción inmediata del usuario.
 - **[Print](/components/print) >** Facilita la impresión de contenido específico desde la aplicación.
-  - [Print Iframe](/components/print/iframe) > Permite imprimir contenido alojado en un iframe, como documentos o reportes generados dinámicamente dentro de la aplicación.
+  - [Print impresaframe](/components/print/iframe) > Permite imprimir contenido alojado en un iframe, como documentos o reportes generados dinámicamente dentro de la aplicación.
   - [Print Page](/components/print/page) > Diseñado para imprimir toda la página o secciones específicas de ella, manteniendo el formato y estilo adecuados para la salida impresa.
+- **[Error Component](/components/error-component) >** Muestra errores o problemas, esencial para una buena experiencia de usuario en la gestión de errores y en la presentación de feedbacks críticos.
 ##
-#### Entradas de texto
+#### ⌨️ Entradas de texto
 
+- **[Form](/components/form) >** Estructura para crear formularios interactivos, fundamental en la recolección de datos, configuraciones de usuario y en interacciones esenciales del usuario.
 - **[Input](/components/input) >** Varios tipos de campos de entrada para formularios, esenciales para cualquier interacción que requiera entrada de datos por parte del usuario.
   - [Card](/components/input/card) > El componente de Input para tarjetas de crédito en Fenext JS es una herramienta especializada para la entrada de información de tarjetas de crédito. Este componente simplifica el proceso de recolección de datos de tarjetas, proporcionando campos específicos para el número de tarjeta, fecha de vencimiento, y código de seguridad (CVV). Es ideal para interfaces de pago o formularios donde se requiere información de tarjetas de crédito, garantizando una experiencia de usuario fluida y segura.
-    - [InputCardCCV](/components/input/card/ccv) >
-    - [InputCardNumber](/components/input/card/number) >
-  - [InputCheckbox](/components/input/checkbox) >
-  - [InputCode](/components/input/code) >
-  - [InputDate](/components/input/date) >
-  - [InputDateRange](/components/input/date-range) >
-  - [InputFile](/components/input/file) >
-  - [InputGallery](/components/input/gallery) >
+    - [Input Card CCV](/components/input/card/ccv) >
+    - [Input Card Number](/components/input/card/number) >
+  - [Input Checkbox](/components/input/checkbox) >
+  - [Input Code](/components/input/code) >
+  - [Input Date](/components/input/date) >
+  - [Input Date Range](/components/input/date-range) >
+  - [Input File](/components/input/file) >
+  - [Input Gallery](/components/input/gallery) >
   - [Google](/components/input/google) >
-    - [InputGoogleAutocomplete](/components/input/google/autocomplete) >
+    - [Input Google Autocomplete](/components/input/google/autocomplete) >
     - [InputGoogleLoadScript](/components/input/google/load-script) >
-    - [InputGoogleMaps](/components/input/google/maps) >
-  - [InputImg](/components/input/img) >
-  - [InputNumber](/components/input/number) >
-  - [InputNumberCount](/components/input/number-count) >
-  - [InputPassword](/components/input/password) >
-  - [InputPhone](/components/input/phone) >
-  - [InputRadio](/components/input/radio) >
-  - [InputRange](/components/input/range) >
-  - [InputRate](/components/input/rate) >
-  - [InputSearch](/components/input/search) >
-  - [InputSelect](/components/input/select) >
-  - [InputSelectCountry](/components/input/select-country) >
-  - [InputSelectCountryMultiple](/components/input/select-country-multiple) >
-  - [InputSelectCSC](/components/input/select-csc) >
-  - [InputSelectMultiple](/components/input/select-multiple) >
-  - [InputSelectNumber](/components/input/select-number) >
-  - [InputSelectOption](/components/input/select-option) >
-  - [InputSwich](/components/input/swich) >
-  - [InputText](/components/input/text) >
-  - [InputTextSelect](/components/input/text-select) >
+    - [Input GoogleMaps](/components/input/google/maps) >
+  - [Input Img](/components/input/img) >
+  - [Input Number](/components/input/number) >
+  - [Input NumberCount](/components/input/number-count) >
+  - [Input Password](/components/input/password) >
+  - [Input Phone](/components/input/phone) >
+  - [Input Radio](/components/input/radio) >
+  - [Input Range](/components/input/range) >
+  - [Input Rate](/components/input/rate) >
+  - [Input Search](/components/input/search) >
+  - [Input Select](/components/input/select) >
+  - [Input Select Country](/components/input/select-country) >
+  - [Input Select Country Multiple](/components/input/select-country-multiple) >
+  - [Input Select CSC](/components/input/select-csc) >
+  - [Input Select Multiple](/components/input/select-multiple) >
+  - [Input Select Number](/components/input/select-number) >
+  - [Input Select Option](/components/input/select-option) >
+  - [Input Swich](/components/input/swich) >
+  - [Input Text](/components/input/text) >
+  - [Input Text Select](/components/input/text-select) >
   - [Unit](/components/input/unit) >
-    - [InputUnitBase](/components/input/unit/base) >
-    - [InputUnitDistance](/components/input/unit/distance) >
-    - [InputUnitVolumen](/components/input/unit/volumen) >
-    - [InputUnitWeight](/components/input/unit/weight) >
-  - [InputUpload](/components/input/upload) >
-
+    - [Input Unit Base](/components/input/unit/base) >
+    - [Input Unit Distance](/components/input/unit/distance) >
+    - [Input Unit Volumen](/components/input/unit/volumen) >
+    - [Input Unit Weight](/components/input/unit/weight) >
+  - [Input Upload](/components/input/upload) >
+##     
+#### 📅 Fechas
+- **[Schedule](/components/schedule) >** Este componente es utilizado para organizar y mostrar eventos o actividades en un calendario. Facilita la planificación y visualización de agendas en aplicaciones o sitios web.
+  - [Schedule Day](/components/schedule/day) > Una variante del componente Schedule enfocada en la visualización diaria. Muestra eventos o tareas programadas para un día específico, ideal para agendas detalladas o itinerarios diarios.
+  - [Schedule Weekly](/components/schedule/weekly) > Se centra en la organización semanal. Presenta una vista de toda la semana, permitiendo a los usuarios ver y planificar actividades a lo largo de varios días. Útil para horarios semanales o planificaciones a mediano plazo.
 ##
-#### Orden
-
-- **[Table](/components/table) >**
+#### 🗒️ Orden
+- **[Table](/components/table) >** El componente Table sirve para mostrar datos en un formato de filas y columnas, facilitando la organización y visualización de información compleja. Es ideal para dashboards, reportes financieros, y listas de datos, donde una representación clara y ordenada es fundamental.
+- **[Drop Down](/components/dropdown) >** Menú desplegable para seleccionar opciones, ampliamente utilizado en formularios, filtros de búsqueda o navegación compacta.
+- **[Chronological List](/components/chronological-list) >** Lista para mostrar eventos o elementos en orden cronológico. Útil en timelines, historiales de transacciones o listados de eventos.
 - **[Collapse](/components/collapse) >** Permite mostrar u ocultar contenido. Utilizado en FAQs, paneles de control con opciones avanzadas o para reducir la sobrecarga visual en interfaces complejas.
   - [Simple](/components/collapse/simple) >  Este componente permite a los usuarios mostrar u ocultar contenido individual con un simple clic. Es ideal para interfaces donde se necesita compactar información, como en secciones de preguntas frecuentes o en paneles de control donde el espacio es limitado.
   - [Multiple](/components/collapse/multiple) >  Similar al Collapse Simple, pero diseñado para manejar múltiples secciones de contenido colapsables simultáneamente. Es útil en interfaces complejas donde varios conjuntos de información necesitan ser accesibles sin abrumar al usuario, como en menús extensos o en paneles de información detallada.
 ##
-- [LavaLamp](/components/lava-lamp)
-
-- [Media](/components/media/input)
-  - [MediaInput](/components/media/input)
-
-- [Schedule](/components/schedule)
-  - [ScheduleDay](/components/schedule/day)
-  - [ScheduleWeekly](/components/schedule/weekly)
-
-- [Share](/components/share)
-
-- [Steps](/components/steps)
-
-
-
-
-
-- [ChronologicalList](/components/chronological-list): Lista para mostrar eventos o elementos en orden cronológico. Útil en timelines, historiales de transacciones o listados de eventos.
-
-- [Chronometer](/components/chronometer): Mide y muestra tiempo, ideal en aplicaciones de productividad, temporizadores de eventos o para seguimiento de actividades.
-
-- [ContentShow](/components/content-show): Mostrar contenido de manera condicional, ideal para interfaces dinámicas donde el contenido depende de ciertas condiciones o selecciones del usuario.
-
-- [Copy](/components/copy): Funcionalidad para copiar texto al portapapeles, útil en interfaces donde los usuarios necesitan replicar información rápidamente, como en aplicaciones de código o datos.
-
-- [Counter](/components/counter): Contador interactivo, común en carritos de compra, configuraciones de cantidad o en interfaces donde se requiere ajuste numérico.
-
-- [DropDown](/components/dropdown): Menú desplegable para seleccionar opciones, ampliamente utilizado en formularios, filtros de búsqueda o navegación compacta.
-
-- [ErrorComponent](/components/error-component): Muestra errores o problemas, esencial para una buena experiencia de usuario en la gestión de errores y en la presentación de feedbacks críticos.
-
-- [Form](/components/form): Estructura para crear formularios interactivos, fundamental en la recolección de datos, configuraciones de usuario y en interacciones esenciales del usuario.
-
-- [User profile](/components/user)
+#### 👑 Lujo
+- **[Lava Lamp](/components/lava-lamp) >** El componente Lava Lamp añade un efecto visual fluido y colorido a interfaces, ideal para realzar la estética y captar la atención del usuario.
+##
 
 ### Instalacion independiente
 
