@@ -12,15 +12,15 @@ Bienvenidos a [Fenext JS](https://www.npmjs.com/package/fenextjs), una librería
 - **Personalización a Medida:** Flexibilidad para adaptar cada componente a las necesidades específicas de tu proyecto.
 - **Hooks Propios:** Funcionalidades avanzadas con hooks personalizados, facilitando tareas complejas y mejorando el rendimiento.
 
-                + [Componentes](/components)
-                + [Errores](/error)
-                + [Funciones](/function)
-                + [Funciones para Firebase](/firebase)
-                + [Hooks personalizados](/hook)
-                + [Imágenes para placeholder](/img-placeholder)
-                + [Interfaces](/interface)
-                + [Validadores](/vaidator)
-                + [SVG's para iconos y animaciones](/svg)
+    + [Componentes](/components)
+    + [Errores](/error)
+    + [Funciones](/function)
+    + [Funciones para Firebase](/firebase)
+    + [Hooks personalizados](/hook)
+    + [Imágenes para placeholder](/img-placeholder)
+    + [Interfaces](/interface)
+    + [Validadores](/vaidator)
+    + [SVG's para iconos y animaciones](/svg)
 
 ## Instalación, cómo empezar:
 
