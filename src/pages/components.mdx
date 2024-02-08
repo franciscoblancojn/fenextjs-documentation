@@ -1,37 +1,140 @@
 # Componentes
 
-Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar tiempo en el desarrollo de funcionalidades, para solo consentrarce en los estilos de los componentes
+#### Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar tiempo en el desarrollo de funcionalidades, para solo consentrarce en los estilos de los componentes
 
-### Lista de componentes disponibles
+#### **Lista de componentes disponibles** csategorizados de la siguiente manera >>>
+               - **Estructurales**
+                    - Configuración
+                    - Forma
+               - **Navegación**
+                    - **Usabilidad**
+                    - **Carga**
+                    - **Progreso**
+                    - **Comunicacion**
+               - **Elementos**
+                    - **Texto**
+                    - **Imagenes**
+                    - **Entradas de texto**
+                    - **Comunicacion**
+          
+##
 
-- [Back](/components/back)
-- [Box](/components/box)
-- [Breadcrumb](/components/breadcrumb)
-- [Button](/components/button)
-- [ChronologicalList](/components/chronological-list)
-- [Chronometer](/components/chronometer)
-- [Collapse](/components/collapse)
-  - [Simple](/components/collapse/simple)
-  - [Multiple](/components/collapse/multiple)
-- [Cols](/components/cols)
-- [Container](/components/container)
-- [ContentLoading](/components/content-loading)
-- [ContentShow](/components/content-show)
-- [Copy](/components/copy)
-- [Counter](/components/counter)
-- [DropDown](/components/dropdown)
-- [ErrorComponent](/components/error-component)
-- [Form](/components/form)
-- [GridGallery](/components/grid-gallery)
-- [Header](/components/header)
-  - [ButtonMenu](/components/header/button-menu)
-  - [ItemMenu](/components/header/item-menu)
-  - [Menu](/components/header/menu)
-- [Img](/components/img)
-- [ImgGallery](/components/img-gallery)
-- [ImgSlider](/components/img-slider)
-- [Input](/components/input)
-  - [Card](/components/input/card)
+### **Estucturales** 
+
+#### Configuración :
+- **[Theme](/components/theme) >** El componente de Theme permite definir y aplicar un conjunto coherente de estilos y paletas de colores en toda la aplicación. Es fundamental para mantener la consistencia visual y para implementar fácilmente cambios de temas o modos (como claro/oscuro).
+ 
+- **[Layout](/components/layout) >** Proporciona estructuras predeterminadas para el diseño de páginas.
+    - **[LayoutGridMenuLeft](/components/layout/layout-grid-menu-left) >** Organiza la página con un menú lateral a la izquierda, optimizando el uso del espacio y facilitando la navegación en la aplicación.
+    - **[LayoutGridMenuTop](/components/layout/layout-grid-menu-top) >** Presenta un diseño con un menú en la parte superior, adecuado para aplicaciones con enfoque en la horizontalidad y accesibilidad rápida a diferentes secciones.
+    - **[LayoutGridMenuTopLeft](/components/layout/layout-grid-menu-top-left) >** Combina ambas disposiciones, con menús tanto en la parte superior como en el lado izquierdo, proporcionando una estructura de navegación robusta y flexible para aplicaciones complejas o sitios web.
+
+#### Forma :
+
+- **[Header](/components/header) >** Cabecera de sitio o aplicación, incluye navegación y elementos clave de UI como logos, menús o controles de usuario.
+
+- **[Container](/components/container) >** Contenedor básico para alinear y organizar elementos, esencial en el diseño web responsivo y en la estandarización de layouts.
+
+- **[Box](/components/box) >** Contenedor genérico para UI, útil para agrupar elementos relacionados visualmente, como en dashboards o en la agrupación de formularios.
+
+- **[Columns](/components/cols) >** Estructura para diseño de columnas, fundamental en layouts responsivos o para organizar contenido en secciones claramente definidas.
+
+- **[TwoColSticky](/components/two-col-sticky) >** ste componente estructura la página en dos columnas, con una de ellas fija ("sticky") que permanece visible mientras se desplaza la otra. Es ideal para diseños que requieren una navegación constante o elementos de referencia, como menús laterales o dashboards con filtros.
+
+##
+### **Navegación**
+
+#### Usabilidad :
+
+- **[Menu](/components/header/menu) >** El componente Menu actúa como el contenedor para un conjunto de ItemMenu o enlaces de navegación. Es esencial para la creación de barras de navegación, menús desplegables o paneles laterales, organizando las opciones de navegación de manera estructurada y coherente.
+      - **[Button Menu](/components/header/button-menu) >** Este componente es un botón interactivo diseñado para activar o desplegar un menú de navegación. Es ideal para interfaces que requieren menús compactos, especialmente en diseños responsivos o en aplicaciones móviles.
+      - **[Item Menu](/components/header/item-menu)>** Representa un elemento individual dentro de un menú. Cada ItemMenu es un enlace o acción en la lista de navegación, permitiendo una organización clara y accesible de las opciones del menú.
+
+- **[Back](/components/back) >** Botón para retroceder en el flujo del usuario. Comúnmente usado en aplicaciones con múltiples niveles de navegación o en flujos de trabajo paso a paso.
+
+- **[Breadcrumb](/components/breadcrumb) >** Indicador de la ruta de navegación actual. Esencial en sitios web con estructura jerárquica profunda, como tiendas en línea o sitios de contenido.
+
+- **[Button](/components/button) >** Elemento interactivo para acciones de usuario, como enviar formularios, abrir ventanas modales o activar funciones. Clave en cualquier interfaz interactiva.
+
+- **[Link](/components/link) >** Navegación interna o externa, fundamental en cualquier interfaz para conectar diferentes áreas o recursos. 
+
+- **[Pagination](/components/pagination) >** Navegación por páginas de contenido, esencial en sitios con listados largos como blogs, catálogos de productos o bases de datos.
+  - **[Pagination All](/components/pagination/all) >** Este componente de paginación está diseñado para mostrar todas las páginas disponibles en una interfaz, permitiendo a los usuarios saltar directamente a cualquier página. Es útil en situaciones donde se necesita un acceso rápido a páginas específicas en un conjunto de datos extenso.
+  - **[Pagination Page](/components/pagination/n-page) >** Un componente de paginación que muestra un número determinado de páginas alrededor de la página actual, con opciones para avanzar hacia adelante y atrás. Este enfoque es ideal para conjuntos de datos grandes, donde mostrar todas las páginas a la vez puede ser abrumador o poco práctico. 
+  - **[Pagination Item Page](/components/pagination/item-page) >** Representa un elemento individual en un sistema de paginación. Cada ItemPage es un enlace a una página específica, permitiendo la navegación precisa dentro de un conjunto de datos o contenido paginado.
+
+#### Carga :
+
+- **[Loader](/components/loader):** Indicadores de carga para procesos o cargas de contenido, mejoran la experiencia de
+  - **[Loader Progress Line](/components/loader/line):** Este componente muestra una barra de progreso horizontal que se llena gradualmente para indicar el avance de una tarea o carga. Es ideal para procesos donde se puede determinar el progreso, como la carga de archivos o el envío de formularios.
+  - **[Loader Spinner](/components/loader/spinner):** Un indicador circular o 'spinner' que gira para mostrar que una operación está en curso. Es ampliamente utilizado en aplicaciones y sitios web durante la espera de procesos que no tienen un tiempo de finalización definido, como la carga de datos desde un servidor.
+  - **[Loader Skeleton](/components/loader/user):** Este loader simula la disposición del contenido antes de que se cargue completamente, usando líneas o formas en el lugar donde aparecerá el contenido real. Es efectivo para mejorar la experiencia del usuario durante la carga de páginas, reduciendo la percepción de espera y manteniendo la estructura visual de la página.
+- **[Content Loading](/components/content-loading):** Indica el estado de carga del contenido, mejorando la experiencia del usuario en cargas asincrónicas o en espera de datos.
+
+#### Progreso:
+- **[Page Progress](/components/page-progress):** Este componente es utilizado para mostrar el progreso de carga de una página completa. Es ideal para informar a los usuarios sobre el estado de carga de la página, especialmente en sitios web con contenido pesado o en aplicaciones web que requieren tiempo para cargar datos.
+- **[Progress](/components/progress)**: Un indicador visual para mostrar el progreso de una tarea o proceso. Puede ser utilizado en situaciones donde se necesite representar visualmente el avance, como en cargas de archivos, procesos de instalación o progreso de tareas.
+- **[Progress Line](/components/progress/line)**: Es una variante del indicador de progreso que muestra una barra lineal. Se utiliza comúnmente para representar el progreso de manera simple y clara, como en el progreso de descargas o en barras de carga de formularios.
+- **[Progress Circle](/components/progress/circle)**: Este estilo muestra el progreso en un formato circular, lo que es ideal para espacios compactos o para una presentación estética más dinámica, como en dashboards o en interfaces de aplicaciones móviles.
+
+#### Comunicación:
+
+- **[Modal](/components/modal):** Componente para crear ventanas emergentes o diálogos. Utilizado para mostrar información adicional, recolectar datos del usuario o proporcionar alertas y confirmaciones en un contexto sobreimpuesto al contenido principal.
+- **[Notification](/components/notification):** Este componente se utiliza para mostrar mensajes breves al usuario. Esencial para proporcionar retroalimentación instantánea o alertas sobre acciones o cambios en el estado de la aplicación.
+- **[NotificationPop](/components/notification/pop):** 
+
+
+- [Print](/components/print)
+  - [PrintIframe](/components/print/iframe)
+  - [PrintPage](/components/print/page)
+
+##
+
+-
+- [ChronologicalList](/components/chronological-list): Lista para mostrar eventos o elementos en orden cronológico. Útil en timelines, historiales de transacciones o listados de eventos.
+
+- [Chronometer](/components/chronometer): Mide y muestra tiempo, ideal en aplicaciones de productividad, temporizadores de eventos o para seguimiento de actividades.
+
+- [ContentShow](/components/content-show): Mostrar contenido de manera condicional, ideal para interfaces dinámicas donde el contenido depende de ciertas condiciones o selecciones del usuario.
+
+- [Copy](/components/copy): Funcionalidad para copiar texto al portapapeles, útil en interfaces donde los usuarios necesitan replicar información rápidamente, como en aplicaciones de código o datos.
+
+- [Counter](/components/counter): Contador interactivo, común en carritos de compra, configuraciones de cantidad o en interfaces donde se requiere ajuste numérico.
+
+- [DropDown](/components/dropdown): Menú desplegable para seleccionar opciones, ampliamente utilizado en formularios, filtros de búsqueda o navegación compacta.
+
+- [ErrorComponent](/components/error-component): Muestra errores o problemas, esencial para una buena experiencia de usuario en la gestión de errores y en la presentación de feedbacks críticos.
+
+- [Form](/components/form): Estructura para crear formularios interactivos, fundamental en la recolección de datos, configuraciones de usuario y en interacciones esenciales del usuario.
+
+##
+### Elementos ------------------------------
+
+### Texto
+
+- [Title](/components/title)
+
+- [Text](/components/text)
+
+- [Tooltip](/components/tooltip)
+
+#### Imagenes
+
+- [Img](/components/img): Componente para integrar y gestionar imágenes, clave en cualquier interfaz que requiera visualización de imágenes, como blogs, galerías o productos.
+
+- [Grid Gallery](/components/grid-gallery): Presenta imágenes o contenido en formato de cuadrícula, ideal para portfolios, catálogos de productos o galerías de medios.s
+
+- [Gallery](/components/img-gallery): Galería para mostrar colecciones de imágenes, usada en sitios de fotografía, portafolios de diseño o catálogos de productos.
+
+- [Slider](/components/img-slider): Carrusel de imágenes, popular en páginas de inicio, en presentaciones de productos o en portfolios.
+
+- [Slider](/components/slider): 
+
+##
+#### Entradas de texto
+
+- [Input](/components/input): Varios tipos de campos de entrada para formularios, esenciales para cualquier interacción que requiera entrada de datos por parte del usuario.
+  - [Card](/components/input/card): El componente de Input para tarjetas de crédito en Fenext JS es una herramienta especializada para la entrada de información de tarjetas de crédito. Este componente simplifica el proceso de recolección de datos de tarjetas, proporcionando campos específicos para el número de tarjeta, fecha de vencimiento, y código de seguridad (CVV). Es ideal para interfaces de pago o formularios donde se requiere información de tarjetas de crédito, garantizando una experiencia de usuario fluida y segura.
     - [InputCardCCV](/components/input/card/ccv)
     - [InputCardNumber](/components/input/card/number)
   - [InputCheckbox](/components/input/checkbox)
@@ -69,46 +172,44 @@ Fenextjs posee componentes para implementar en Nextjs con el objetivo de ahorrar
     - [InputUnitVolumen](/components/input/unit/volumen)
     - [InputUnitWeight](/components/input/unit/weight)
   - [InputUpload](/components/input/upload)
+- [Collapse](/components/collapse): Permite mostrar u ocultar contenido. Utilizado en FAQs, paneles de control con opciones avanzadas o para reducir la sobrecarga visual en interfaces complejas.
+  - [Simple](/components/collapse/simple): Este componente permite a los usuarios mostrar u ocultar contenido individual con un simple clic. Es ideal para interfaces donde se necesita compactar información, como en secciones de preguntas frecuentes o en paneles de control donde el espacio es limitado.
+  - [Multiple](/components/collapse/multiple): Similar al Collapse Simple, pero diseñado para manejar múltiples secciones de contenido colapsables simultáneamente. Es útil en interfaces complejas donde varios conjuntos de información necesitan ser accesibles sin abrumar al usuario, como en menús extensos o en paneles de información detallada.
+
+
+
+##
 - [LavaLamp](/components/lava-lamp)
-- [Layout](/components/layout)
-  - [LayoutGridMenuLeft](/components/layout/layout-grid-menu-left)
-  - [LayoutGridMenuTop](/components/layout/layout-grid-menu-top)
-  - [LayoutGridMenuTopLeft](/components/layout/layout-grid-menu-top-left)
-- [Link](/components/link)
-- [Loader](/components/loader)
-  - [LoaderLine](/components/loader/line)
-  - [LoaderSpinner](/components/loader/spinner)
-  - [LoaderUser](/components/loader/user)
+
+
+
+
+
 - [Media](/components/media/input)
   - [MediaInput](/components/media/input)
-- [Modal](/components/modal)
-  - [ModalBase](/components/modal/base)
-- [Notification](/components/notification)
-  - [NotificationPop](/components/notification/pop)
-- [PageProgress](/components/page-progress)
-- [Pagination](/components/pagination)
-  - [PaginationAll](/components/pagination/all)
-  - [PaginationItemPage](/components/pagination/item-page)
-  - [PaginationNPage](/components/pagination/n-page)
-- [Print](/components/print)
-  - [PrintIframe](/components/print/iframe)
-  - [PrintPage](/components/print/page)
-- [Progress](/components/progress)
-  - [ProgressLine](/components/progress/line)
-  - [ProgressCircle](/components/progress/circle)
+
+
+
+
 - [Schedule](/components/schedule)
   - [ScheduleDay](/components/schedule/day)
   - [ScheduleWeekly](/components/schedule/weekly)
+
 - [Share](/components/share)
-- [Slider](/components/slider)
+
 - [Steps](/components/steps)
+
 - [Tab](/components/tab)
+
 - [Table](/components/table)
-- [Text](/components/text)
-- [Theme](/components/theme)
-- [Title](/components/title)
-- [Tooltip](/components/tooltip)
-- [TwoColSticky](/components/two-col-sticky)
+
+
+
+
+
+
+
+
 - [User](/components/user)
 
 ### Instalacion independiente
