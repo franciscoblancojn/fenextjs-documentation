@@ -5,12 +5,8 @@ import { Logo } from "./src/components/Logo";
 const config: DocsThemeConfig = {
   logo: <span><Logo/></span>,
   project: {
-    link: "https://github.com/shuding/nextra-docs-template",
+    link: "https://github.com/franciscoblancojn/fenextjs",
   },
-  // chat: {
-  //   link: 'https://discord.com',
-  // },
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
   footer: {
     text: <Logo/>,
   },
