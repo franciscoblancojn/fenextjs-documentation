@@ -12,7 +12,7 @@ const config: DocsThemeConfig = {
   // },
   docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
   footer: {
-    text: "Fenextjs",
+    text: <Logo/>,
   },
   
 };
