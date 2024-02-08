@@ -1,13 +1,12 @@
-
-import "../../styles/index.css"
-import { AppProps } from 'next/app';
+import "../../styles/index.css";
+import { AppProps } from "next/app";
 
 function CustomApp({ Component, pageProps }: AppProps) {
-    return (
-        <>
-        <Component {...pageProps} />
-        </>
-    );
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default CustomApp;

@@ -1,16 +1,17 @@
 export interface LogoProps {
-  className?:string
+  className?: string;
 }
 
-export const Logo = ({className=""}: LogoProps) => {
+export const Logo = ({ className = "" }: LogoProps) => {
   return (
     <>
       <svg
-        className={`logo ${className}`}        viewBox="0 0 60 13"
+        className={`logo ${className}`}
+        viewBox="0 0 60 13"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect width="21" height="13" rx="3"  fill="var(--color-2)"/>
+        <rect width="21" height="13" rx="3" fill="var(--color-2)" />
         <path
           d="M3.5625 11V2.27273H9.69886V4.18182H5.93182V5.68182H9.32386V7.59091H5.93182V11H3.5625ZM9.85031 11V2.27273H16.1401V4.18182H12.2196V5.68182H15.8162V7.59091H12.2196V9.09091H16.123V11H9.85031Z"
           fill="var(--color-1)"
