@@ -4,11 +4,11 @@ import { Iframe } from "../../components/Iframe";
 
 El componente Table es un componente que muestra una tabla con columnas y filas personalizadas.
 
-### Ejemplo
+### Ejemplo:
 
 <Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=table-table--index&viewMode=story" />
 
-### Importacion
+### Importación
 
 Para importar el componente Table, se puede hacer desde fenextjs o fenextjs-component
 
@@ -22,9 +22,9 @@ o
 import { Table, TableProps } from "fenextjs-component/cjs/Table";
 ```
 
-### Parametros
+### Parámetros:
 
-| Parametro      |                           Tipo                            | Requerido | Default | Descripcion                                                                     |
+| Parámetro      |                           Tipo                            | Requerido | Default | Descripción                                                                     |
 | -------------- | :-------------------------------------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------ |
 | \_t            |                         `string`                          |    No     |         | Propiedad de internacionalización.                                              |
 | name           |                         `string`                          |    Sí     |         | Nombre de la tabla.                                                             |
@@ -42,7 +42,7 @@ import { Table, TableProps } from "fenextjs-component/cjs/Table";
 
 #### TableHeader
 
-| Parametro         |                       Tipo                        | Requerido | Default | Descripcion                                                                                                                                                                               |
+| Parámetro         |                       Tipo                        | Requerido | Default | Descripción                                                                                                                                                                               |
 | ----------------- | :-----------------------------------------------: | :-------: | :-----: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id                |              `keyof T` (clave de T)               |    Sí     |         | Clave de propiedad en el objeto de datos que corresponde a esta columna de encabezado.                                                                                                    |
 | th                |          `React.ReactNode` (nodo React)           |    Sí     |         | Etiqueta a mostrar en la columna de encabezado.                                                                                                                                           |

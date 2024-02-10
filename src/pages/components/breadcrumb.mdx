@@ -4,11 +4,11 @@ import { Iframe } from "../../components/Iframe";
 
 El componente Breadcrumb es una representación visual de una lista de enlaces que proporcionan una navegación jerárquica en una aplicación web. Cada enlace en la lista se muestra con una etiqueta "a" que permite redirigir al usuario a la URL especificada.
 
-### Ejemplo
+### Ejemplo:
 
 <Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=breadcrumb-breadcrumb--index&viewMode=story" />
 
-### Importacion
+### Importación
 
 Para importar el componente Breadcrumb, se puede hacer desde fenextjs o fenextjs-component
 
@@ -22,18 +22,18 @@ o
 import { Breadcrumb, BreadcrumbProps } from "fenextjs-component/cjs/Breadcrumb";
 ```
 
-### Parametros
+### Parámetros:
 
-| Parametro     |                                 Tipo                                  | Requerido | Default | Descripcion                        |
+| Parámetro     |                                 Tipo                                  | Requerido | Default | Descripción                        |
 | ------------- | :-------------------------------------------------------------------: | :-------: | :-----: | :--------------------------------- |
-| links         | [BreadcrumbLinkProps[]](#parametros-de-los-links-breadcrumblinkprops) |    si     |         | Lista de links para el componente  |
+| links         | [BreadcrumbLinkProps[]](#Parámetros:-de-los-links-breadcrumblinkprops) |    si     |         | Lista de links para el componente  |
 | className     |                                string                                 |    no     |   ""    | Clase personalizada del componente |
 | classNameItem |                                string                                 |    no     |   ""    | Clase personalizada de los items   |
 | classNameLink |                                string                                 |    no     |   ""    | Clase personalizada de los links   |
 
-### Parametros de los links (BreadcrumbLinkProps)
+### Parámetros: de los links (BreadcrumbLinkProps)
 
-| Parametro |   Tipo    | Requerido | Default | Descripcion                                          |
+| Parámetro |   Tipo    | Requerido | Default | Descripción                                          |
 | --------- | :-------: | :-------: | :-----: | :--------------------------------------------------- |
 | href      |  string   |    si     |         | Url del link                                         |
 | children  | ReactNode |    si     |         | Contenido del link                                   |

@@ -4,11 +4,11 @@ import { Iframe } from "../../components/Iframe";
 
 El componente TwoColSticky es un componente que muestra un dos columnas con una de ellas sticky.
 
-### Ejemplo
+### Ejemplo:
 
 <Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=user-user--index&viewMode=story" />
 
-### Importacion
+### Importación
 
 Para importar el componente TwoColSticky, se puede hacer desde fenextjs o fenextjs-component
 
@@ -28,16 +28,16 @@ import {
 } from "fenextjs-component/cjs/TwoColSticky";
 ```
 
-### Parametros
+### Parámetros:
 
-| Propiedad |             Tipo              | Requerido | Descripcion                                                                         |
+| Propiedad |             Tipo              | Requerido | Descripción                                                                         |
 | --------- | :---------------------------: | :-------: | :---------------------------------------------------------------------------------- |
 | user      | `Partial<UserInterfaceProps>` |    Sí     | Datos parciales del usuario (`Partial<UserInterfaceProps>`).                        |
 | loader    |           `boolean`           |    No     | Indica si se debe mostrar un cargador mientras se carga la información del usuario. |
 
 #### UserInterfaceProps
 
-| Propiedad  |                        Tipo                         | Requerido | Descripcion                                                                           |
+| Propiedad  |                        Tipo                         | Requerido | Descripción                                                                           |
 | ---------- | :-------------------------------------------------: | :-------: | :------------------------------------------------------------------------------------ |
 | status     |                  `UserStatusProps`                  |    Sí     | Estado del usuario. Puede ser VERIFY, NOVERIFY, BAN o PENDING.                        |
 | id         |                      `string`                       |    Sí     | Identificador único del usuario.                                                      |
