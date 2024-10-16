@@ -25,7 +25,9 @@
     "remove": "npm run remove-node-module && npm run remove-bun-lockb",
     "update-package": "ncu -u !next",
     "update": "npm run update-package && npm run remove && npm run bun-i && npm run flb",
-    "u": "npm run update"
+    "u": "npm run update",
+
+    "generate" :"bun ./src/scripts/generateDoc.tsx"
   },
   "repository": {
     "type": "git",
