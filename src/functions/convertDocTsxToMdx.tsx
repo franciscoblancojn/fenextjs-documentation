@@ -37,7 +37,7 @@ export function convertDocTsxToMdx(docTsx: any): string {
                 mdxContent += `| ${Object.keys(extra.tableItems[0]).join(" | ")} |\n`;
                 mdxContent += `| ${Object.keys(extra.tableItems[0]).map(() => "---").join(" | ")} |\n`;
                 extra.tableItems.forEach((item: any) => {
-                    mdxContent +=fixCharacter( `| ${Object.values(item).join(" | ")} |\n`);
+                    mdxContent +=( `| ${Object.values(item).map(fixCharacter).join(" | ")} |\n`);
                 });
             }
         });
