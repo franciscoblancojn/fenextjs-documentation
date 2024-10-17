@@ -1,0 +1,55 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# DropDown
+
+El componente DropDown proporciona un menú desplegable ajustable que puede cambiar su posición según el espacio disponible alrededor del contenedor.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-dropdown--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente DropDown, se puede hacer desde fenextjs
+
+```tsx copy
+import { DropDown } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| show | 'focus' \| 'click' \| 'always' | no | 'focus' | Controla cuándo se muestra el menú desplegable. |
+| classNameDropDown | string | no | '' | Clase CSS para personalizar el contenedor del DropDown. |
+| children | ReactNode | no | undefined | Contenido que se muestra dentro del menú desplegable. |
+
+### Ajustes Espaciales
+
+El componente DropDown ajusta su posición automáticamente según el espacio disponible en su contenedor. Los posibles ajustes son:
+
+| Dirección | Descripcion |
+| --- | --- |
+| left | El DropDown se alinea a la izquierda si hay más espacio disponible. |
+| right | El DropDown se alinea a la derecha si hay más espacio disponible. |
+| up | El DropDown se despliega hacia arriba si hay más espacio disponible arriba. |
+| down | El DropDown se despliega hacia abajo si hay más espacio disponible abajo. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-dropdown--index)
+
+### Usos
+
+- Básico
+
+```tsx copy
+<DropDown>Contenido desplegable</DropDown>
+```
+
+- DropDown siempre visible
+
+```tsx copy
+<DropDown show="always">Contenido siempre visible</DropDown>
+```
+
