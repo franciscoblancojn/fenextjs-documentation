@@ -2,11 +2,12 @@ import { convertDocTsxToMdx } from "../functions/convertDocTsxToMdx"
 
 
 const onGenerateDocComponents = async () => {
+    const Bun_ = eval("Bun")
     console.log("---------------------------");
     console.log("Init generate Components" );
     console.log("---------------------------");
 
-    const glob = new Bun.Glob("**/_.doc.tsx");
+    const glob = new Bun_.Glob("**/_.doc.tsx");
 
     const URL_BASE= "../fenextjs-component/src"
 
@@ -18,7 +19,7 @@ const onGenerateDocComponents = async () => {
 
         let FILEDOC = `./src/pages/components-2/${path}`.replaceAll("/_.doc.tsx",".mdx")
 
-        await Bun.write(FILEDOC, mdx);
+        await Bun_.write(FILEDOC, mdx);
     }
 
   console.log("---------------------------");
