@@ -1,0 +1,64 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# ChatMessage
+
+El componente ChatMessage es una representación de un mensaje de chat, mostrando el usuario, mensaje, hora de creación y su estado, con opciones de personalización para el estilo y comportamiento.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-chat-message--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente ChatMessage, se puede hacer desde fenextjs
+
+```tsx copy
+import { ChatMessage } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| id | string | number | sí | undefined | Identificador único del mensaje. |
+| loader | boolean | no | false | Indica si el componente está en estado de carga, mostrando placeholders en lugar de contenido. |
+| right | boolean | no | false | Define si el mensaje debe alinearse a la derecha, generalmente para mensajes propios. |
+| account | Partial\<UserProps\> | no | undefined | Propiedades parciales del usuario que envía el mensaje, incluyendo nombre e imagen de perfil. |
+| message | ReactNode | no | undefined | El contenido del mensaje, puede ser texto o cualquier nodo de React. |
+| createdAt | Date | no | undefined | Fecha y hora en la que fue creado el mensaje. |
+| view | boolean | no | false | Indica si el mensaje ha sido visto o no. |
+| imgProps | Partial\<ImgProps\> | no | \{ imgIf404: FenextImgUserPlaceholder \} | Propiedades adicionales para el componente Img que se utiliza para mostrar la imagen del usuario. |
+
+### Alineación del mensaje
+
+El componente permite alinear el mensaje hacia la derecha o izquierda basado en el prop `right`.
+
+| Prop `right` | Alineación | Descripción |
+| --- | --- | --- |
+| false | Izquierda | El mensaje se muestra alineado a la izquierda, típico de mensajes recibidos. |
+| true | Derecha | El mensaje se muestra alineado a la derecha, típico de mensajes enviados por el usuario. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-chat-message--index)
+
+### Usos
+
+- Mensaje básico
+
+```tsx copy
+<ChatMessage id={1} message="Hola" createdAt={new Date()} account={{ name: "Usuario" }} />
+```
+
+- Mensaje alineado a la derecha
+
+```tsx copy
+<ChatMessage id={2} message="Hola, soy yo" right={true} createdAt={new Date()} account={{ name: "Yo" }} />
+```
+
+- Mensaje en estado de carga
+
+```tsx copy
+<ChatMessage id={3} loader={true} />
+```
+

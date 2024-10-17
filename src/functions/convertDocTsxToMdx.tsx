@@ -8,7 +8,7 @@ export function convertDocTsxToMdx(docTsx: any): string {
     let mdxContent = `import { Iframe } from "@/components/Iframe"; \n\n# ${name}\n\n${description}\n\n`;
 
     const URL_STORYBOOK_IFRAME = BASE_URL_STORYBOOK_IFRAME + docTsx.idStorybook + "--index"
-    const URL_STORYBOOK = BASE_URL_STORYBOOK+ docTsx.idStorybook + "--index"
+    const URL_STORYBOOK = BASE_URL_STORYBOOK + docTsx.idStorybook + "--index"
     // Sección de Ejemplo (puede ser estática)
     mdxContent += `### Ejemplo\n\n<Iframe src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
 
@@ -22,19 +22,24 @@ export function convertDocTsxToMdx(docTsx: any): string {
     mdxContent += `| Parametro | Tipo | Requerido | Default | Descripcion |\n`;
     mdxContent += `| --------- | ---- | --------- | ------- | ----------- |\n`;
 
+
+    const fixCharacter = (d:string)=>`${d}`.replaceAll("}", "\\}").replaceAll("{", "\\{").replaceAll("<", "\\<").replaceAll(">", "\\>")
+
     props.forEach((prop: any) => {
-        mdxContent += `| ${prop.id} | ${prop.type} | ${prop.require ? "sí" : "no"} | ${prop.default || ""} | ${prop.description} |\n`.replaceAll("<","\\<").replaceAll(">","\\>");;
+        mdxContent += `| ${prop.id} | ${prop.type} | ${prop.require ? "sí" : "no"} | ${fixCharacter(prop.default || "")} | ${prop.description} |\n`.replaceAll("<", "\\<").replaceAll(">", "\\>");;
     });
 
     // Sección de Extras (Redireccionamiento)
     if (extras && extras.length > 0) {
         extras.forEach((extra: any) => {
             mdxContent += `\n### ${extra.title}\n\n${extra.description}\n\n`;
-            mdxContent += `| ${Object.keys(extra.tableItems[0]).join(" | ")} |\n`;
-            mdxContent += `| ${Object.keys(extra.tableItems[0]).map(() => "---").join(" | ")} |\n`;
-            extra.tableItems.forEach((item: any) => {
-                mdxContent += `| ${Object.values(item).join(" | ")} |\n`.replaceAll("<","\\<").replaceAll(">","\\>");
-            });
+            if (extra.tableItems && extra.tableItems.length > 0) {
+                mdxContent += `| ${Object.keys(extra.tableItems[0]).join(" | ")} |\n`;
+                mdxContent += `| ${Object.keys(extra.tableItems[0]).map(() => "---").join(" | ")} |\n`;
+                extra.tableItems.forEach((item: any) => {
+                    mdxContent +=fixCharacter( `| ${Object.values(item).join(" | ")} |\n`);
+                });
+            }
         });
     }
 
