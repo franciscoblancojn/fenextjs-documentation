@@ -23,7 +23,7 @@ export function convertDocTsxToMdx(docTsx: any): string {
     mdxContent += `| --------- | ---- | --------- | ------- | ----------- |\n`;
 
 
-    const fixCharacter = (d:string)=>`${d}`.replaceAll("}", "\\}").replaceAll("{", "\\{").replaceAll("<", "\\<").replaceAll(">", "\\>")
+    const fixCharacter = (d:string)=>`${d}`.replaceAll("}", "\\}").replaceAll("{", "\\{").replaceAll("<", "\<").replaceAll(">", "\>")
 
     props.forEach((prop: any) => {
         mdxContent += `| ${prop.id} | ${prop.type} | ${prop.require ? "sí" : "no"} | ${fixCharacter(prop.default || "")} | ${prop.description} |\n`.replaceAll("<", "\\<").replaceAll(">", "\\>");;
