@@ -24,8 +24,8 @@ import { Chat } from "fenextjs";
 | useAccountOwner | boolean | no | false | Si se debe mostrar al dueño de la cuenta en el chat. |
 | onScrollIfNewMessage | boolean | no | true | Si se debe hacer scroll automáticamente cuando hay un nuevo mensaje. |
 | onActionAfterNewMessage | () =\> void | no |  | Función que se ejecuta después de recibir un nuevo mensaje. |
-| empty | ReactNode | no | \\<Text\\>There is not messages yet\\</Text\\>\\<Telegram /\\> | Contenido que se mostrará si no hay mensajes en el chat. |
-| chatUser | ChatUserProps | ChatUserProps[] | sí |  | Información del usuario o usuarios del chat. |
+| empty | ReactNode | no | \<Text\>There is not messages yet\</Text\>\<Telegram /\> | Contenido que se mostrará si no hay mensajes en el chat. |
+| chatUser | ChatUserProps \| ChatUserProps[] | sí |  | Información del usuario o usuarios del chat. |
 | loaderChatUser | boolean | no | false | Si el usuario del chat está en estado de carga. |
 | chatMessage | ChatMessageProps[] | sí |  | Lista de mensajes del chat. |
 | loaderChatMessage | boolean | no | false | Si los mensajes del chat están en estado de carga. |

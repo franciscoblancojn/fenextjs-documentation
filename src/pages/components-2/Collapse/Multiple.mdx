@@ -20,10 +20,10 @@ import { CollapseMultiple } from "fenextjs";
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
-| items | Omit\<CollapseBaseProps, 'checkbox' | 'name' | 'id'\>[] | no |  | Lista de items que se mostrarán como componentes Collapse dentro de CollapseMultiple. |
-| defaultActive | number | number[] | no | [] | Índice(s) de los elementos que estarán activados por defecto. |
+| items | Omit\<CollapseBaseProps, 'checkbox' \| 'name' \| 'id'\>[] | no |  | Lista de items que se mostrarán como componentes Collapse dentro de CollapseMultiple. |
+| defaultActive | number \| number[] | no | [] | Índice(s) de los elementos que estarán activados por defecto. |
 | name | string | no | '' | Nombre del conjunto de Collapse, utilizado para agrupar los items. |
-| type | 'radio' | 'checkbox' | no | 'checkbox' | Determina si los items se comportarán como un conjunto de tipo 'radio' o 'checkbox'. |
+| type | 'radio' \| 'checkbox' | no | 'checkbox' | Determina si los items se comportarán como un conjunto de tipo 'radio' o 'checkbox'. |
 | useActiveForShowChildren | boolean | no |  | Si está habilitado, el contenido solo se mostrará cuando los elementos de Collapse estén activos. |
 | classNameMultiple | string | no | '' | Clase CSS personalizada para el contenedor del componente CollapseMultiple. |
 | className | string | no | '' | Clase CSS personalizada para cada elemento Collapse dentro de CollapseMultiple. |
