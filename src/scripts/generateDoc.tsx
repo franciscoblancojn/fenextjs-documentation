@@ -22,6 +22,7 @@ const onGenerateDocComponents = async () => {
             const idStorybook = `${storybook.title}`.toLowerCase().replaceAll("/","-")
             doc.idStorybook = idStorybook
         } catch (error) {
+            console.log("Error Storybook ---- " + path );
             error;
         }
         
