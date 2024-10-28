@@ -15,6 +15,16 @@ const onGenerateDocComponents = async () => {
         console.log("Component ---- " + path );
         const FILE = require("../../"+URL_BASE + "/" +path);
         const doc = FILE.default
+
+        try {
+            const STORYBOOK = require("../../"+URL_BASE + "/" +`${path}`.replaceAll("_.doc.tsx","_.stories.tsx"));
+            const storybook = STORYBOOK.default
+            const idStorybook = `${storybook.title}`.toLowerCase().replaceAll("/","-")
+            doc.idStorybook = idStorybook
+        } catch (error) {
+            error;
+        }
+        
         const mdx = convertDocTsxToMdx(doc)
 
         let FILEDOC = `./src/pages/components-2/${path}`.replaceAll("/_.doc.tsx",".mdx")
