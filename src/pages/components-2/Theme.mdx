@@ -1,0 +1,43 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# Theme
+
+El componente Theme permite gestionar y representar visualmente los temas de la aplicación, utilizando la funcionalidad y componentes proporcionados por `fenextjs-svg` y `fenextjs-hook`.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-theme--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Theme, se puede hacer desde fenextjs
+
+```tsx copy
+import { Theme } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del componente. |
+| classNameItem | string | no | '' | Clase CSS para los elementos dentro del componente. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-theme--index)
+
+### Usos
+
+- Básico
+
+```tsx copy
+<Theme />
+```
+
+- Con clases personalizadas
+
+```tsx copy
+<Theme className="custom-theme" classNameItem="custom-theme-item" />
+```
+

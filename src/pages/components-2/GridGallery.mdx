@@ -1,0 +1,53 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# GridGallery
+
+El componente GridGallery permite mostrar una galería de elementos en un formato de cuadrícula, con soporte para clases personalizadas en los contenedores y los elementos.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-grid-gallery--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente GridGallery, se puede hacer desde fenextjs
+
+```tsx copy
+import { GridGallery } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| items | ReactNode[] | sí | undefined | Lista de elementos que se mostrarán dentro de la galería. |
+| className | string | no | '' | Clase CSS para personalizar el contenedor principal de la galería. |
+| classNameItem | string | no | '' | Clase CSS para personalizar cada uno de los elementos de la galería. |
+
+### Estructura de Cuadrícula
+
+La galería organiza los elementos en una cuadrícula flexible, permitiendo personalización a través de clases CSS.
+
+| Propiedad | Uso | Descripcion |
+| --- | --- | --- |
+| className | Personaliza la clase del contenedor de la galería. | Puedes aplicar estilos globales o específicos a toda la galería. |
+| classNameItem | Personaliza la clase de cada elemento dentro de la galería. | Permite aplicar estilos individuales a los elementos en la cuadrícula. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-grid-gallery--index)
+
+### Usos
+
+- Uso básico
+
+```tsx copy
+<GridGallery items={[<div>Item 1</div>, <div>Item 2</div>]} />
+```
+
+- Galería con clases personalizadas
+
+```tsx copy
+<GridGallery className="mi-galeria" classNameItem="mi-item" items={[<div>Item 1</div>, <div>Item 2</div>]} />
+```
+

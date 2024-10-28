@@ -1,0 +1,44 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# PrintIframe
+
+El componente PrintIframe permite renderizar contenido dentro de un iframe y proporciona una interfaz para imprimirlo. Utiliza el hook `usePrintIframe` para gestionar la funcionalidad de impresión en un iframe.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-print-iframe--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente PrintIframe, se puede hacer desde fenextjs
+
+```tsx copy
+import { PrintIframe } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del componente PrintIframe. |
+| onComponent | (data: PrintIframeComponentProps) =\> ReactNode | sí | N/A | Función que retorna el contenido a renderizar dentro del iframe, aceptando datos de tipo `PrintIframeComponentProps`. |
+| loader | boolean | no | false | Indica si el iframe está en estado de carga, mostrando un indicador de carga. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-print-iframe--index)
+
+### Usos
+
+- PrintIframe básico
+
+```tsx copy
+<PrintIframe onComponent={({ loader }) => <div>{loader ? "Cargando..." : "Contenido a imprimir"}</div>} />
+```
+
+- PrintIframe con clase personalizada
+
+```tsx copy
+<PrintIframe className="mi-clase" onComponent={({ loader }) => <div>{loader ? "Cargando..." : "Contenido listo"}</div>} />
+```
+

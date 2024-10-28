@@ -1,0 +1,53 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# InputCalendarMonth
+
+El componente InputCalendarMonth permite seleccionar fechas en un formato de calendario mensual. Puede usarse tanto para una selección normal como para un rango de fechas.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-input-calendar-month--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente InputCalendarMonth, se puede hacer desde fenextjs
+
+```tsx copy
+import { InputCalendarMonth } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| type | 'normal' \| 'range' | no | 'normal' | Define si el calendario es para una selección única ('normal') o un rango de fechas ('range'). |
+| date | FenextjsDate | no |  | La fecha actual del calendario, utilizada para mostrar el mes y año. |
+| onPreMonth | () =\> void | no |  | Función que se ejecuta al hacer clic en el botón para mostrar el mes anterior. |
+| onNextMonth | () =\> void | no |  | Función que se ejecuta al hacer clic en el botón para mostrar el mes siguiente. |
+| selectDate | Date \| undefined | sí |  | La fecha actualmente seleccionada en el modo 'normal'. |
+| selectDateRange | Date[] | sí |  | El rango de fechas seleccionado en el modo 'range'. |
+| setSelectDate | (d: Date) =\> void | sí |  | Función para actualizar la fecha seleccionada en el modo 'normal'. |
+| setSelectDateRange | (d: (d: Date[]) =\> Date[]) =\> void | sí |  | Función para actualizar el rango de fechas en el modo 'range'. |
+| dataNSelect | boolean | sí |  | Indica si se ha seleccionado la primera fecha en el modo 'range'. |
+| setDataNSelect | (d: (d: boolean) =\> boolean) =\> void | sí |  | Función para actualizar el estado de la selección de fechas en el modo 'range'. |
+| min | Date | no |  | Fecha mínima seleccionable. |
+| max | Date | no |  | Fecha máxima seleccionable. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-input-calendar-month--index)
+
+### Usos
+
+- Calendario básico
+
+```tsx copy
+<InputCalendarMonth date={new FenextjsDate()} selectDate={selectedDate} setSelectDate={setSelectedDate} selectDateRange={[]} setSelectDateRange={() => {}} dataNSelect={false} setDataNSelect={() => {}} />
+```
+
+- Calendario con selección de rango
+
+```tsx copy
+<InputCalendarMonth type="range" date={new FenextjsDate()} selectDate={undefined} setSelectDate={() => {}} selectDateRange={selectedRange} setSelectDateRange={setSelectedRange} dataNSelect={true} setDataNSelect={setNSelect} />
+```
+

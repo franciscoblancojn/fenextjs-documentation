@@ -1,0 +1,42 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# PageProgress
+
+El componente PageProgress muestra una barra de progreso visual durante los cambios de ruta en Next.js, indicando al usuario el estado de carga de la página.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-page-progress--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente PageProgress, se puede hacer desde fenextjs
+
+```tsx copy
+import { PageProgress } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor de la barra de progreso. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-page-progress--index)
+
+### Usos
+
+- Barra de progreso básica
+
+```tsx copy
+<PageProgress />
+```
+
+- Barra de progreso personalizada
+
+```tsx copy
+<PageProgress className="mi-clase-personalizada" />
+```
+

@@ -1,0 +1,45 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# ImgSlider
+
+El componente ImgSlider permite navegar entre una lista de imágenes utilizando un sistema de pasos. Se puede controlar el paso actual y navegar entre las imágenes usando botones de paginación.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-img-slider--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente ImgSlider, se puede hacer desde fenextjs
+
+```tsx copy
+import { ImgSlider } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| imgs | ImgProps[] | sí |  | Lista de imágenes que se muestran en el deslizador. |
+| step | number | no | 0 | Paso actual en el deslizador de imágenes. |
+| setStep | (e: number) =\> void | no |  | Función para actualizar el paso actual en el deslizador. |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del deslizador. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-img-slider--index)
+
+### Usos
+
+- Deslizador básico
+
+```tsx copy
+<ImgSlider imgs={imageList} />
+```
+
+- Deslizador con paso controlado
+
+```tsx copy
+<ImgSlider imgs={imageList} step={2} setStep={(e) => console.log(e)} />
+```
+

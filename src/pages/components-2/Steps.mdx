@@ -1,0 +1,78 @@
+import { Iframe } from "@/components/Iframe"; 
+
+# Steps
+
+El componente Steps proporciona una interfaz para mostrar y navegar entre pasos en un proceso secuencial, permitiendo personalizar el contenido, la navegación y la apariencia de cada paso.
+
+### Ejemplo
+
+<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-steps--index&viewMode=story" />
+
+### Importacion
+
+Para importar el componente Steps, se puede hacer desde fenextjs
+
+```tsx copy
+import { Steps } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| items | \{ label: ReactNode; icon?: ReactNode; content: ReactNode; status?: 'none' \| 'ok' \| 'error'; \}[] | sí | [] | Los elementos que representan cada paso, incluyendo el contenido, etiqueta, ícono y estado del paso. |
+| defaultStep | number | no | 0 | El paso mostrado inicialmente. |
+| step | number | no | undefined | Define manualmente el paso mostrado. |
+| useArrowKey | boolean | no | true | Indica si se pueden usar las teclas de flecha para navegar entre los pasos. |
+| useStep | boolean | no | false | Determina si el componente debe controlar internamente el estado del paso actual. |
+| btnPrev | ReactNode | no | "Previous" | Contenido del botón de retroceso. |
+| btnNext | ReactNode | no | "Next" | Contenido del botón de avance. |
+| disabledBtnPrev | boolean | no | false | Deshabilita el botón de retroceso. |
+| disabledBtnNext | boolean | no | false | Deshabilita el botón de avance. |
+| onPrev | (step: number) =\> Promise\<void\> \| void | no | undefined | Función que se ejecuta al hacer clic en el botón de retroceso. |
+| onNext | (step: number) =\> Promise\<void\> \| void | no | undefined | Función que se ejecuta al hacer clic en el botón de avance. |
+| onSetStep | (step: number) =\> void | no | undefined | Función que se ejecuta al establecer un nuevo paso. |
+| stepPos | 'top' \| 'left' \| 'right' | no | 'left' | Posición de la lista de pasos. |
+| showCurrentStepNStep | boolean | no | false | Muestra el paso actual junto al total de pasos. |
+| useDogs | boolean | no | false | Indica si se debe utilizar un comportamiento especial (documentación adicional requerida). |
+| className | string | no | "" | Clase CSS para el contenedor del componente. |
+| classNameContentSteps | string | no | "" | Clase CSS para el contenedor de los pasos. |
+| classNameListSteps | string | no | "" | Clase CSS para la lista de pasos. |
+| classNameContentItems | string | no | "" | Clase CSS para los elementos de contenido. |
+| classNameStep | string | no | "" | Clase CSS para cada paso. |
+| classNameStepActive | string | no | "" | Clase CSS para el paso activo. |
+| classNameItem | string | no | "" | Clase CSS para cada ítem. |
+| classNameItemActive | string | no | "" | Clase CSS para el ítem activo. |
+| classNameStepCircle | string | no | "" | Clase CSS para el círculo del paso. |
+| classNameStepLabel | string | no | "" | Clase CSS para la etiqueta del paso. |
+| classNameContentBtn | string | no | "" | Clase CSS para el contenedor de los botones de navegación. |
+| classNameBtn | string | no | "" | Clase CSS para los botones de navegación. |
+| classNameBtnNext | string | no | "" | Clase CSS para el botón de avance. |
+| classNameBtnPrev | string | no | "" | Clase CSS para el botón de retroceso. |
+| forceShowBtnPrev | boolean | no | false | Fuerza la visibilidad del botón de retroceso. |
+| forceShowBtnNext | boolean | no | false | Fuerza la visibilidad del botón de avance. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-steps--index)
+
+### Usos
+
+- Ejemplo básico
+
+```tsx copy
+<Steps items={[{ label: "Paso 1", content: <div>Contenido del Paso 1</div> }]} />
+```
+
+- Ejemplo con pasos personalizados
+
+```tsx copy
+<Steps items={[{ label: "Inicio", content: <div>Contenido Inicio</div> }, { label: "Fin", content: <div>Contenido Fin</div> }]} stepPos="top" />
+```
+
+- Con botones deshabilitados
+
+```tsx copy
+<Steps disabledBtnPrev={true} disabledBtnNext={true} />
+```
+
