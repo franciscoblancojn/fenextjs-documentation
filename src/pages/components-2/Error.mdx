@@ -26,14 +26,17 @@ import { ErrorComponent } from "fenextjs";
 | className | string | no | '' | Clase CSS para personalizar el estilo del componente. |
 | children | ReactNode | no | undefined | Contenido que se muestra dentro del componente si no se proporciona un error. |
 
-### Gestión de Errores
+### ErrorFenextjs
 
-El componente permite gestionar errores personalizados o de validación de formularios, mostrando mensajes de error específicos o relacionados con entradas.
+El error que se pasa al componente tiene distintos atributos:
 
-| Propiedad | Uso | Descripcion |
+| Propiedad | Tipo | Descripción |
 | --- | --- | --- |
-| error | El mensaje de error principal y opcionalmente una entrada relacionada se muestran en el componente. | El error puede contener un mensaje y detalles sobre una entrada relacionada. |
-| useDataError | Incluir el error en el atributo 'data-error' como una cadena JSON para depuración. | Se puede desactivar si no se requiere pasar el error como un dato estructurado. |
+| code | ErrorCode | Código del error |
+| message | string | Mensaje interno del error |
+| msg | msg | Mensaje del error |
+| input | input | Input del error |
+| data | any | Data del error |
 
 ### Storybook
 
