@@ -23,7 +23,7 @@ import { Chronometer } from "fenextjs";
 | time | number | no | 100 | El tiempo inicial en segundos que se mostrará y del cual el cronómetro comenzará la cuenta regresiva. |
 | onChange | (time: number) =\> void | no | undefined | Función que se ejecuta cada vez que el tiempo cambia, recibiendo el nuevo tiempo como parámetro. |
 | min | number | no | 0 | El tiempo mínimo al que puede llegar el cronómetro, en segundos. |
-| optionsTimeToText | getTimeToTextProps | no | \{ days: false \} | Opciones para personalizar el formato del tiempo mostrado, como si incluir o no los días. |
+| optionsTimeToText | getTimeToTextProps | no | \{days: false, hours: true,minutes: true,seconds: true \} | Opciones para personalizar el formato del tiempo mostrado, como si incluir o no los días. |
 | className | string | no | '' | Clase CSS personalizada para el componente. |
 
 ### Storybook
