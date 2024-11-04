@@ -26,6 +26,17 @@ import { ChronologicalList } from "fenextjs";
 | parseDateHHMMSS | (date: Date) =\> string | no | getTimeToText | Función para parsear la hora en el formato 'HH:MM:SS'. |
 | className | string | no | '' | Clase CSS personalizada para el componente. |
 
+### ChronologicalListItemsProps
+
+Cada elemento de la lista tiene sus propios parámetros:
+
+| Propiedad | Tipo | Requerido | Descripción |
+| --- | --- | --- | --- |
+| date | Date | si | La fecha correspondiente al elemento. |
+| children | ReactNode | si | El contenido que se mostrará dentro del elemento. |
+| market | ReactNode | no | Contenido personalizado que se mostrará junto a cada elemento como marcador. Puede ser un ícono, texto o cualquier otro nodo. |
+| className | string | no | Clase CSS personalizada para el elemento. |
+
 ### Formato de Fecha y Hora
 
 El componente permite personalizar el formato de la fecha y hora utilizando las funciones `parseDateYYYYMMDD` y `parseDateHHMMSS`. Si no se proporcionan, se utilizan las funciones por defecto.

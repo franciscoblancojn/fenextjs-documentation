@@ -44,12 +44,26 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Breadcrumb básico
 
 ```tsx copy
-<Breadcrumb links={[{ href: "/home", children: "Home" }, { href: "/about", children: "About" }]} />
+<Breadcrumb 
+    links={[
+        { href: "/home", children: "Home" }, 
+        { href: "/about", children: "About" }
+    ]}
+/>
 ```
 
 - Breadcrumb con clases personalizadas
 
 ```tsx copy
-<Breadcrumb className="custom-breadcrumb" classNameItem="custom-item" classNameLink="custom-link" links={[{ href: "/home", children: "Home" }, { href: "/services", children: "Services" }, { href: "/contact", children: "Contact" }]} />
+<Breadcrumb 
+    className="custom-breadcrumb" 
+    classNameItem="custom-item" 
+    classNameLink="custom-link" 
+    links={[
+        { href: "/home", children: "Home" }, 
+        { href: "/services", children: "Services" }, 
+        { href: "/contact", children: "Contact" }
+    ]}
+/>
 ```
 
