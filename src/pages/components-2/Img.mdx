@@ -20,7 +20,7 @@ import { Img } from "fenextjs";
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
-| src | string | sí | undefined | La URL de la imagen a mostrar. |
+| src | string | sí |  | La URL de la imagen a mostrar. |
 | alt | string | no | undefined | Texto alternativo para la imagen. |
 | srcMin1920 | string | no | undefined | URL de la imagen para resoluciones mayores a 1920px. |
 | srcMin1680 | string | no | undefined | URL de la imagen para resoluciones mayores a 1680px. |
@@ -29,7 +29,7 @@ import { Img } from "fenextjs";
 | srcMin992 | string | no | undefined | URL de la imagen para resoluciones mayores a 992px. |
 | srcMin768 | string | no | undefined | URL de la imagen para resoluciones mayores a 768px. |
 | srcMin575 | string | no | undefined | URL de la imagen para resoluciones mayores a 575px. |
-| imgIf404 | string | no | '' | URL de la imagen que se mostrará en caso de error de carga. |
+| imgIf404 | string | no | undefined | URL de la imagen que se mostrará en caso de error de carga. |
 | layers | CSSProperties[] | no | [] | Capas CSS que se aplican como filtros o estilos adicionales a la imagen. |
 | onErrorImg | (e: SyntheticEvent\<HTMLImageElement, Event\>) =\> void | no | undefined | Función personalizada que se ejecuta cuando ocurre un error al cargar la imagen. |
 | onClick | () =\> void | no | undefined | Función personalizada que se ejecuta al hacer clic en la imagen. |
