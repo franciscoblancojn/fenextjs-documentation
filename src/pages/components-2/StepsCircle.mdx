@@ -24,7 +24,7 @@ import { StepsCircle } from "fenextjs";
 | items | StepsCircleItemProps[] | no | [] | Lista de elementos de paso con contenido y funciones de clic opcionales. |
 | defaultStep | number | no | undefined | El paso que se mostrará inicialmente. |
 | valueStep | number | no | undefined | Paso actual cuando se controla externamente. |
-| disable | boolean | no | false | Deshabilita la interacción con el componente. |
+| disabled | boolean | no | false | Deshabilita la interacción con el componente. |
 
 ### StepsCircleItemProps
 
@@ -68,7 +68,7 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ```tsx copy
 <StepsCircle 
-    disable={true}
+    disabled={true}
     items={[{ children: <div>Paso deshabilitado</div> }]}
 />
 ```

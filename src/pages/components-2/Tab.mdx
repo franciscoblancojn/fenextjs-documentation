@@ -44,18 +44,31 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Ejemplo básico
 
 ```tsx copy
-<Tab items={[{ id: "tab1", head: "Tab 1", body: "Contenido 1" }, { id: "tab2", head: "Tab 2", body: "Contenido 2" }]} />
+<Tab
+    items={[
+        { id: "tab1", head: "Tab 1", body: "Contenido 1" },
+        { id: "tab2", head: "Tab 2", body: "Contenido 2" }
+    ]}
+/>
 ```
 
 - Con clase personalizada y función de cambio
 
 ```tsx copy
-<Tab className="custom-tab" onChange={(item) => console.log("Pestaña seleccionada:", item)} />
+<Tab 
+    className="custom-tab" 
+    onChange={(item) => console.log("Pestaña seleccionada:", item)} 
+/>
 ```
 
 - Con contador de elementos en el encabezado
 
 ```tsx copy
-<Tab items={[{ id: "tab1", head: "Tab 1", body: "Contenido 1", useCount: true, count: 3, singular: "elemento", plural: "elementos" }]} useCount={true} />
+<Tab 
+    items={[
+        { id: "tab1", head: "Tab 1", body: "Contenido 1", useCount: true, count: 3, singular: "elemento", plural: "elementos" }
+    ]}
+    useCount={true}
+/>
 ```
 
