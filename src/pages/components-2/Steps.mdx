@@ -20,11 +20,10 @@ import { Steps } from "fenextjs";
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
-| items | \{ label: ReactNode; icon?: ReactNode; content: ReactNode; status?: 'none' \| 'ok' \| 'error'; \}[] | sí | [] | Los elementos que representan cada paso, incluyendo el contenido, etiqueta, ícono y estado del paso. |
+| items | StepsItemProps[] | sí | [] | Los elementos que representan cada paso, incluyendo el contenido, etiqueta, ícono y estado del paso. |
 | defaultStep | number | no | 0 | El paso mostrado inicialmente. |
 | step | number | no | undefined | Define manualmente el paso mostrado. |
 | useArrowKey | boolean | no | true | Indica si se pueden usar las teclas de flecha para navegar entre los pasos. |
-| useStep | boolean | no | false | Determina si el componente debe controlar internamente el estado del paso actual. |
 | btnPrev | ReactNode | no | "Previous" | Contenido del botón de retroceso. |
 | btnNext | ReactNode | no | "Next" | Contenido del botón de avance. |
 | disabledBtnPrev | boolean | no | false | Deshabilita el botón de retroceso. |
@@ -51,6 +50,17 @@ import { Steps } from "fenextjs";
 | classNameBtnPrev | string | no | "" | Clase CSS para el botón de retroceso. |
 | forceShowBtnPrev | boolean | no | false | Fuerza la visibilidad del botón de retroceso. |
 | forceShowBtnNext | boolean | no | false | Fuerza la visibilidad del botón de avance. |
+
+### StepsItemProps
+
+Los items de step tienen su propios parametros:
+
+| Parametro | Tipo | Descripción |
+| --- | --- | --- |
+| label | ReactNode | Label del elemento. |
+| icon | ReactNode | Icon del elemento. |
+| content | ReactNode | Contenido del elemento. |
+| status | "none" \| "ok" \| "error" | Estatus del elemento. |
 
 ### Storybook
 
