@@ -20,9 +20,27 @@ import { DropDown } from "fenextjs";
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
-| show | 'focus' \| 'click' \| 'always' | no | 'focus' | Controla cuándo se muestra el menú desplegable. |
+| loader | boolean | no | false | Indica si el componente está en estado de carga, mostrando un ícono de cargando. |
+| disabled | boolean | no | false | Determina si el componente está deshabilitado, evitando que el usuario lo pueda interactuar. |
+| defaultActive | boolean | no | false | Determina si el DropDown estará activado de manera predeterminada. |
+| active | boolean | no | undefined | Estado activo controlado externamente. |
+| id | string | no |  | ID único del componente. |
+| name | string | no | '' | Nombre del componente. |
+| status | 'none' \| 'error' \| 'ok' | no | 'none' | Estado del DropDown, puede ser 'none', 'error' o 'ok'. |
+| type | 'radio' \| 'checkbox' | no | 'checkbox' | Define el tipo de interacción del componente, ya sea tipo 'radio' o 'checkbox'. |
+| show | 'checked' \| 'focus' | no | 'checked' | Controla cómo se muestra el contenido del DropDown, ya sea cuando está 'checked' o 'focus'. |
+| header | ReactNode | sí |  | El contenido del encabezado del DropDown. |
+| onChange | (value: boolean) =\> void | no |  | Función que se ejecuta cuando el estado activo del DropDown cambia. |
+| iconArrow | ReactNode | no | \<Arrow /\> | Ícono que se mostrará como la flecha de colapso. |
+| rotateIcon | boolean | no | true | Indica si el ícono debe rotar al expandirse el DropDown. |
+| useActiveForShowChildren | boolean | no | false | Si está habilitado, el contenido solo se mostrará cuando el DropDown esté activo. |
+| children | ReactNode | no |  | El contenido dentro del cuerpo del DropDown. |
+| className | string | no | '' | Clase CSS personalizada para el componente DropDown. |
+| classNameHeader | string | no | '' | Clase CSS personalizada para el encabezado del DropDown. |
+| classNameHeaderContent | string | no | '' | Clase CSS personalizada para el contenido del encabezado del DropDown. |
+| classNameHeaderIcon | string | no | '' | Clase CSS personalizada para el ícono del encabezado del DropDown. |
+| classNameBody | string | no | '' | Clase CSS personalizada para el cuerpo del DropDown. |
 | classNameDropDown | string | no | '' | Clase CSS para personalizar el contenedor del DropDown. |
-| children | ReactNode | no | undefined | Contenido que se muestra dentro del menú desplegable. |
 
 ### Ajustes Espaciales
 
