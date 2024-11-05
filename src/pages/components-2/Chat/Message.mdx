@@ -47,13 +47,24 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Mensaje básico
 
 ```tsx copy
-<ChatMessage id={1} message="Hola" createdAt={new Date()} account={{ name: "Usuario" }} />
+<ChatMessage 
+    id={1}
+    message="Hola" 
+    createdAt={new Date()} 
+    account={{ name: "Usuario" }} 
+/>
 ```
 
 - Mensaje alineado a la derecha
 
 ```tsx copy
-<ChatMessage id={2} message="Hola, soy yo" right={true} createdAt={new Date()} account={{ name: "Yo" }} />
+<ChatMessage 
+    id={2} 
+    message="Hola, soy yo" 
+    right={true} 
+    createdAt={new Date()} 
+    account={{ name: "Yo" }} 
+/>
 ```
 
 - Mensaje en estado de carga
