@@ -44,18 +44,27 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Selector de rango de fechas por defecto
 
 ```tsx copy
-<InputDateRange defaultValue={[new Date(), new Date()]} onChange={(range) => console.log(range)} />
+<InputDateRange 
+    defaultValue={[new Date(), new Date()]} 
+    onChange={(range) => console.log(range)} 
+/>
 ```
 
 - Selector de rango de fechas con validación
 
 ```tsx copy
-<InputDateRange value={[startDate, endDate]} onChange={(range) => validateRange(range)} />
+<InputDateRange 
+    value={[startDate, endDate]} 
+    onChange={(range) => validateRange(range)} 
+/>
 ```
 
 - Selector de rango de fechas deshabilitado
 
 ```tsx copy
-<InputDateRange defaultValue={[new Date(), new Date()]} disabled={true} />
+<InputDateRange 
+    defaultValue={[new Date(), new Date()]} 
+    disabled={true} 
+/>
 ```
 

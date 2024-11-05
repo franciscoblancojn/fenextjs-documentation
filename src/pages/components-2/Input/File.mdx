@@ -46,18 +46,28 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Selector de archivos con validación de tipo
 
 ```tsx copy
-<InputFile accept={['jpg', 'png']} onChange={(file) => console.log(file)} />
+<InputFile 
+    accept={['jpg', 'png']} 
+    onChange={(file) => console.log(file)} 
+/>
 ```
 
 - Selector de archivos con tamaño máximo
 
 ```tsx copy
-<InputFile MAX_SIZE_FILE={2000000} textMaxSizeFile="El archivo supera el límite de tamaño." onChange={(file) => console.log(file)} />
+<InputFile 
+    MAX_SIZE_FILE={2000000} 
+    textMaxSizeFile="El archivo supera el límite de tamaño." 
+    onChange={(file) => console.log(file)} 
+/>
 ```
 
 - Selector de archivos deshabilitado
 
 ```tsx copy
-<InputFile disabled={true} onChange={(file) => console.log(file)} />
+<InputFile 
+    disabled={true} 
+    onChange={(file) => console.log(file)}
+/>
 ```
 
