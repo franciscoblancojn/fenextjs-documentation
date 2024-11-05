@@ -6,7 +6,7 @@ El componente Menu renderiza una lista de elementos interactivos. Se utiliza par
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=header-menu--index&viewMode=story" />
+<Iframe minHeightIframe="50vh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=header-menu--index&viewMode=story" />
 
 ### Importacion
 
@@ -35,18 +35,35 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Menú básico
 
 ```tsx copy
-<Menu items={[{ label: 'Home', link: '/' }, { label: 'About', link: '/about' }]} />
+<Menu 
+    items={[
+        { label: 'Home', link: '/' }, 
+        { label: 'About', link: '/about' }
+    ]} 
+/>
 ```
 
 - Menú con ícono personalizado
 
 ```tsx copy
-<Menu iconArrow={<CustomIcon />} items={[{ label: 'Home', link: '/' }, { label: 'Services', link: '/services' }]} />
+<Menu 
+    iconArrow={<CustomIcon />} 
+    items={[
+        { label: 'Home', link: '/' }, 
+        { label: 'Services', link: '/services' }
+    ]} 
+/>
 ```
 
 - Menú con submenús desplegables
 
 ```tsx copy
-<Menu defaultShowSubMenu={true} items={[{ label: 'Home', link: '/', defaultActive: true }, { label: 'Projects', link: '/projects' }]} />
+<Menu 
+    defaultShowSubMenu={true} 
+    items={[
+        { label: 'Home', link: '/', defaultActive: true }, 
+        { label: 'Projects', link: '/projects' }
+    ]} 
+/>
 ```
 
