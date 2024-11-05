@@ -34,15 +34,25 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Uso básico del TableActionCheckbox
 
 ```tsx copy
-<TableActionCheckbox className="my-checkbox" data={[{ id: 1, name: "Item 1" }, { id: 2, name: "Item 2" }]} actionAllCheckbox={{ label: "Select All" }} />
+<TableActionCheckbox
+    className="my-checkbox" 
+    data={[{ id: 1, name: "Item 1" }, { id: 2, name: "Item 2" }]} 
+    actionAllCheckbox={{ label: "Select All" }} 
+/>
 ```
 
 - Uso con acciones personalizadas
 
 ```tsx copy
-<TableActionCheckbox data={[{ id: 1, name: "Item 1" }, { id: 2, name: "Item 2" }]} actions={[
-                (selectedData) => <button onClick={() => console.log(selectedData)}>Delete</button>,
-                (selectedData) => <button onClick={() => console.log(selectedData)}>Edit</button>
-            ]} />
+<TableActionCheckbox
+    data={[
+        { id: 1, name: "Item 1" },
+        { id: 2, name: "Item 2" }
+    ]}
+    actions={[
+        (selectedData) => <button onClick={() => console.log(selectedData)}>Delete</button>,
+        (selectedData) => <button onClick={() => console.log(selectedData)}>Edit</button>
+    ]}
+/>
 ```
 

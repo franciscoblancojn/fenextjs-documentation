@@ -1,15 +1,15 @@
 {
   "index": "Introducción",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
-  },
+  // "about": {
+  //   "title": "About",
+  //   "type": "page"
+  // },
+  // "contact": {
+  //   "title": "Contact ↗",
+  //   "type": "page",
+  //   "href": "https://twitter.com/shuding_",
+  //   "newWindow": true
+  // },
   "components": {
     "title": "Componentes",
     "index": "Introduction"

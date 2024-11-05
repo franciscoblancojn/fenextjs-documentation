@@ -36,18 +36,34 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - TwoColSticky básico
 
 ```tsx copy
-<TwoColSticky colSticky={<div>Sticky Content</div>}>Scrollable Content</TwoColSticky>
+<TwoColSticky 
+    colSticky={<div>Sticky Content</div>}
+>
+    Scrollable Content
+</TwoColSticky>
 ```
 
 - TwoColSticky con columna sticky a la derecha
 
 ```tsx copy
-<TwoColSticky colSticky={<div>Sticky Content</div>} posCol="right">Scrollable Content</TwoColSticky>
+<TwoColSticky 
+    colSticky={<div>Sticky Content</div>} 
+    posCol="right"
+>
+    Scrollable Content
+</TwoColSticky>
 ```
 
 - TwoColSticky con clases personalizadas
 
 ```tsx copy
-<TwoColSticky colSticky={<div>Sticky Content</div>} className="custom-container" classNameChildren="custom-children" classNameColSticky="custom-sticky">Scrollable Content</TwoColSticky>
+<TwoColSticky 
+    colSticky={<div>Sticky Content</div>} 
+    className="custom-container" 
+    classNameChildren="custom-children" 
+    classNameColSticky="custom-sticky"
+>
+    Scrollable Content
+</TwoColSticky>
 ```
 
