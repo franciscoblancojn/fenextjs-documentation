@@ -20,9 +20,9 @@ import { InputDateRange } from "fenextjs";
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
-| defaultValue | [Date \| undefined, Date \| undefined] | no | undefined | Valor predeterminado del rango de fechas. |
-| value | [Date \| undefined, Date \| undefined] | no | undefined | Valor actual del rango de fechas. Si se proporciona, anula el valor predeterminado. |
-| onChange | (value: [Date \| undefined, Date \| undefined]) =\> void | no | undefined | Función que se ejecuta cuando el rango de fechas cambia. |
+| defaultValue | [Date, Date] | no | undefined | Valor predeterminado del rango de fechas. |
+| value | [Date, Date] | no | undefined | Valor actual del rango de fechas. Si se proporciona, anula el valor predeterminado. |
+| onChange | (value: [Date, Date]) =\> void | no | undefined | Función que se ejecuta cuando el rango de fechas cambia. |
 | propsStart | InputDateBaseProps | no | \{\} | Props adicionales para el campo de fecha de inicio. |
 | propsEnd | InputDateBaseProps | no | \{\} | Props adicionales para el campo de fecha de fin. |
 | label | string | no | '' | Etiqueta que se muestra para el campo de rango de fechas. |
@@ -32,8 +32,8 @@ import { InputDateRange } from "fenextjs";
 | optionalText | string | no | '(optional)' | Texto que se muestra si el campo es opcional. |
 | required | boolean | no | false | Indica si el campo es obligatorio. |
 | requiredText | string | no | '*' | Texto que se muestra si el campo es obligatorio. |
-| min | Date \| undefined | no | undefined | Fecha mínima válida para ambos campos de fecha. |
-| max | Date \| undefined | no | undefined | Fecha máxima válida para ambos campos de fecha. |
+| min | Date | no | undefined | Fecha mínima válida para ambos campos de fecha. |
+| max | Date | no | undefined | Fecha máxima válida para ambos campos de fecha. |
 
 ### Storybook
 
