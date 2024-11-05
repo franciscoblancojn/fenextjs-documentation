@@ -20,9 +20,9 @@ import { InputImg } from "fenextjs";
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
-| title | React.ReactNode | no | 'Add Image' | Título que se muestra en el componente. |
-| text | React.ReactNode | no | 'Drag Image' | Texto que se muestra en el componente para guiar al usuario. |
-| icon | React.ReactNode | no | \<SvgImg /\> | Ícono que se muestra en el componente. |
+| title | ReactNode | no | 'Add Image' | Título que se muestra en el componente. |
+| text | ReactNode | no | 'Drag Image' | Texto que se muestra en el componente para guiar al usuario. |
+| icon | ReactNode | no | \<SvgImg /\> | Ícono que se muestra en el componente. |
 | onRemove | () =\> void | no | undefined | Función que se ejecuta cuando se elimina la imagen. |
 | className | string | no | '' | Clase CSS para el componente. |
 | classNameContentIcon | string | no | '' | Clase CSS para el contenedor del ícono. |
@@ -43,18 +43,27 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Carga de una imagen simple
 
 ```tsx copy
-<InputImg onChange={(data) => { console.log(data); }} />
+<InputImg 
+    onChange={(data) => { console.log(data); }} 
+/>
 ```
 
 - Carga de una imagen con título y texto personalizado
 
 ```tsx copy
-<InputImg title="Sube tu Imagen" text="Arrastra la imagen aquí" onChange={(data) => { console.log(data); }} />
+<InputImg 
+    title="Sube tu Imagen" 
+    text="Arrastra la imagen aquí" 
+    onChange={(data) => { console.log(data); }} 
+/>
 ```
 
 - Carga de imagen con función de eliminación
 
 ```tsx copy
-<InputImg onRemove={() => { console.log('Imagen eliminada'); }} onChange={(data) => { console.log(data); }} />
+<InputImg 
+    onRemove={() => { console.log('Imagen eliminada'); }} 
+    onChange={(data) => { console.log(data); }}
+/>
 ```
 

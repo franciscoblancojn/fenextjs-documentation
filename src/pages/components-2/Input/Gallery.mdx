@@ -37,18 +37,26 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Galería de imágenes básica
 
 ```tsx copy
-<InputGallery onChange={(items) => { console.log(items); }} />
+<InputGallery 
+    onChange={(items) => { console.log(items); }} 
+/>
 ```
 
 - Galería de imágenes con valores predefinidos
 
 ```tsx copy
-<InputGallery defaultValue={[{ fileData: "url1", text: "Image 1" }]} onChange={(items) => { console.log(items); }} />
+<InputGallery 
+    defaultValue={[{ fileData: "url1", text: "Image 1" }]} 
+    onChange={(items) => { console.log(items); }} 
+/>
 ```
 
 - Galería con botón personalizado
 
 ```tsx copy
-<InputGallery textBtn="Upload New Image" onChange={(items) => { console.log(items); }} />
+<InputGallery 
+    textBtn="Upload New Image" 
+    onChange={(items) => { console.log(items); }} 
+/>
 ```
 

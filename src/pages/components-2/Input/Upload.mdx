@@ -20,18 +20,18 @@ import { InputUpload } from "fenextjs";
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
-| title | React.ReactNode | no | "Drag and drop here" | Título mostrado en el área de carga de archivos. |
-| text | React.ReactNode | no | "Drag and drop your file or template here." | Texto adicional que se muestra en el área de carga de archivos. |
-| titleFile | React.ReactNode | no | undefined | Título personalizado que se muestra al seleccionar un archivo. |
-| textFile | React.ReactNode | no | undefined | Texto personalizado que se muestra al seleccionar un archivo. |
-| textPreview | React.ReactNode | no | "Preview File" | Texto que se muestra para la previsualización del archivo. |
-| icon | React.ReactNode | no | \<Upload2 /\> | Icono que se muestra en el área de carga. |
-| iconFile | React.ReactNode | no | "" | Icono que se muestra junto con el archivo cargado. |
-| btn | React.ReactNode | no | "Choose File" | Texto o componente personalizado para el botón de selección de archivo. |
+| title | ReactNode | no | "Drag and drop here" | Título mostrado en el área de carga de archivos. |
+| text | ReactNode | no | "Drag and drop your file or template here." | Texto adicional que se muestra en el área de carga de archivos. |
+| titleFile | ReactNode | no | undefined | Título personalizado que se muestra al seleccionar un archivo. |
+| textFile | ReactNode | no | undefined | Texto personalizado que se muestra al seleccionar un archivo. |
+| textPreview | ReactNode | no | "Preview File" | Texto que se muestra para la previsualización del archivo. |
+| icon | ReactNode | no | \<Upload2 /\> | Icono que se muestra en el área de carga. |
+| iconFile | ReactNode | no | "" | Icono que se muestra junto con el archivo cargado. |
+| btn | ReactNode | no | "Choose File" | Texto o componente personalizado para el botón de selección de archivo. |
 | tagPreview | "embed" \| "img" | no | "embed" | Etiqueta HTML usada para mostrar la previsualización del archivo. Puede ser 'embed' o 'img'. |
-| customPreview | (data: FileProps) =\> React.ReactNode | no | undefined | Función personalizada para renderizar la previsualización del archivo. |
+| customPreview | (data: FileProps) =\> ReactNode | no | undefined | Función personalizada para renderizar la previsualización del archivo. |
 | loader | boolean | no | false | Determina si se muestra un indicador de carga mientras se sube el archivo. |
-| iconLoader | React.ReactNode | no | \<LoaderSpinner /\> | Icono o componente que se muestra mientras el archivo está en proceso de carga. |
+| iconLoader | ReactNode | no | \<LoaderSpinner /\> | Icono o componente que se muestra mientras el archivo está en proceso de carga. |
 | parseProgress | (e: number) =\> string | no | (e) =\> `Uploading . . . $\{e.toFixed(0)\}%` | Función que permite personalizar el texto de progreso de la carga de archivos. |
 | onChange | (file: File) =\> void | no | undefined | Función que se ejecuta cuando el archivo cambia, recibe el archivo seleccionado. |
 
