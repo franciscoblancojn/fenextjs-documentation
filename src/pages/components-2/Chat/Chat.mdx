@@ -6,7 +6,7 @@ El componente Chat es un contenedor completo que incluye elementos como el usuar
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=chat-chat--index&viewMode=story" />
+<Iframe minHeightIframe="80vh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=chat-chat--index&viewMode=story" />
 
 ### Importacion
 
@@ -56,7 +56,11 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Chat vacío
 
 ```tsx copy
-<Chat chatUser={[{ id: 1, name: "User1" }]} chatMessage={[]} chatFormSendMessage={{ onSubmit: () => {} }} />
+<Chat 
+    chatUser={[{ id: 1, name: "User1" }]} 
+    chatMessage={[]} 
+    chatFormSendMessage={{ onSubmit: () => {} }}
+/>
 ```
 
 - Chat con botón de cargar más mensajes

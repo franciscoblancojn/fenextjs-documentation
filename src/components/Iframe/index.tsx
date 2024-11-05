@@ -1,8 +1,10 @@
+
 export interface IframeProps {
   src: string;
+  minHeightIframe?:string
 }
 
-export const Iframe = ({ src }: IframeProps) => {
+export const Iframe = ({ src, minHeightIframe }: IframeProps) => {
   return (
     <>
       <iframe
@@ -11,7 +13,7 @@ export const Iframe = ({ src }: IframeProps) => {
         style={{
           width: "100%",
           border: 0,
-          minHeight: "30dvh",
+          minHeight: minHeightIframe ?? "30dvh",
         }}
       />
     </>

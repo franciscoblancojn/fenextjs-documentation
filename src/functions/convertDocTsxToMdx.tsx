@@ -3,14 +3,14 @@ const BASE_URL_STORYBOOK_IFRAME = "https://fenextjs-component-storybook.vercel.a
 const BASE_URL_STORYBOOK = "https://fenextjs-component-storybook.vercel.app/?path=/story/"
 
 export function convertDocTsxToMdx(docTsx: any): string {
-    const { name, description, props, extras, useExample } = docTsx;
+    const { name, description, props, extras, useExample,minHeightIframe } = docTsx;
 
     let mdxContent = `import { Iframe } from "@/components/Iframe"; \n\n# ${name}\n\n${description}\n\n`;
 
     const URL_STORYBOOK_IFRAME = BASE_URL_STORYBOOK_IFRAME + docTsx.idStorybook + "--index"
     const URL_STORYBOOK = BASE_URL_STORYBOOK + docTsx.idStorybook + "--index"
     // Sección de Ejemplo (puede ser estática)
-    mdxContent += `### Ejemplo\n\n<Iframe src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
+    mdxContent += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
 
     // Sección de Importación
     mdxContent += `### Importacion\n\n`;
