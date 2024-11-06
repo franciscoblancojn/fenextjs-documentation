@@ -1,37 +1,26 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 # LoaderSpinner
 
-El componente LoaderSpinner es un componente que muestra un loader de spinner simple.
+El componente LoaderSpinner se utiliza para mostrar un indicador de carga en forma de spinner o círculo giratorio. Se puede personalizar su estilo utilizando una clase CSS específica.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-spinner--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-spinner--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente LoaderSpinner, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente LoaderSpinner, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  LoaderSpinner,
-  LoaderSpinnerProps,
-} from "fenextjs/cjs/component/Loader/Spinner";
-```
-
-o
-
-```tsx copy
-import {
-  LoaderSpinner,
-  LoaderSpinnerProps,
-} from "fenextjs-component/cjs/Loader/Spinner";
+import { LoaderSpinner } from "fenextjs";
 ```
 
 ### Parametros
 
 | Parametro | Tipo | Requerido | Default | Descripcion |
-| classNameLoaderSpinner | `string` | No | | Clase personalizada del loader. |
+| --------- | ---- | --------- | ------- | ----------- |
+| classNameLoaderSpinner | string | no | '' | Clase CSS para personalizar el estilo del spinner. |
 
 ### Storybook
 
@@ -39,8 +28,15 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente LoaderSpinner
+- LoaderSpinner básico
 
 ```tsx copy
 <LoaderSpinner />
 ```
+
+- LoaderSpinner con clase personalizada
+
+```tsx copy
+<LoaderSpinner classNameLoaderSpinner="custom-loader-spinner" />
+```
+

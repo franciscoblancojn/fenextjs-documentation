@@ -28,7 +28,7 @@ const onGenerateDocComponents = async () => {
         
         const mdx = convertDocTsxToMdx(doc)
 
-        let FILEDOC = `./src/pages/components-2/${path}`.replaceAll("/_.doc.tsx",".mdx")
+        let FILEDOC = `./src/pages/components/${path}`.replaceAll("/_.doc.tsx",".mdx").toLowerCase()
 
         await Bun_.write(FILEDOC, mdx);
     }

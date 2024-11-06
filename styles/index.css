@@ -12,4 +12,8 @@ html[class~=dark] .logo {
   --color-2: #0024b8;
 }
 
+.nextra-menu-desktop li button {
+  text-transform: capitalize;
+}
+
 /*# sourceMappingURL=index.css.map */

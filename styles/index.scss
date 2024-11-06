@@ -1,1 +1,7 @@
 @import "../src/components/styles.scss";
+
+.nextra-menu-desktop{
+    li button{
+        text-transform: capitalize;
+    }
+}

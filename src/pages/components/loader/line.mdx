@@ -1,39 +1,27 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 # LoaderLine
 
-El componente LoaderLine es un componente que muestra un loader de linea simple.
+El componente LoaderLine se utiliza para mostrar un indicador de carga en forma de línea. Se puede personalizar tanto su altura como su estilo utilizando una clase CSS específica.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-line--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-line--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente LoaderLine, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente LoaderLine, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  LoaderLine,
-  LoaderLineProps,
-} from "fenextjs/cjs/component/Loader/Line";
-```
-
-o
-
-```tsx copy
-import {
-  LoaderLine,
-  LoaderLineProps,
-} from "fenextjs-component/cjs/Loader/Line";
+import { LoaderLine } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro           |   Tipo   | Requerido | Default | Descripcion                     |
-| ------------------- | :------: | :-------: | :-----: | :------------------------------ |
-| height              | `number` |    No     |         | Altura de la linea              |
-| classNameLoaderLine | `string` |    No     |         | Clase personalizada del loader. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| classNameLoaderLine | string | no | '' | Clase CSS para personalizar el estilo de la línea del indicador de carga. |
+| height | number | no | 20 | Altura de la línea del indicador de carga, en píxeles. |
 
 ### Storybook
 
@@ -41,8 +29,21 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente LoaderLine
+- LoaderLine básico
 
 ```tsx copy
 <LoaderLine />
 ```
+
+- LoaderLine con altura personalizada
+
+```tsx copy
+<LoaderLine height={30} />
+```
+
+- LoaderLine con clase personalizada
+
+```tsx copy
+<LoaderLine classNameLoaderLine="custom-loader-line" />
+```
+

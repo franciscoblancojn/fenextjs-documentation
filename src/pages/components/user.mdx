@@ -1,55 +1,50 @@
-import { Iframe } from "../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
-# TwoColSticky
+# User
 
-El componente TwoColSticky es un componente que muestra un dos columnas con una de ellas sticky.
+El componente User muestra información de un usuario, incluyendo su imagen, nombre, y correo electrónico. También incluye una opción de cargador para mostrar un indicador de carga cuando la información del usuario no está disponible.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=user-user--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=user-user--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente TwoColSticky, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente User, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  TwoColSticky,
-  TwoColStickyProps,
-} from "fenextjs/cjs/component/TwoColSticky";
-```
-
-o
-
-```tsx copy
-import {
-  TwoColSticky,
-  TwoColStickyProps,
-} from "fenextjs-component/cjs/TwoColSticky";
+import { User } from "fenextjs";
 ```
 
 ### Parametros
 
-| Propiedad |             Tipo              | Requerido | Descripcion                                                                         |
-| --------- | :---------------------------: | :-------: | :---------------------------------------------------------------------------------- |
-| user      | `Partial<UserInterfaceProps>` |    Sí     | Datos parciales del usuario (`Partial<UserInterfaceProps>`).                        |
-| loader    |           `boolean`           |    No     | Indica si se debe mostrar un cargador mientras se carga la información del usuario. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| user | Partial\<UserProps\> | no | undefined | Objeto con la información del usuario, como nombre, imagen, y correo electrónico. |
+| loader | boolean | no | false | Indica si se debe mostrar el cargador en lugar de la información del usuario. |
+| className | string | no | '' | Clase CSS para personalizar el contenedor principal del componente. |
+| classNamePicture | string | no | '' | Clase CSS para personalizar el contenedor de la imagen del usuario. |
+| classNameImg | string | no | '' | Clase CSS para la imagen del usuario. |
+| classNameName | string | no | '' | Clase CSS para el nombre del usuario. |
+| classNameLetter | string | no | '' | Clase CSS para la inicial del nombre del usuario cuando no se tiene imagen. |
+| classNameEmail | string | no | '' | Clase CSS para el correo electrónico del usuario. |
+| classNameLoader | LoaderUserClassProps | no | \{\} | Clase CSS para el componente de cargador cuando se muestra en lugar de los datos del usuario. |
 
-#### UserInterfaceProps
+### UserProps
 
-| Propiedad  |                        Tipo                         | Requerido | Descripcion                                                                           |
-| ---------- | :-------------------------------------------------: | :-------: | :------------------------------------------------------------------------------------ |
-| status     |                  `UserStatusProps`                  |    Sí     | Estado del usuario. Puede ser VERIFY, NOVERIFY, BAN o PENDING.                        |
-| id         |                      `string`                       |    Sí     | Identificador único del usuario.                                                      |
-| token      |                      `string`                       |    Sí     | Token asociado al usuario.                                                            |
-| name       |                      `string`                       |    Sí     | Nombre del usuario.                                                                   |
-| img        |                   `ImgDataProps`                    |    Sí     | Datos de la imagen del usuario (`ImgDataProps`).                                      |
-| role       |                   `UserRoleProps`                   |    Sí     | Rol del usuario. Puede ser ADMIN, CUSTOMER o BACKOFFICE.                              |
-| phone      |                    `PhoneProps`                     |    No     | Datos del teléfono del usuario (`PhoneProps`).                                        |
-| email      |                      `string`                       |    Sí     | Dirección de correo electrónico del usuario.                                          |
-| stripe_id  |                      `string`                       |    No     | Identificador de Stripe asociado al usuario.                                          |
-| dateCreate |                       `Date`                        |    Sí     | Fecha de creación del usuario.                                                        |
-| verify     | `{ [id in UserTypeVerifyProps]: UserStatusProps; }` |    No     | Estado de verificación para diferentes tipos de verificación (`UserTypeVerifyProps`). |
+Fenextjs posee su interface estandar para:
+
+| Propiedad | Tipo | Descripción |
+| --- | --- | --- |
+| status | UserStatusProps | Estatus del usuario. |
+| id | string | Id del usuario. |
+| token | string | token del usuario. |
+| name | string | Nombre del usuario. |
+| img | ImgDataProps | Avatar del usuario. |
+| role | UserRoleProps | Rol del usuario. |
+| phone | PhoneProps | Telefono del usuario. |
+| email | string | Correo del usuario. |
+| dateCreate | Date | Fecha de creacion del usuario. |
 
 ### Storybook
 
@@ -57,8 +52,42 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente TwoColSticky
+- User básico
 
 ```tsx copy
-<TwoColSticky />
+<User 
+    user={{ 
+        name: "John Doe", 
+        email: "john@example.com" 
+    }}
+/>
 ```
+
+- User con imagen de perfil
+
+```tsx copy
+<User 
+    user={{ 
+        name: "Jane Doe", 
+        email: "jane@example.com", 
+        image: "/path/to/image.jpg" 
+    }} 
+/>
+```
+
+- User con cargador
+
+```tsx copy
+<User loader={true} />
+```
+
+- User con clases personalizadas
+
+```tsx copy
+<User 
+    user={{ name: "John Doe" }} 
+    className="custom-container" 
+    classNameName="custom-name" 
+/>
+```
+

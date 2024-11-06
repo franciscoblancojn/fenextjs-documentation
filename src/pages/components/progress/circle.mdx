@@ -1,39 +1,28 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 # ProgressCircle
 
-El componente ProgressCircle es un componente que muestra un progreso reprecentado en circulo y porcentaje.
+El componente ProgressCircle muestra un círculo de progreso visual que indica el avance de una tarea o porcentaje completado. Ofrece una opción para mostrar el porcentaje numérico en el centro del círculo.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=progress-progresscircle--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=progress-progresscircle--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente ProgressCircle, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente ProgressCircle, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  ProgressCircle,
-  ProgressCircleProps,
-} from "fenextjs/cjs/component/Progress/Circle";
-```
-
-o
-
-```tsx copy
-import {
-  ProgressCircle,
-  ProgressCircleProps,
-} from "fenextjs-component/cjs/Progress/Circle";
+import { ProgressCircle } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro |   Tipo    | Requerido | Default | Descripcion                                      |
-| --------- | :-------: | :-------: | :-----: | :----------------------------------------------- |
-| p         | `number`  |    Sí     |         | Número de progreso.                              |
-| showP     | `boolean` |    Sí     |         | Indica si se debe mostrar el número de progreso. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del componente ProgressCircle. |
+| p | number | sí | N/A | Valor de progreso representado en el círculo, como un número entre 0 y 100. |
+| showP | boolean | no | true | Indica si el valor numérico del progreso (`p`) se muestra en el centro del círculo. |
 
 ### Storybook
 
@@ -41,8 +30,21 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente ProgressCircle
+- ProgressCircle básico
 
 ```tsx copy
-<ProgressCircle p={40} showP={true} />
+<ProgressCircle p={75} />
 ```
+
+- ProgressCircle con progreso visible
+
+```tsx copy
+<ProgressCircle p={50} showP={true} />
+```
+
+- ProgressCircle con clase personalizada
+
+```tsx copy
+<ProgressCircle p={90} className="mi-clase" />
+```
+

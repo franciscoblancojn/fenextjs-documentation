@@ -1,50 +1,30 @@
-import { Iframe } from "../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 # Chronometer
 
-El componente Chronometer es un componente que muestra un tiempo en descenso hasta llegar al tiempo minimo.
+El componente Chronometer muestra una cuenta regresiva en base al tiempo dado en segundos, actualizándose cada segundo. Permite personalizar el formato del tiempo mostrado y ejecutar una acción cada vez que el tiempo cambia.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=chronometer-chronometer--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=chronometer-chronometer--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente Chronometer, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente Chronometer, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  Chronometer,
-  ChronometerProps,
-} from "fenextjs/cjs/component/Chronometer";
-```
-
-o
-
-```tsx copy
-import {
-  Chronometer,
-  ChronometerProps,
-} from "fenextjs-component/cjs/Chronometer";
+import { Chronometer } from "fenextjs";
 ```
 
 ### Parametros
 
-| Propiedad         |          Tipo          | Requerido | Default | Descripción                                              |
-| ----------------- | :--------------------: | :-------: | :-----: | :------------------------------------------------------- |
-| time              |         number         |    no     |         | El tiempo en segundos para el componente.                |
-| onChange          | (time: number) => void |    no     |         | Función de cambio de tiempo para el componente.          |
-| min               |         number         |    no     |         | El mínimo en segundos para el componente.                |
-| optionsTimeToText |   getTimeToTextProps   |    no     |         | Opciones para convertir tiempo a texto en el componente. |
-
-#### getTimeToTextProps
-
-| Propiedad |  Tipo   | Requerido | Default | Descripción                                                        |
-| --------- | :-----: | :-------: | :-----: | :----------------------------------------------------------------- |
-| days      | boolean |    no     |  true   | Incluir el componente de días en la salida. Por defecto, true.     |
-| hours     | boolean |    no     |  true   | Incluir el componente de horas en la salida. Por defecto, true.    |
-| minutes   | boolean |    no     |  true   | Incluir el componente de minutos en la salida. Por defecto, true.  |
-| seconds   | boolean |    no     |  true   | Incluir el componente de segundos en la salida. Por defecto, true. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| time | number | no | 100 | El tiempo inicial en segundos que se mostrará y del cual el cronómetro comenzará la cuenta regresiva. |
+| onChange | (time: number) =\> void | no | undefined | Función que se ejecuta cada vez que el tiempo cambia, recibiendo el nuevo tiempo como parámetro. |
+| min | number | no | 0 | El tiempo mínimo al que puede llegar el cronómetro, en segundos. |
+| optionsTimeToText | getTimeToTextProps | no | \{days: false, hours: true,minutes: true,seconds: true \} | Opciones para personalizar el formato del tiempo mostrado, como si incluir o no los días. |
+| className | string | no | '' | Clase CSS personalizada para el componente. |
 
 ### Storybook
 
@@ -52,12 +32,29 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente Chronometer
+- Cronómetro básico
 
 ```tsx copy
-<Chronometer
-  time={60}
-  onChange={(newTime) => console.log(`Nuevo tiempo: ${newTime} segundos`)}
-  min={0}
+<Chronometer time={120} />
+```
+
+- Cronómetro con acción al cambiar el tiempo
+
+```tsx copy
+
+<Chronometer 
+    time={60} 
+    onChange={(newTime) => console.log("Nuevo tiempo:", newTime)} 
 />
 ```
+
+- Cronómetro con formato de tiempo personalizado
+
+```tsx copy
+
+<Chronometer 
+    time={3600} 
+    optionsTimeToText={{ hours: true, minutes: true, seconds: true }} 
+/>
+```
+

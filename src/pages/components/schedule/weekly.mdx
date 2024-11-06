@@ -1,50 +1,32 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 # ScheduleWeekly
 
-El componente ScheduleWeekly es un componente que muestra un schedule por semana.
+El componente ScheduleWeekly permite a los usuarios gestionar horarios semanales seleccionando intervalos de tiempo específicos para cada día de la semana. Utiliza ScheduleDay y CollapseMultiple para representar los horarios diarios en un formato de colapso.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=schedule-scheduleweekly--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=schedule-scheduleweekly--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente ScheduleWeekly, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente ScheduleWeekly, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  ScheduleWeekly,
-  ScheduleWeeklyProps,
-} from "fenextjs/cjs/component/Schedule/Weekly";
-```
-
-o
-
-```tsx copy
-import {
-  ScheduleWeekly,
-  ScheduleWeeklyProps,
-} from "fenextjs-component/cjs/Schedule/Weekly";
+import { ScheduleWeekly } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro             |                  Tipo                  | Requerido | Default | Descripcion                                                                                                                           |
-| --------------------- | :------------------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------------------------------------------------------------ |
-| \_t                   |                `string`                |    No     |         | Propiedad de internacionalización.                                                                                                    |
-| title                 |              `ReactNode`               |    No     |         | Título de la vista semanal.                                                                                                           |
-| defaultValue          |       `ScheduleWeeklyValueType`        |    No     |         | Valor predeterminado del campo de entrada.                                                                                            |
-| value                 |       `ScheduleWeeklyValueType`        |    No     |         | Valor actual del campo de entrada.                                                                                                    |
-| onChange              | `(v: ScheduleWeeklyValueType) => void` |    No     |         | Función de devolución de llamada para manejar cambios en el campo de entrada.                                                         |
-| minDate               |                 `Date`                 |    No     |         | Fecha mínima permitida para la selección.                                                                                             |
-| maxDate               |                 `Date`                 |    No     |         | Fecha máxima permitida para la selección.                                                                                             |
-| disabledDates         | `Date[]` or `(date: Date) => boolean`  |    No     |         | Fechas deshabilitadas para la selección. Puede ser una lista de fechas o una función que toma una fecha y devuelve un valor booleano. |
-| format                |                `string`                |    No     |         | Formato de fecha para mostrar y manejar la entrada. Puede usar tokens como 'yyyy', 'MM', 'dd', 'HH', 'mm', 'ss'.                      |
-| showTodayButton       |               `boolean`                |    No     |  true   | Indica si se debe mostrar el botón "Hoy".                                                                                             |
-| ButtonProps           |     `Omit<ButtonProps, "onClick">`     |    No     |         | Propiedades del botón para agregar elementos.                                                                                         |
-| CollapseMultipleProps | `Omit<CollapseMultipleProps, "items">` |    No     |         | Propiedades de `CollapseMultiple` para el campo de entrada.                                                                           |
-| onParseHeaderDay      |      `(v: DaysEnum) => ReactNode`      |    No     |         | Función de devolución de llamada para analizar el encabezado del día.                                                                 |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del componente ScheduleWeekly. |
+| title | ReactNode | no | 'Schedule Weekly' | Título del componente ScheduleWeekly. |
+| defaultValue | ScheduleWeeklyValueType | no | \{\} | Valor inicial del horario semanal, estructurado por días de la semana. |
+| value | ScheduleWeeklyValueType | no | undefined | Valor actual del horario semanal, usado para el control del componente desde el exterior. |
+| onChange | (v: ScheduleWeeklyValueType) =\> void | no | N/A | Función callback para manejar cambios en el valor del horario semanal. |
+| CollapseMultipleProps | Omit\<CollapseMultipleProps, 'items'\> | no | \{ name: 'schedule', type: 'radio', defaultActive: 0 \} | Props para personalizar el comportamiento del componente CollapseMultiple que envuelve cada día de la semana. |
+| onParseHeaderDay | (v: DaysEnum) =\> ReactNode | no | undefined | Función para personalizar el encabezado de cada día de la semana en el colapso. |
 
 ### Storybook
 
@@ -52,8 +34,21 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente ScheduleWeekly
+- Uso básico del ScheduleWeekly
 
 ```tsx copy
-<ScheduleWeekly />
+<ScheduleWeekly onChange={(value) => console.log(value)} />
 ```
+
+- ScheduleWeekly con título personalizado
+
+```tsx copy
+<ScheduleWeekly title="Horario Semanal" />
+```
+
+- ScheduleWeekly con CollapseMultipleProps personalizados
+
+```tsx copy
+<ScheduleWeekly CollapseMultipleProps={{ type: 'checkbox', defaultActive: [0, 1] }} />
+```
+

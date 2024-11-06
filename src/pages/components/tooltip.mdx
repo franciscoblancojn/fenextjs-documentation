@@ -1,36 +1,30 @@
-import { Iframe } from "../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 # Tooltip
 
-El componente Tooltip es un componente que muestra un contenerdor que al hacer hover muestra un contenido personalizado.
+El componente Tooltip muestra información adicional en un cuadro emergente cuando el usuario se desplaza sobre un elemento o interactúa con él. La posición del tooltip puede ajustarse en los ejes X e Y.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=tooltip-tooltip--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=tooltip-tooltip--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente Tooltip, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente Tooltip, se puede hacer desde fenextjs
 
 ```tsx copy
-import { Tooltip, TooltipProps } from "fenextjs/cjs/component/Tooltip";
-```
-
-o
-
-```tsx copy
-import { Tooltip, TooltipProps } from "fenextjs-component/cjs/Tooltip";
+import { Tooltip } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro |              Tipo               | Requerido | Default  | Descripcion                                                            |
-| --------- | :-----------------------------: | :-------: | :------: | :--------------------------------------------------------------------- |
-| \_t       |            `string`             |    No     |          | Propiedad de internacionalización.                                     |
-| children  |           `ReactNode`           |    No     |          | Contenido del componente que activa el tooltip.                        |
-| tooltip   |           `ReactNode`           |    No     |          | Contenido del tooltip a mostrar.                                       |
-| positionX | `"center" \| "right" \| "left"` |    No     | "center" | Posición horizontal del tooltip. Puede ser "center", "right" o "left". |
-| positionY | `"center" \| "top" \| "bottom"` |    No     |  "top"   | Posición vertical del tooltip. Puede ser "center", "top" o "bottom".   |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del tooltip. |
+| children | ReactNode | no | undefined | Contenido o elemento que activará la visualización del tooltip. |
+| tooltip | ReactNode | no | undefined | Contenido del tooltip que se mostrará al usuario. |
+| positionX | 'center' \| 'right' \| 'left' | no | 'center' | Posición horizontal del tooltip en relación con el elemento activador. |
+| positionY | 'center' \| 'top' \| 'bottom' | no | 'top' | Posición vertical del tooltip en relación con el elemento activador. |
 
 ### Storybook
 
@@ -38,8 +32,21 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente Tooltip
+- Tooltip básico
 
 ```tsx copy
-<Tooltip />
+<Tooltip tooltip="Texto de ayuda">Hover aquí</Tooltip>
 ```
+
+- Tooltip con posición ajustada
+
+```tsx copy
+<Tooltip tooltip="Texto de ayuda" positionX="right" positionY="bottom">Hover aquí</Tooltip>
+```
+
+- Tooltip con clase personalizada
+
+```tsx copy
+<Tooltip tooltip="Texto de ayuda" className="custom-tooltip">Hover aquí</Tooltip>
+```
+

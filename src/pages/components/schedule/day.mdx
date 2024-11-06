@@ -1,47 +1,32 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 # ScheduleDay
 
-El componente ScheduleDay es un componente que muestra un schedule por dia.
+El componente ScheduleDay permite a los usuarios seleccionar un rango de fechas para un día específico y añade múltiples intervalos de tiempo si es necesario. Utiliza el componente InputDateRange para manejar los intervalos de fecha/hora.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=schedule-scheduleday--index&viewMode=story" />
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=schedule-scheduleday--index&viewMode=story" />
 
 ### Importacion
 
-Para importar el componente ScheduleDay, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente ScheduleDay, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  ScheduleDay,
-  ScheduleDayProps,
-} from "fenextjs/cjs/component/Schedule/Day";
-```
-
-o
-
-```tsx copy
-import {
-  ScheduleDay,
-  ScheduleDayProps,
-} from "fenextjs-component/cjs/Schedule/Day";
+import { ScheduleDay } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro       |                 Tipo                  | Requerido | Default | Descripcion                                                                                                                           |
-| --------------- | :-----------------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------------------------------------------------------------ |
-| \_t             |               `string`                |    No     |         | Propiedad de internacionalización.                                                                                                    |
-| defaultValue    |        `ScheduleDayValueType`         |    No     |         | Valor predeterminado del campo de entrada.                                                                                            |
-| value           |        `ScheduleDayValueType`         |    No     |         | Valor actual del campo de entrada.                                                                                                    |
-| onChange        |  `(v: ScheduleDayValueType) => void`  |    No     |         | Función de devolución de llamada para manejar cambios en el campo de entrada.                                                         |
-| minDate         |                `Date`                 |    No     |         | Fecha mínima permitida para la selección.                                                                                             |
-| maxDate         |                `Date`                 |    No     |         | Fecha máxima permitida para la selección.                                                                                             |
-| disabledDates   | `Date[]` or `(date: Date) => boolean` |    No     |         | Fechas deshabilitadas para la selección. Puede ser una lista de fechas o una función que toma una fecha y devuelve un valor booleano. |
-| format          |               `string`                |    No     |         | Formato de fecha para mostrar y manejar la entrada. Puede usar tokens como 'yyyy', 'MM', 'dd', 'HH', 'mm', 'ss'.                      |
-| showTodayButton |               `boolean`               |    No     |  true   | Indica si se debe mostrar el botón "Hoy".                                                                                             |
-| ButtonProps     |    `Omit<ButtonProps, "onClick">`     |    No     |         | Propiedades del botón para agregar elementos.                                                                                         |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del componente ScheduleDay. |
+| defaultValue | ScheduleDayValueType | no | [[undefined, undefined]] | Valor inicial del campo de entrada, representado como un array de rangos de fechas. |
+| value | ScheduleDayValueType | no | undefined | Valor actual del campo de entrada, usado para el control del componente desde el exterior. |
+| onChange | (v: ScheduleDayValueType) =\> void | no | N/A | Función callback para manejar cambios en el valor del campo de entrada. |
+| ButtonProps | Omit\<ButtonProps, 'onClick'\> | no | \{ children: 'Add Time Range' \} | Props para personalizar el botón que añade nuevos intervalos de tiempo. |
+| propsStart | InputDateRangeBaseProps | no | \{ label: 'Start time', placeholder: 'Start time' \} | Props específicos para el campo de hora de inicio del rango de fecha. |
+| propsEnd | InputDateRangeBaseProps | no | \{ label: 'Final hour', placeholder: 'Final hour' \} | Props específicos para el campo de hora de fin del rango de fecha. |
 
 ### Storybook
 
@@ -49,8 +34,21 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente ScheduleDay
+- Uso básico del ScheduleDay
 
 ```tsx copy
-<ScheduleDay />
+<ScheduleDay onChange={(value) => console.log(value)} />
 ```
+
+- ScheduleDay con valor predeterminado
+
+```tsx copy
+<ScheduleDay defaultValue={[[new Date(2023, 0, 1), new Date(2023, 0, 2)]]} />
+```
+
+- ScheduleDay con botón personalizado
+
+```tsx copy
+<ScheduleDay ButtonProps={{ children: "Añadir rango de tiempo", className: "mi-clase-boton" }} />
+```
+
