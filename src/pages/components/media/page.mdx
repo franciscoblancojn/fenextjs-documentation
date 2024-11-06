@@ -1,47 +1,52 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # MediaPage
 
-El componente MediaPage es un componente que muestra un pagina de media para gestionar archivos.
+El componente MediaPage proporciona una interfaz para subir, mostrar y seleccionar imágenes, con funcionalidades adicionales como eliminación, aceptación y un header personalizable. Permite manejar tanto una imagen única como múltiples imágenes.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=media-page--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=media-page--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente MediaPage, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente MediaPage, se puede hacer desde fenextjs
 
 ```tsx copy
-import { MediaPage, MediaPageProps } from "fenextjs/cjs/component/Media/Page";
-```
-
-o
-
-```tsx copy
-import { MediaPage, MediaPageProps } from "fenextjs-component/cjs/Media/Page";
+import { MediaPage } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro         |                                                         Tipo                                                         | Requerido | Default | Descripcion                                                 |
-| ----------------- | :------------------------------------------------------------------------------------------------------------------: | :-------: | :-----: | :---------------------------------------------------------- |
-| defaultValue      |                                          `ImgDataProps[]` \| `ImgDataProps`                                          |    No     |         | Valor predeterminado del componente.                        |
-| disabledSelectImg |                                                      `boolean`                                                       |    No     |         | Indica si la selección de imágenes está deshabilitada.      |
-| images            |                                                   `ImgDataProps[]`                                                   |    No     |         | Lista de imágenes para el componente.                       |
-| loaderImages      |                                                      `boolean`                                                       |    No     |         | Indica si la carga de imágenes está en estado de carga.     |
-| multiple          |                                                      `boolean`                                                       |    No     |         | Indica si se permiten múltiples imágenes.                   |
-| isPage            |                                                      `boolean`                                                       |    No     |         | Indica si la vista es una página.                           |
-| onRenderImg       |                                         `(data: ImgDataProps) => ReactNode`                                          |    No     |         | Función para renderizar una imagen en la vista.             |
-| onChange          |                            `(data: ImgDataProps[] \| ImgDataProps \| undefined) => void`                             |    No     |         | Función a llamar cuando cambia la selección de imágenes.    |
-| onUploadImg       |                                            `(data: ImgDataProps) => void`                                            |    No     |         | Función a llamar cuando se carga una nueva imagen.          |
-| onDeleteImg       |                                            `(data: ImgDataProps) => void`                                            |    No     |         | Función a llamar cuando se elimina una imagen.              |
-| onAcepte          |                                   `(data: ImgDataProps[] \| ImgDataProps) => void`                                   |    No     |         | Función a llamar cuando se acepta la selección de imágenes. |
-| HeaderPage        |                                                     `ReactNode`                                                      |    No     |         | Elemento de encabezado para la página de medios.            |
-| ButtonAcceptProps |                                            `Omit<ButtonProps, "onClick">`                                            |    No     |         | Propiedades del botón de aceptar para la página.            |
-| ButtonCancelProps |                                            `Omit<ButtonProps, "onClick">`                                            |    No     |         | Propiedades del botón de cancelar para la página.           |
-| InputUploadProps  | `Omit<InputUploadProps, "onChange" \| "defaultValue" \| "onChangeProgress" \| "onUploadFile" \| "clearAfterUpload">` |    No     |         | Propiedades del componente de carga de archivos.            |
-| extraContentImgs  |                                                     `ReactNode`                                                      |    No     |         | Contenido adicional para las imágenes en la página.         |
+| Parametro   | Tipo                                                         | Requerido | Default   | Descripcion                                                                         |
+| ----------- | ------------------------------------------------------------ | --------- | --------- | ----------------------------------------------------------------------------------- |
+| className   | string                                                       | no        | ''        | Clase CSS para personalizar el contenedor del componente MediaPage.                 |
+| multiple    | boolean                                                      | no        | false     | Determina si se pueden seleccionar o subir múltiples imágenes a la vez.             |
+| onChange    | (data: ImgDataProps[] \| ImgDataProps \| undefined) =\> void | no        | undefined | Función que se ejecuta cuando hay cambios en las imágenes seleccionadas o cargadas. |
+| onUploadImg | (data: ImgDataProps) =\> void                                | no        | undefined | Función que se ejecuta cuando se sube una imagen.                                   |
+| onDeleteImg | (data: ImgDataProps) =\> void                                | no        | undefined | Función que se ejecuta cuando se elimina una imagen.                                |
+| onAcepte    | (data: ImgDataProps[] \| ImgDataProps) =\> void              | no        | undefined | Función que se ejecuta cuando se acepta la selección de imágenes.                   |
+| HeaderPage  | ReactNode                                                    | no        |
+
+\<Title tag="h3"\>Media\</Title\>
+\<Text\>Upload or Select Imagen.\</Text\> | Contenido del encabezado de la página de medios, se puede personalizar. |
+| defaultValue | ImgDataProps[] \| ImgDataProps | no | undefined | Valor por defecto del componente, que puede ser una o varias imágenes. |
+| images | ImgDataProps[] | no | [] | Imágenes a mostrar en el componente MediaPage. |
+| loaderImages | boolean | no | false | Muestra un cargador mientras las imágenes están siendo cargadas. |
+| disabledSelectImg | boolean | no | false | Deshabilita la opción de seleccionar imágenes. |
+| InputUploadProps | Omit\<InputUploadProps, 'onChange' \| 'defaultValue' \| 'onChangeProgress' \| 'onUploadFile' \| 'clearAfterUpload'\> | no | \{
+accept: ["png", "jpg", "jpeg", "webp"],
+title: "Upload Imagen",
+text: "Click for select or upload Imagen.",
+\} | Propiedades para personalizar el componente InputUpload utilizado dentro de MediaPage. |
+| ButtonAcceptProps | Omit\<ButtonProps, 'onClick'\> | no | \{ children: 'Acepte' \} | Propiedades del botón de aceptación. |
+| ButtonCancelProps | Omit\<ButtonProps, 'onClick'\> | no | \{ children: 'Cancel' \} | Propiedades del botón de cancelación. |
+| isPage | boolean | no | true | Determina si el componente se comporta como una página completa de medios o como un componente en línea. |
+| extraContentImgs | ReactNode | no | undefined | Contenido adicional que se puede agregar junto a las imágenes en MediaPage. |
+| onRenderImg | (data: ImgDataProps) =\> ReactNode | no | undefined | Función que permite renderizar imágenes personalizadas dentro de la galería. |
 
 ### Storybook
 
@@ -49,8 +54,20 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente MediaPage
+- MediaPage básico
 
 ```tsx copy
 <MediaPage />
+```
+
+- MediaPage con imágenes predeterminadas
+
+```tsx copy
+<MediaPage defaultValue={defaultImages} />
+```
+
+- MediaPage con múltiples imágenes
+
+```tsx copy
+<MediaPage multiple={true} />
 ```

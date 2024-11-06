@@ -1,46 +1,45 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # InputCheckbox
 
-El componente InputCheckbox es un componente que muestra un checkbox personalizado.
+El componente InputCheckbox es un campo de entrada de tipo checkbox que permite al usuario seleccionar o deseleccionar una opción. Puede mostrar etiquetas y manejar validaciones, así como valores personalizados para las opciones activas e inactivas.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcheckbox--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcheckbox--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente InputCheckbox, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente InputCheckbox, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  InputCheckbox,
-  InputCheckboxProps,
-} from "fenextjs/cjs/component/Input/Checkbox";
-```
-
-o
-
-```tsx copy
-import {
-  InputCheckbox,
-  InputCheckboxProps,
-} from "fenextjs-component/cjs/Input/Checkbox";
+import { InputCheckbox } from "fenextjs";
 ```
 
 ### Parametros
 
-| Propiedad       |             Tipo              | Requerido | Default | Descripción                                                                                                                                                       |
-| --------------- | :---------------------------: | :-------: | :-----: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| label           |             `any`             |    No     |         | La etiqueta que se mostrará junto al checkbox.                                                                                                                    |
-| labelPosition   |      `"right" \| "left"`      |    No     |         | La posición de la etiqueta con respecto al checkbox. Puede ser "right" (derecha) o "left" (izquierda).                                                            |
-| name            |           `string`            |    No     |         | El atributo de nombre del elemento de entrada del checkbox.                                                                                                       |
-| onChange        |    `(e: boolean) => void`     |    No     |         | Una función de devolución de llamada para ejecutar cuando se cambia el estado del checkbox. Recibe un valor booleano que indica si el checkbox está marcado o no. |
-| defaultValue    |           `boolean`           |    No     |         | El valor predeterminado del checkbox cuando se renderiza por primera vez.                                                                                         |
-| useValue        |           `boolean`           |    No     |         | Un valor booleano que indica si se debe usar el atributo de valor del elemento de entrada del checkbox o no.                                                      |
-| value           |           `boolean`           |    No     |         | El valor del elemento de entrada del checkbox.                                                                                                                    |
-| disabled        |           `boolean`           |    No     |         | Un valor booleano que indica si el checkbox está desactivado o no.                                                                                                |
-| onValidateCheck | `() => Promise<void> \| void` |    No     |         | Una función de devolución de llamada para ejecutar cuando se valida el checkbox. Debe devolver una promesa o void.                                                |
+| Parametro       | Tipo                           | Requerido | Default      | Descripcion                                                                                                     |
+| --------------- | ------------------------------ | --------- | ------------ | --------------------------------------------------------------------------------------------------------------- |
+| label           | ReactNode                      | no        | ''           | Etiqueta que se muestra al lado del checkbox.                                                                   |
+| labelPosition   | 'right' \| 'left'              | no        | 'right'      | Posición de la etiqueta en relación con el checkbox.                                                            |
+| name            | string                         | no        | ''           | Atributo name del elemento input checkbox.                                                                      |
+| onChange        | (checked: boolean) =\> void    | no        | undefined    | Función que se ejecuta cuando se alterna el checkbox, recibe un valor booleano que indica si está seleccionado. |
+| defaultValue    | boolean                        | no        | false        | Valor predeterminado del checkbox cuando se renderiza por primera vez.                                          |
+| value           | boolean                        | no        | undefined    | Valor controlado del checkbox.                                                                                  |
+| disabled        | boolean                        | no        | false        | Indica si el checkbox está deshabilitado.                                                                       |
+| onValidateCheck | () =\> Promise\<void\> \| void | no        | undefined    | Función que se ejecuta para validar el checkbox.                                                                |
+| optional        | boolean                        | no        | false        | Indica si el checkbox es opcional.                                                                              |
+| optionalText    | string                         | no        | '(optional)' | Texto que se muestra si el checkbox es opcional.                                                                |
+| required        | boolean                        | no        | false        | Indica si el checkbox es obligatorio.                                                                           |
+| requiredText    | string                         | no        | '\*'         | Texto que se muestra si el checkbox es obligatorio.                                                             |
+| onActive        | () =\> void                    | no        | undefined    | Función que se ejecuta cuando el checkbox se activa.                                                            |
+| onInactive      | () =\> void                    | no        | undefined    | Función que se ejecuta cuando el checkbox se desactiva.                                                         |
+| valueActive     | VT                             | no        | undefined    | Valor a pasar cuando el checkbox se activa.                                                                     |
+| valueInactive   | VF                             | no        | undefined    | Valor a pasar cuando el checkbox se desactiva.                                                                  |
+| icon            | ReactNode                      | no        | \<Check /\>  | Ícono que se muestra junto al checkbox.                                                                         |
 
 ### Storybook
 
@@ -48,8 +47,30 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente InputCheckbox
+- Básico
 
 ```tsx copy
-<InputCheckbox />
+<InputCheckbox label="Acepto los términos y condiciones" />
+```
+
+- Checkbox deshabilitado
+
+```tsx copy
+<InputCheckbox label="No puedo seleccionar este" disabled={true} />
+```
+
+- Checkbox obligatorio
+
+```tsx copy
+<InputCheckbox label="Este checkbox es obligatorio" required={true} />
+```
+
+- Checkbox opcional con texto
+
+```tsx copy
+<InputCheckbox
+  label="Este es opcional"
+  optional={true}
+  optionalText="(opcional)"
+/>
 ```

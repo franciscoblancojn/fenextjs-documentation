@@ -1,41 +1,38 @@
-import { Iframe } from "../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # Button
 
-El componente Button es un componente versátil que representa un botón interactivo. Puede renderizarse como un elemento "button" o como un contenedor "div", y proporciona varias opciones de personalización, incluyendo tamaño, icono y estado de carga.
+El componente Button es un botón interactivo que puede ser configurado para mostrar íconos, estar en estado de carga (loader), deshabilitarse y adaptarse a diferentes tamaños. Permite a los usuarios interactuar con la aplicación ejecutando acciones al hacer clic.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-button--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-button--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente Button, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente Button, se puede hacer desde fenextjs
 
 ```tsx copy
-import { Button, ButtonProps } from "fenextjs/cjs/component/Button";
-```
-
-o
-
-```tsx copy
-import { Button, ButtonProps } from "fenextjs-component/cjs/Button";
+import { Button } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro       |                              Tipo                              | Requerido | Default  | Descripcion                                                                                           |
-| --------------- | :------------------------------------------------------------: | :-------: | :------: | :---------------------------------------------------------------------------------------------------- |
-| loader          |                            boolean                             |    no     |  false   | Si el componente esta en estado loader, con un indicardor de spiner y deshabilitada su funcionalidad  |
-| disabled        |                            boolean                             |    no     |  false   | Si el componente esta en estado disabled, por ende se deshabilita su funcionalidad                    |
-| onClick         |                            function                            |    no     |          | Funcion que se ejecuta por onClick en el componente, (solo se ejecuta si loader y disabled son false) |
-| icon            |                           ReactNode                            |    no     |    ""    | Icono del componente                                                                                  |
-| children        |                           ReactNode                            |    no     |          | Contenido del componente                                                                              |
-| isBtn           |                            boolean                             |    no     |   true   | Si es false se usara la etiquera "div" y no la "button"                                               |
-| size            | "extra-small"\| "small" \|"normal" \|"strong" \|"extra-strong" |    no     | "normal" | Tamaño del bottom, es posible personalizar los tamaños                                                |
-| full            |                            boolean                             |    no     |  false   | Si es true el botton tendra width:100%                                                                |
-| className       |                             string                             |    no     |    ""    | Clase personalizada del componente                                                                    |
-| classNameLoader |                             string                             |    no     |    ""    | Clase personalizada del loader                                                                        |
+| Parametro       | Tipo                                                               | Requerido | Default   | Descripcion                                                                                                         |
+| --------------- | ------------------------------------------------------------------ | --------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
+| loader          | boolean                                                            | no        | false     | Si el botón está en estado de carga, mostrando un indicador de carga (spinner) y deshabilitado para otras acciones. |
+| disabled        | boolean                                                            | no        | false     | Si el botón está deshabilitado, impidiendo cualquier interacción.                                                   |
+| onClick         | function                                                           | no        |           | Función que se ejecuta cuando se hace clic en el botón (solo si no está deshabilitado o en estado de carga).        |
+| onClickDisabled | function                                                           | no        |           | Función que se ejecuta cuando se hace clic en el botón estando deshabilitado.                                       |
+| icon            | ReactNode                                                          | no        | undefined | El ícono que se mostrará dentro del botón.                                                                          |
+| isBtn           | boolean                                                            | no        | true      | Si se renderiza el componente como un botón (`<button>`) o como un `<div>`.                                         |
+| size            | "extra-small" \| "small" \| "normal" \| "strong" \| "extra-strong" | no        | "normal"  | El tamaño del botón.                                                                                                |
+| full            | boolean                                                            | no        | false     | Si el botón debe ocupar todo el ancho disponible.                                                                   |
+| className       | string                                                             | no        | ""        | Clase personalizada para el componente Button.                                                                      |
+| classNameLoader | string                                                             | no        | ""        | Clase personalizada para el componente Loader dentro del botón cuando está en estado de carga.                      |
 
 ### Storybook
 
@@ -43,46 +40,37 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente Button
+- Botón básico
 
 ```tsx copy
-const handleButtonClick = () => {
-  console.log("Button clicked!");
-};
-<Button onClick={handleButtonClick}>Click Me</Button>;
+<Button>Click me</Button>
 ```
 
-- Button con clase de estilo personalizada
+- Botón con ícono
 
 ```tsx copy
-<Button className="custom-button">Custom Button</Button>
+<Button icon={<img src="/icon.svg" alt="Icon" />}>Click me</Button>
 ```
 
-- Button con loadding
+- Botón en estado de carga
 
 ```tsx copy
-<Button loader={true}>Loadding....</Button>
+<Button loader={true}>Loading...</Button>
 ```
 
-- Button deshabilitado
+- Botón deshabilitado
 
 ```tsx copy
-<Button disabled={true}>Disabled Button</Button>
+<Button disabled={true}>Disabled</Button>
 ```
 
-- Button como un contenedor "div"
+- Botón con tamaño personalizado
 
 ```tsx copy
-<Button isBtn={false}>Div Button</Button>
+<Button size="strong">Strong Button</Button>
 ```
 
-- Button con tamaño personalizado
-
-```tsx copy
-<Button size="extra-strong">Extra Strong Button</Button>
-```
-
-- Button a lo ancho
+- Botón con ancho completo
 
 ```tsx copy
 <Button full={true}>Full Width Button</Button>

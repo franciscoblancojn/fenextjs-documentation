@@ -1,49 +1,42 @@
-import { Iframe } from "../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # Tab
 
-El componente Tab es un componente que muestra una lista de tab con su respectivo contenido.
+El componente Tab permite la creación de pestañas con contenidos asociados, personalizables en clases CSS y comportamiento.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-tab--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-tab--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente Tab, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente Tab, se puede hacer desde fenextjs
 
 ```tsx copy
-import { Tab, TabProps } from "fenextjs/cjs/component/Tab";
-```
-
-o
-
-```tsx copy
-import { Tab, TabProps } from "fenextjs-component/cjs/Tab";
+import { Tab } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro                  |              Tipo              | Requerido | Default | Descripcion                                                                                 |
-| -------------------------- | :----------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------------------ |
-| \_t                        |            `string`            |    No     |         | Propiedad de internacionalización.                                                          |
-| items                      |        `TabItemProps[]`        |    No     |         | Array de objetos `TabItemProps` que representan las pestañas.                               |
-| onChange                   | `(item: TabItemProps) => void` |    No     |         | Función de devolución de llamada al cambiar de pestaña.                                     |
-| defaultTab                 |            `number`            |    No     |         | Índice de la pestaña que se mostrará por defecto.                                           |
-| beforeTabs                 |       `React.ReactNode`        |    No     |         | Componente antes de la lista de encabezados de pestañas.                                    |
-| afterTabs                  |       `React.ReactNode`        |    No     |         | Componente después de la lista de encabezados de pestañas.                                  |
-| tabScrollActive            |           `boolean`            |    No     |  false  | Indica si se deben mostrar todas las pestañas en un menú desplegable cuando hay demasiadas. |
-| validateTabOneHiddenHeader |           `boolean`            |    No     |  true   | Indica si, cuando hay solo una pestaña, se debe ocultar el encabezado.                      |
-
-#### TabItemProps
-
-| Parametro |       Tipo        | Requerido | Default | Descripcion                                               |
-| --------- | :---------------: | :-------: | :-----: | :-------------------------------------------------------- |
-| id        |     `string`      |    Sí     |         | Identificador único de la pestaña.                        |
-| head      | `React.ReactNode` |    Sí     |         | Contenido que se mostrará en el encabezado de la pestaña. |
-| body      | `React.ReactNode` |    Sí     |         | Contenido que se mostrará en el cuerpo de la pestaña.     |
-| beforeTab | `React.ReactNode` |    No     |         | Componente antes del encabezado de la pestaña.            |
-| afterTab  | `React.ReactNode` |    No     |         | Componente después del encabezado de la pestaña.          |
+| Parametro                  | Tipo                          | Requerido | Default   | Descripcion                                                                     |
+| -------------------------- | ----------------------------- | --------- | --------- | ------------------------------------------------------------------------------- |
+| className                  | string                        | no        | ""        | Clase CSS para el contenedor del componente.                                    |
+| classNameContentHead       | string                        | no        | ""        | Clase CSS para el contenedor del encabezado del contenido de las pestañas.      |
+| classNameHead              | string                        | no        | ""        | Clase CSS para el encabezado de la pestaña.                                     |
+| classNameHeadItem          | string                        | no        | ""        | Clase CSS para cada elemento del encabezado de la pestaña.                      |
+| classNameHeadItemActive    | string                        | no        | ""        | Clase CSS para el elemento activo del encabezado de la pestaña.                 |
+| classNameBody              | string                        | no        | ""        | Clase CSS para el contenedor del cuerpo de las pestañas.                        |
+| classNameBodyItem          | string                        | no        | ""        | Clase CSS para cada elemento del cuerpo de la pestaña.                          |
+| items                      | TabItemProps[]                | no        | []        | Lista de objetos que representan las pestañas con encabezado y cuerpo.          |
+| defaultTab                 | number                        | no        | 0         | Índice de la pestaña a mostrar por defecto.                                     |
+| activeTab                  | number                        | no        | undefined | Índice de la pestaña actualmente activa.                                        |
+| onChange                   | (item: TabItemProps) =\> void | no        | undefined | Función a ejecutar al cambiar de pestaña.                                       |
+| tabScrollActive            | boolean                       | no        | false     | Determina si las pestañas deben estar en modo de desplazamiento al seleccionar. |
+| validataTabOneHiddenHeader | boolean                       | no        | true      | Oculta el encabezado de las pestañas si solo hay una pestaña presente.          |
+| useCount                   | boolean                       | no        | false     | Permite mostrar un contador de elementos en el encabezado de la pestaña.        |
 
 ### Storybook
 
@@ -51,8 +44,41 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente Tab
+- Ejemplo básico
 
 ```tsx copy
-<Tab />
+<Tab
+  items={[
+    { id: "tab1", head: "Tab 1", body: "Contenido 1" },
+    { id: "tab2", head: "Tab 2", body: "Contenido 2" },
+  ]}
+/>
+```
+
+- Con clase personalizada y función de cambio
+
+```tsx copy
+<Tab
+  className="custom-tab"
+  onChange={(item) => console.log("Pestaña seleccionada:", item)}
+/>
+```
+
+- Con contador de elementos en el encabezado
+
+```tsx copy
+<Tab
+  items={[
+    {
+      id: "tab1",
+      head: "Tab 1",
+      body: "Contenido 1",
+      useCount: true,
+      count: 3,
+      singular: "elemento",
+      plural: "elementos",
+    },
+  ]}
+  useCount={true}
+/>
 ```

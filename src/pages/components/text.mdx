@@ -1,35 +1,33 @@
-import { Iframe } from "../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # Text
 
-El componente Text es un componente que muestra un contenedor de texto en sus distintas versiones.
+Componente Text que permite mostrar diferentes elementos de texto (`p`, `strong`, `small`, etc.) con soporte para un indicador de carga en forma de líneas de esqueleto.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=text-text--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=text-text--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente Text, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente Text, se puede hacer desde fenextjs
 
 ```tsx copy
-import { Text, TextProps } from "fenextjs/cjs/component/Text";
-```
-
-o
-
-```tsx copy
-import { Text, TextProps } from "fenextjs-component/cjs/Text";
+import { Text } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro   |                                                 Tipo                                                 | Requerido | Default | Descripcion                                                                                                                                       |
-| ----------- | :--------------------------------------------------------------------------------------------------: | :-------: | :-----: | :------------------------------------------------------------------------------------------------------------------------------------------------ |
-| \_t         |                                               `string`                                               |    No     |         | Propiedad de internacionalización.                                                                                                                |
-| tag         | `"p" \| "strong" \| "small" \| "em" \| "b" \| "del" \| "i" \| "mark" \| "ins" \|   "sub"   \| "sup"` |    No     |   "p"   | Indica el tipo de etiqueta HTML a utilizar para el texto. Puede ser "p", "strong", "small", "em", "b", "del", "i", "mark", "ins", "sub", o "sup". |
-| loader      |                                              `boolean`                                               |    No     |  false  | Indica si se debe mostrar un cargador mientras se carga el texto.                                                                                 |
-| nLineLoader |                                               `number`                                               |    No     |    3    | Número de líneas que se deben mostrar en el cargador.                                                                                             |
+| Parametro   | Tipo                                                                                           | Requerido | Default | Descripcion                                                                                                         |
+| ----------- | ---------------------------------------------------------------------------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| className   | string                                                                                         | no        | ""      | Clase CSS para el contenedor principal del componente.                                                              |
+| tag         | "p" \| "strong" \| "small" \| "em" \| "b" \| "del" \| "i" \| "mark" \| "ins" \| "sub" \| "sup" | no        | "p"     | Define la etiqueta HTML que se utiliza para el texto. Permite diferentes opciones como `p`, `strong`, `small`, etc. |
+| loader      | boolean                                                                                        | no        | false   | Determina si se muestra un indicador de carga. Cuando es `true`, muestra líneas de carga en lugar del contenido.    |
+| nLineLoader | number                                                                                         | no        | 3       | Número de líneas de esqueleto que se muestran cuando `loader` está activo.                                          |
+| children    | ReactNode                                                                                      | no        |         | Contenido que se mostrará dentro del componente `Text` si `loader` es `false`.                                      |
 
 ### Storybook
 
@@ -40,5 +38,13 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Uso básico del componente Text
 
 ```tsx copy
-<Text />
+<Text tag="strong" className="text-strong">
+  Texto destacado
+</Text>
+```
+
+- Uso del componente Text con el loader activo
+
+```tsx copy
+<Text loader={true} nLineLoader={5} />
 ```

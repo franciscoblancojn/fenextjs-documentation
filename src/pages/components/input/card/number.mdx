@@ -1,0 +1,66 @@
+import { Iframe } from "@/components/Iframe";
+
+# InputCardNumber
+
+El componente InputCardNumber es un campo de entrada diseñado para capturar el número de una tarjeta de crédito. Este componente formatea automáticamente la entrada del número en grupos de cuatro dígitos y muestra el icono correspondiente al tipo de tarjeta detectada.
+
+### Ejemplo
+
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-card-inputcardnumber--index&viewMode=story"
+/>
+
+### Importacion
+
+Para importar el componente InputCardNumber, se puede hacer desde fenextjs
+
+```tsx copy
+import { InputCardNumber } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro       | Tipo                     | Requerido | Default   | Descripcion                                                                                                    |
+| --------------- | ------------------------ | --------- | --------- | -------------------------------------------------------------------------------------------------------------- |
+| defaultValue    | string                   | no        | ''        | Valor predeterminado del componente, que representa el número de tarjeta.                                      |
+| value           | string                   | no        | ''        | Valor controlado del componente, que representa el número de tarjeta.                                          |
+| onChange        | (value: string) =\> void | no        | undefined | Función que se ejecuta cuando el valor del componente cambia, proporcionando el número de tarjeta como cadena. |
+| maxNumberLength | number                   | no        | 19        | Longitud máxima permitida para la entrada del número de tarjeta. El valor mínimo es 15.                        |
+| disabled        | boolean                  | no        | false     | Indica si el campo de entrada está deshabilitado.                                                              |
+| required        | boolean                  | no        | false     | Indica si el campo de entrada es obligatorio.                                                                  |
+| error           | string \| undefined      | no        | undefined | Mensaje de error que se muestra si la validación falla.                                                        |
+| className       | string                   | no        | ''        | Clase CSS para personalizar el estilo del componente.                                                          |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/input-card-inputcardnumber--index)
+
+### Usos
+
+- Básico
+
+```tsx copy
+<InputCardNumber />
+```
+
+- InputCardNumber con valor predeterminado
+
+```tsx copy
+<InputCardNumber defaultValue="1234 5678 9012 3456" />
+```
+
+- InputCardNumber controlado
+
+```tsx copy
+<InputCardNumber
+  value="4111 1111 1111 1111"
+  onChange={(number) => console.log(number)}
+/>
+```
+
+- InputCardNumber deshabilitado
+
+```tsx copy
+<InputCardNumber disabled={true} />
+```

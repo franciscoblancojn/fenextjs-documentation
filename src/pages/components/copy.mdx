@@ -1,35 +1,33 @@
-import { Iframe } from "../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # Copy
 
-El componente Copy es un componente que muestra contenido que al hacer click copia un texto definido.
+El componente Copy permite copiar un texto al portapapeles cuando se hace clic en él, con la opción de mostrar una notificación al usuario.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=copy-copy--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=copy-copy--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente Copy, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente Copy, se puede hacer desde fenextjs
 
 ```tsx copy
-import { Copy, CopyProps } from "fenextjs/cjs/component/Copy";
-```
-
-o
-
-```tsx copy
-import { Copy, CopyProps } from "fenextjs-component/cjs/Copy";
+import { Copy } from "fenextjs";
 ```
 
 ### Parametros
 
-| Propiedad      |          Tipo          | Requerido | Default | Descripción                                        |
-| -------------- | :--------------------: | :-------: | :-----: | :------------------------------------------------- |
-| text           |         string         |    no     |         | El texto para copiar.                              |
-| children       |       ReactNode        |    no     |         | Contenido del componente.                          |
-| onClickForCopy | (text: string) => void |    no     |         | Función a ejecutar al hacer clic para copiar.      |
-| notification   | NotificationDataProps  |    no     |         | Datos para la notificación asociada al componente. |
+| Parametro      | Tipo                  | Requerido | Default                                                | Descripcion                                                          |
+| -------------- | --------------------- | --------- | ------------------------------------------------------ | -------------------------------------------------------------------- |
+| text           | string                | no        | ''                                                     | Texto que se copiará al portapapeles al hacer clic en el componente. |
+| children       | ReactNode             | no        | undefined                                              | El contenido que se mostrará dentro del componente Copy.             |
+| onClickForCopy | function              | no        | undefined                                              | Función personalizada que se ejecuta después de copiar el texto.     |
+| notification   | NotificationDataProps | no        | \{ message: 'Copy', type: RequestResultTypeProps.OK \} | Configuración de la notificación que se muestra al copiar el texto.  |
+| className      | string                | no        | ''                                                     | Clase CSS para personalizar el contenedor del componente.            |
 
 ### Storybook
 
@@ -37,14 +35,30 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente Copy
+- Básico
+
+```tsx copy
+<Copy text="Texto a copiar">Copia este texto</Copy>
+```
+
+- Copy con notificación personalizada
 
 ```tsx copy
 <Copy
   text="Texto a copiar"
-  onClickForCopy={(text) => console.log(`Texto copiado: ${text}`)}
-  notification={{ type: "info", message: "Texto copiado exitosamente" }}
+  notification={{ message: "Texto copiado", type: "success" }}
 >
-  {/* Contenido del componente */}
+  Copia este texto
+</Copy>
+```
+
+- Copy con función personalizada
+
+```tsx copy
+<Copy
+  text="Texto a copiar"
+  onClickForCopy={(text) => console.log("Texto copiado:", text)}
+>
+  Copia este texto
 </Copy>
 ```

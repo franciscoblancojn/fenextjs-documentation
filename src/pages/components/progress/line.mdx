@@ -1,39 +1,31 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # ProgressLine
 
-El componente ProgressLine es un componente que muestra un progreso reprecentado en linea y porcentaje.
+El componente ProgressLine muestra una barra de progreso lineal que indica el avance de una tarea o el porcentaje completado. Incluye una opción para mostrar el porcentaje numérico junto a la barra.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=progress-progressline--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=progress-progressline--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente ProgressLine, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente ProgressLine, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  ProgressLine,
-  ProgressLineProps,
-} from "fenextjs/cjs/component/Progress/Line";
-```
-
-o
-
-```tsx copy
-import {
-  ProgressLine,
-  ProgressLineProps,
-} from "fenextjs-component/cjs/Progress/Line";
+import { ProgressLine } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro |   Tipo    | Requerido | Default | Descripcion                                      |
-| --------- | :-------: | :-------: | :-----: | :----------------------------------------------- |
-| p         | `number`  |    Sí     |         | Número de progreso.                              |
-| showP     | `boolean` |    Sí     |         | Indica si se debe mostrar el número de progreso. |
+| Parametro | Tipo    | Requerido | Default | Descripcion                                                                 |
+| --------- | ------- | --------- | ------- | --------------------------------------------------------------------------- |
+| className | string  | no        | ''      | Clase CSS para personalizar el contenedor del componente ProgressLine.      |
+| p         | number  | sí        | N/A     | Valor de progreso representado en la barra, como un número entre 0 y 100.   |
+| showP     | boolean | no        | true    | Indica si el valor numérico del progreso (`p`) se muestra junto a la barra. |
 
 ### Storybook
 
@@ -41,8 +33,20 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente ProgressLine
+- ProgressLine básico
 
 ```tsx copy
-<ProgressLine p={40} showP={true} />
+<ProgressLine p={75} />
+```
+
+- ProgressLine con progreso visible
+
+```tsx copy
+<ProgressLine p={50} showP={true} />
+```
+
+- ProgressLine con clase personalizada
+
+```tsx copy
+<ProgressLine p={90} className="mi-clase" />
 ```

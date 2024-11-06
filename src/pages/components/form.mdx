@@ -1,0 +1,75 @@
+import { Iframe } from "@/components/Iframe";
+
+# Form
+
+El componente Form es un formulario que permite manejar envíos de datos, con soporte para mostrar loaders, manejar deshabilitación, y ejecutar funciones tras el envío exitoso o en caso de error.
+
+### Ejemplo
+
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-form--index&viewMode=story"
+/>
+
+### Importacion
+
+Para importar el componente Form, se puede hacer desde fenextjs
+
+```tsx copy
+import { Form } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro     | Tipo                                               | Requerido | Default   | Descripcion                                                              |
+| ------------- | -------------------------------------------------- | --------- | --------- | ------------------------------------------------------------------------ |
+| id            | string                                             | no        | ''        | Identificador único para el formulario, útil para eventos o seguimiento. |
+| data          | any                                                | sí        | undefined | Datos iniciales que el formulario manejará durante el envío.             |
+| onSubmit      | RequestProps\<D, R, E, T\>                         | no        | undefined | Función para manejar el envío de datos del formulario.                   |
+| onAfterSubmit | (data: RequestResultDataProps\<R, E, T\>) =\> void | no        | undefined | Función que se ejecuta después de un envío exitoso del formulario.       |
+| disabled      | boolean                                            | no        | true      | Indica si el formulario está deshabilitado, bloqueando su envío.         |
+| loader        | boolean                                            | no        | false     | Muestra un loader mientras el formulario está siendo enviado.            |
+| className     | string                                             | no        | ''        | Clase CSS para aplicar estilos personalizados al formulario.             |
+| children      | ReactNode                                          | no        | undefined | Contenido que se renderiza dentro del formulario, como inputs o botones. |
+
+### Gestión de Envío
+
+El componente maneja el envío de datos mediante la función 'onSubmit', y permite realizar acciones adicionales mediante 'onAfterSubmit' tras el éxito o fallo en el envío.
+
+| Propiedad     | Uso                                                                         | Descripción                                                                                           |
+| ------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| onSubmit      | Maneja el envío de datos y devuelve el resultado de la operación.           | Función que puede incluir lógica personalizada para gestionar los datos que se envían.                |
+| onAfterSubmit | Ejecuta acciones después del envío exitoso, como el seguimiento de eventos. | Función opcional que recibe los datos del resultado del envío y permite manejar la lógica post-envío. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/component-form--index)
+
+### Usos
+
+- Uso básico
+
+```tsx copy
+<Form data={{ field: "value" }} onSubmit={(data) => console.log(data)}>
+  Enviar
+</Form>
+```
+
+- Formulario con deshabilitación y loader
+
+```tsx copy
+<Form data={{ field: "value" }} disabled={true} loader={true}>
+  Enviar
+</Form>
+```
+
+- Formulario con acción después del envío
+
+```tsx copy
+<Form
+  data={{ field: "value" }}
+  onAfterSubmit={(result) => console.log("Envío exitoso", result)}
+>
+  Enviar
+</Form>
+```

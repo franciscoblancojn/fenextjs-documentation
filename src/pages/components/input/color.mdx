@@ -1,0 +1,48 @@
+import { Iframe } from "@/components/Iframe";
+
+# InputColor
+
+El componente InputColor permite a los usuarios seleccionar un color mediante un selector de color. Es útil para aplicaciones que requieren la personalización de colores, como editores de imágenes, personalización de temas y formularios de diseño.
+
+### Ejemplo
+
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcolor--index&viewMode=story"
+/>
+
+### Importacion
+
+Para importar el componente InputColor, se puede hacer desde fenextjs
+
+```tsx copy
+import { InputColor } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro    | Tipo                     | Requerido | Default   | Descripcion                                                                     |
+| ------------ | ------------------------ | --------- | --------- | ------------------------------------------------------------------------------- |
+| defaultValue | string                   | no        | ''        | Valor predeterminado del selector de color cuando se renderiza por primera vez. |
+| value        | string                   | no        | undefined | Valor del selector de color, si se proporciona, anula el valor predeterminado.  |
+| onChange     | (color: string) =\> void | no        | undefined | Función que se ejecuta cuando el color seleccionado cambia.                     |
+| className    | string                   | no        | ''        | Clase CSS adicional para el contenedor del selector de color.                   |
+| disabled     | boolean                  | no        | false     | Indica si el selector de color está deshabilitado.                              |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/input-inputcolor--index)
+
+### Usos
+
+- Selector de color por defecto
+
+```tsx copy
+<InputColor defaultValue="#ff0000" onChange={(color) => console.log(color)} />
+```
+
+- Selector de color deshabilitado
+
+```tsx copy
+<InputColor defaultValue="#00ff00" disabled={true} />
+```

@@ -1,41 +1,35 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # CollapseMultiple
 
-El componente CollapseMultiple es un componente que muestra multiples contenidos colapsados y headers para interactuar con los contenidos.
+El componente CollapseMultiple permite mostrar múltiples elementos de Collapse organizados, con soporte para múltiples tipos de colapso (radio o checkbox) y control sobre los estados activos por defecto.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=collapse-multiple--index&viewMode=story" />
+<Iframe
+  minHeightIframe="50vh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=collapse-multiple--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente CollapseMultiple, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente CollapseMultiple, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  CollapseMultiple,
-  CollapseMultipleProps,
-} from "fenextjs/cjs/component/Collapse/Multiple";
-```
-
-o
-
-```tsx copy
-import {
-  CollapseMultiple,
-  CollapseMultipleProps,
-} from "fenextjs-component/cjs/Collapse/Multiple";
+import { CollapseMultiple } from "fenextjs";
 ```
 
 ### Parametros
 
-| Propiedad     |         Tipo          | Requerido | Default | Descripción                                                                        |
-| ------------- | :-------------------: | :-------: | :-----: | :--------------------------------------------------------------------------------- |
-| name          |        string         |    sí     |         | El nombre para el componente.                                                      |
-| type          | "radio" \| "checkbox" |    sí     |         | Tipo de collapse. Puede ser "radio" o "checkbox".                                  |
-| items         |  CollapseBaseProps[]  |    no     |         | Elementos del Collapse.                                                            |
-| defaultActive |  number \| number[]   |    no     |         | Estado activo por defecto del Collapse. Puede ser un número o un array de números. |
+| Parametro                | Tipo                                                      | Requerido | Default    | Descripcion                                                                                       |
+| ------------------------ | --------------------------------------------------------- | --------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| items                    | Omit\<CollapseBaseProps, 'checkbox' \| 'name' \| 'id'\>[] | no        | []         | Lista de items que se mostrarán como componentes Collapse dentro de CollapseMultiple.             |
+| defaultActive            | number \| number[]                                        | no        | []         | Índice(s) de los elementos que estarán activados por defecto.                                     |
+| name                     | string                                                    | no        | ''         | Nombre del conjunto de Collapse, utilizado para agrupar los items.                                |
+| type                     | 'radio' \| 'checkbox'                                     | no        | 'checkbox' | Determina si los items se comportarán como un conjunto de tipo 'radio' o 'checkbox'.              |
+| useActiveForShowChildren | boolean                                                   | no        |            | Si está habilitado, el contenido solo se mostrará cuando los elementos de Collapse estén activos. |
+| classNameMultiple        | string                                                    | no        | ''         | Clase CSS personalizada para el contenedor del componente CollapseMultiple.                       |
+| className                | string                                                    | no        | ''         | Clase CSS personalizada para cada elemento Collapse dentro de CollapseMultiple.                   |
 
 ### Storybook
 
@@ -43,18 +37,37 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente CollapseMultiple
+- CollapseMultiple básico con varios Collapse
 
 ```tsx copy
 <CollapseMultiple
-  name="exampleCollapse"
-  type="checkbox"
   items={[
-    { disabled: false, defaultActive: true, header: "Item 1" },
-    { disabled: true, defaultActive: false, header: "Item 2" },
-    // Agrega más elementos según sea necesario
+    { header: <h3>Encabezado 1</h3>, children: "Contenido del collapse 1" },
+    { header: <h3>Encabezado 2</h3>, children: "Contenido del collapse 2" },
   ]}
->
-  Contenido del CollapseMultiple
-</CollapseMultiple>
+/>
+```
+
+- CollapseMultiple con estado de 'radio'
+
+```tsx copy
+<CollapseMultiple
+  type="radio"
+  items={[
+    { header: <h3>Encabezado 1</h3>, children: "Contenido del collapse 1" },
+    { header: <h3>Encabezado 2</h3>, children: "Contenido del collapse 2" },
+  ]}
+/>
+```
+
+- CollapseMultiple con varios activos por defecto
+
+```tsx copy
+<CollapseMultiple
+  defaultActive={[0, 1]}
+  items={[
+    { header: <h3>Encabezado 1</h3>, children: "Contenido del collapse 1" },
+    { header: <h3>Encabezado 2</h3>, children: "Contenido del collapse 2" },
+  ]}
+/>
 ```

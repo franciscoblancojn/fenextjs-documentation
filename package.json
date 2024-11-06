@@ -25,7 +25,9 @@
     "remove": "npm run remove-node-module && npm run remove-bun-lockb",
     "update-package": "ncu -u !next",
     "update": "npm run update-package && npm run remove && npm run bun-i && npm run flb",
-    "u": "npm run update"
+    "u": "npm run update",
+
+    "generate" :"bun ./src/scripts/generateDoc.tsx"
   },
   "repository": {
     "type": "git",
@@ -38,18 +40,18 @@
   },
   "homepage": "https://github.com/franciscoblancojn/fenextjs-documentation#readme",
   "dependencies": {
-    "eslint": "^8.56.0",
+    "eslint": "^9.14.0",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "20.10.5",
-    "typescript": "^5.3.3",
-    "npm-check-updates": "^16.14.12",
-    "@typescript-eslint/eslint-plugin": "^6.16.0",
-    "@typescript-eslint/parser": "^6.16.0"
+    "@types/node": "22.9.0",
+    "typescript": "^5.6.3",
+    "npm-check-updates": "^17.1.10",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0"
   }
 }

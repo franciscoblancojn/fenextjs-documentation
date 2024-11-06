@@ -1,46 +1,38 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # MediaInput
 
-El componente MediaInput es un componente que muestra un input media para gestionar archivos.
+El componente MediaInput permite a los usuarios seleccionar o cargar imágenes a través de una interfaz que incluye botones y galerías de imágenes. Admite múltiples selecciones y permite personalización a través de varios props, como títulos, iconos y comportamiento del modal.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=media-input--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=media-input--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente MediaInput, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente MediaInput, se puede hacer desde fenextjs
 
 ```tsx copy
-import {
-  MediaInput,
-  MediaInputProps,
-} from "fenextjs/cjs/component/Media/Input";
-```
-
-o
-
-```tsx copy
-import {
-  MediaInput,
-  MediaInputProps,
-} from "fenextjs-component/cjs/Media/Input";
+import { MediaInput } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro         |                                Tipo                                | Requerido | Default | Descripcion                                             |
-| ----------------- | :----------------------------------------------------------------: | :-------: | :-----: | :------------------------------------------------------ |
-| titleView         |                              `string`                              |    No     |         | Título de la vista del componente.                      |
-| textView          |                              `string`                              |    No     |         | Texto de la vista del componente.                       |
-| iconView          |                            `ReactNode`                             |    No     |         | Icono de la vista del componente.                       |
-| defaultValue      |                 `ImgDataProps[]` \| `ImgDataProps`                 |    No     |         | Valor predeterminado del componente.                    |
-| multiple          |                             `boolean`                              |    No     |         | Indica si se permiten múltiples elementos.              |
-| onChange          |   `(data: ImgDataProps[] \| ImgDataProps \| undefined) => void`    |    No     |         | Función a llamar cuando cambia el valor del componente. |
-| ButtonUploadProps |                   `Omit<ButtonProps, "onClick">`                   |    No     |         | Propiedades del botón de carga para el componente.      |
-| MediaPageProps    | `Omit<MediaPageProps, "onChange" \| "multiple" \| "defaultValue">` |    No     |         | Propiedades de la página de medios para el componente.  |
-| ModalProps        |                 `Pick<ModalBaseBaseProps, "type">`                 |    No     |         | Propiedades del modal para el componente.               |
+| Parametro         | Tipo                                                               | Requerido | Default                                    | Descripcion                                                               |
+| ----------------- | ------------------------------------------------------------------ | --------- | ------------------------------------------ | ------------------------------------------------------------------------- |
+| className         | string                                                             | no        | ''                                         | Clase CSS para personalizar el contenedor del componente MediaInput.      |
+| titleView         | string                                                             | no        | 'Upload Image'                             | Título que se muestra en la vista de carga de imágenes.                   |
+| textView          | string                                                             | no        | 'Click for select or upload Image.'        | Texto que se muestra en la vista de carga de imágenes.                    |
+| iconView          | ReactNode                                                          | no        | undefined                                  | Icono que se muestra junto al título y texto de la vista de carga.        |
+| defaultValue      | ImgDataProps[] \| ImgDataProps                                     | no        | undefined                                  | Valor por defecto del componente, que puede ser una o varias imágenes.    |
+| multiple          | boolean                                                            | no        | false                                      | Define si se pueden seleccionar múltiples imágenes.                       |
+| onChange          | (data: ImgDataProps[] \| ImgDataProps \| undefined) =\> void       | no        | undefined                                  | Función que se ejecuta cuando cambian los datos seleccionados o cargados. |
+| ButtonUploadProps | Omit\<ButtonProps, 'onClick'\>                                     | no        | \{ children: 'Upload Image', full: true \} | Propiedades del botón de subida de imágenes.                              |
+| MediaPageProps    | Omit\<MediaPageProps, 'onChange' \| 'multiple' \| 'defaultValue'\> | no        | \{\}                                       | Propiedades adicionales para la galería de medios.                        |
+| ModalProps        | Pick\<ModalBaseBaseProps, 'type'\>                                 | no        | \{ type: 'full' \}                         | Propiedades del modal que contiene la galería de imágenes.                |
 
 ### Storybook
 
@@ -48,8 +40,20 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente MediaInput
+- MediaInput básico
 
 ```tsx copy
 <MediaInput />
+```
+
+- MediaInput con múltiples imágenes
+
+```tsx copy
+<MediaInput multiple={true} />
+```
+
+- MediaInput con valores predeterminados
+
+```tsx copy
+<MediaInput defaultValue={defaultImages} />
 ```

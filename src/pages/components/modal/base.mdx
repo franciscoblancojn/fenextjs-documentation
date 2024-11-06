@@ -1,34 +1,44 @@
-import { Iframe } from "../../../components/Iframe";
+import { Iframe } from "@/components/Iframe";
 
 # ModalBase
 
-El componente ModalBase es un componente que muestra una modal.
+El componente ModalBase proporciona una base flexible para modales con diferentes posiciones, tipos de cierre y opciones de visibilidad.
 
 ### Ejemplo
 
-<Iframe src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=modal-modalbase--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=modal-modalbase--index&viewMode=story"
+/>
 
 ### Importacion
 
-Para importar el componente ModalBase, se puede hacer desde fenextjs o fenextjs-component
+Para importar el componente ModalBase, se puede hacer desde fenextjs
 
 ```tsx copy
-import { ModalBase, ModalBaseProps } from "fenextjs/cjs/component/Modal/Base";
-```
-
-o
-
-```tsx copy
-import { ModalBase, ModalBaseProps } from "fenextjs-component/cjs/Modal/Base";
+import { ModalBase } from "fenextjs";
 ```
 
 ### Parametros
 
-| Parametro |                                       Tipo                                       | Requerido | Default | Descripcion                                 |
-| --------- | :------------------------------------------------------------------------------: | :-------: | :-----: | :------------------------------------------ |
-| active    |                                    `boolean`                                     |    No     |         | Indica si el modal está activo.             |
-| type      | ` "top" \| "left" \| "right" \| "bottom" \| "center" \| "full" \| "layout-grid"` |    No     |         | Tipo de modal.                              |
-| onClose   |                                   `() => void`                                   |    No     |         | Función a llamar cuando se cierra el modal. |
+| Parametro                      | Tipo                                                                                                                                          | Requerido | Default     | Descripcion                                                                                  |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ----------- | -------------------------------------------------------------------------------------------- |
+| active                         | boolean                                                                                                                                       | no        | false       | Indica si el modal está activo.                                                              |
+| activeName                     | boolean \| null                                                                                                                               | no        | undefined   | Indica si el nombre específico del modal está activo.                                        |
+| activeNameLast                 | boolean \| null                                                                                                                               | no        | undefined   | Indica si el último nombre activo del modal está activo.                                     |
+| childrenUseActiveForShowHidden | boolean                                                                                                                                       | no        | false       | Determina si los elementos secundarios utilizan el estado activo para mostrarse u ocultarse. |
+| disabledClose                  | boolean                                                                                                                                       | no        | false       | Indica si el cierre del modal está deshabilitado.                                            |
+| useRender                      | boolean                                                                                                                                       | no        | false       | Determina si el modal utiliza renderización condicional.                                     |
+| type                           | 'top' \| 'left' \| 'right' \| 'bottom' \| 'center' \| 'full' \| 'layout-grid' \| 'top-right' \| 'top-left' \| 'bottom-right' \| 'bottom-left' | no        | 'center'    | Define el tipo de modal o la posición en la que se muestra.                                  |
+| typeClose                      | 'out' \| 'inset' \| 'none'                                                                                                                    | no        | 'out'       | Especifica el tipo de botón de cierre para el modal.                                         |
+| onClose                        | function                                                                                                                                      | no        | undefined   | Función que se ejecuta al cerrar el modal.                                                   |
+| name                           | string                                                                                                                                        | no        | undefined   | Nombre identificador del modal.                                                              |
+| nameLocalStorage               | string                                                                                                                                        | no        | undefined   | Nombre clave en localStorage para el modal.                                                  |
+| closeComponent                 | ReactNode                                                                                                                                     | no        | \<Close /\> | Componente personalizado de cierre para el modal.                                            |
+| className                      | string                                                                                                                                        | no        | ''          | Clase CSS para personalizar el contenedor del modal.                                         |
+| classNameBg                    | string                                                                                                                                        | no        | ''          | Clase CSS para personalizar el fondo del modal.                                              |
+| classNameClose                 | string                                                                                                                                        | no        | ''          | Clase CSS para personalizar el icono de cierre del modal.                                    |
+| classNameContent               | string                                                                                                                                        | no        | ''          | Clase CSS para personalizar el contenido del modal.                                          |
 
 ### Storybook
 
@@ -36,8 +46,26 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico del componente ModalBase
+- Modal básico
 
 ```tsx copy
-<ModalBase />
+<ModalBase active={true} />
+```
+
+- Modal con contenido personalizado
+
+```tsx copy
+<ModalBase active={true}>Contenido del modal</ModalBase>
+```
+
+- Modal con botón de cierre deshabilitado
+
+```tsx copy
+<ModalBase active={true} disabledClose={true} />
+```
+
+- Modal con posición superior derecha
+
+```tsx copy
+<ModalBase active={true} type="top-right" />
 ```

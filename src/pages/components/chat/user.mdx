@@ -1,0 +1,55 @@
+import { Iframe } from "@/components/Iframe";
+
+# ChatUser
+
+El componente ChatUser muestra la información de un usuario en un contexto de chat, incluyendo su imagen, nombre y datos extra opcionales. También soporta un estado de carga y permite personalizar la imagen y el contenido adicional.
+
+### Ejemplo
+
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=chat-user--index&viewMode=story"
+/>
+
+### Importacion
+
+Para importar el componente ChatUser, se puede hacer desde fenextjs
+
+```tsx copy
+import { ChatUser } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo                | Requerido | Default                                  | Descripcion                                                                                                    |
+| --------- | ------------------- | --------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| name      | string              | no        | undefined                                | El nombre del usuario que se mostrará en el componente.                                                        |
+| img       | Partial\<ImgProps\> | no        | undefined                                | Propiedades de la imagen del usuario, incluyendo la URL o cualquier atributo de la imagen.                     |
+| role      | string              | no        | undefined                                | El rol del usuario, usado para aplicar clases CSS adicionales al componente.                                   |
+| loader    | boolean             | no        | false                                    | Indica si el componente está en estado de carga, mostrando placeholders en lugar del contenido real.           |
+| imgProps  | Partial\<ImgProps\> | no        | \{ imgIf404: FenextImgUserPlaceholder \} | Propiedades adicionales para el componente Img, permitiendo personalizar cómo se maneja la imagen del usuario. |
+| extraData | ReactNode           | no        | undefined                                | Contenido adicional que se mostrará junto al nombre del usuario, como información adicional o etiquetas.       |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/chat-user--index)
+
+### Usos
+
+- Usuario básico
+
+```tsx copy
+<ChatUser name="Juan Perez" role="admin" />
+```
+
+- Usuario con datos extra
+
+```tsx copy
+<ChatUser name="Maria" extraData={<span>Conectado</span>} />
+```
+
+- Usuario en estado de carga
+
+```tsx copy
+<ChatUser loader={true} />
+```
