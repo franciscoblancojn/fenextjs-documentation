@@ -1,18 +1,11 @@
 {
-  "index": "Introducción",
-  // "about": {
-  //   "title": "About",
-  //   "type": "page"
-  // },
-  // "contact": {
-  //   "title": "Contact ↗",
-  //   "type": "page",
-  //   "href": "https://twitter.com/shuding_",
-  //   "newWindow": true
-  // },
+  "index":  {
+    "title": "Introducción",
+    "index": 1
+  },
   "components": {
     "title": "Componentes",
-    "index": "Introduction"
+    "index": 2
   },
   "error": {
     "title": "Error"
