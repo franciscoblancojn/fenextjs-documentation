@@ -40,18 +40,23 @@
   },
   "homepage": "https://github.com/franciscoblancojn/fenextjs-documentation#readme",
   "dependencies": {
-    "eslint": "^9.14.0",
-    "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "next": "13.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "22.9.0",
-    "typescript": "^5.6.3",
-    "npm-check-updates": "^17.1.10",
-    "@typescript-eslint/eslint-plugin": "^8.13.0",
-    "@typescript-eslint/parser": "^8.13.0"
+    "@types/node": "20.12.4",
+    "@types/react": "18.2.74",
+    "@types/react-dom": "18.2.24",
+    "@typescript-eslint/eslint-plugin": "7.5.0",
+    "@typescript-eslint/parser": "7.5.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-storybook": "0.8.0",
+    "prettier": "3.2.5",
+    "ts-loader": "9.5.1",
+    "tslib": "2.6.2",
+    "typescript": "5.4.4"
   }
 }

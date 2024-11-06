@@ -34,7 +34,7 @@ const onGenerateDocComponents = async () => {
 
     const mdx = convertDocTsxToMdx(doc);
 
-    let FILEDOC = `./src/pages/components/${path}`
+    const FILEDOC = `./src/pages/components/${path}`
       .replaceAll("/_.doc.tsx", ".mdx")
       .toLowerCase();
 
