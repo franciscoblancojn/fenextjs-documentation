@@ -1,4 +1,4 @@
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 # Back
 
@@ -6,7 +6,10 @@ El componente Back es una representación visual de un botón de retroceso (atr�
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-back--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-back--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,32 +21,32 @@ import { Back } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| loader | boolean | no | false | Indica si el componente está en estado de carga, mostrando un indicador de spinner y deshabilitando su funcionalidad. |
-| disabled | boolean | no | false | Indica si el botón está deshabilitado. |
-| onClick | function | no | undefined | Función personalizada que se ejecuta al hacer clic en el botón. |
-| icon | ReactNode | no | \<PaginationPre /\> | Icono que se muestra dentro del botón. |
-| children | ReactNode | no | 'Back' | Contenido o texto que se muestra dentro del botón. |
-| typeOnBack | 'history' \| 'router' \| 'link' \| 'none' | no | 'history' | Tipo de acción a ejecutar al hacer clic en el botón. |
-| link | string | no | '' | URL a la que redirigir si 'typeOnBack' es 'link'. |
-| useHistoryMinLenght | boolean | no | false | Determina si se debe mostrar el botón solo si el historial del navegador tiene una longitud mínima. |
-| minLenght | number | no | 2 | Longitud mínima del historial del navegador para mostrar el botón. |
-| className | string | no | '' | Clase CSS para personalizar el contenedor del botón. |
-| classNameDisabled | string | no | '' | Clase CSS para el estado deshabilitado del botón. |
-| classNameIcon | string | no | '' | Clase CSS para el icono del botón. |
-| classNameContent | string | no | '' | Clase CSS para el contenido del botón. |
+| Parametro           | Tipo                                      | Requerido | Default             | Descripcion                                                                                                           |
+| ------------------- | ----------------------------------------- | --------- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| loader              | boolean                                   | no        | false               | Indica si el componente está en estado de carga, mostrando un indicador de spinner y deshabilitando su funcionalidad. |
+| disabled            | boolean                                   | no        | false               | Indica si el botón está deshabilitado.                                                                                |
+| onClick             | function                                  | no        | undefined           | Función personalizada que se ejecuta al hacer clic en el botón.                                                       |
+| icon                | ReactNode                                 | no        | \<PaginationPre /\> | Icono que se muestra dentro del botón.                                                                                |
+| children            | ReactNode                                 | no        | 'Back'              | Contenido o texto que se muestra dentro del botón.                                                                    |
+| typeOnBack          | 'history' \| 'router' \| 'link' \| 'none' | no        | 'history'           | Tipo de acción a ejecutar al hacer clic en el botón.                                                                  |
+| link                | string                                    | no        | ''                  | URL a la que redirigir si 'typeOnBack' es 'link'.                                                                     |
+| useHistoryMinLenght | boolean                                   | no        | false               | Determina si se debe mostrar el botón solo si el historial del navegador tiene una longitud mínima.                   |
+| minLenght           | number                                    | no        | 2                   | Longitud mínima del historial del navegador para mostrar el botón.                                                    |
+| className           | string                                    | no        | ''                  | Clase CSS para personalizar el contenedor del botón.                                                                  |
+| classNameDisabled   | string                                    | no        | ''                  | Clase CSS para el estado deshabilitado del botón.                                                                     |
+| classNameIcon       | string                                    | no        | ''                  | Clase CSS para el icono del botón.                                                                                    |
+| classNameContent    | string                                    | no        | ''                  | Clase CSS para el contenido del botón.                                                                                |
 
 ### Redireccionamiento
 
 Dependiendo del valor de 'typeOnBack', la redirección se ejecutará de la siguiente manera:
 
-| Tipo de back | Redireccion | Descripción |
-| --- | --- | --- |
-| history | history.back() | Redirección a la página anterior mediante el historial del navegador. |
-| router | router.back() | Redirección utilizando el router de Next.js. |
-| link | router.push(link) | Redirección a una URL específica. |
-| none | Ninguna acción | No se realiza ninguna redirección. |
+| Tipo de back | Redireccion       | Descripción                                                           |
+| ------------ | ----------------- | --------------------------------------------------------------------- |
+| history      | history.back()    | Redirección a la página anterior mediante el historial del navegador. |
+| router       | router.back()     | Redirección utilizando el router de Next.js.                          |
+| link         | router.push(link) | Redirección a una URL específica.                                     |
+| none         | Ninguna acción    | No se realiza ninguna redirección.                                    |
 
 ### Storybook
 
@@ -74,4 +77,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Back disabled={true} />
 ```
-

@@ -1,4 +1,4 @@
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 # TableActionCheckbox
 
@@ -6,7 +6,10 @@ Componente TableActionCheckbox que permite realizar acciones sobre un conjunto d
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=table-tableactioncheckbox--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=table-tableactioncheckbox--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,12 +21,12 @@ import { TableActionCheckbox } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| className | string | no | "" | Clase CSS para el contenedor principal del componente. |
-| actionAllCheckbox | InputCheckboxProps | no |  | Propiedades para la casilla de verificación que permite seleccionar o deseleccionar todos los elementos. |
-| actions | ((data: T[]) =\> ReactNode)[] | no |  | Arreglo de funciones que toman los datos seleccionados como parámetro y devuelven un elemento React. Cada función representa una acción que se puede ejecutar en los datos seleccionados. |
-| data | T[] | no |  | Arreglo de datos en el que se aplicarán las acciones definidas. |
+| Parametro         | Tipo                          | Requerido | Default | Descripcion                                                                                                                                                                               |
+| ----------------- | ----------------------------- | --------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| className         | string                        | no        | ""      | Clase CSS para el contenedor principal del componente.                                                                                                                                    |
+| actionAllCheckbox | InputCheckboxProps            | no        |         | Propiedades para la casilla de verificación que permite seleccionar o deseleccionar todos los elementos.                                                                                  |
+| actions           | ((data: T[]) =\> ReactNode)[] | no        |         | Arreglo de funciones que toman los datos seleccionados como parámetro y devuelven un elemento React. Cada función representa una acción que se puede ejecutar en los datos seleccionados. |
+| data              | T[]                           | no        |         | Arreglo de datos en el que se aplicarán las acciones definidas.                                                                                                                           |
 
 ### Storybook
 
@@ -35,9 +38,12 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ```tsx copy
 <TableActionCheckbox
-    className="my-checkbox" 
-    data={[{ id: 1, name: "Item 1" }, { id: 2, name: "Item 2" }]} 
-    actionAllCheckbox={{ label: "Select All" }} 
+  className="my-checkbox"
+  data={[
+    { id: 1, name: "Item 1" },
+    { id: 2, name: "Item 2" },
+  ]}
+  actionAllCheckbox={{ label: "Select All" }}
 />
 ```
 
@@ -45,14 +51,17 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ```tsx copy
 <TableActionCheckbox
-    data={[
-        { id: 1, name: "Item 1" },
-        { id: 2, name: "Item 2" }
-    ]}
-    actions={[
-        (selectedData) => <button onClick={() => console.log(selectedData)}>Delete</button>,
-        (selectedData) => <button onClick={() => console.log(selectedData)}>Edit</button>
-    ]}
+  data={[
+    { id: 1, name: "Item 1" },
+    { id: 2, name: "Item 2" },
+  ]}
+  actions={[
+    (selectedData) => (
+      <button onClick={() => console.log(selectedData)}>Delete</button>
+    ),
+    (selectedData) => (
+      <button onClick={() => console.log(selectedData)}>Edit</button>
+    ),
+  ]}
 />
 ```
-

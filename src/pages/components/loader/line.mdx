@@ -1,4 +1,4 @@
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 # LoaderLine
 
@@ -6,7 +6,10 @@ El componente LoaderLine se utiliza para mostrar un indicador de carga en forma 
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-line--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-line--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,10 +21,10 @@ import { LoaderLine } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| classNameLoaderLine | string | no | '' | Clase CSS para personalizar el estilo de la línea del indicador de carga. |
-| height | number | no | 20 | Altura de la línea del indicador de carga, en píxeles. |
+| Parametro           | Tipo   | Requerido | Default | Descripcion                                                               |
+| ------------------- | ------ | --------- | ------- | ------------------------------------------------------------------------- |
+| classNameLoaderLine | string | no        | ''      | Clase CSS para personalizar el estilo de la línea del indicador de carga. |
+| height              | number | no        | 20      | Altura de la línea del indicador de carga, en píxeles.                    |
 
 ### Storybook
 
@@ -46,4 +49,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <LoaderLine classNameLoaderLine="custom-loader-line" />
 ```
-

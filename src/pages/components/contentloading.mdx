@@ -1,4 +1,4 @@
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 # ContentLoading
 
@@ -6,7 +6,10 @@ El componente ContentLoading es una envoltura que muestra un contenido cargando 
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=contentloading-contentloading--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=contentloading-contentloading--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,13 +21,13 @@ import { ContentLoading } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| children | ReactNode | no | undefined | El contenido que se mostrará cuando no esté en estado de carga. |
-| componentLoader | ReactNode | no | \<LoaderSpinner /\> | Componente que se muestra mientras el contenido está en estado de carga. |
-| loader | boolean | no | false | Indica si el componente está en estado de carga, mostrando el componente loader. |
-| isPage | boolean | no | false | Determina si el componente debe comportarse como una página en carga. |
-| className | string | no | '' | Clase CSS para personalizar el contenedor del componente. |
+| Parametro       | Tipo      | Requerido | Default             | Descripcion                                                                      |
+| --------------- | --------- | --------- | ------------------- | -------------------------------------------------------------------------------- |
+| children        | ReactNode | no        | undefined           | El contenido que se mostrará cuando no esté en estado de carga.                  |
+| componentLoader | ReactNode | no        | \<LoaderSpinner /\> | Componente que se muestra mientras el contenido está en estado de carga.         |
+| loader          | boolean   | no        | false               | Indica si el componente está en estado de carga, mostrando el componente loader. |
+| isPage          | boolean   | no        | false               | Determina si el componente debe comportarse como una página en carga.            |
+| className       | string    | no        | ''                  | Clase CSS para personalizar el contenedor del componente.                        |
 
 ### Storybook
 
@@ -35,18 +38,23 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Básico
 
 ```tsx copy
-<ContentLoading><div>Contenido cargado</div></ContentLoading>
+<ContentLoading>
+  <div>Contenido cargado</div>
+</ContentLoading>
 ```
 
 - ContentLoading con loader activado
 
 ```tsx copy
-<ContentLoading loader={true}><div>Contenido cargado</div></ContentLoading>
+<ContentLoading loader={true}>
+  <div>Contenido cargado</div>
+</ContentLoading>
 ```
 
 - ContentLoading como página
 
 ```tsx copy
-<ContentLoading isPage={true}><div>Contenido cargado</div></ContentLoading>
+<ContentLoading isPage={true}>
+  <div>Contenido cargado</div>
+</ContentLoading>
 ```
-

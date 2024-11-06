@@ -1,7 +1,6 @@
-
 export interface IframeProps {
   src: string;
-  minHeightIframe?:string
+  minHeightIframe?: string;
 }
 
 export const Iframe = ({ src, minHeightIframe }: IframeProps) => {
