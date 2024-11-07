@@ -28,7 +28,7 @@ const onGenerateDoc = async ({
     console.log(`${name} ---- ` + path);
     const FILE = require("../../" + URL_BASE + "/" + path);
     const doc = FILE.default;
-    if(options.useStorybook){
+    if (options.useStorybook) {
       try {
         const STORYBOOK = require(
           "../../" +

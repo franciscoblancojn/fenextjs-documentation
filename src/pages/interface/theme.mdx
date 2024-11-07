@@ -10,23 +10,22 @@ Para importar el componente ThemeProps, se puede hacer desde fenextjs
 import { ThemeProps } from "fenextjs";
 ```
 
-
 ### ThemeType
 
 Tipo que especifica los valores válidos para el tema de la aplicación.
 
-| key | value | description |
-| --- | --- | --- |
-| light | 'light' | Tema claro, adecuado para ambientes luminosos. |
-| dark | 'dark' | Tema oscuro, adecuado para ambientes con poca luz. |
-| auto | 'auto' | Tema automático que ajusta según la configuración del sistema. |
+| key   | value   | description                                                    |
+| ----- | ------- | -------------------------------------------------------------- |
+| light | 'light' | Tema claro, adecuado para ambientes luminosos.                 |
+| dark  | 'dark'  | Tema oscuro, adecuado para ambientes con poca luz.             |
+| auto  | 'auto'  | Tema automático que ajusta según la configuración del sistema. |
 
 ### ThemeConst
 
 Constante que contiene los valores posibles para el tema (`ThemeType`).
 
-| key | value | description |
-| --- | --- | --- |
-| light | 'light' | Tema claro, adecuado para ambientes luminosos. |
-| dark | 'dark' | Tema oscuro, adecuado para ambientes con poca luz. |
-| auto | 'auto' | Tema automático que ajusta según la configuración del sistema. |
+| key   | value   | description                                                    |
+| ----- | ------- | -------------------------------------------------------------- |
+| light | 'light' | Tema claro, adecuado para ambientes luminosos.                 |
+| dark  | 'dark'  | Tema oscuro, adecuado para ambientes con poca luz.             |
+| auto  | 'auto'  | Tema automático que ajusta según la configuración del sistema. |

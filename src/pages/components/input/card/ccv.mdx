@@ -2,11 +2,14 @@
 
 El componente InputCardCCV es un campo de entrada diseñado para capturar el Código de Seguridad (CCV) de una tarjeta de crédito. Este componente asegura que solo se ingresen números y limita la longitud a 4 caracteres, facilitando una entrada de datos adecuada y segura para transacciones.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-card-inputcardccv--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-card-inputcardccv--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,18 +21,18 @@ import { InputCardCCV } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| placeholder | string | no | 'XXX' | Texto que se muestra como marcador de posición en el campo de entrada. |
-| disabled | boolean | no | false | Indica si el campo de entrada está deshabilitado. |
-| required | boolean | no | false | Indica si el campo de entrada es obligatorio. |
-| optional | boolean | no | false | Indica si el campo de entrada es opcional. |
-| onChange | function | no | undefined | Función que se ejecuta al cambiar el valor del campo de entrada. |
-| maxLength | number | no | 4 | Longitud máxima permitida para la entrada, en este caso 4 caracteres. Se establece directamente en el componente. |
-| regExpReplace | string | no | '' | Cadena utilizada para reemplazar los valores no deseados. Se establece directamente en el componente. |
-| regExp | RegExp | no | /[^0-9]/g | Expresión regular que se utiliza para validar la entrada, permitiendo solo números. Se establece directamente en el componente. |
-| inputMode | string | no | 'numeric' | Modo de entrada para facilitar el ingreso de datos numéricos en dispositivos móviles. Se establece directamente en el componente. |
-| type | string | no | 'number' | Tipo de entrada del campo, que se establece como número. Se establece directamente en el componente. |
+| Parametro     | Tipo     | Requerido | Default   | Descripcion                                                                                                                       |
+| ------------- | -------- | --------- | --------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| placeholder   | string   | no        | 'XXX'     | Texto que se muestra como marcador de posición en el campo de entrada.                                                            |
+| disabled      | boolean  | no        | false     | Indica si el campo de entrada está deshabilitado.                                                                                 |
+| required      | boolean  | no        | false     | Indica si el campo de entrada es obligatorio.                                                                                     |
+| optional      | boolean  | no        | false     | Indica si el campo de entrada es opcional.                                                                                        |
+| onChange      | function | no        | undefined | Función que se ejecuta al cambiar el valor del campo de entrada.                                                                  |
+| maxLength     | number   | no        | 4         | Longitud máxima permitida para la entrada, en este caso 4 caracteres. Se establece directamente en el componente.                 |
+| regExpReplace | string   | no        | ''        | Cadena utilizada para reemplazar los valores no deseados. Se establece directamente en el componente.                             |
+| regExp        | RegExp   | no        | /[^0-9]/g | Expresión regular que se utiliza para validar la entrada, permitiendo solo números. Se establece directamente en el componente.   |
+| inputMode     | string   | no        | 'numeric' | Modo de entrada para facilitar el ingreso de datos numéricos en dispositivos móviles. Se establece directamente en el componente. |
+| type          | string   | no        | 'number'  | Tipo de entrada del campo, que se establece como número. Se establece directamente en el componente.                              |
 
 ### Storybook
 
@@ -60,4 +63,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <InputCardCCV onChange={(e) => console.log(e.target.value)} />
 ```
-
