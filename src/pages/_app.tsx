@@ -5,11 +5,11 @@ import { AppProps } from "next/app";
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Component {...pageProps} />
       <Head>
         <title>Fenextjs</title>
         <link rel="icon" href="/favicon.png" sizes="32x32"></link>
       </Head>
-      <Component {...pageProps} />
     </>
   );
 }

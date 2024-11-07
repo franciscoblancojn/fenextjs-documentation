@@ -23,7 +23,8 @@
     "title": "Image placeholder"
   },
   "interface": {
-    "title": "Interfaces"
+    "title": "Interfaces",
+    "index": 3
   },
   "svg": {
     "title": "Svg"
