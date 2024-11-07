@@ -4,11 +4,14 @@ const BASE_URL_STORYBOOK =
   "https://fenextjs-component-storybook.vercel.app/?path=/story/";
 
 export interface convertDocTsxToMdxProps {
-  useStorybook?: boolean
-  useUses?:boolean
+  useStorybook?: boolean;
+  useUses?: boolean;
 }
 
-export function convertDocTsxToMdx(docTsx: any, options: convertDocTsxToMdxProps): string {
+export function convertDocTsxToMdx(
+  docTsx: any,
+  options: convertDocTsxToMdxProps,
+): string {
   const { name, description, props, extras, useExample, minHeightIframe } =
     docTsx;
 
@@ -16,20 +19,18 @@ export function convertDocTsxToMdx(docTsx: any, options: convertDocTsxToMdxProps
     BASE_URL_STORYBOOK_IFRAME + docTsx.idStorybook + "--index";
   const URL_STORYBOOK = BASE_URL_STORYBOOK + docTsx.idStorybook + "--index";
 
-  let mdxContent = ""
-    mdxContent += `# ${name}\n\n${description}\n\n`;
+  let mdxContent = "";
+  mdxContent += `# ${name}\n\n${description}\n\n`;
   if (options.useStorybook) {
     mdxContent += `import { Iframe } from "@/components/Iframe"; \n\n`;
     // Sección de Ejemplo (puede ser estática)
     mdxContent += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
   }
 
-
   // Sección de Importación
   mdxContent += `### Importacion\n\n`;
   mdxContent += `Para importar el componente ${name}, se puede hacer desde fenextjs\n\n`;
   mdxContent += `\`\`\`tsx copy\nimport { ${name} } from "fenextjs";\n\`\`\`\n\n`;
-
 
   const fixCharacter = (d: string) =>
     `${d}`
@@ -38,17 +39,15 @@ export function convertDocTsxToMdx(docTsx: any, options: convertDocTsxToMdxProps
       .replaceAll("<", "\\<")
       .replaceAll(">", "\\>")
       .replaceAll("|", "\\|");
-  if(props && props.length > 0){
+  if (props && props.length > 0) {
     // Sección de Parámetros
     mdxContent += `### Parametros\n\n`;
     mdxContent += `| Parametro | Tipo | Requerido | Default | Descripcion |\n`;
     mdxContent += `| --------- | ---- | --------- | ------- | ----------- |\n`;
-  
-  
+
     props.forEach((prop: any) => {
       mdxContent += `| ${prop.id} | ${fixCharacter(prop.type)} | ${prop.require ? "sí" : "no"} | ${fixCharacter(prop.default || "")} | ${prop.description} |\n`;
     });
-
   }
 
   // Sección de Extras (Redireccionamiento)
@@ -67,13 +66,13 @@ export function convertDocTsxToMdx(docTsx: any, options: convertDocTsxToMdxProps
     });
   }
 
-  if(options?.useStorybook){
+  if (options?.useStorybook) {
     // Sección de Storybook (puede ser estática)
     mdxContent += `\n### Storybook\n\n`;
     mdxContent += `Para ver el storybook del componente lo puede hacer con este [link](${URL_STORYBOOK})\n\n`;
   }
 
-  if(options?.useUses){
+  if (options?.useUses) {
     // Sección de Usos
     mdxContent += `### Usos\n\n`;
     useExample.forEach((example: any) => {

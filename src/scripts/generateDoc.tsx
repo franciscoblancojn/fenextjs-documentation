@@ -1,21 +1,28 @@
-import { convertDocTsxToMdx, convertDocTsxToMdxProps } from "../functions/convertDocTsxToMdx";
+import {
+  convertDocTsxToMdx,
+  convertDocTsxToMdxProps,
+} from "../functions/convertDocTsxToMdx";
 
 interface onGenerateDocProps {
-  name:string
-  URL_BASE:string
-  page:string
+  name: string;
+  URL_BASE: string;
+  page: string;
 
-  options:convertDocTsxToMdxProps
+  options: convertDocTsxToMdxProps;
 }
 
-const onGenerateDoc = async ({URL_BASE,name,options,page}:onGenerateDocProps) => {
+const onGenerateDoc = async ({
+  URL_BASE,
+  name,
+  options,
+  page,
+}: onGenerateDocProps) => {
   const Bun_ = eval("Bun");
   console.log("---------------------------");
   console.log(`Init generate ${name}`);
   console.log("---------------------------");
 
   const glob = new Bun_.Glob("**/_.doc.tsx");
-
 
   for await (const path of glob.scan(URL_BASE)) {
     console.log(`${name} ---- ` + path);
@@ -39,7 +46,7 @@ const onGenerateDoc = async ({URL_BASE,name,options,page}:onGenerateDocProps) =>
       error;
     }
 
-    const mdx = convertDocTsxToMdx(doc,options);
+    const mdx = convertDocTsxToMdx(doc, options);
 
     const FILEDOC = `./src/pages/${page}/${path}`
       .replaceAll("/_.doc.tsx", ".mdx")
@@ -55,20 +62,19 @@ const onGenerateDoc = async ({URL_BASE,name,options,page}:onGenerateDocProps) =>
 
 const main = async () => {
   await onGenerateDoc({
-    name:"Components",
-    URL_BASE:"../fenextjs-component/src",
-    page:"components",
-    options:{
-      useStorybook:true,
-      useUses:true
-    }
+    name: "Components",
+    URL_BASE: "../fenextjs-component/src",
+    page: "components",
+    options: {
+      useStorybook: true,
+      useUses: true,
+    },
   });
   await onGenerateDoc({
-    name:"Interfaces",
-    URL_BASE:"../fenextjs-interface/src",
-    page:"interface",
-    options:{
-    }
+    name: "Interfaces",
+    URL_BASE: "../fenextjs-interface/src",
+    page: "interface",
+    options: {},
   });
 };
 
