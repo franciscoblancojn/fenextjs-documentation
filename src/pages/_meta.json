@@ -7,6 +7,10 @@
     "title": "Componentes",
     "index": 2
   },
+  "interface": {
+    "title": "Interfaces",
+    "index": 3
+  },
   "error": {
     "title": "Error"
   },
@@ -21,10 +25,6 @@
   },
   "img-placeholder": {
     "title": "Image placeholder"
-  },
-  "interface": {
-    "title": "Interfaces",
-    "index": 3
   },
   "svg": {
     "title": "Svg"
