@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # SwichViewTable
 
 El componente SwichViewTable permite a los usuarios alternar entre diferentes vistas de tabla mediante iconos específicos para cada opción de visualización.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=swichview-table--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=swichview-table--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,11 +18,11 @@ import { SwichViewTable } from "fenextjs";
 
 ### Parametros
 
-| Parametro    | Tipo                                                            | Requerido | Default                        | Descripcion                                                           |
-| ------------ | --------------------------------------------------------------- | --------- | ------------------------------ | --------------------------------------------------------------------- |
-| className    | string                                                          | no        | ""                             | Clase CSS para el contenedor del componente.                          |
-| defaultValue | "fenext-swich-view-table-box" \| "fenext-swich-view-table-list" | no        | "fenext-swich-view-table-list" | Vista de tabla predeterminada que se muestra al cargar el componente. |
-| onChange     | (e?: SwichViewTableType) =\> void                               | no        | undefined                      | Función que se ejecuta cuando se selecciona una nueva vista de tabla. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | "" | Clase CSS para el contenedor del componente. |
+| defaultValue | "fenext-swich-view-table-box" \| "fenext-swich-view-table-list" | no | "fenext-swich-view-table-list" | Vista de tabla predeterminada que se muestra al cargar el componente. |
+| onChange | (e?: SwichViewTableType) =\> void | no | undefined | Función que se ejecuta cuando se selecciona una nueva vista de tabla. |
 
 ### Storybook
 
@@ -42,10 +39,7 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Con valor predeterminado y función de cambio
 
 ```tsx copy
-<SwichViewTable
-  defaultValue="fenext-swich-view-table-box"
-  onChange={(e) => console.log("Vista de tabla seleccionada:", e)}
-/>
+<SwichViewTable defaultValue="fenext-swich-view-table-box" onChange={(e) => console.log("Vista de tabla seleccionada:", e)} />
 ```
 
 - Aplicando una clase personalizada
@@ -53,3 +47,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <SwichViewTable className="custom-table-class" />
 ```
+

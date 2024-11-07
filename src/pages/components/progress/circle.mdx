@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # ProgressCircle
 
 El componente ProgressCircle muestra un círculo de progreso visual que indica el avance de una tarea o porcentaje completado. Ofrece una opción para mostrar el porcentaje numérico en el centro del círculo.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=progress-progresscircle--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=progress-progresscircle--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,11 +18,11 @@ import { ProgressCircle } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo    | Requerido | Default | Descripcion                                                                         |
-| --------- | ------- | --------- | ------- | ----------------------------------------------------------------------------------- |
-| className | string  | no        | ''      | Clase CSS para personalizar el contenedor del componente ProgressCircle.            |
-| p         | number  | sí        | N/A     | Valor de progreso representado en el círculo, como un número entre 0 y 100.         |
-| showP     | boolean | no        | true    | Indica si el valor numérico del progreso (`p`) se muestra en el centro del círculo. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del componente ProgressCircle. |
+| p | number | sí | N/A | Valor de progreso representado en el círculo, como un número entre 0 y 100. |
+| showP | boolean | no | true | Indica si el valor numérico del progreso (`p`) se muestra en el centro del círculo. |
 
 ### Storybook
 
@@ -50,3 +47,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <ProgressCircle p={90} className="mi-clase" />
 ```
+

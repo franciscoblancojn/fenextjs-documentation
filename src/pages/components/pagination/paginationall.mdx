@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # Pagination
 
 El componente Pagination permite la navegación de contenido paginado y ofrece opciones de personalización de estilo para adaptarse a diferentes diseños y temas.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=pagination-pagination--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=pagination-pagination--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,15 +18,14 @@ import { Pagination } from "fenextjs";
 
 ### Parametros
 
-| Parametro         | Tipo                                    | Requerido | Default | Descripcion                                                                                   |
-| ----------------- | --------------------------------------- | --------- | ------- | --------------------------------------------------------------------------------------------- |
-| className         | string                                  | no        | ''      | Clase CSS para el contenedor principal de la paginación.                                      |
-| classNameItemPage | PaginationItemPageClassProps            | no        | \{\}    | Objeto con las clases CSS para personalizar el componente de cada página.                     |
-| classNameNPage    | PaginationNPageClassProps               | no        | \{\}    | Objeto con las clases CSS para personalizar el componente de selección de número de página.   |
-| showItemPage      | boolean                                 | no        | true    | Determina si se debe mostrar el componente de cada página en la paginación.                   |
-| showNPage         | boolean                                 | no        | true    | Determina si se debe mostrar el componente de selección de número de página en la paginación. |
-| listNpage         | Array\<\{ id: string; text: string \}\> | no        | [       |
-
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para el contenedor principal de la paginación. |
+| classNameItemPage | PaginationItemPageClassProps | no | \{\} | Objeto con las clases CSS para personalizar el componente de cada página. |
+| classNameNPage | PaginationNPageClassProps | no | \{\} | Objeto con las clases CSS para personalizar el componente de selección de número de página. |
+| showItemPage | boolean | no | true | Determina si se debe mostrar el componente de cada página en la paginación. |
+| showNPage | boolean | no | true | Determina si se debe mostrar el componente de selección de número de página en la paginación. |
+| listNpage | Array\<\{ id: string; text: string \}\> | no | [
                 \{ id: "10", text: "10" \},
                 \{ id: "20", text: "20" \},
                 \{ id: "50", text: "50" \},
@@ -60,3 +56,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Pagination className="mi-clase-personalizada" />
 ```
+

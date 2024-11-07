@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # ChatFormSendMessage
 
 El componente ChatFormSendMessage es un formulario que permite a los usuarios enviar mensajes dentro del chat. Incluye opciones como un botón para enviar el mensaje, la posibilidad de enviar mensajes presionando 'Enter' y un estado de carga mientras se procesa el envío.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=chat-chatformsendmessage--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=chat-chatformsendmessage--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,13 +18,13 @@ import { ChatFormSendMessage } from "fenextjs";
 
 ### Parametros
 
-| Parametro          | Tipo                                                             | Requerido | Default | Descripcion                                                                                       |
-| ------------------ | ---------------------------------------------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------- |
-| onSubmit           | RequestProps\<ChatFormSendMessageDataProps, RequestResultProps\> | no        |         | Función que se ejecuta al enviar el mensaje, recibiendo los datos del formulario como parámetros. |
-| loader             | boolean                                                          | no        | false   | Indica si el formulario está en estado de carga, deshabilitando la interacción del usuario.       |
-| useSubmitInEnter   | boolean                                                          | no        | true    | Si se debe permitir el envío del mensaje presionando 'Enter'.                                     |
-| btnChildren        | ReactNode                                                        | no        | Send    | Contenido del botón para enviar el mensaje.                                                       |
-| placeholderMessage | string                                                           | no        | Message | Texto de placeholder que se mostrará en el campo del mensaje.                                     |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| onSubmit | RequestProps\<ChatFormSendMessageDataProps, RequestResultProps\> | no |  | Función que se ejecuta al enviar el mensaje, recibiendo los datos del formulario como parámetros. |
+| loader | boolean | no | false | Indica si el formulario está en estado de carga, deshabilitando la interacción del usuario. |
+| useSubmitInEnter | boolean | no | true | Si se debe permitir el envío del mensaje presionando 'Enter'. |
+| btnChildren | ReactNode | no | Send | Contenido del botón para enviar el mensaje. |
+| placeholderMessage | string | no | Message | Texto de placeholder que se mostrará en el campo del mensaje. |
 
 ### Storybook
 
@@ -38,24 +35,31 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Formulario básico de enviar mensaje
 
 ```tsx copy
-<ChatFormSendMessage
-  onSubmit={async (data) => {
-    console.log(data);
-  }}
+
+<ChatFormSendMessage 
+    onSubmit={async (data) => { console.log(data); }}
 />
+            
 ```
 
 - Formulario con botón y placeholder personalizados
 
 ```tsx copy
-<ChatFormSendMessage
-  btnChildren="Enviar"
-  placeholderMessage="Escribe tu mensaje aquí"
+
+<ChatFormSendMessage 
+    btnChildren="Enviar"
+    placeholderMessage="Escribe tu mensaje aquí"
 />
+            
 ```
 
 - Formulario sin envío con Enter
 
 ```tsx copy
-<ChatFormSendMessage useSubmitInEnter={false} />
+
+<ChatFormSendMessage 
+    useSubmitInEnter={false}
+/>
+            
 ```
+

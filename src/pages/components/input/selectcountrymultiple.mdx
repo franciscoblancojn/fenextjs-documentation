@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # InputSelectCountryMultiple
 
 El componente InputSelectCountryMultiple permite seleccionar múltiples países de una lista de opciones, con posibilidad de personalización adicional a través de las propiedades del componente.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputselectcountrymultiple--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputselectcountrymultiple--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,9 +18,9 @@ import { InputSelectCountryMultiple } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo                                      | Requerido | Default | Descripcion                                                                                                        |
-| --------- | ----------------------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| ...props  | InputSelectMultipleTProps\<CountryProps\> | no        |         | Propiedades adicionales que extienden de InputSelectMultipleTProps, como eventos o configuraciones del componente. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| ...props | InputSelectMultipleTProps\<CountryProps\> | no |  | Propiedades adicionales que extienden de InputSelectMultipleTProps, como eventos o configuraciones del componente. |
 
 ### Storybook
 
@@ -34,22 +31,25 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Selección múltiple de países
 
 ```tsx copy
+
 <InputSelectCountryMultiple />
 ```
 
 - InputSelectCountryMultiple con estilos personalizados
 
 ```tsx copy
-<InputSelectCountryMultiple classNameSelect="custom-select-multiple" />
+
+<InputSelectCountryMultiple
+    classNameSelect="custom-select-multiple"
+/>
 ```
 
 - InputSelectCountryMultiple con opciones predeterminadas
 
 ```tsx copy
+
 <InputSelectCountryMultiple
-  value={[
-    { name: "United States", isoCode: "US" },
-    { name: "Canada", isoCode: "CA" },
-  ]}
+    value={[{ name: "United States", isoCode: "US" }, { name: "Canada", isoCode: "CA" }]}
 />
 ```
+

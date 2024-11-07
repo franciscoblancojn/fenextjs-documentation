@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # LavaLamp
 
 El componente LavaLamp genera un fondo animado que simula el efecto de una lámpara de lava con múltiples elementos flotantes. Los elementos pueden personalizarse en estilo, tamaño, animación y cantidad.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=lavalamp-lavalamp--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=lavalamp-lavalamp--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,13 +18,13 @@ import { LavaLamp } from "fenextjs";
 
 ### Parametros
 
-| Parametro     | Tipo                     | Requerido | Default                                                                                                                            | Descripcion                                                                                       |
-| ------------- | ------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| nItems        | number                   | no        | 20                                                                                                                                 | Número de elementos flotantes en la lámpara de lava.                                              |
-| styles        | CSSProperties            | no        | \{ width: "100%", height: "500px",background: "linear-gradient(45deg,var(--fenext-color-blue) 0%,var(--fenext-color-teal) 100%)"\} | Estilos generales aplicados al contenedor de la lámpara de lava.                                  |
-| stylesElement | LavaLampStylesElement[]  | no        |                                                                                                                                    | Estilos aplicados a los elementos individuales flotantes en la lámpara de lava.                   |
-| ranges        | LavaLampRangeStylesProps | no        | \{\}                                                                                                                               | Propiedades de rango aleatorio para determinar el movimiento, escala y posición de los elementos. |
-| className     | string                   | no        | ''                                                                                                                                 | Clase CSS adicional para personalizar el contenedor del componente.                               |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| nItems | number | no | 20 | Número de elementos flotantes en la lámpara de lava. |
+| styles | CSSProperties | no | \{ width: "100%", height: "500px",background: "linear-gradient(45deg,var(--fenext-color-blue) 0%,var(--fenext-color-teal) 100%)"\} | Estilos generales aplicados al contenedor de la lámpara de lava. |
+| stylesElement | LavaLampStylesElement[] | no |  | Estilos aplicados a los elementos individuales flotantes en la lámpara de lava. |
+| ranges | LavaLampRangeStylesProps | no | \{\} | Propiedades de rango aleatorio para determinar el movimiento, escala y posición de los elementos. |
+| className | string | no | '' | Clase CSS adicional para personalizar el contenedor del componente. |
 
 ### Storybook
 
@@ -44,11 +41,12 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Con estilos personalizados
 
 ```tsx copy
-<LavaLamp styles={{ width: "80%", height: "600px" }} />
+<LavaLamp styles={{ width: '80%', height: '600px' }} />
 ```
 
 - Con elementos personalizados
 
 ```tsx copy
-<LavaLamp stylesElement={[{ width: "200px", background: "red" }]} />
+<LavaLamp stylesElement={[{ width: '200px', background: 'red' }]} />
 ```
+

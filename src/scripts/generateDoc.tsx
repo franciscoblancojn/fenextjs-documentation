@@ -1,17 +1,24 @@
-import { convertDocTsxToMdx } from "../functions/convertDocTsxToMdx";
+import { convertDocTsxToMdx, convertDocTsxToMdxProps } from "../functions/convertDocTsxToMdx";
 
-const onGenerateDocComponents = async () => {
+interface onGenerateDocProps {
+  name:string
+  URL_BASE:string
+  page:string
+
+  options:convertDocTsxToMdxProps
+}
+
+const onGenerateDoc = async ({URL_BASE,name,options,page}:onGenerateDocProps) => {
   const Bun_ = eval("Bun");
   console.log("---------------------------");
-  console.log("Init generate Components");
+  console.log(`Init generate ${name}`);
   console.log("---------------------------");
 
   const glob = new Bun_.Glob("**/_.doc.tsx");
 
-  const URL_BASE = "../fenextjs-component/src";
 
   for await (const path of glob.scan(URL_BASE)) {
-    console.log("Component ---- " + path);
+    console.log(`${name} ---- ` + path);
     const FILE = require("../../" + URL_BASE + "/" + path);
     const doc = FILE.default;
 
@@ -32,9 +39,9 @@ const onGenerateDocComponents = async () => {
       error;
     }
 
-    const mdx = convertDocTsxToMdx(doc);
+    const mdx = convertDocTsxToMdx(doc,options);
 
-    const FILEDOC = `./src/pages/components/${path}`
+    const FILEDOC = `./src/pages/${page}/${path}`
       .replaceAll("/_.doc.tsx", ".mdx")
       .toLowerCase();
 
@@ -42,12 +49,27 @@ const onGenerateDocComponents = async () => {
   }
 
   console.log("---------------------------");
-  console.log("Finish generate Components");
+  console.log(`Finish generate ${name}`);
   console.log("---------------------------");
 };
 
 const main = async () => {
-  await onGenerateDocComponents();
+  await onGenerateDoc({
+    name:"Components",
+    URL_BASE:"../fenextjs-component/src",
+    page:"components",
+    options:{
+      useStorybook:true,
+      useUses:true
+    }
+  });
+  await onGenerateDoc({
+    name:"Interfaces",
+    URL_BASE:"../fenextjs-interface/src",
+    page:"interface",
+    options:{
+    }
+  });
 };
 
 main();

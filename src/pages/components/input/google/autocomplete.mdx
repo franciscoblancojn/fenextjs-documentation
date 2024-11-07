@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # InputGoogleAutocomplete
 
 El componente InputGoogleAutocomplete permite la entrada de direcciones utilizando la funcionalidad de autocompletado de Google, con validaciones y manejo de errores.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-google-autocomplete--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-google-autocomplete--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,18 +18,18 @@ import { InputGoogleAutocomplete } from "fenextjs";
 
 ### Parametros
 
-| Parametro              | Tipo                                           | Requerido | Default                | Descripcion                                                                |
-| ---------------------- | ---------------------------------------------- | --------- | ---------------------- | -------------------------------------------------------------------------- |
-| defaultValueJsonString | string                                         | no        | undefined              | Valor predeterminado en formato JSON string para la dirección.             |
-| valueJsonString        | string                                         | no        | undefined              | Valor actual en formato JSON string para la dirección.                     |
-| onChangeJsonString     | (value: string) =\> void                       | no        | undefined              | Función que se ejecuta cuando el valor en formato JSON string cambia.      |
-| defaultValue           | AddressGoogle \| undefined                     | no        | undefined              | El valor predeterminado del input.                                         |
-| value                  | AddressGoogle \| undefined                     | no        | undefined              | El valor actual del input.                                                 |
-| onChange               | (value: AddressGoogle \| undefined) =\> void   | no        | undefined              | Función que se ejecuta cuando cambia el valor de la dirección.             |
-| parseJson_to_String    | (value: AddressGoogle \| undefined) =\> string | no        | parseAddress_to_String | Función que convierte el objeto de dirección a string.                     |
-| parseString_to_Json    | (value: string) =\> AddressGoogle \| undefined | no        | parseString_to_Address | Función que convierte un string a un objeto de dirección.                  |
-| className              | string                                         | no        | ''                     | Clase CSS para personalizar el contenedor del input.                       |
-| validator              | FenextjsValidatorClass\<AddressGoogle\>        | no        | undefined              | Instancia de FenextjsValidator para validaciones personalizadas del input. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| defaultValueJsonString | string | no | undefined | Valor predeterminado en formato JSON string para la dirección. |
+| valueJsonString | string | no | undefined | Valor actual en formato JSON string para la dirección. |
+| onChangeJsonString | (value: string) =\> void | no | undefined | Función que se ejecuta cuando el valor en formato JSON string cambia. |
+| defaultValue | AddressGoogle \| undefined | no | undefined | El valor predeterminado del input. |
+| value | AddressGoogle \| undefined | no | undefined | El valor actual del input. |
+| onChange | (value: AddressGoogle \| undefined) =\> void | no | undefined | Función que se ejecuta cuando cambia el valor de la dirección. |
+| parseJson_to_String | (value: AddressGoogle \| undefined) =\> string | no | parseAddress_to_String | Función que convierte el objeto de dirección a string. |
+| parseString_to_Json | (value: string) =\> AddressGoogle \| undefined | no | parseString_to_Address | Función que convierte un string a un objeto de dirección. |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del input. |
+| validator | FenextjsValidatorClass\<AddressGoogle\> | no | undefined | Instancia de FenextjsValidator para validaciones personalizadas del input. |
 
 ### Storybook
 
@@ -63,3 +60,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <InputGoogleAutocomplete onChangeJsonString={(value) => console.log(value)} />
 ```
+

@@ -1,15 +1,12 @@
-import { Iframe } from "@/components/Iframe";
-
 # Loader
 
 El componente Loader se utiliza para mostrar un indicador de carga. Se puede personalizar utilizando una clase CSS específica para adaptar su estilo.
 
+import { Iframe } from "@/components/Iframe"; 
+
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-loader--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=loader-loader--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,9 +18,9 @@ import { Loader } from "fenextjs";
 
 ### Parametros
 
-| Parametro       | Tipo   | Requerido | Default | Descripcion                                                   |
-| --------------- | ------ | --------- | ------- | ------------------------------------------------------------- |
-| classNameLoader | string | no        | ''      | Clase CSS para personalizar el estilo del indicador de carga. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| classNameLoader | string | no | '' | Clase CSS para personalizar el estilo del indicador de carga. |
 
 ### Storybook
 
@@ -42,3 +39,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Loader classNameLoader="custom-loader" />
 ```
+
