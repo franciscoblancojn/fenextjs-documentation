@@ -77,6 +77,12 @@ const main = async () => {
     page: "interface",
     options: {},
   });
+  await onGenerateDoc({
+    name: "Error",
+    URL_BASE: "../fenextjs-error/src",
+    page: "error",
+    options: {},
+  });
 };
 
 main();

@@ -12,7 +12,8 @@
     "index": 3
   },
   "error": {
-    "title": "Error"
+    "title": "Error",
+    "index": 4
   },
   "firebase": {
     "title": "Firebase"
