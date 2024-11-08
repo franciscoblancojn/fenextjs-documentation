@@ -2,11 +2,14 @@
 
 El componente NotificationPop muestra mensajes de notificación flotantes que desaparecen automáticamente después de un tiempo especificado. Puede posicionarse en la parte superior o inferior de la pantalla.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=notification-notificationpop--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=notification-notificationpop--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,12 +21,12 @@ import { NotificationPop } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| classNamePop | string | no | '' | Clase CSS para el contenedor del pop de notificación. |
-| className | string | no | '' | Clase CSS adicional para el componente. |
-| typePop | 'top' \| 'down' | no | 'down' | Posición de la notificación en la pantalla. |
-| time | number | no | 2000 | Duración en milisegundos antes de que la notificación desaparezca automáticamente. |
+| Parametro    | Tipo            | Requerido | Default | Descripcion                                                                        |
+| ------------ | --------------- | --------- | ------- | ---------------------------------------------------------------------------------- |
+| classNamePop | string          | no        | ''      | Clase CSS para el contenedor del pop de notificación.                              |
+| className    | string          | no        | ''      | Clase CSS adicional para el componente.                                            |
+| typePop      | 'top' \| 'down' | no        | 'down'  | Posición de la notificación en la pantalla.                                        |
+| time         | number          | no        | 2000    | Duración en milisegundos antes de que la notificación desaparezca automáticamente. |
 
 ### Storybook
 
@@ -40,7 +43,9 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Notificación Pop en la parte superior
 
 ```tsx copy
-<NotificationPop typePop="top">Notificación en la parte superior</NotificationPop>
+<NotificationPop typePop="top">
+  Notificación en la parte superior
+</NotificationPop>
 ```
 
 - Notificación Pop con duración personalizada
@@ -48,4 +53,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <NotificationPop time={3000}>Mensaje que dura 3 segundos</NotificationPop>
 ```
-
