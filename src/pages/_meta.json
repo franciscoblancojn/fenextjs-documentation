@@ -15,11 +15,12 @@
     "title": "Error",
     "index": 4
   },
+  "functions": {
+    "title": "Funciones",
+    "index": 5
+  },
   "firebase": {
     "title": "Firebase"
-  },
-  "function": {
-    "title": "Function"
   },
   "hook": {
     "title": "Hooks"

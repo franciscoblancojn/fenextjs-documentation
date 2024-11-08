@@ -2,14 +2,11 @@
 
 El componente ImgSlider permite navegar entre una lista de imágenes utilizando un sistema de pasos. Se puede controlar el paso actual y navegar entre las imágenes usando botones de paginación.
 
-import { Iframe } from "@/components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=img-imgslider--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=img-imgslider--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,13 +18,13 @@ import { ImgSlider } from "fenextjs";
 
 ### Parametros
 
-| Parametro   | Tipo                 | Requerido | Default | Descripcion                                               |
-| ----------- | -------------------- | --------- | ------- | --------------------------------------------------------- |
-| imgs        | ImgProps[]           | sí        |         | Lista de imágenes que se muestran en el deslizador.       |
-| defaultStep | number               | no        | 0       | Paso inicial en el deslizador de imágenes.                |
-| step        | number               | no        |         | Paso actual en el deslizador de imágenes.                 |
-| setStep     | (e: number) =\> void | no        |         | Función para actualizar el paso actual en el deslizador.  |
-| className   | string               | no        | ''      | Clase CSS para personalizar el contenedor del deslizador. |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| imgs | ImgProps[] | sí |  | Lista de imágenes que se muestran en el deslizador. |
+| defaultStep | number | no | 0 | Paso inicial en el deslizador de imágenes. |
+| step | number | no |  | Paso actual en el deslizador de imágenes. |
+| setStep | (e: number) =\> void | no |  | Función para actualizar el paso actual en el deslizador. |
+| className | string | no | '' | Clase CSS para personalizar el contenedor del deslizador. |
 
 ### Storybook
 
@@ -46,3 +43,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <ImgSlider imgs={imageList} step={2} setStep={(e) => console.log(e)} />
 ```
+

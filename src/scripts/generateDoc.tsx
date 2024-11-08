@@ -24,7 +24,8 @@ const onGenerateDoc = async ({
 
   const glob = new Bun_.Glob("**/_.doc.tsx");
 
-  for await (const path of glob.scan(URL_BASE)) {
+  for await (const PATH of glob.scan(URL_BASE)) {
+    let path = PATH
     console.log(`${name} ---- ` + path);
     const FILE = require("../../" + URL_BASE + "/" + path);
     const doc = FILE.default;
@@ -48,6 +49,10 @@ const onGenerateDoc = async ({
     }
 
     const mdx = convertDocTsxToMdx(doc, options);
+    
+    if(path == "_t/_.doc.tsx"){
+      path = "t/_.doc.tsx"
+    }
 
     const FILEDOC = `./src/pages/${page}/${path}`
       .replaceAll("/_.doc.tsx", ".mdx")
@@ -81,6 +86,12 @@ const main = async () => {
     name: "Error",
     URL_BASE: "../fenextjs-error/src",
     page: "error",
+    options: {},
+  });
+  await onGenerateDoc({
+    name: "Functions",
+    URL_BASE: "../fenextjs-functions/src",
+    page: "functions",
     options: {},
   });
 };
