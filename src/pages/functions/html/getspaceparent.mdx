@@ -12,15 +12,20 @@ import { GetSpaceParent } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| element | HTMLElement | sí |  | Elemento HTML para el cual se calcularán los espacios relativos a su contenedor padre. |
+| Parametro | Tipo        | Requerido | Default | Descripcion                                                                            |
+| --------- | ----------- | --------- | ------- | -------------------------------------------------------------------------------------- |
+| element   | HTMLElement | sí        |         | Elemento HTML para el cual se calcularán los espacios relativos a su contenedor padre. |
+
 ### Usos
 
 - Calcular espacios de un elemento dentro de su contenedor padre
 
 ```tsx copy
 const spaces = GetSpaceParent(document.getElementById("myElement"));
-console.log(spaces.spaceTop, spaces.spaceLeft, spaces.spaceRight, spaces.spaceBottom);
+console.log(
+  spaces.spaceTop,
+  spaces.spaceLeft,
+  spaces.spaceRight,
+  spaces.spaceBottom,
+);
 ```
-

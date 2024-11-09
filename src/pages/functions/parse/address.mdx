@@ -16,9 +16,10 @@ import { parseAddress_to_String } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| data | AddressGoogle \| undefined \| null | sí |  | Objeto `AddressGoogle` que se convertirá a cadena JSON. |
+| Parametro | Tipo                               | Requerido | Default | Descripcion                                             |
+| --------- | ---------------------------------- | --------- | ------- | ------------------------------------------------------- |
+| data      | AddressGoogle \| undefined \| null | sí        |         | Objeto `AddressGoogle` que se convertirá a cadena JSON. |
+
 ### Usos
 
 - Convertir un objeto AddressGoogle a cadena
@@ -28,8 +29,6 @@ const address = { formatted_address: "123 Main St" };
 const jsonString = parseAddress_to_String(address);
 console.log(jsonString);
 ```
-
-
 
 # parseString_to_Address
 
@@ -45,9 +44,10 @@ import { parseString_to_Address } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| data | string \| undefined \| null | sí |  | Cadena JSON que representa un objeto `AddressGoogle`. |
+| Parametro | Tipo                        | Requerido | Default | Descripcion                                           |
+| --------- | --------------------------- | --------- | ------- | ----------------------------------------------------- |
+| data      | string \| undefined \| null | sí        |         | Cadena JSON que representa un objeto `AddressGoogle`. |
+
 ### Usos
 
 - Convertir una cadena JSON a un objeto AddressGoogle
@@ -57,6 +57,3 @@ const jsonString = '{"formatted_address": "123 Main St"}';
 const address = parseString_to_Address(jsonString);
 console.log(address);
 ```
-
-
-

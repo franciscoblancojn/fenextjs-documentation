@@ -12,15 +12,17 @@ import { getBase64ForImageDonwload } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| url | string | sí |  | URL de la imagen que se descargará y convertirá a Base64. |
+| Parametro | Tipo   | Requerido | Default | Descripcion                                               |
+| --------- | ------ | --------- | ------- | --------------------------------------------------------- |
+| url       | string | sí        |         | URL de la imagen que se descargará y convertirá a Base64. |
+
 ### Usos
 
 - Convertir imagen a Base64
 
 ```tsx copy
-const base64String = await getBase64ForImageDonwload({ url: "https://example.com/image.jpg" });
+const base64String = await getBase64ForImageDonwload({
+  url: "https://example.com/image.jpg",
+});
 console.log(base64String);
 ```
-
