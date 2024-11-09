@@ -2,11 +2,14 @@
 
 El componente InputColor permite a los usuarios seleccionar un color mediante un selector de color. Es útil para aplicaciones que requieren la personalización de colores, como editores de imágenes, personalización de temas y formularios de diseño.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcolor--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcolor--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,13 +21,13 @@ import { InputColor } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| defaultValue | string | no | '' | Valor predeterminado del selector de color cuando se renderiza por primera vez. |
-| value | string | no | undefined | Valor del selector de color, si se proporciona, anula el valor predeterminado. |
-| onChange | (color: string) =\> void | no | undefined | Función que se ejecuta cuando el color seleccionado cambia. |
-| className | string | no | '' | Clase CSS adicional para el contenedor del selector de color. |
-| disabled | boolean | no | false | Indica si el selector de color está deshabilitado. |
+| Parametro    | Tipo                     | Requerido | Default   | Descripcion                                                                     |
+| ------------ | ------------------------ | --------- | --------- | ------------------------------------------------------------------------------- |
+| defaultValue | string                   | no        | ''        | Valor predeterminado del selector de color cuando se renderiza por primera vez. |
+| value        | string                   | no        | undefined | Valor del selector de color, si se proporciona, anula el valor predeterminado.  |
+| onChange     | (color: string) =\> void | no        | undefined | Función que se ejecuta cuando el color seleccionado cambia.                     |
+| className    | string                   | no        | ''        | Clase CSS adicional para el contenedor del selector de color.                   |
+| disabled     | boolean                  | no        | false     | Indica si el selector de color está deshabilitado.                              |
 
 ### Storybook
 
@@ -43,4 +46,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <InputColor defaultValue="#00ff00" disabled={true} />
 ```
-

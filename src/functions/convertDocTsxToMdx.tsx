@@ -12,8 +12,15 @@ export function convertDocTsxToMdx(
   docTsx: any,
   options: convertDocTsxToMdxProps,
 ): string {
-  const { name, description, props, extras, useExample, minHeightIframe, functions } =
-    docTsx;
+  const {
+    name,
+    description,
+    props,
+    extras,
+    useExample,
+    minHeightIframe,
+    functions,
+  } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
     BASE_URL_STORYBOOK_IFRAME + docTsx.idStorybook + "--index";
@@ -27,12 +34,11 @@ export function convertDocTsxToMdx(
     mdxContent += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
   }
 
-  if(functions == undefined || functions.length == 0){
+  if (functions == undefined || functions.length == 0) {
     // Sección de Importación
     mdxContent += `### Importacion\n\n`;
     mdxContent += `Para importar el componente ${name}, se puede hacer desde fenextjs\n\n`;
     mdxContent += `\`\`\`tsx copy\nimport { ${name} } from "fenextjs";\n\`\`\`\n\n`;
-
   }
   const fixCharacter = (d: string) =>
     `${d}`
@@ -83,15 +89,13 @@ export function convertDocTsxToMdx(
     });
   }
 
-  if(functions && functions.length > 0){
-
+  if (functions && functions.length > 0) {
     // mdxContent += `### Funciones\n\n`;
 
     functions.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example,options)
-      mdxContent +=`\n\n`
+      mdxContent += convertDocTsxToMdx(example, options);
+      mdxContent += `\n\n`;
     });
-
   }
 
   return mdxContent;

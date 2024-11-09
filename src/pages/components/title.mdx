@@ -2,11 +2,14 @@
 
 El componente Title representa un título de encabezado con soporte para diferentes niveles (`h1` a `h6`), opcionalmente muestra un loader y permite personalización mediante clases CSS.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=title-title--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=title-title--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,12 +21,12 @@ import { Title } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| tag | 'h1' \| 'h2' \| 'h3' \| 'h4' \| 'h5' \| 'h6' | no | 'h1' | Define el nivel de encabezado que se utiliza para el componente. |
-| loader | boolean | no | false | Indica si el componente está en estado de carga, mostrando un indicador de carga. |
-| className | string | no | '' | Clase CSS para personalizar el contenedor del título. |
-| children | ReactNode | sí | undefined | Contenido o texto que se muestra dentro del título. |
+| Parametro | Tipo                                         | Requerido | Default   | Descripcion                                                                       |
+| --------- | -------------------------------------------- | --------- | --------- | --------------------------------------------------------------------------------- |
+| tag       | 'h1' \| 'h2' \| 'h3' \| 'h4' \| 'h5' \| 'h6' | no        | 'h1'      | Define el nivel de encabezado que se utiliza para el componente.                  |
+| loader    | boolean                                      | no        | false     | Indica si el componente está en estado de carga, mostrando un indicador de carga. |
+| className | string                                       | no        | ''        | Clase CSS para personalizar el contenedor del título.                             |
+| children  | ReactNode                                    | sí        | undefined | Contenido o texto que se muestra dentro del título.                               |
 
 ### Storybook
 
@@ -54,4 +57,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Title className="custom-title">Título personalizado</Title>
 ```
-
