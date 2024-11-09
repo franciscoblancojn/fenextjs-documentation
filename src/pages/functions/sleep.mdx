@@ -1,0 +1,31 @@
+# sleep
+
+Función asincrónica que pausa la ejecución durante un tiempo especificado.
+
+### Importacion
+
+Para importar el componente sleep, se puede hacer desde fenextjs
+
+```tsx copy
+import { sleep } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| time | number | no |  | Tiempo en milisegundos para pausar la ejecución. El valor predeterminado es 1000 ms (1 segundo). |
+### Usos
+
+- Pausar la ejecución durante 2 segundos
+
+```tsx copy
+await sleep(2000); // Pausa la ejecución por 2 segundos
+```
+
+- Usar el valor predeterminado (1 segundo)
+
+```tsx copy
+await sleep(); // Pausa la ejecución por 1 segundo
+```
+

@@ -1,0 +1,26 @@
+# GetSpaceParent
+
+Función que calcula el espacio entre un elemento y su primer contenedor padre con overflow configurado (hidden, scroll, o auto) o hasta el body.
+
+### Importacion
+
+Para importar el componente GetSpaceParent, se puede hacer desde fenextjs
+
+```tsx copy
+import { GetSpaceParent } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| element | HTMLElement | sí |  | Elemento HTML para el cual se calcularán los espacios relativos a su contenedor padre. |
+### Usos
+
+- Calcular espacios de un elemento dentro de su contenedor padre
+
+```tsx copy
+const spaces = GetSpaceParent(document.getElementById("myElement"));
+console.log(spaces.spaceTop, spaces.spaceLeft, spaces.spaceRight, spaces.spaceBottom);
+```
+

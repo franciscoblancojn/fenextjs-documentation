@@ -92,7 +92,9 @@ const main = async () => {
     name: "Functions",
     URL_BASE: "../fenextjs-functions/src",
     page: "functions",
-    options: {},
+    options: {
+      useUses: true,
+    },
   });
 };
 
