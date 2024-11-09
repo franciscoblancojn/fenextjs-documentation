@@ -2,14 +2,11 @@
 
 El componente InputText permite al usuario introducir texto en un campo de entrada. Es personalizable y se puede utilizar en formularios y otras interfaces de usuario donde se requiera la entrada de texto.
 
-import { Iframe } from "@/components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputtext--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputtext--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,48 +18,48 @@ import { InputText } from "fenextjs";
 
 ### Parametros
 
-| Parametro           | Tipo                                                                                             | Requerido | Default                 | Descripcion                                                                  |
-| ------------------- | ------------------------------------------------------------------------------------------------ | --------- | ----------------------- | ---------------------------------------------------------------------------- |
-| id                  | any                                                                                              | no        | ''                      | ID del campo de entrada.                                                     |
-| name                | any                                                                                              | no        | ''                      | Nombre del campo de entrada.                                                 |
-| datalist            | any                                                                                              | no        | undefined               | Nombre del datalist para el campo de entrada.                                |
-| validator           | FenextjsValidatorClass                                                                           | no        | undefined               | Clase de validador de Fenextjs para la validación de la entrada.             |
-| label               | any                                                                                              | no        | ''                      | Texto de etiqueta que se muestra para el campo de entrada.                   |
-| placeholder         | string                                                                                           | no        | ''                      | Texto que se muestra en el campo de entrada cuando está vacío.               |
-| placeholderFocus    | string                                                                                           | no        | undefined               | Texto de marcador de posición que se muestra cuando el campo tiene foco.     |
-| defaultValue        | string \| undefined \| null                                                                      | no        | undefined               | Valor predeterminado para establecer en el campo de entrada.                 |
-| value               | string \| undefined \| null                                                                      | no        | undefined               | Valor a establecer en el campo de entrada.                                   |
-| type                | 'text' \| 'search' \| 'tel' \| 'url' \| 'password' \| 'number' \| 'textarea'                     | no        | 'text'                  | Tipo de entrada del campo (texto, número, contraseña, etc.).                 |
-| onChange            | function                                                                                         | no        | () =\> \{\}             | Función que se llama cuando cambia el valor de entrada.                      |
-| onBlur              | function                                                                                         | no        | () =\> \{\}             | Función que se llama cuando el campo pierde el foco.                         |
-| onEnter             | function                                                                                         | no        | () =\> \{\}             | Función que se llama cuando se presiona la tecla Enter.                      |
-| onChangeValidate    | function                                                                                         | no        | async (e: string) =\> e | Función para la validación personalizada de la entrada.                      |
-| props               | any                                                                                              | no        | undefined               | Propiedades adicionales para pasar al componente de entrada.                 |
-| icon                | any                                                                                              | no        | \<\>\</\>               | Icono que se muestra dentro del campo de entrada.                            |
-| iconPos             | 'left' \| 'right'                                                                                | no        | 'right'                 | Posición del icono dentro del campo de entrada.                              |
-| extraInContentInput | any                                                                                              | no        | \<\>\</\>               | Contenido adicional para mostrar dentro del contenedor del campo de entrada. |
-| extraInLabel        | any                                                                                              | no        | \<\>\</\>               | Contenido adicional para mostrar dentro de la etiqueta del campo.            |
-| disabled            | boolean                                                                                          | no        | false                   | Indica si el campo de entrada está deshabilitado.                            |
-| showIcon            | boolean                                                                                          | no        | true                    | Indica si se debe mostrar el icono en el campo de entrada.                   |
-| className           | string                                                                                           | no        | ''                      | Clase CSS para el componente de entrada.                                     |
-| error               | ErrorFenextjs                                                                                    | no        | undefined               | Texto de error del campo de entrada.                                         |
-| errorWithIsChange   | boolean                                                                                          | no        | true                    | Mostrar error si ha cambiado.                                                |
-| optional            | boolean                                                                                          | no        | false                   | Indica si el campo es opcional.                                              |
-| optionalText        | string                                                                                           | no        | '(optional)'            | Texto opcional para el campo de entrada.                                     |
-| required            | boolean                                                                                          | no        | false                   | Indica si el campo es obligatorio.                                           |
-| requiredText        | string                                                                                           | no        | '\*'                    | Texto para indicar que el campo es obligatorio.                              |
-| loader              | boolean                                                                                          | no        | false                   | Indica si debe mostrarse un cargador.                                        |
-| isChange            | boolean \| undefined                                                                             | no        | undefined               | Indica si el valor ha cambiado.                                              |
-| useLoader           | boolean                                                                                          | no        | true                    | Indica si se debe usar el cargador.                                          |
-| inputMode           | 'none' \| 'text' \| 'tel' \| 'url' \| 'email' \| 'numeric' \| 'decimal' \| 'search' \| undefined | no        | undefined               | Modo de entrada del campo.                                                   |
-| autoComplete        | boolean                                                                                          | no        | false                   | Indica si se debe habilitar la autocompletación.                             |
-| onKeyDown           | function                                                                                         | no        | undefined               | Función para manejar eventos de tecla presionada.                            |
-| onWheel             | function                                                                                         | no        | undefined               | Función para manejar eventos de rueda del mouse.                             |
-| maxLength           | number                                                                                           | no        | undefined               | Longitud máxima para el campo de entrada.                                    |
-| regExp              | RegExp                                                                                           | no        | undefined               | Expresión regular para validar la entrada.                                   |
-| regExpReplace       | string                                                                                           | no        | ''                      | Cadena de reemplazo para la expresión regular.                               |
-| parseText           | (data: string) =\> string                                                                        | no        | undefined               | Función para analizar el texto de entrada.                                   |
-| onChangeEvent       | (e: InputTextChangeEvent) =\> void                                                               | no        | undefined               | Función para manejar el evento de cambio del campo de entrada.               |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| id | any | no | '' | ID del campo de entrada. |
+| name | any | no | '' | Nombre del campo de entrada. |
+| datalist | any | no | undefined | Nombre del datalist para el campo de entrada. |
+| validator | FenextjsValidatorClass | no | undefined | Clase de validador de Fenextjs para la validación de la entrada. |
+| label | any | no | '' | Texto de etiqueta que se muestra para el campo de entrada. |
+| placeholder | string | no | '' | Texto que se muestra en el campo de entrada cuando está vacío. |
+| placeholderFocus | string | no | undefined | Texto de marcador de posición que se muestra cuando el campo tiene foco. |
+| defaultValue | string \| undefined \| null | no | undefined | Valor predeterminado para establecer en el campo de entrada. |
+| value | string \| undefined \| null | no | undefined | Valor a establecer en el campo de entrada. |
+| type | 'text' \| 'search' \| 'tel' \| 'url' \| 'password' \| 'number' \| 'textarea' | no | 'text' | Tipo de entrada del campo (texto, número, contraseña, etc.). |
+| onChange | function | no | () =\> \{\} | Función que se llama cuando cambia el valor de entrada. |
+| onBlur | function | no | () =\> \{\} | Función que se llama cuando el campo pierde el foco. |
+| onEnter | function | no | () =\> \{\} | Función que se llama cuando se presiona la tecla Enter. |
+| onChangeValidate | function | no | async (e: string) =\> e | Función para la validación personalizada de la entrada. |
+| props | any | no | undefined | Propiedades adicionales para pasar al componente de entrada. |
+| icon | any | no | \<\>\</\> | Icono que se muestra dentro del campo de entrada. |
+| iconPos | 'left' \| 'right' | no | 'right' | Posición del icono dentro del campo de entrada. |
+| extraInContentInput | any | no | \<\>\</\> | Contenido adicional para mostrar dentro del contenedor del campo de entrada. |
+| extraInLabel | any | no | \<\>\</\> | Contenido adicional para mostrar dentro de la etiqueta del campo. |
+| disabled | boolean | no | false | Indica si el campo de entrada está deshabilitado. |
+| showIcon | boolean | no | true | Indica si se debe mostrar el icono en el campo de entrada. |
+| className | string | no | '' | Clase CSS para el componente de entrada. |
+| error | ErrorFenextjs | no | undefined | Texto de error del campo de entrada. |
+| errorWithIsChange | boolean | no | true | Mostrar error si ha cambiado. |
+| optional | boolean | no | false | Indica si el campo es opcional. |
+| optionalText | string | no | '(optional)' | Texto opcional para el campo de entrada. |
+| required | boolean | no | false | Indica si el campo es obligatorio. |
+| requiredText | string | no | '*' | Texto para indicar que el campo es obligatorio. |
+| loader | boolean | no | false | Indica si debe mostrarse un cargador. |
+| isChange | boolean \| undefined | no | undefined | Indica si el valor ha cambiado. |
+| useLoader | boolean | no | true | Indica si se debe usar el cargador. |
+| inputMode | 'none' \| 'text' \| 'tel' \| 'url' \| 'email' \| 'numeric' \| 'decimal' \| 'search' \| undefined | no | undefined | Modo de entrada del campo. |
+| autoComplete | boolean | no | false | Indica si se debe habilitar la autocompletación. |
+| onKeyDown | function | no | undefined | Función para manejar eventos de tecla presionada. |
+| onWheel | function | no | undefined | Función para manejar eventos de rueda del mouse. |
+| maxLength | number | no | undefined | Longitud máxima para el campo de entrada. |
+| regExp | RegExp | no | undefined | Expresión regular para validar la entrada. |
+| regExpReplace | string | no | '' | Cadena de reemplazo para la expresión regular. |
+| parseText | (data: string) =\> string | no | undefined | Función para analizar el texto de entrada. |
+| onChangeEvent | (e: InputTextChangeEvent) =\> void | no | undefined | Función para manejar el evento de cambio del campo de entrada. |
 
 ### Storybook
 
@@ -97,11 +94,7 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - InputText en estado de error
 
 ```tsx copy
-<InputText
-  error={
-    new ErrorFenextjs({ code: ErrorCode.ERROR, message: "Campo requerido" })
-  }
-/>
+<InputText error={new ErrorFenextjs({code: ErrorCode.ERROR, message: "Campo requerido"})} />
 ```
 
 - InputText con autocompletado
@@ -127,3 +120,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <InputText loader={true} />
 ```
+
