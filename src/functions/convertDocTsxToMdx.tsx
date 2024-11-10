@@ -22,7 +22,7 @@ export function convertDocTsxToMdx(
     functions,
     interfaces,
     properties,
-    useImport
+    useImport,
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -37,7 +37,10 @@ export function convertDocTsxToMdx(
     mdxContent += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
   }
 
-  if ((functions == undefined || functions.length == 0) && useImport!==false) {
+  if (
+    (functions == undefined || functions.length == 0) &&
+    useImport !== false
+  ) {
     // Sección de Importación
     mdxContent += `### Importacion\n\n`;
     mdxContent += `Para importar el componente ${name}, se puede hacer desde fenextjs\n\n`;
