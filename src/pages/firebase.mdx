@@ -29,6 +29,24 @@ fenextFirebase.storega.Ref("/images/user1").onUploadBase64(base64Data);
 
 Obtiene la configuración actual utilizada para inicializar Firebase.
 
+### Usos
+
+- Establecer referencia y obtener datos
+
+```tsx copy
+const fb = new FenextFirebase({ config });
+fb.getConfig();
+```
+
 # getApp
 
 Obtiene la instancia de la aplicación de Firebase. Si no está inicializada, la crea.
+
+### Usos
+
+- Establecer referencia y obtener datos
+
+```tsx copy
+const fb = new FenextFirebase({ config });
+fb.getApp();
+```
