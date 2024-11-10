@@ -96,6 +96,14 @@ const main = async () => {
       useUses: true,
     },
   });
+  await onGenerateDoc({
+    name: "Firebase",
+    URL_BASE: "../fenextjs-firebase/src",
+    page: "firebase",
+    options: {
+      useUses: true,
+    },
+  });
 };
 
 main();

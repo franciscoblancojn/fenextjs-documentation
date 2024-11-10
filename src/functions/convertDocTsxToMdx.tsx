@@ -20,6 +20,9 @@ export function convertDocTsxToMdx(
     useExample,
     minHeightIframe,
     functions,
+    interfaces,
+    properties,
+    useImport
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -34,7 +37,7 @@ export function convertDocTsxToMdx(
     mdxContent += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
   }
 
-  if (functions == undefined || functions.length == 0) {
+  if ((functions == undefined || functions.length == 0) && useImport!==false) {
     // Sección de Importación
     mdxContent += `### Importacion\n\n`;
     mdxContent += `Para importar el componente ${name}, se puede hacer desde fenextjs\n\n`;
@@ -93,6 +96,22 @@ export function convertDocTsxToMdx(
     // mdxContent += `### Funciones\n\n`;
 
     functions.forEach((example: any) => {
+      mdxContent += convertDocTsxToMdx(example, options);
+      mdxContent += `\n\n`;
+    });
+  }
+  if (interfaces && interfaces.length > 0) {
+    // mdxContent += `### Funciones\n\n`;
+
+    interfaces.forEach((example: any) => {
+      mdxContent += convertDocTsxToMdx(example, options);
+      mdxContent += `\n\n`;
+    });
+  }
+  if (properties && properties.length > 0) {
+    // mdxContent += `### Funciones\n\n`;
+
+    properties.forEach((example: any) => {
       mdxContent += convertDocTsxToMdx(example, options);
       mdxContent += `\n\n`;
     });
