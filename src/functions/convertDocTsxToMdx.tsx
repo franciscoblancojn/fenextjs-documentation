@@ -6,7 +6,7 @@ const BASE_URL_STORYBOOK =
 export interface convertDocTsxToMdxProps {
   useStorybook?: boolean;
   useUses?: boolean;
-  subTitle?:boolean
+  subTitle?: boolean;
 }
 
 export function convertDocTsxToMdx(
@@ -24,7 +24,7 @@ export function convertDocTsxToMdx(
     interfaces,
     properties,
     useImport,
-    useBreadcrumb
+    useBreadcrumb,
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -33,11 +33,11 @@ export function convertDocTsxToMdx(
 
   let mdxContent = "";
 
-  if(useBreadcrumb === false){
-    mdxContent+=`---
+  if (useBreadcrumb === false) {
+    mdxContent += `---
 breadcrumb: false
 ---
-`
+`;
   }
 
   mdxContent += `#${options.subTitle === true ? "#" : ""} ${name}\n\n${description}\n\n`;
@@ -49,8 +49,8 @@ breadcrumb: false
 
   if (
     ((functions == undefined || functions.length == 0) &&
-    useImport !== false) ||
-    useImport ===true
+      useImport !== false) ||
+    useImport === true
   ) {
     // Sección de Importación
     mdxContent += `### Importacion\n\n`;
@@ -110,7 +110,7 @@ breadcrumb: false
     // mdxContent += `### Funciones\n\n`;
 
     functions.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example,  {...options,subTitle:true});
+      mdxContent += convertDocTsxToMdx(example, { ...options, subTitle: true });
       mdxContent += `\n\n`;
     });
   }
@@ -118,7 +118,7 @@ breadcrumb: false
     // mdxContent += `### Funciones\n\n`;
 
     interfaces.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example,  {...options,subTitle:true});
+      mdxContent += convertDocTsxToMdx(example, { ...options, subTitle: true });
       mdxContent += `\n\n`;
     });
   }
@@ -126,7 +126,7 @@ breadcrumb: false
     // mdxContent += `### Funciones\n\n`;
 
     properties.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example, {...options,subTitle:true});
+      mdxContent += convertDocTsxToMdx(example, { ...options, subTitle: true });
       mdxContent += `\n\n`;
     });
   }
