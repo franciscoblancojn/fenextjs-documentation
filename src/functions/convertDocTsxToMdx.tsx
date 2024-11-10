@@ -6,6 +6,7 @@ const BASE_URL_STORYBOOK =
 export interface convertDocTsxToMdxProps {
   useStorybook?: boolean;
   useUses?: boolean;
+  subTitle?:boolean
 }
 
 export function convertDocTsxToMdx(
@@ -23,6 +24,7 @@ export function convertDocTsxToMdx(
     interfaces,
     properties,
     useImport,
+    useBreadcrumb
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -30,7 +32,15 @@ export function convertDocTsxToMdx(
   const URL_STORYBOOK = BASE_URL_STORYBOOK + docTsx.idStorybook + "--index";
 
   let mdxContent = "";
-  mdxContent += `# ${name}\n\n${description}\n\n`;
+
+  if(useBreadcrumb === false){
+    mdxContent+=`---
+breadcrumb: false
+---
+`
+  }
+
+  mdxContent += `#${options.subTitle === true ? "#" : ""} ${name}\n\n${description}\n\n`;
   if (options.useStorybook) {
     mdxContent += `import { Iframe } from "@/components/Iframe"; \n\n`;
     // Sección de Ejemplo (puede ser estática)
@@ -38,8 +48,9 @@ export function convertDocTsxToMdx(
   }
 
   if (
-    (functions == undefined || functions.length == 0) &&
-    useImport !== false
+    ((functions == undefined || functions.length == 0) &&
+    useImport !== false) ||
+    useImport ===true
   ) {
     // Sección de Importación
     mdxContent += `### Importacion\n\n`;
@@ -99,7 +110,7 @@ export function convertDocTsxToMdx(
     // mdxContent += `### Funciones\n\n`;
 
     functions.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example, options);
+      mdxContent += convertDocTsxToMdx(example,  {...options,subTitle:true});
       mdxContent += `\n\n`;
     });
   }
@@ -107,7 +118,7 @@ export function convertDocTsxToMdx(
     // mdxContent += `### Funciones\n\n`;
 
     interfaces.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example, options);
+      mdxContent += convertDocTsxToMdx(example,  {...options,subTitle:true});
       mdxContent += `\n\n`;
     });
   }
@@ -115,7 +126,7 @@ export function convertDocTsxToMdx(
     // mdxContent += `### Funciones\n\n`;
 
     properties.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example, options);
+      mdxContent += convertDocTsxToMdx(example, {...options,subTitle:true});
       mdxContent += `\n\n`;
     });
   }

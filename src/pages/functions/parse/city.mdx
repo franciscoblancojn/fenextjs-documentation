@@ -2,7 +2,7 @@
 
 Conjunto de funciones para convertir entre un objeto `CityProps` y su representación en cadena JSON.
 
-# parseCity_to_String
+## parseCity_to_String
 
 Función que convierte un objeto de tipo `CityProps` en una cadena JSON. Si el objeto es nulo o indefinido, retorna `undefined`.
 
@@ -16,10 +16,9 @@ import { parseCity_to_String } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo                           | Requerido | Default | Descripcion                                         |
-| --------- | ------------------------------ | --------- | ------- | --------------------------------------------------- |
-| data      | CityProps \| undefined \| null | sí        |         | Objeto `CityProps` que se convertirá a cadena JSON. |
-
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | CityProps \| undefined \| null | sí |  | Objeto `CityProps` que se convertirá a cadena JSON. |
 ### Usos
 
 - Convertir un objeto CityProps a cadena
@@ -30,7 +29,9 @@ const jsonString = parseCity_to_String(city);
 console.log(jsonString);
 ```
 
-# parseString_to_City
+
+
+## parseString_to_City
 
 Función que convierte una cadena JSON en un objeto de tipo `CityProps`. Si la conversión falla o el dato es nulo, retorna un objeto con valores predeterminados.
 
@@ -44,17 +45,18 @@ import { parseString_to_City } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo                        | Requerido | Default | Descripcion                                       |
-| --------- | --------------------------- | --------- | ------- | ------------------------------------------------- |
-| data      | string \| undefined \| null | sí        |         | Cadena JSON que representa un objeto `CityProps`. |
-
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | string \| undefined \| null | sí |  | Cadena JSON que representa un objeto `CityProps`. |
 ### Usos
 
 - Convertir una cadena JSON a un objeto CityProps
 
 ```tsx copy
-const jsonString =
-  '{"id": 1, "id_country": 10, "id_state": 5, "text": "New York"}';
+const jsonString = '{"id": 1, "id_country": 10, "id_state": 5, "text": "New York"}';
 const city = parseString_to_City(jsonString);
 console.log(city);
 ```
+
+
+

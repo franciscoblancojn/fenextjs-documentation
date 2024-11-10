@@ -104,6 +104,14 @@ const main = async () => {
       useUses: true,
     },
   });
+  await onGenerateDoc({
+    name: "Date",
+    URL_BASE: "../fenextjs-date/src",
+    page: "date",
+    options: {
+      useUses: true,
+    },
+  });
 };
 
 main();

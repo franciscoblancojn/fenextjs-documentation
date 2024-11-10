@@ -2,7 +2,7 @@
 
 Conjunto de funciones para convertir entre un objeto `CSCProps` (Country, State, City) y su representación en cadena (`CSCStringProps`).
 
-# parseCSC_to_CSCString
+## parseCSC_to_CSCString
 
 Función que convierte un objeto de tipo `CSCProps` en una representación de cadena (`CSCStringProps`).
 
@@ -16,10 +16,9 @@ import { parseCSC_to_CSCString } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo                          | Requerido | Default | Descripcion                                                                                |
-| --------- | ----------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------ |
-| data      | CSCProps \| undefined \| null | sí        |         | Objeto `CSCProps` que contiene los datos de país, estado y ciudad para convertir a cadena. |
-
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | CSCProps \| undefined \| null | sí |  | Objeto `CSCProps` que contiene los datos de país, estado y ciudad para convertir a cadena. |
 ### Usos
 
 - Convertir un objeto CSCProps a representación en cadena
@@ -30,7 +29,9 @@ const cscString = parseCSC_to_CSCString(cscData);
 console.log(cscString);
 ```
 
-# parseCSCString_to_CSC
+
+
+## parseCSCString_to_CSC
 
 Función que convierte una representación en cadena (`CSCStringProps`) en un objeto `CSCProps`.
 
@@ -44,20 +45,18 @@ import { parseCSCString_to_CSC } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo                                | Requerido | Default | Descripcion                                                                                                   |
-| --------- | ----------------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------- |
-| data      | CSCStringProps \| undefined \| null | sí        |         | Representación en cadena de un objeto CSC (`CSCStringProps`) que contiene los datos de país, estado y ciudad. |
-
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | CSCStringProps \| undefined \| null | sí |  | Representación en cadena de un objeto CSC (`CSCStringProps`) que contiene los datos de país, estado y ciudad. |
 ### Usos
 
 - Convertir una representación en cadena a objeto CSCProps
 
 ```tsx copy
-const cscStringData = {
-  country: "countryString",
-  state: "stateString",
-  city: "cityString",
-};
+const cscStringData = { country: "countryString", state: "stateString", city: "cityString" };
 const cscObject = parseCSCString_to_CSC(cscStringData);
 console.log(cscObject);
 ```
+
+
+

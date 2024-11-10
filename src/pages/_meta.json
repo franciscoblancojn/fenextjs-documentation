@@ -20,7 +20,12 @@
     "index": 5
   },
   "firebase": {
-    "title": "Firebase"
+    "title": "Firebase",
+    "index": 6
+  },
+  "date": {
+    "title": "Date",
+    "index": 7
   },
   "hook": {
     "title": "Hooks"
