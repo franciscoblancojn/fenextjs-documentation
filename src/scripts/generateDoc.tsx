@@ -140,6 +140,15 @@ const main = async () => {
     },
   });
   await onGenerateDoc({
+    name: "Hooks",
+    URL_BASE: "../fenextjs-hook/src",
+    page: "hook",
+    options: {
+      // useStorybook: true,
+      useUses: true,
+    },
+  });
+  await onGenerateDoc({
     name: "Interfaces",
     URL_BASE: "../fenextjs-interface/src",
     page: "interface",

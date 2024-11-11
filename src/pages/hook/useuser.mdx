@@ -1,0 +1,21 @@
+# useUser
+
+Hook para gestionar datos de usuario y autenticación.
+
+### Importacion
+
+Para importar el componente useUser, se puede hacer desde fenextjs
+
+```tsx copy
+import { useUser } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| validateTokenUser | RequestProps\<Q, R, E, T\> | no |  | Función para validar el token del usuario. Por defecto, verifica que el objeto del usuario tenga una propiedad 'token' y la decodifica utilizando JSON Web Tokens. |
+| varName | string | no |  | Nombre de la variable de almacenamiento en `localStorage` para guardar el usuario. |
+| onValidateUser | (user: Q \| null \| undefined) =\> boolean | no |  | Función personalizada para validar el objeto de usuario. |
+| urlRedirectInLogut | string | no |  | URL de redirección al cerrar sesión. |
+| onLogOut | () =\> void | no |  | Función que se ejecuta al cerrar sesión. |

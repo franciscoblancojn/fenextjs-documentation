@@ -2,14 +2,11 @@
 
 El componente Table permite mostrar una tabla de datos con funcionalidades avanzadas como paginación, selección de elementos, ordenación, y más.
 
-import { Iframe } from "@/components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=table-table--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=table-table--index&viewMode=story" />
 
 ### Importacion
 
@@ -21,33 +18,33 @@ import { Table } from "fenextjs";
 
 ### Parametros
 
-| Parametro                  | Tipo                                                                     | Requerido | Default                             | Descripcion                                                      |
-| -------------------------- | ------------------------------------------------------------------------ | --------- | ----------------------------------- | ---------------------------------------------------------------- |
-| classNameContent           | string                                                                   | no        | ""                                  | Clase CSS para el contenedor principal de la tabla.              |
-| classNameContentTable      | string                                                                   | no        | ""                                  | Clase CSS para el contenedor del elemento de la tabla.           |
-| classNameTable             | string                                                                   | no        | ""                                  | Clase CSS para el elemento de la tabla.                          |
-| classNameTHead             | string                                                                   | no        | ""                                  | Clase CSS para el encabezado de la tabla.                        |
-| classNameTBody             | string                                                                   | no        | ""                                  | Clase CSS para el cuerpo de la tabla.                            |
-| classNameThr               | string                                                                   | no        | ""                                  | Clase CSS para las filas del encabezado de la tabla.             |
-| classNameTr                | string                                                                   | no        | ""                                  | Clase CSS para las filas de la tabla.                            |
-| classNameTh                | string                                                                   | no        | ""                                  | Clase CSS para las celdas del encabezado de la tabla.            |
-| classNameTd                | string                                                                   | no        | ""                                  | Clase CSS para las celdas del cuerpo de la tabla.                |
-| classNameContentPagination | string                                                                   | no        | ""                                  | Clase CSS para el contenedor de la paginación.                   |
-| classNameLoader            | string                                                                   | no        | ""                                  | Clase CSS para el elemento del cargador.                         |
-| name                       | string                                                                   | sí        |                                     | Nombre de la tabla.                                              |
-| items                      | T[]                                                                      | sí        |                                     | Arreglo de datos a mostrar en la tabla.                          |
-| header                     | TableHeader\<T\>                                                         | sí        |                                     | Configuración del encabezado de la tabla.                        |
-| pagination                 | PaginationProps                                                          | no        |                                     | Propiedades opcionales de la paginación de la tabla.             |
-| showPagination             | boolean                                                                  | no        | true                                | Indica si se debe mostrar la paginación en la tabla.             |
-| loader                     | boolean                                                                  | no        | false                               | Muestra un cargador mientras se cargan los datos de la tabla.    |
-| typeLoader                 | "spinner" \| "line"                                                      | no        | "line"                              | Tipo de cargador a mostrar.                                      |
-| useCheckbox                | boolean                                                                  | no        | true                                | Si se deben incluir casillas de verificación en la tabla.        |
-| onChecked                  | (items: T[]) =\> void                                                    | no        |                                     | Función a ejecutar al seleccionar elementos de la tabla.         |
-| onOrderBy                  | (order: \{ id: keyof T; order: "ASC" \| "DESC" \}) =\> void              | no        |                                     | Función a ejecutar para ordenar los datos de la tabla.           |
-| onShowHidden               | (showHidden: \{ id: keyof T; showHidden: "SHOW" \| "HIDDEN" \}) =\> void | no        |                                     | Función para mostrar u ocultar columnas de la tabla.             |
-| notResult                  | ReactNode                                                                | no        | \<div\>There is not results\</div\> | Componente a mostrar cuando no hay resultados en la tabla.       |
-| actionsCheckbox            | Omit\<TableActionCheckboxProps\<T\>, "actionAllCheckbox" \| "data"\>     | no        |                                     | Propiedades para las acciones de selección múltiple de la tabla. |
-| actionsCheckboxSelectAll   | ReactNode                                                                | no        | "Select All"                        | Componente para seleccionar todas las casillas de verificación.  |
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| classNameContent | string | no | "" | Clase CSS para el contenedor principal de la tabla. |
+| classNameContentTable | string | no | "" | Clase CSS para el contenedor del elemento de la tabla. |
+| classNameTable | string | no | "" | Clase CSS para el elemento de la tabla. |
+| classNameTHead | string | no | "" | Clase CSS para el encabezado de la tabla. |
+| classNameTBody | string | no | "" | Clase CSS para el cuerpo de la tabla. |
+| classNameThr | string | no | "" | Clase CSS para las filas del encabezado de la tabla. |
+| classNameTr | string | no | "" | Clase CSS para las filas de la tabla. |
+| classNameTh | string | no | "" | Clase CSS para las celdas del encabezado de la tabla. |
+| classNameTd | string | no | "" | Clase CSS para las celdas del cuerpo de la tabla. |
+| classNameContentPagination | string | no | "" | Clase CSS para el contenedor de la paginación. |
+| classNameLoader | string | no | "" | Clase CSS para el elemento del cargador. |
+| name | string | sí |  | Nombre de la tabla. |
+| items | T[] | sí |  | Arreglo de datos a mostrar en la tabla. |
+| header | TableHeader\<T\> | sí |  | Configuración del encabezado de la tabla. |
+| pagination | PaginationProps | no |  | Propiedades opcionales de la paginación de la tabla. |
+| showPagination | boolean | no | true | Indica si se debe mostrar la paginación en la tabla. |
+| loader | boolean | no | false | Muestra un cargador mientras se cargan los datos de la tabla. |
+| typeLoader | "spinner" \| "line" | no | "line" | Tipo de cargador a mostrar. |
+| useCheckbox | boolean | no | true | Si se deben incluir casillas de verificación en la tabla. |
+| onChecked | (items: T[]) =\> void | no |  | Función a ejecutar al seleccionar elementos de la tabla. |
+| onOrderBy | (order: \{ id: keyof T; order: "ASC" \| "DESC" \}) =\> void | no |  | Función a ejecutar para ordenar los datos de la tabla. |
+| onShowHidden | (showHidden: \{ id: keyof T; showHidden: "SHOW" \| "HIDDEN" \}) =\> void | no |  | Función para mostrar u ocultar columnas de la tabla. |
+| notResult | ReactNode | no | \<div\>There is not results\</div\> | Componente a mostrar cuando no hay resultados en la tabla. |
+| actionsCheckbox | Omit\<TableActionCheckboxProps\<T\>, "actionAllCheckbox" \| "data"\> | no |  | Propiedades para las acciones de selección múltiple de la tabla. |
+| actionsCheckboxSelectAll | ReactNode | no | "Select All" | Componente para seleccionar todas las casillas de verificación. |
 
 ### Storybook
 
@@ -58,51 +55,18 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Tabla básica con datos
 
 ```tsx copy
-<Table
-  name="sampleTable"
-  items={[
-    { id: 1, name: "Item 1" },
-    { id: 2, name: "Item 2" },
-  ]}
-  header={[
-    { id: "id", th: "ID" },
-    { id: "name", th: "Name" },
-  ]}
-/>
+<Table name="sampleTable" items={[{ id: 1, name: "Item 1" }, { id: 2, name: "Item 2" }]} header={[{ id: "id", th: "ID" }, { id: "name", th: "Name" }]} />
 ```
 
 - Tabla con paginación y selección múltiple
 
 ```tsx copy
-<Table
-  name="paginatedTable"
-  items={[
-    { id: 1, name: "Item A" },
-    { id: 2, name: "Item B" },
-  ]}
-  header={[
-    { id: "id", th: "ID" },
-    { id: "name", th: "Name" },
-  ]}
-  pagination={{ current: 1, total: 10 }}
-  useCheckbox={true}
-/>
+<Table name="paginatedTable" items={[{ id: 1, name: "Item A" }, { id: 2, name: "Item B" }]} header={[{ id: "id", th: "ID" }, { id: "name", th: "Name" }]} pagination={{ current: 1, total: 10 }} useCheckbox={true} />
 ```
 
 - Tabla con ordenación y cargador
 
 ```tsx copy
-<Table
-  name="sortableTable"
-  items={[
-    { id: 1, name: "Alpha" },
-    { id: 2, name: "Beta" },
-  ]}
-  header={[
-    { id: "id", th: "ID", parse: (item) => `#${item}` },
-    { id: "name", th: "Name" },
-  ]}
-  loader={true}
-  typeLoader="spinner"
-/>
+<Table name="sortableTable" items={[{ id: 1, name: "Alpha" }, { id: 2, name: "Beta" }]} header={[{ id: "id", th: "ID", parse: (item) => `#${item}` }, { id: "name", th: "Name" }]} loader={true} typeLoader="spinner" />
 ```
+

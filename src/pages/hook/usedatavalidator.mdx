@@ -1,0 +1,42 @@
+# useDataValidator
+
+El hook useDataValidator permite validar datos de entrada utilizando una clase de validación opcional, y proporciona el estado de validación.
+
+### Importacion
+
+Para importar el componente useDataValidator, se puede hacer desde fenextjs
+
+```tsx copy
+import { useDataValidator } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | T | sí |  | Los datos que se van a validar. |
+| validator | FenextjsValidatorClass\<T\> | no |  | Instancia opcional de una clase de validación personalizada para validar los datos. |
+| autoOnValidate | boolean | no | true | Determina si la validación se debe ejecutar automáticamente al cambiar los datos. |
+### Usos
+
+- Validación automática de datos
+
+```tsx copy
+const { isValidData, onValidateData } = useDataValidator({
+    data: myData,
+    validator: new FenextjsValidatorClass(),
+});
+console.log(isValidData); // Muestra el estado de la validación
+```
+
+- Validación manual de datos
+
+```tsx copy
+const { isValidData, onValidateData } = useDataValidator({
+    data: myData,
+    validator: new FenextjsValidatorClass(),
+    autoOnValidate: false,
+});
+onValidateData(); // Ejecuta la validación manualmente
+```
+

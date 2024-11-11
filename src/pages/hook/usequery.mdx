@@ -1,0 +1,38 @@
+# useQuery
+
+El hook useQuery permite gestionar los parámetros de consulta en la URL, incluyendo su actualización, eliminación y verificación de cambios en Next.js.
+
+### Importacion
+
+Para importar el componente useQuery, se puede hacer desde fenextjs
+
+```tsx copy
+import { useQuery } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| ignoreQuerys | [id: keyof useQuery_QueryProps] | no |  | Lista opcional de claves de consulta que deben ignorarse al obtener los parámetros de la URL. |
+### Usos
+
+- Uso básico de useQuery
+
+```tsx copy
+const { query, setQuery, onConcatQuery, onChangeQuery, onDeleteQuery, isChange } = useQuery({
+    ignoreQuerys: ["tab", "page"]
+});
+
+// Actualizar un parámetro específico
+onChangeQuery("search")("new search term");
+
+// Agregar varios parámetros
+onConcatQuery({ page: 2, order: "asc" });
+
+// Eliminar un parámetro específico
+onDeleteQuery("order");
+
+console.log(query); // Muestra los parámetros de consulta actuales
+```
+

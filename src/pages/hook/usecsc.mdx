@@ -1,0 +1,46 @@
+# useCSC
+
+El hook useCSC proporciona funcionalidad para seleccionar País, Estado y Ciudad, cargando dinámicamente los datos relacionados.
+
+### Importacion
+
+Para importar el componente useCSC, se puede hacer desde fenextjs
+
+```tsx copy
+import { useCSC } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| defaultValue | CSCProps | no |  | Valor inicial opcional que define los datos CSC por defecto. |
+| value | CSCProps | no |  | Objeto opcional que contiene el valor actual de los datos CSC seleccionados. |
+| onChange | (data: CSCProps) =\> void | no |  | Función de callback que se ejecuta al cambiar el valor CSC. |
+| defaultValueJsonString | string | no |  | Valor inicial opcional en formato JSON string para los datos CSC. |
+| valueJsonString | string | no |  | Cadena JSON opcional que representa el valor actual de los datos CSC. |
+| onChangeJsonString | (data: string) =\> void | no |  | Función de callback que se ejecuta cuando los datos CSC en formato JSON cambian. |
+| parseJson_to_String | (data: CSCProps) =\> string | no |  | Función para convertir CSCProps a una cadena JSON, usa parseCSC_to_CSCString si no se proporciona. |
+| parseString_to_Json | (data: string) =\> CSCProps | no |  | Función para convertir una cadena JSON a CSCProps, usa parseCSCString_to_CSC si no se proporciona. |
+### Usos
+
+- Uso básico
+
+```tsx copy
+const { countrys, states, citys, onChangeCSC, value } = useCSC({
+                defaultValue: {
+                    country: { id: 1, text: "México" },
+                    state: { id: 1, text: "CDMX" },
+                    city: { id: 1, text: "Coyoacán" }
+                }
+            });
+            onChangeCSC("country")(countrys[0]);
+```
+
+- Cambiar ciudad
+
+```tsx copy
+const { onChangeCSC, citys } = useCSC();
+                onChangeCSC("city")(citys[1]);
+```
+

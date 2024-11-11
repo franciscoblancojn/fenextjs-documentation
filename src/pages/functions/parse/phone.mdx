@@ -16,10 +16,9 @@ import { parsePhone_to_String } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo                                       | Requerido | Default | Descripcion                                                  |
-| --------- | ------------------------------------------ | --------- | ------- | ------------------------------------------------------------ |
-| data      | Partial\<PhoneProps\> \| undefined \| null | sí        |         | Objeto `PhoneProps` parcial que se convertirá a cadena JSON. |
-
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | Partial\<PhoneProps\> \| undefined \| null | sí |  | Objeto `PhoneProps` parcial que se convertirá a cadena JSON. |
 ### Usos
 
 - Convertir un objeto PhoneProps parcial a cadena JSON
@@ -29,6 +28,8 @@ const phone = { code: "+1", number: "1234567890" };
 const jsonString = parsePhone_to_String(phone);
 console.log(jsonString);
 ```
+
+
 
 ## parseString_to_Phone
 
@@ -44,10 +45,9 @@ import { parseString_to_Phone } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo                        | Requerido | Default | Descripcion                                                |
-| --------- | --------------------------- | --------- | ------- | ---------------------------------------------------------- |
-| data      | string \| undefined \| null | sí        |         | Cadena JSON que representa un objeto `PhoneProps` parcial. |
-
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | string \| undefined \| null | sí |  | Cadena JSON que representa un objeto `PhoneProps` parcial. |
 ### Usos
 
 - Convertir una cadena JSON a un objeto PhoneProps parcial
@@ -57,3 +57,6 @@ const jsonString = '{"code": "+1", "number": "1234567890"}';
 const phone = parseString_to_Phone(jsonString);
 console.log(phone);
 ```
+
+
+

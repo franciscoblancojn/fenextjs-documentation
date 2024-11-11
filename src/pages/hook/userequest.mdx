@@ -1,0 +1,22 @@
+# useRequestLite
+
+Hook simplificado que permite ejecutar una función de solicitud con manejo de errores y estado de carga.
+
+### Importacion
+
+Para importar el componente useRequestLite, se puede hacer desde fenextjs
+
+```tsx copy
+import { useRequestLite } from "fenextjs";
+```
+
+### Parametros
+
+| Parametro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| f | (data: FP) =\> Promise\<FR\> | sí |  | Función de solicitud a ejecutar. |
+| onResult | (data: FR) =\> void | no |  | Función de callback al recibir un resultado exitoso. |
+| onError | (data: FE) =\> void | no |  | Función de callback al ocurrir un error. |
+| parseError | (errors: any) =\> FE | no |  | Función para analizar y transformar el error, si ocurre. |
+| defaultResult | FR | no |  | Resultado predeterminado de la solicitud. |
+| defaultError | FE | no |  | Error predeterminado en caso de fallo de la solicitud. |

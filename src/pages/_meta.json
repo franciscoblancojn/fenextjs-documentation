@@ -7,6 +7,10 @@
     "title": "Componentes",
     "index": 2
   },
+  "hook": {
+    "title": "Hooks",
+    "index": 2
+  },
   "interface": {
     "title": "Interfaces",
     "index": 3
@@ -34,9 +38,6 @@
   "img-placeholder": {
     "title": "Image placeholder",
     "index": 9
-  },
-  "hook": {
-    "title": "Hooks"
   },
   "svg": {
     "title": "Svg",
