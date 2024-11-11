@@ -112,9 +112,11 @@ import {Modal} from "fenextjs";
           <div class="item-svg-modal" data-svg="${SvgName}">
             ${SVG}
           </div>
+
           \`\`\`tsx copy
           import { ${SvgName} } from "fenextjs";
           \`\`\`
+          
         </div>
       </Modal>
     `;
