@@ -27,6 +27,10 @@
     "title": "Date",
     "index": 7
   },
+  "validator": {
+    "title": "Validator",
+    "index": 8
+  },
   "hook": {
     "title": "Hooks"
   },
@@ -35,8 +39,5 @@
   },
   "svg": {
     "title": "Svg"
-  },
-  "vaidator": {
-    "title": "Validator"
   }
 }

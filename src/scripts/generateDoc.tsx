@@ -112,6 +112,14 @@ const main = async () => {
       useUses: true,
     },
   });
+  await onGenerateDoc({
+    name: "Validator",
+    URL_BASE: "../fenextjs-validator/src",
+    page: "validator",
+    options: {
+      useUses: true,
+    },
+  });
 };
 
 main();
