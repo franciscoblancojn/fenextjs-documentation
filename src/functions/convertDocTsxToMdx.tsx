@@ -26,6 +26,7 @@ export function convertDocTsxToMdx(
     useImport,
     useBreadcrumb,
     html,
+    returns
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -72,7 +73,17 @@ breadcrumb: false
     mdxContent += `| --------- | ---- | --------- | ------- | ----------- |\n`;
 
     props.forEach((prop: any) => {
-      mdxContent += `| ${prop.id} | ${fixCharacter(prop.type)} | ${prop.require ? "sí" : "no"} | ${fixCharacter(prop.default || "")} | ${prop.description} |\n`;
+      mdxContent += `| ${prop.id} | ${fixCharacter(prop.type)} | ${prop.require ? "sí" : "no"} | ${fixCharacter(prop.default || "")} | ${fixCharacter(prop.description)} |\n`;
+    });
+  }
+  if (returns && returns.length > 0) {
+    // Sección de Parámetros
+    mdxContent += `### Returns\n\n`;
+    mdxContent += `| Parametro | Tipo | Descripcion |\n`;
+    mdxContent += `| --------- | ---- | ----------- |\n`;
+
+    returns.forEach((prop: any) => {
+      mdxContent += `| ${prop.id} | ${fixCharacter(prop.type)}  | ${fixCharacter(prop.description)} |\n`;
     });
   }
 

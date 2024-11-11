@@ -16,10 +16,12 @@ import { useAction } from "fenextjs";
 | --------- | ---- | --------- | ------- | ----------- |
 | name | string | sí |  | Nombre único para diferenciar distintas acciones. |
 | onActionExecute | (d?: T) =\> void | no |  | Función que se ejecuta al recibir la acción. |
-| env_log | \{
-                    onActionExecute?: boolean;
-                    onAction?: boolean;
-                \} | no |  | Objeto que define qué eventos serán registrados en la consola. |
+| env_log | object | no |  | Objeto que define qué eventos serán registrados en la consola. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| onAction | (detail?: T) =\> void  | Función que se usa para ejecutar la acción, se le puede pasar parámetros si lo necesita. |
 
 ### env_log
 
@@ -41,7 +43,7 @@ useAction({ name: "name_action", onActionExecute: console.log })
 
 ```tsx copy
 const { onAction } = useAction({ name: "name_action" });
-                onAction()
+onAction()
             
 ```
 
@@ -49,7 +51,7 @@ const { onAction } = useAction({ name: "name_action" });
 
 ```tsx copy
 const { onAction } = useAction<string>({ name: "name_action" });
-                onAction("Data")
+onAction("Data")
             
 ```
 

@@ -10,6 +10,12 @@ Para importar el componente useTheme, se puede hacer desde fenextjs
 import { useTheme } from "fenextjs";
 ```
 
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| theme | ThemeType  | El tema actualmente almacenado, que puede ser 'auto', 'light', o 'dark'. |
+| setTheme | (newTheme: ThemeType) =\> void  | Función para establecer un nuevo tema, almacenándolo en localStorage y aplicándolo al DOM. |
 
 ### ThemeType
 
@@ -26,7 +32,7 @@ Define los posibles valores para el tema, como 'auto', 'light', o 'dark', utiliz
 
 ```tsx copy
 const { theme, setTheme } = useTheme();
-                console.log(theme); // Muestra el tema actual
-                setTheme("dark"); // Cambia el tema a oscuro
+console.log(theme); // Muestra el tema actual
+setTheme("dark"); // Cambia el tema a oscuro
 ```
 

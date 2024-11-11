@@ -24,27 +24,38 @@ import { useModal } from "fenextjs";
 | onClose | () =\> void | no |  | Función que se ejecuta cuando el modal se cierra. |
 | onChange | (d: boolean) =\> void | no |  | Función que se ejecuta al cambiar el estado del modal. |
 | disabled | boolean | no |  | Deshabilita las acciones sobre el modal si está establecido en `true`. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| active | boolean  | Estado actual del modal, considerando el valor almacenado y el estado de recarga. |
+| activeNameLast | boolean  | Indica si el nombre del modal es el último en la lista del almacenamiento local. |
+| activeName | boolean  | Indica si el nombre del modal está presente en la lista del almacenamiento local. |
+| listNamesLocalStorage | string[]  | Lista de nombres de modales almacenados en el almacenamiento local. |
+| onChange | (d: boolean) =\> void  | Función para actualizar el estado del modal. |
+| onActive | () =\> void  | Función para activar el modal. |
+| onClose | () =\> void  | Función para cerrar el modal. |
 ### Usos
 
 - Uso básico del hook useModal
 
 ```tsx copy
 const { active, onActive, onClose } = useModal({
-                    name: "myModal",
-                    defaultActive: false,
-                    onActive: () => console.log("Modal activado"),
-                    onClose: () => console.log("Modal cerrado")
-                });
+    name: "myModal",
+    defaultActive: false,
+    onActive: () => console.log("Modal activado"),
+    onClose: () => console.log("Modal cerrado")
+});
 ```
 
 - Control de estado usando almacenamiento local
 
 ```tsx copy
 const { active, listNamesLocalStorage } = useModal({
-                    name: "myModal",
-                    nameLocalStorage: "modalState",
-                    activeByNameLocalStorage: true,
-                    onChange: (isActive) => console.log("Estado del modal:", isActive)
-                });
+    name: "myModal",
+    nameLocalStorage: "modalState",
+    activeByNameLocalStorage: true,
+    onChange: (isActive) => console.log("Estado del modal:", isActive)
+});
 ```
 

@@ -15,6 +15,13 @@ import { useNotification } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | time | number | no |  | Tiempo en milisegundos durante el cual la notificación se muestra. Valor predeterminado: 2000. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| notification | NotificationDataProps \| undefined  | El objeto de notificación actual que contiene los datos de la notificación activa, si la hay. |
+| pop | (props: NotificationDataProps, options?: NotificationOptions) =\> void  | Función que muestra una notificación con los datos especificados y la oculta después de que transcurre el tiempo especificado. |
+| reset | () =\> void  | Función que reinicia la notificación al estado predeterminado. |
 
 ### NotificationDataProps
 
@@ -30,13 +37,13 @@ Propiedades de los datos de notificación, que incluyen el tipo y mensaje de la 
 
 ```tsx copy
 const { pop } = useNotification();
-                pop({ message: "Notificación de éxito", type: "success" });
+pop({ message: "Notificación de éxito", type: "success" });
 ```
 
 - Reiniciar la notificación
 
 ```tsx copy
 const { reset } = useNotification();
-                reset();
+reset();
 ```
 

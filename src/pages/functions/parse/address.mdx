@@ -19,6 +19,11 @@ import { parseAddress_to_String } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | data | AddressGoogle \| undefined \| null | sí |  | Objeto `AddressGoogle` que se convertirá a cadena JSON. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| jsonString | string  | Cadena JSON que representa el objeto `AddressGoogle` o una cadena vacía en caso de error. |
 ### Usos
 
 - Convertir un objeto AddressGoogle a cadena
@@ -48,6 +53,11 @@ import { parseString_to_Address } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | data | string \| undefined \| null | sí |  | Cadena JSON que representa un objeto `AddressGoogle`. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| addressObject | AddressGoogle  | Objeto `AddressGoogle` resultante de la cadena JSON, o un objeto con `formatted_address` en caso de error. |
 ### Usos
 
 - Convertir una cadena JSON a un objeto AddressGoogle

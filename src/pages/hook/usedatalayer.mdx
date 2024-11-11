@@ -15,6 +15,11 @@ import { useDataLayer } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | useDataLayerProps | object | no |  | Propiedades de configuración para el hook. Actualmente no requiere ninguna propiedad específica. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| push | (props: useDataLayerPushProps) =\> boolean  | Función que envía un evento y datos al objeto `dataLayer`. Retorna `true` si el evento se ha enviado correctamente, `false` si `dataLayer` no está disponible. |
 
 ### useDataLayerPushProps
 
@@ -31,13 +36,13 @@ Propiedades que pueden ser enviadas a `dataLayer` usando la función `push`.
 
 ```tsx copy
 const { push } = useDataLayer();
-                push({ event: "pageView" });
+push({ event: "pageView" });
 ```
 
 - Enviar evento con datos adicionales
 
 ```tsx copy
 const { push } = useDataLayer();
-                push({ event: "userLogin", userId: "12345", value: "Inicio de sesión" });
+push({ event: "userLogin", userId: "12345", value: "Inicio de sesión" });
 ```
 

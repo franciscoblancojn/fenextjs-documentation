@@ -16,6 +16,11 @@ import { parseFile } from "fenextjs";
 | --------- | ---- | --------- | ------- | ----------- |
 | file | any | sí |  | El archivo a leer. |
 | options | \{ fileText?: boolean; updateProgress: (progress: number) =\> void; \} | sí |  | Opciones de configuración, incluyendo `fileText` y `updateProgress`. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| fileContents | Promise\<any\>  | Una promesa que se resuelve con el contenido del archivo, ya sea en formato texto o base64. |
 ### Usos
 
 - Leer un archivo como texto con progreso de carga

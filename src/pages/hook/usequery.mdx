@@ -15,6 +15,17 @@ import { useQuery } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | ignoreQuerys | [id: keyof useQuery_QueryProps] | no |  | Lista opcional de claves de consulta que deben ignorarse al obtener los parámetros de la URL. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| load | boolean  | Indica si el enrutador (router) está listo. |
+| query | useQuery_QueryProps  | Objeto que contiene los parámetros de consulta de la URL, mapeados y procesados. |
+| setQuery | (query: useQuery_QueryProps) =\> boolean  | Función que establece los parámetros de consulta en la URL. |
+| onConcatQuery | (newQuery: useQuery_QueryProps) =\> boolean  | Función que concatena nuevos parámetros de consulta con los existentes y actualiza la URL. |
+| onChangeQuery | (id: keyof useQuery_QueryProps) =\> (value: any) =\> boolean  | Función que retorna un manejador de eventos para actualizar un parámetro específico de consulta en la URL. |
+| onDeleteQuery | (id: keyof useQuery_QueryProps) =\> boolean  | Función que elimina un parámetro específico de consulta de la URL. |
+| isChange | boolean  | Indica si los parámetros de consulta han cambiado desde la última vez. |
 ### Usos
 
 - Uso básico de useQuery

@@ -19,6 +19,11 @@ import { parseDateYYYYMMDD } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | date | Date | sí |  | El objeto Date a convertir. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | string  | Cadena de texto en formato 'YYYY-MM-DD'. |
 ### Usos
 
 - Convertir una fecha a formato 'YYYY-MM-DD'.
@@ -47,6 +52,11 @@ import { parseTextToDate } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | props | parseTextToDateProps | sí |  | Objeto con el texto a convertir y el tipo de fecha. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | Date  | Fecha resultante después de la conversión. |
 ### Usos
 
 - Convertir un texto en una fecha (por ejemplo, para un formato 'YYYY-MM-DD').
@@ -75,6 +85,11 @@ import { parseDateToText } from "fenextjs";
 | --------- | ---- | --------- | ------- | ----------- |
 | date | Date | no |  | La fecha a convertir en texto. Si no se proporciona, se usará la fecha actual. |
 | type | TypeDate \| 'YYYY-MM-DD' | sí |  | El tipo de texto a crear a partir de la fecha. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | string  | La fecha convertida en una cadena de texto. |
 ### Usos
 
 - Convertir una fecha en texto con formato 'YYYY-MM-DD'.
@@ -103,6 +118,11 @@ import { getMonthValue } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | date | Date | sí |  | La fecha de la cual obtener el valor del mes. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | string  | El valor del mes en formato 'yyyy-mm'. |
 ### Usos
 
 - Obtener el valor del mes de una fecha.
@@ -131,6 +151,11 @@ import { getWeekValue } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | date | Date | sí |  | La fecha de la cual obtener el valor de la semana. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | string  | El valor de la semana en formato 'yyyy-Www'. |
 ### Usos
 
 - Obtener el valor de la semana de una fecha.
@@ -159,6 +184,11 @@ import { getTimeValue } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | date | Date | sí |  | La fecha de la cual obtener el valor de la hora. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | string  | El valor de la hora en formato 'hh:mm'. |
 ### Usos
 
 - Obtener el valor de la hora de una fecha.
@@ -188,6 +218,11 @@ import { parseDateTimeFormat } from "fenextjs";
 | --------- | ---- | --------- | ------- | ----------- |
 | date | Date | sí |  | La fecha para formatear. |
 | options | parseDateTimeFormatOptions | sí |  | Opciones de formato personalizadas. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | string  | La fecha formateada según las opciones especificadas. |
 ### Usos
 
 - Formatear una fecha usando opciones personalizadas.

@@ -16,6 +16,11 @@ import { _tValidate } from "fenextjs";
 | --------- | ---- | --------- | ------- | ----------- |
 | d | any | sí |  | Dato que será validado. Si es un string, se aplicará la función de transformación _t si está definida. |
 | _t | _TFunciton | no |  | Función opcional que transforma el dato si es un string. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | any  | Retorna el dato original o el dato transformado si _t fue aplicada. |
 ### Usos
 
 - Validar y aplicar función de transformación

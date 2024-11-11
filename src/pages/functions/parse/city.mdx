@@ -19,6 +19,11 @@ import { parseCity_to_String } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | data | CityProps \| undefined \| null | sí |  | Objeto `CityProps` que se convertirá a cadena JSON. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| jsonString | string \| undefined  | Cadena JSON que representa el objeto `CityProps` o `undefined` si el objeto es nulo o indefinido. |
 ### Usos
 
 - Convertir un objeto CityProps a cadena
@@ -48,6 +53,11 @@ import { parseString_to_City } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | data | string \| undefined \| null | sí |  | Cadena JSON que representa un objeto `CityProps`. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| cityObject | CityProps \| undefined  | Objeto `CityProps` resultante de la cadena JSON, o un objeto con valores predeterminados en caso de error o datos nulos. |
 ### Usos
 
 - Convertir una cadena JSON a un objeto CityProps

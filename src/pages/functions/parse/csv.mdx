@@ -15,6 +15,11 @@ import { parseCsvToJson } from "fenextjs";
 | Parametro | Tipo | Requerido | Default | Descripcion |
 | --------- | ---- | --------- | ------- | ----------- |
 | csv | string | sí |  | Cadena de texto que contiene el contenido del archivo CSV. |
+### Returns
+
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| result | \{ headers: string[], data: any[] \}  | Objeto que contiene los encabezados y los datos convertidos a formato JSON. Si ocurre un error durante el procesamiento, retorna un objeto vacío. |
 ### Usos
 
 - Convertir un archivo CSV en formato JSON
