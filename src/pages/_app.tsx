@@ -1,5 +1,5 @@
 import Head from "next/head";
-import "fenextjs-component/styles/index.css"
+import "fenextjs-component/styles/index.css";
 import "../../styles/index.css";
 import { AppProps } from "next/app";
 
