@@ -2,11 +2,14 @@
 
 El componente InputSelectOption permite mostrar opciones seleccionables con texto, imágenes o íconos, además de proporcionar funcionalidades adicionales como la eliminación de opciones y la personalización de eventos.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputselectoption--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputselectoption--index&viewMode=story"
+/>
 
 ### Importacion
 
@@ -18,25 +21,25 @@ import { InputSelectOption } from "fenextjs";
 
 ### Parametros
 
-| Parametro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| id | string \| number | sí | undefined | ID de la opción, que puede ser un string o un número. |
-| text | string | sí | undefined | Texto que se mostrará en la opción. |
-| img | string | no | undefined | URL de la imagen que se mostrará en la opción, si es proporcionada. |
-| imgComponent | ImgProps | no | undefined | Propiedades para personalizar el componente de imagen (Img). |
-| icon | ReactNode | no | undefined | Icono que se mostrará junto al texto de la opción. |
-| type | 'div' \| 'option' \| 'multiple' | no | 'div' | Define el tipo de opción que se renderiza: div, option, o multiple. |
-| disabled | boolean | no | false | Indica si la opción está deshabilitada. |
-| selected | boolean | no | false | Indica si la opción está seleccionada. |
-| hidden | boolean | no | false | Indica si la opción está oculta. |
-| onClick | (item: InputSelectOptionBaseProps) =\> void | no | undefined | Función que se ejecuta al hacer clic en la opción. |
-| onDelete | (item: InputSelectOptionBaseProps) =\> void | no | undefined | Función que se ejecuta al eliminar la opción. |
-| isBtn | boolean | no | false | Indica si la opción se debe comportar como un botón. |
-| data | T | no | undefined | Datos personalizados asociados con la opción. |
-| iconDelete | ReactNode | no | \<Trash /\> | Icono personalizado para la eliminación de la opción. |
-| classNameOption | string | no | '' | Clase CSS para personalizar la opción. |
-| classNameOptionImg | string | no | '' | Clase CSS para personalizar la imagen de la opción. |
-| classNameOptionDelete | string | no | '' | Clase CSS para personalizar el botón de eliminar de la opción. |
+| Parametro             | Tipo                                        | Requerido | Default     | Descripcion                                                         |
+| --------------------- | ------------------------------------------- | --------- | ----------- | ------------------------------------------------------------------- |
+| id                    | string \| number                            | sí        | undefined   | ID de la opción, que puede ser un string o un número.               |
+| text                  | string                                      | sí        | undefined   | Texto que se mostrará en la opción.                                 |
+| img                   | string                                      | no        | undefined   | URL de la imagen que se mostrará en la opción, si es proporcionada. |
+| imgComponent          | ImgProps                                    | no        | undefined   | Propiedades para personalizar el componente de imagen (Img).        |
+| icon                  | ReactNode                                   | no        | undefined   | Icono que se mostrará junto al texto de la opción.                  |
+| type                  | 'div' \| 'option' \| 'multiple'             | no        | 'div'       | Define el tipo de opción que se renderiza: div, option, o multiple. |
+| disabled              | boolean                                     | no        | false       | Indica si la opción está deshabilitada.                             |
+| selected              | boolean                                     | no        | false       | Indica si la opción está seleccionada.                              |
+| hidden                | boolean                                     | no        | false       | Indica si la opción está oculta.                                    |
+| onClick               | (item: InputSelectOptionBaseProps) =\> void | no        | undefined   | Función que se ejecuta al hacer clic en la opción.                  |
+| onDelete              | (item: InputSelectOptionBaseProps) =\> void | no        | undefined   | Función que se ejecuta al eliminar la opción.                       |
+| isBtn                 | boolean                                     | no        | false       | Indica si la opción se debe comportar como un botón.                |
+| data                  | T                                           | no        | undefined   | Datos personalizados asociados con la opción.                       |
+| iconDelete            | ReactNode                                   | no        | \<Trash /\> | Icono personalizado para la eliminación de la opción.               |
+| classNameOption       | string                                      | no        | ''          | Clase CSS para personalizar la opción.                              |
+| classNameOptionImg    | string                                      | no        | ''          | Clase CSS para personalizar la imagen de la opción.                 |
+| classNameOptionDelete | string                                      | no        | ''          | Clase CSS para personalizar el botón de eliminar de la opción.      |
 
 ### Storybook
 
@@ -59,7 +62,11 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Opción con acción personalizada
 
 ```tsx copy
-<InputSelectOption id={3} text="Opción 3" onClick={(item) => console.log(item)} />
+<InputSelectOption
+  id={3}
+  text="Opción 3"
+  onClick={(item) => console.log(item)}
+/>
 ```
 
 - Opción deshabilitada
@@ -67,4 +74,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <InputSelectOption id={4} text="Opción 4" disabled={true} />
 ```
-
