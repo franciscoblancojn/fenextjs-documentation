@@ -1,7 +1,43 @@
 @import "../src/components/styles.scss";
 
+
 .nextra-menu-desktop{
     li button{
         text-transform: capitalize;
+    }
+}
+
+.content-svg{
+    --auto-grid-min-size: 4rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    .item-svg{
+        width: 100%;
+        padding: .5rem;
+        aspect-ratio: 1/1;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+    svg{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.content-svg-modal{
+    padding-top: 2rem;
+    display: grid;
+}
+.item-svg-modal{
+    width: 6rem;
+    padding: .5rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    svg{
+        max-width: 100%;
+        max-height: 100%;
     }
 }

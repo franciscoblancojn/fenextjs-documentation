@@ -2,6 +2,7 @@ import {
   convertDocTsxToMdx,
   convertDocTsxToMdxProps,
 } from "../functions/convertDocTsxToMdx";
+import { renderToStaticMarkup } from 'react-dom/server';
 
 interface onGenerateDocProps {
   name: string;
@@ -33,9 +34,9 @@ const onGenerateDoc = async ({
       try {
         const STORYBOOK = require(
           "../../" +
-            URL_BASE +
-            "/" +
-            `${path}`.replaceAll("_.doc.tsx", "_.stories.tsx"),
+          URL_BASE +
+          "/" +
+          `${path}`.replaceAll("_.doc.tsx", "_.stories.tsx"),
         );
         const storybook = STORYBOOK.default;
         const idStorybook = `${storybook.title}`
@@ -65,6 +66,69 @@ const onGenerateDoc = async ({
   console.log(`Finish generate ${name}`);
   console.log("---------------------------");
 };
+
+const onGenerateDocSvg = async () => {
+  const name = 'Svg'
+  const Bun_ = eval("Bun");
+  console.log("---------------------------");
+  console.log(`Init generate ${name}`);
+  console.log("---------------------------");
+
+  const glob = new Bun_.Glob("**/index.tsx");
+
+  const URL_BASE = "../fenextjs-svg/src"
+
+  let mdx = ""
+  mdx += `---
+breadcrumb: false
+---
+import {Modal} from "fenextjs";
+
+`;
+  mdx += `# Svg\n\n`;
+  mdx += `Fenextjs posee una lista de svg disponible para usarlos:\n\n`;
+
+
+  mdx += `<div class="content-svg">`;
+  for await (const PATH of glob.scan(URL_BASE)) {
+    let path = PATH;
+    const SvgName = `Svg${path}`.split("/").join("").replace("index.tsx",'')
+    console.log(`${name} ---- ${SvgName} ---- ` + path);
+    const FILE = require("../../" + URL_BASE + "/" + path);
+
+    const FSvg = FILE?.[SvgName]
+
+    const SVG = renderToStaticMarkup(<FSvg/>)
+
+    mdx += `
+      <Modal
+        ElementActionModalActive={
+          <div class="item-svg" data-svg="${SvgName}">
+            ${SVG}
+          </div>
+        }
+        typeClose={'inset'}
+      >
+        <div class="content-svg-modal">
+          <div class="item-svg-modal" data-svg="${SvgName}">
+            ${SVG}
+          </div>
+          \`\`\`tsx copy
+          import { ${SvgName} } from "fenextjs";
+          \`\`\`
+        </div>
+      </Modal>
+    `
+  }
+  mdx += `</div>`;
+  await Bun_.write(`./src/pages/svg.mdx`, mdx);
+
+  console.log("---------------------------");
+  console.log(`Finish generate ${name}`);
+  console.log("---------------------------");
+
+}
+
 
 const main = async () => {
   await onGenerateDoc({
@@ -128,6 +192,8 @@ const main = async () => {
       useUses: true,
     },
   });
+
+  await onGenerateDocSvg()
 };
 
 main();

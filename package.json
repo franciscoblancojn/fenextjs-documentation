@@ -18,7 +18,6 @@
     "sass-index": "sass ./styles/index.scss:./styles/index.css",
     "sass-min": "npm run sass-index-min ",
     "sass": "npm run sass-index ",
-
     "bun-i": "bun i",
     "remove-bun-lockb": "rm -r bun.lockb",
     "remove-node-module": "rm -r node_modules",
@@ -26,8 +25,7 @@
     "update-package": "ncu -u !next",
     "update": "npm run update-package && npm run remove && npm run bun-i && npm run flb",
     "u": "npm run update",
-
-    "generate" :"bun ./src/scripts/generateDoc.tsx"
+    "generate": "bun ./src/scripts/generateDoc.tsx"
   },
   "repository": {
     "type": "git",
@@ -40,9 +38,10 @@
   },
   "homepage": "https://github.com/franciscoblancojn/fenextjs-documentation#readme",
   "dependencies": {
+    "fenextjs": "^13.0.1",
+    "next": "13.5.1",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
-    "next": "13.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

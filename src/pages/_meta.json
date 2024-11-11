@@ -39,6 +39,7 @@
     "title": "Hooks"
   },
   "svg": {
-    "title": "Svg"
+    "title": "Svg",
+    "index": 10
   }
 }
