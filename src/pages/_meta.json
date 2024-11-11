@@ -31,11 +31,12 @@
     "title": "Validator",
     "index": 8
   },
+  "img-placeholder": {
+    "title": "Image placeholder",
+    "index": 9
+  },
   "hook": {
     "title": "Hooks"
-  },
-  "img-placeholder": {
-    "title": "Image placeholder"
   },
   "svg": {
     "title": "Svg"

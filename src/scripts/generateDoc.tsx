@@ -120,6 +120,14 @@ const main = async () => {
       useUses: true,
     },
   });
+  await onGenerateDoc({
+    name: "Img Placeholder",
+    URL_BASE: "../fenextjs-img-placeholder/src",
+    page: "img-placeholder",
+    options: {
+      useUses: true,
+    },
+  });
 };
 
 main();

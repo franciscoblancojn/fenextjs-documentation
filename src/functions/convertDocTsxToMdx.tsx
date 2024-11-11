@@ -25,6 +25,7 @@ export function convertDocTsxToMdx(
     properties,
     useImport,
     useBreadcrumb,
+    html
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -95,6 +96,10 @@ breadcrumb: false
     // Sección de Storybook (puede ser estática)
     mdxContent += `\n### Storybook\n\n`;
     mdxContent += `Para ver el storybook del componente lo puede hacer con este [link](${URL_STORYBOOK})\n\n`;
+  }
+
+  if(html){
+    mdxContent += `${html}\n\n`;
   }
 
   if (options?.useUses && useExample && useExample.length > 0) {
