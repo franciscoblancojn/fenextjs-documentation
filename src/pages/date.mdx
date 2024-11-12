@@ -6,7 +6,7 @@ breadcrumb: false
 
 Clase para manipular fechas, proporcionando métodos para sumar unidades de tiempo, formatear, validar y comparar fechas.
 
-### Importacion
+### Importación
 
 Para importar el componente FenextjsDate, se puede hacer desde fenextjs
 
@@ -18,9 +18,9 @@ import { FenextjsDate } from "fenextjs";
 
 Establece el callback que se ejecutará al modificar la fecha.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                  | Requerido | Default | Descripcion                  |
+| Parámetro | Tipo                  | Requerido | Default | Descripcion                  |
 | --------- | --------------------- | --------- | ------- | ---------------------------- |
 | callback  | (date: Date) =\> void | sí        |         | Función callback a ejecutar. |
 
@@ -37,9 +37,9 @@ fenextDate.setOnCallback((date) => console.log("Fecha actualizada:", date));
 
 Agrega una cantidad de tiempo en milisegundos a la fecha actual.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                          |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                          |
 | --------- | ------ | --------- | ------- | ------------------------------------ |
 | time      | number | sí        |         | Tiempo en milisegundos para agregar. |
 
@@ -56,9 +56,9 @@ fenextDate.addTime(60000); // Agrega 1 minuto en milisegundos
 
 Agrega una cantidad específica de milisegundos a la fecha.
 
-### Parametros
+### Parámetros
 
-| Parametro    | Tipo   | Requerido | Default | Descripcion                           |
+| Parámetro    | Tipo   | Requerido | Default | Descripcion                           |
 | ------------ | ------ | --------- | ------- | ------------------------------------- |
 | milliseconds | number | sí        |         | Milisegundos para agregar a la fecha. |
 
@@ -75,9 +75,9 @@ fenextDate.addMilliseconds(500); // Agrega 500 milisegundos
 
 Agrega una cantidad de segundos a la fecha actual.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion            |
+| Parámetro | Tipo   | Requerido | Default | Descripcion            |
 | --------- | ------ | --------- | ------- | ---------------------- |
 | seconds   | number | sí        |         | Segundos para agregar. |
 
@@ -94,9 +94,9 @@ fenextDate.addSeconds(10); // Agrega 10 segundos
 
 Agrega una cantidad de minutos a la fecha actual.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion           |
+| Parámetro | Tipo   | Requerido | Default | Descripcion           |
 | --------- | ------ | --------- | ------- | --------------------- |
 | minutes   | number | sí        |         | Minutos para agregar. |
 
@@ -113,9 +113,9 @@ fenextDate.addMinutes(30); // Agrega 30 minutos
 
 Agrega una cantidad de horas a la fecha actual.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion         |
+| Parámetro | Tipo   | Requerido | Default | Descripcion         |
 | --------- | ------ | --------- | ------- | ------------------- |
 | hours     | number | sí        |         | Horas para agregar. |
 
@@ -132,9 +132,9 @@ fenextDate.addHours(5); // Agrega 5 horas
 
 Agrega una cantidad de días a la fecha actual.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion        |
+| Parámetro | Tipo   | Requerido | Default | Descripcion        |
 | --------- | ------ | --------- | ------- | ------------------ |
 | date      | number | sí        |         | Días para agregar. |
 
@@ -151,9 +151,9 @@ fenextDate.addDate(10); // Agrega 10 días
 
 Agrega una cantidad de meses a la fecha actual.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion         |
+| Parámetro | Tipo   | Requerido | Default | Descripcion         |
 | --------- | ------ | --------- | ------- | ------------------- |
 | month     | number | sí        |         | Meses para agregar. |
 
@@ -170,9 +170,9 @@ fenextDate.addMonth(3); // Agrega 3 meses
 
 Agrega una cantidad de años a la fecha actual.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion        |
+| Parámetro | Tipo   | Requerido | Default | Descripcion        |
 | --------- | ------ | --------- | ------- | ------------------ |
 | year      | number | sí        |         | Años para agregar. |
 
@@ -189,9 +189,9 @@ fenextDate.addYear(2); // Agrega 2 años
 
 Devuelve la fecha formateada según las opciones dadas.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                      | Requerido | Default | Descripcion                                                     |
+| Parámetro | Tipo                      | Requerido | Default | Descripcion                                                     |
 | --------- | ------------------------- | --------- | ------- | --------------------------------------------------------------- |
 | options   | FenextjsDateFormatOptions | sí        |         | Opciones de formato para la fecha.                              |
 | date      | FenextjsDateValue         | no        |         | Fecha para formatear; usa la fecha actual si no se proporciona. |
@@ -214,9 +214,9 @@ console.log("Fecha formateada:", formattedDate);
 
 Devuelve la fecha formateada usando un formato identificado por un ID.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo              | Requerido | Default | Descripcion                                                  |
+| Parámetro | Tipo              | Requerido | Default | Descripcion                                                  |
 | --------- | ----------------- | --------- | ------- | ------------------------------------------------------------ |
 | id        | string            | sí        |         | ID del formato a usar.                                       |
 | date      | FenextjsDateValue | no        |         | Fecha a formatear; usa la fecha actual si no se proporciona. |
@@ -237,7 +237,7 @@ console.log("Fecha formateada con ID:", formattedDate);
 
 Devuelve un arreglo de fechas para un mes y año específicos.
 
-### Importacion
+### Importación
 
 Para importar el componente getDateByMonth, se puede hacer desde fenextjs
 
@@ -245,9 +245,9 @@ Para importar el componente getDateByMonth, se puede hacer desde fenextjs
 import { getDateByMonth } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                          |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                          |
 | --------- | ------ | --------- | ------- | -------------------------------------------------------------------- |
 | month     | number | sí        |         | Número del mes (1 para enero, 12 para diciembre).                    |
 | year      | number | no        |         | Año para obtener las fechas; usa el año actual si no se proporciona. |
@@ -266,7 +266,7 @@ console.log("Fechas de febrero:", dates);
 
 Establece la fecha a un mes y año específicos.
 
-### Importacion
+### Importación
 
 Para importar el componente setDateByMonth, se puede hacer desde fenextjs
 
@@ -274,9 +274,9 @@ Para importar el componente setDateByMonth, se puede hacer desde fenextjs
 import { setDateByMonth } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                           |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                           |
 | --------- | ------ | --------- | ------- | --------------------------------------------------------------------- |
 | month     | number | sí        |         | Número del mes (1 para enero, 12 para diciembre).                     |
 | year      | number | no        |         | Año para establecer la fecha; usa el año actual si no se proporciona. |
@@ -295,9 +295,9 @@ console.log("Fecha establecida:", fenextDate);
 
 Genera una lista de fechas para un mes específico.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo              | Requerido | Default | Descripcion                                |
+| Parámetro | Tipo              | Requerido | Default | Descripcion                                |
 | --------- | ----------------- | --------- | ------- | ------------------------------------------ |
 | date      | FenextjsDateValue | no        |         | Fecha de referencia para el mes a generar. |
 
@@ -315,7 +315,7 @@ console.log("Fechas del mes:", dates);
 
 Devuelve un arreglo de fechas que representa un calendario completo del mes actual, con días de la semana.
 
-### Importacion
+### Importación
 
 Para importar el componente getDateByCalendar, se puede hacer desde fenextjs
 
@@ -337,7 +337,7 @@ console.log("Fechas del calendario:", calendarDates);
 
 Establece las fechas del calendario con un arreglo de fechas.
 
-### Importacion
+### Importación
 
 Para importar el componente setDateByCalendar, se puede hacer desde fenextjs
 
@@ -345,9 +345,9 @@ Para importar el componente setDateByCalendar, se puede hacer desde fenextjs
 import { setDateByCalendar } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro     | Tipo   | Requerido | Default | Descripcion                                                                     |
+| Parámetro     | Tipo   | Requerido | Default | Descripcion                                                                     |
 | ------------- | ------ | --------- | ------- | ------------------------------------------------------------------------------- |
 | calendarDates | Date[] | sí        |         | Un arreglo de objetos `Date` que representa las fechas del calendario completo. |
 
@@ -366,9 +366,9 @@ console.log("Fechas del calendario establecidas:", fenextDate);
 
 Genera una lista de fechas para el mes y año específicos, con una vista tipo calendario.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo              | Requerido | Default | Descripcion                                     |
+| Parámetro | Tipo              | Requerido | Default | Descripcion                                     |
 | --------- | ----------------- | --------- | ------- | ----------------------------------------------- |
 | date      | FenextjsDateValue | no        |         | Fecha de referencia para generar el calendario. |
 
@@ -386,9 +386,9 @@ console.log("Fechas del calendario:", calendarDates);
 
 Valida si la fecha proporcionada está dentro del rango especificado por las fechas mínima y máxima.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo | Requerido | Default | Descripcion                                                                                                  |
+| Parámetro | Tipo | Requerido | Default | Descripcion                                                                                                  |
 | --------- | ---- | --------- | ------- | ------------------------------------------------------------------------------------------------------------ |
 | min       | Date | no        |         | Fecha mínima que la fecha proporcionada debe cumplir. Si no se proporciona, no se valida el límite inferior. |
 | max       | Date | no        |         | Fecha máxima que la fecha proporcionada debe cumplir. Si no se proporciona, no se valida el límite superior. |
@@ -411,9 +411,9 @@ console.log(isValid);
 
 Compara la fecha actual con otra fecha proporcionada, utilizando los criterios de comparación especificados.
 
-### Parametros
+### Parámetros
 
-| Parametro   | Tipo                                            | Requerido | Default | Descripcion                                                                                                           |
+| Parámetro   | Tipo                                            | Requerido | Default | Descripcion                                                                                                           |
 | ----------- | ----------------------------------------------- | --------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
 | dateCompare | Date                                            | sí        |         | La fecha con la que se va a comparar la fecha actual.                                                                 |
 | compare     | \{ [id in FenextjsDateCompareType]?: boolean \} | sí        |         | Un objeto que contiene los criterios de comparación. Puede incluir propiedades como 'FullYear', 'Month', 'Date', etc. |

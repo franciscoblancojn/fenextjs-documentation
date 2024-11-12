@@ -1,6 +1,6 @@
 # Form
 
-El componente Form es un formulario que permite manejar envíos de datos, con soporte para mostrar loaders, manejar deshabilitación, y ejecutar funciones tras el envío exitoso o en caso de error.
+El componente Form es un formulario que permite manejar envíos de datos, con soporte para mostrar loaders, manejar deshabilitación, y ejecutar funciones tras el envío éxitoso o en caso de error.
 
 import { Iframe } from "@/components/Iframe";
 
@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-form--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente Form, se puede hacer desde fenextjs
 
@@ -19,14 +19,14 @@ Para importar el componente Form, se puede hacer desde fenextjs
 import { Form } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro     | Tipo                                               | Requerido | Default   | Descripcion                                                              |
+| Parámetro     | Tipo                                               | Requerido | Default   | Descripcion                                                              |
 | ------------- | -------------------------------------------------- | --------- | --------- | ------------------------------------------------------------------------ |
 | id            | string                                             | no        | ''        | Identificador único para el formulario, útil para eventos o seguimiento. |
 | data          | any                                                | sí        | undefined | Datos iniciales que el formulario manejará durante el envío.             |
 | onSubmit      | RequestProps\<D, R, E, T\>                         | no        | undefined | Función para manejar el envío de datos del formulario.                   |
-| onAfterSubmit | (data: RequestResultDataProps\<R, E, T\>) =\> void | no        | undefined | Función que se ejecuta después de un envío exitoso del formulario.       |
+| onAfterSubmit | (data: RequestResultDataProps\<R, E, T\>) =\> void | no        | undefined | Función que se ejecuta después de un envío éxitoso del formulario.       |
 | disabled      | boolean                                            | no        | true      | Indica si el formulario está deshabilitado, bloqueando su envío.         |
 | loader        | boolean                                            | no        | false     | Muestra un loader mientras el formulario está siendo enviado.            |
 | className     | string                                             | no        | ''        | Clase CSS para aplicar estilos personalizados al formulario.             |
@@ -39,7 +39,7 @@ El componente maneja el envío de datos mediante la función 'onSubmit', y permi
 | Propiedad     | Uso                                                                         | Descripción                                                                                           |
 | ------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | onSubmit      | Maneja el envío de datos y devuelve el resultado de la operación.           | Función que puede incluir lógica personalizada para gestionar los datos que se envían.                |
-| onAfterSubmit | Ejecuta acciones después del envío exitoso, como el seguimiento de eventos. | Función opcional que recibe los datos del resultado del envío y permite manejar la lógica post-envío. |
+| onAfterSubmit | Ejecuta acciones después del envío éxitoso, como el seguimiento de eventos. | Función opcional que recibe los datos del resultado del envío y permite manejar la lógica post-envío. |
 
 ### Storybook
 
@@ -68,7 +68,7 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Form
   data={{ field: "value" }}
-  onAfterSubmit={(result) => console.log("Envío exitoso", result)}
+  onAfterSubmit={(result) => console.log("Envío éxitoso", result)}
 >
   Enviar
 </Form>

@@ -2,7 +2,7 @@
 
 Hook para gestionar datos de usuario y autenticación.
 
-### Importacion
+### Importación
 
 Para importar el componente useUser, se puede hacer desde fenextjs
 
@@ -10,9 +10,9 @@ Para importar el componente useUser, se puede hacer desde fenextjs
 import { useUser } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro          | Tipo                                       | Requerido | Default | Descripcion                                                                                                                                                        |
+| Parámetro          | Tipo                                       | Requerido | Default | Descripcion                                                                                                                                                        |
 | ------------------ | ------------------------------------------ | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | validateTokenUser  | RequestProps\<Q, R, E, T\>                 | no        |         | Función para validar el token del usuario. Por defecto, verifica que el objeto del usuario tenga una propiedad 'token' y la decodifica utilizando JSON Web Tokens. |
 | varName            | string                                     | no        |         | Nombre de la variable de almacenamiento en `localStorage` para guardar el usuario.                                                                                 |

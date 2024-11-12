@@ -2,7 +2,7 @@
 
 Hook personalizado para administrar y validar datos con múltiples opciones para manejar cambios, envío y estados de error.
 
-### Importacion
+### Importación
 
 Para importar el componente useData, se puede hacer desde fenextjs
 
@@ -10,9 +10,9 @@ Para importar el componente useData, se puede hacer desde fenextjs
 import { useData } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro   | Tipo                                   | Requerido | Default | Descripcion                                                           |
+| Parámetro   | Tipo                                   | Requerido | Default | Descripcion                                                           |
 | ----------- | -------------------------------------- | --------- | ------- | --------------------------------------------------------------------- |
 | defaultData | T                                      | sí        |         | Los datos predeterminados para inicializar el hook.                   |
 | options     | useDataOptions\<T, M, RT, RM, ET, EM\> | no        |         | Un objeto que contiene varias opciones de configuración para el hook. |
@@ -31,12 +31,12 @@ Opciones para personalizar el comportamiento del hook.
 | validator                           | Instancia de clase validadora para validar los datos de data.                              |
 | validatorMemo                       | Instancia de clase validadora para validar los datos de dataMemo.                          |
 | onSubmitData                        | Función de callback para enviar los datos.                                                 |
-| onAfterSubmitDataOk                 | Función de callback que se llama después de un envío exitoso de datos.                     |
+| onAfterSubmitDataOk                 | Función de callback que se llama después de un envío éxitoso de datos.                     |
 | onAfterSubmitParseError             | Función de callback para manejar errores de análisis.                                      |
 | onAfterSubmitDataError              | Función de callback para manejar errores después de enviar los datos.                      |
 | afterSubmitDataSetIsChangeFalse     | Determinar si se cambia el valor de isChange despues del terminar onSubmitData.            |
 | onSubmitDataMemo                    | Función de callback para enviar los datos de dataMemo.                                     |
-| onAfterSubmitDataMemoOk             | Función de callback que se llama después de un envío exitoso de datos de dataMemo.         |
+| onAfterSubmitDataMemoOk             | Función de callback que se llama después de un envío éxitoso de datos de dataMemo.         |
 | onAfterSubmitParseErrorMemo         | Función de callback para manejar errores de análisis de dataMemo.                          |
 | onAfterSubmitDataMemoError          | Función de callback para manejar errores después de enviar los datos de dataMemo.          |
 | afterSubmitDataMemoSetIsChangeFalse | Determinar si se cambia el valor de isChange despues del terminar onSubmitDataMemo.        |
@@ -160,7 +160,7 @@ const {
                     .isMinOrEqual(6, 'La contraseña es muy corta'),
             }),
         onAfterSubmitDataOk: async ({ result }) => {
-            console.log("Ingreso exitoso")
+            console.log("Ingreso éxitoso")
         },
         onAfterSubmitDataError: ({ error }) => {
             console.log("Ocurrio un error", error)

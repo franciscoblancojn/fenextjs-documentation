@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputfile--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente InputFile, se puede hacer desde fenextjs
 
@@ -19,9 +19,9 @@ Para importar el componente InputFile, se puede hacer desde fenextjs
 import { InputFile } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro        | Tipo                                                      | Requerido | Default                      | Descripcion                                                                 |
+| Parámetro        | Tipo                                                      | Requerido | Default                      | Descripcion                                                                 |
 | ---------------- | --------------------------------------------------------- | --------- | ---------------------------- | --------------------------------------------------------------------------- |
 | accept           | string[]                                                  | no        | []                           | Tipos de archivo permitidos para la entrada. Ejemplo: ['jpg', 'png']        |
 | defaultValue     | FileProps                                                 | no        | \{ fileData: '', text: '' \} | Valor predeterminado del archivo. Usado para establecer un archivo inicial. |
@@ -29,7 +29,7 @@ import { InputFile } from "fenextjs";
 | onChangeProgress | (v: number) =\> void                                      | no        | undefined                    | Función que se ejecuta al actualizar el progreso de la carga.               |
 | onChangeError    | (v: ErrorProps \| undefined) =\> void                     | no        | undefined                    | Función que se ejecuta cuando hay un error durante la carga.                |
 | onUploadFile     | (data: InputFileUploadDataProps) =\> Promise\<FileProps\> | no        | undefined                    | Función que se ejecuta para manejar la carga del archivo.                   |
-| clearAfterUpload | boolean                                                   | no        | false                        | Indica si se debe limpiar el input después de una carga exitosa.            |
+| clearAfterUpload | boolean                                                   | no        | false                        | Indica si se debe limpiar el input después de una carga éxitosa.            |
 | MAX_SIZE_FILE    | number                                                    | no        | 5000000                      | Tamaño máximo del archivo en bytes que se puede subir.                      |
 | parseProgress    | (progres: number) =\> any                                 | no        | (e) =\> e                    | Función para analizar el progreso de la carga.                              |
 | disabled         | boolean                                                   | no        | false                        | Indica si el input de archivo está deshabilitado.                           |

@@ -55,7 +55,7 @@ breadcrumb: false
     useImport === true
   ) {
     // Sección de Importación
-    mdxContent += `### Importacion\n\n`;
+    mdxContent += `### Importación\n\n`;
     mdxContent += `Para importar el componente ${name}, se puede hacer desde fenextjs\n\n`;
     mdxContent += `\`\`\`tsx copy\nimport { ${name} } from "fenextjs";\n\`\`\`\n\n`;
   }
@@ -68,8 +68,8 @@ breadcrumb: false
       .replaceAll("|", "\\|");
   if (props && props.length > 0) {
     // Sección de Parámetros
-    mdxContent += `### Parametros\n\n`;
-    mdxContent += `| Parametro | Tipo | Requerido | Default | Descripcion |\n`;
+    mdxContent += `### Parámetros\n\n`;
+    mdxContent += `| Parámetro | Tipo | Requerido | Default | Descripcion |\n`;
     mdxContent += `| --------- | ---- | --------- | ------- | ----------- |\n`;
 
     props.forEach((prop: any) => {

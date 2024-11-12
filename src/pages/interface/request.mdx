@@ -2,7 +2,7 @@
 
 Tipos y interfaces que definen la estructura de resultados de una solicitud, incluyendo el tipo de resultado, datos, y posibles errores.
 
-### Importacion
+### Importación
 
 Para importar el componente RequestResultProps, se puede hacer desde fenextjs
 
@@ -10,12 +10,12 @@ Para importar el componente RequestResultProps, se puede hacer desde fenextjs
 import { RequestResultProps } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                                                          | Requerido | Default   | Descripcion                                                                                                                  |
+| Parámetro | Tipo                                                          | Requerido | Default   | Descripcion                                                                                                                  |
 | --------- | ------------------------------------------------------------- | --------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | type      | RequestResultTypeProps \| keyof typeof RequestResultTypeProps | no        | N/A       | Especifica el tipo de resultado de la solicitud; acepta un valor del enum `RequestResultTypeProps` o una cadena equivalente. |
-| result    | R (opcional)                                                  | no        | undefined | El resultado de la solicitud si esta fue exitosa.                                                                            |
+| result    | R (opcional)                                                  | no        | undefined | El resultado de la solicitud si esta fue éxitosa.                                                                            |
 | error     | ErrorProps\<E\> (opcional)                                    | no        | undefined | Detalles del error si la solicitud falló, definidos por la interfaz `ErrorProps`.                                            |
 | message   | string (opcional)                                             | no        | undefined | Mensaje adicional relacionado con el resultado de la solicitud.                                                              |
 
@@ -25,7 +25,7 @@ Enumeración que define los diferentes tipos de resultados de una solicitud.
 
 | key     | value     | description                                                   |
 | ------- | --------- | ------------------------------------------------------------- |
-| OK      | 'OK'      | Indica que la solicitud fue exitosa.                          |
+| OK      | 'OK'      | Indica que la solicitud fue éxitosa.                          |
 | ERROR   | 'ERROR'   | Indica que hubo un error en la solicitud.                     |
 | NONE    | 'NONE'    | Indica que no hay resultado o estado asociado a la solicitud. |
 | NORMAL  | 'NORMAL'  | Indica un estado normal o neutral en la solicitud.            |

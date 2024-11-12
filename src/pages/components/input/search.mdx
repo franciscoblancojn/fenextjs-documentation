@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputsearch--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente InputSearch, se puede hacer desde fenextjs
 
@@ -19,9 +19,9 @@ Para importar el componente InputSearch, se puede hacer desde fenextjs
 import { InputSearch } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro                    | Tipo                                                                                             | Requerido | Default                                 | Descripcion                                                                                |
+| Parámetro                    | Tipo                                                                                             | Requerido | Default                                 | Descripcion                                                                                |
 | ---------------------------- | ------------------------------------------------------------------------------------------------ | --------- | --------------------------------------- | ------------------------------------------------------------------------------------------ |
 | classNameSearch              | string                                                                                           | no        | ''                                      | Clase CSS para personalizar el contenedor del campo de búsqueda.                           |
 | classNameSearchBg            | string                                                                                           | no        | ''                                      | Clase CSS para el fondo del campo de búsqueda.                                             |
@@ -33,7 +33,7 @@ import { InputSearch } from "fenextjs";
 | onSearch                     | (value: string, tabFilter?: InputSearchTabFilterProps[]) =\> Promise\<InputSearchResultProps[]\> | no        | undefined                               | Función que se llama al realizar una búsqueda, pasando el valor y los filtros de pestañas. |
 | onEnterSearch                | (value: string) =\> void                                                                         | no        | undefined                               | Función que se ejecuta al presionar Enter en el campo de búsqueda.                         |
 | onClearSearch                | () =\> void                                                                                      | no        | undefined                               | Función que se ejecuta al limpiar el campo de búsqueda.                                    |
-| onClickSearch                | (result: InputSearchResultProps) =\> void                                                        | no        | undefined                               | Función que se ejecuta al hacer clic en un resultado de búsqueda.                          |
+| onClickSearch                | (result: InputSearchResultProps) =\> void                                                        | no        | undefined                               | Función que se ejecuta al hacer click en un resultado de búsqueda.                         |
 | useResult                    | boolean                                                                                          | no        | false                                   | Indica si se debe mostrar la lista de resultados de búsqueda.                              |
 | useLoadMore                  | boolean                                                                                          | no        | true                                    | Indica si se debe permitir cargar más resultados.                                          |
 | ButtonLoadMoreProps          | Omit\<ButtonProps, 'onClick'\>                                                                   | no        | \{ children: 'Load More' \}             | Propiedades para el botón de carga adicional.                                              |

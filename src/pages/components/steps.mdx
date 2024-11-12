@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=steps-steps--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente Steps, se puede hacer desde fenextjs
 
@@ -19,9 +19,9 @@ Para importar el componente Steps, se puede hacer desde fenextjs
 import { Steps } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro             | Tipo                                       | Requerido | Default    | Descripcion                                                                                          |
+| Parámetro             | Tipo                                       | Requerido | Default    | Descripcion                                                                                          |
 | --------------------- | ------------------------------------------ | --------- | ---------- | ---------------------------------------------------------------------------------------------------- |
 | items                 | StepsItemProps[]                           | sí        | []         | Los elementos que representan cada paso, incluyendo el contenido, etiqueta, ícono y estado del paso. |
 | defaultStep           | number                                     | no        | 0          | El paso mostrado inicialmente.                                                                       |
@@ -31,8 +31,8 @@ import { Steps } from "fenextjs";
 | btnNext               | ReactNode                                  | no        | "Next"     | Contenido del botón de avance.                                                                       |
 | disabledBtnPrev       | boolean                                    | no        | false      | Deshabilita el botón de retroceso.                                                                   |
 | disabledBtnNext       | boolean                                    | no        | false      | Deshabilita el botón de avance.                                                                      |
-| onPrev                | (step: number) =\> Promise\<void\> \| void | no        | undefined  | Función que se ejecuta al hacer clic en el botón de retroceso.                                       |
-| onNext                | (step: number) =\> Promise\<void\> \| void | no        | undefined  | Función que se ejecuta al hacer clic en el botón de avance.                                          |
+| onPrev                | (step: number) =\> Promise\<void\> \| void | no        | undefined  | Función que se ejecuta al hacer click en el botón de retroceso.                                      |
+| onNext                | (step: number) =\> Promise\<void\> \| void | no        | undefined  | Función que se ejecuta al hacer click en el botón de avance.                                         |
 | onSetStep             | (step: number) =\> void                    | no        | undefined  | Función que se ejecuta al establecer un nuevo paso.                                                  |
 | stepPos               | 'top' \| 'left' \| 'right'                 | no        | 'left'     | Posición de la lista de pasos.                                                                       |
 | showCurrentStepNStep  | boolean                                    | no        | false      | Muestra el paso actual junto al total de pasos.                                                      |

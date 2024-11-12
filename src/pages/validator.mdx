@@ -6,7 +6,7 @@ breadcrumb: false
 
 Clase para validar datos de entrada, proporcionando métodos para verificar requerimientos, longitudes, y tipos específicos de validaciones.
 
-### Importacion
+### Importación
 
 Para importar el componente FenextjsValidator, se puede hacer desde fenextjs
 
@@ -18,9 +18,9 @@ import { FenextjsValidator } from "fenextjs";
 
 Método para definir la validación 'isEqual'. Establece la regla de que los datos deben ser iguales al valor especificado.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo     | Requerido | Default | Descripcion                                                             |
+| Parámetro | Tipo     | Requerido | Default | Descripcion                                                             |
 | --------- | -------- | --------- | ------- | ----------------------------------------------------------------------- |
 | d         | T[] \| T | sí        |         | Valor o lista de valores con los que se compararán los datos a validar. |
 | msg       | string   | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.  |
@@ -51,9 +51,9 @@ validator.isEqual("value1", "Los valores no son iguales");
 
 Método para habilitar la validación 'isRequired'. Establece la regla de que los datos deben estar presentes y no ser nulos o indefinidos.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                            |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                            |
 | --------- | ------ | --------- | ------- | ---------------------------------------------------------------------- |
 | msg       | string | no        |         | Mensaje de error personalizado que se mostrará si la validación falla. |
 
@@ -83,9 +83,9 @@ validator.isRequired("Los datos son obligatorios");
 
 Método para habilitar la validación 'isBoolean'. Establece la regla de que los datos deben ser de tipo booleano.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                            |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                            |
 | --------- | ------ | --------- | ------- | ---------------------------------------------------------------------- |
 | msg       | string | no        |         | Mensaje de error personalizado que se mostrará si la validación falla. |
 
@@ -115,9 +115,9 @@ validator.isBoolean("Debe ser un valor booleano");
 
 Método para habilitar la validación 'isNumber'. Establece la regla de que los datos deben ser de tipo número.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                            |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                            |
 | --------- | ------ | --------- | ------- | ---------------------------------------------------------------------- |
 | msg       | string | no        |         | Mensaje de error personalizado que se mostrará si la validación falla. |
 
@@ -147,9 +147,9 @@ validator.isNumber("Debe ser un número");
 
 Método para habilitar la validación 'isString'. Establece la regla de que los datos deben ser de tipo cadena (string).
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                            |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                            |
 | --------- | ------ | --------- | ------- | ---------------------------------------------------------------------- |
 | msg       | string | no        |         | Mensaje de error personalizado que se mostrará si la validación falla. |
 
@@ -179,9 +179,9 @@ validator.isString("Debe ser una cadena");
 
 Método para habilitar la validación de longitud. Establece la regla de que los datos deben tener una longitud específica.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                              |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                              |
 | --------- | ------ | --------- | ------- | ------------------------------------------------------------------------ |
 | length    | number | sí        |         | La longitud que deben tener los datos para que la validación sea válida. |
 | msg       | string | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.   |
@@ -212,9 +212,9 @@ validator.isLength(5, "La longitud debe ser 5");
 
 Método para habilitar la validación 'isDate'. Establece la regla de que los datos deben ser de tipo Date (fecha).
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                            |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                            |
 | --------- | ------ | --------- | ------- | ---------------------------------------------------------------------- |
 | msg       | string | no        |         | Mensaje de error personalizado que se mostrará si la validación falla. |
 
@@ -244,9 +244,9 @@ validator.isDate("Debe ser una fecha válida");
 
 Método para habilitar la validación 'isObject'. Establece la regla de que los datos deben ser de tipo objeto.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                                                        | Requerido | Default | Descripcion                                                            |
+| Parámetro | Tipo                                                        | Requerido | Default | Descripcion                                                            |
 | --------- | ----------------------------------------------------------- | --------- | ------- | ---------------------------------------------------------------------- |
 | obj       | \{ [id in keyof T]?: FenextjsValidatorClass \} \| undefined | sí        |         | Objeto con las reglas de validación para cada propiedad del objeto.    |
 | msg       | string                                                      | no        |         | Mensaje de error personalizado que se mostrará si la validación falla. |
@@ -284,9 +284,9 @@ validator.isObject(
 
 Método para habilitar la validación 'isArray'. Establece la regla de que los datos deben ser un array.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                                | Requerido | Default | Descripcion                                                                                           |
+| Parámetro | Tipo                                | Requerido | Default | Descripcion                                                                                           |
 | --------- | ----------------------------------- | --------- | ------- | ----------------------------------------------------------------------------------------------------- |
 | item      | FenextjsValidatorClass \| undefined | no        |         | Instancia de FenextjsValidatorClass que define las reglas de validación para cada elemento del array. |
 | msg       | string                              | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.                                |
@@ -326,9 +326,9 @@ validator.isArray(
 
 Método para habilitar la validación 'isMin'. Establece la regla de que los datos deben ser mayores que un valor específico.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo           | Requerido | Default | Descripcion                                                                 |
+| Parámetro | Tipo           | Requerido | Default | Descripcion                                                                 |
 | --------- | -------------- | --------- | ------- | --------------------------------------------------------------------------- |
 | min       | number \| Date | sí        |         | Valor mínimo que los datos deben superar para que la validación sea válida. |
 | msg       | string         | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.      |
@@ -366,9 +366,9 @@ validator.isMin(new Date("2024-01-01"));
 
 Método para habilitar la validación 'isMinOrEqual'. Establece la regla de que los datos deben ser mayores o iguales que un valor específico.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo           | Requerido | Default | Descripcion                                                                           |
+| Parámetro | Tipo           | Requerido | Default | Descripcion                                                                           |
 | --------- | -------------- | --------- | ------- | ------------------------------------------------------------------------------------- |
 | min       | number \| Date | sí        |         | Valor mínimo que los datos deben superar o igualar para que la validación sea válida. |
 | msg       | string         | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.                |
@@ -406,9 +406,9 @@ validator.isMinOrEqual(new Date("2024-01-01"));
 
 Método para habilitar la validación 'isMax'. Establece la regla de que los datos deben ser menores que un valor específico.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo           | Requerido | Default | Descripcion                                                                            |
+| Parámetro | Tipo           | Requerido | Default | Descripcion                                                                            |
 | --------- | -------------- | --------- | ------- | -------------------------------------------------------------------------------------- |
 | max       | number \| Date | sí        |         | Valor máximo que los datos deben ser menores que él para que la validación sea válida. |
 | msg       | string         | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.                 |
@@ -446,9 +446,9 @@ validator.isMax(new Date("2024-01-01"));
 
 Método para habilitar la validación 'isMaxOrEqual'. Establece la regla de que los datos deben ser menores o iguales que un valor específico.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo           | Requerido | Default | Descripcion                                                                                      |
+| Parámetro | Tipo           | Requerido | Default | Descripcion                                                                                      |
 | --------- | -------------- | --------- | ------- | ------------------------------------------------------------------------------------------------ |
 | max       | number \| Date | sí        |         | Valor máximo que los datos deben ser menores o iguales que él para que la validación sea válida. |
 | msg       | string         | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.                           |
@@ -486,9 +486,9 @@ validator.isMaxOrEqual(new Date("2024-01-01"));
 
 Método para habilitar la comparación de valores de referencia. Establece la regla de que los datos deben ser iguales a otro valor de referencia almacenado en la instancia.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                                                    |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                                                    |
 | --------- | ------ | --------- | ------- | ---------------------------------------------------------------------------------------------- |
 | refKey    | string | sí        |         | La clave que identifica el valor de referencia almacenado en la instancia para la comparación. |
 | msg       | string | no        |         | Mensaje de error personalizado que se mostrará si la validación falla.                         |
@@ -519,9 +519,9 @@ validator.isCompareRef("myRefKey", "Los valores no coinciden");
 
 Método para habilitar la validación 'isWhen'. Establece la regla de comparación cuando se cumpla una condición específica.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                              | Requerido | Default | Descripcion                                                                                                                                                                                                                                       |
+| Parámetro | Tipo                              | Requerido | Default | Descripcion                                                                                                                                                                                                                                       |
 | --------- | --------------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | data      | FenextjsValidatorClassIsWhenProps | sí        |         | Objeto que contiene las reglas de validación a aplicar cuando la condición especificada sea verdadera. La estructura de 'FenextjsValidatorClassIsWhenProps' incluye los campos 'key', 'is', 'then', 'otherwise', y opcionalmente 'dataIsCurrent'. |
 
@@ -577,11 +577,11 @@ validator.isWhen({
 
 Método para habilitar la validación 'isRegex'. Establece la regla de que los datos deben coincidir con una expresión regular especificada.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                                                |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                                                |
 | --------- | ------ | --------- | ------- | ------------------------------------------------------------------------------------------ |
-| data      | RegExp | sí        |         | Expresión regular con la que los datos deben coincidir para que la validación sea exitosa. |
+| data      | RegExp | sí        |         | Expresión regular con la que los datos deben coincidir para que la validación sea éxitosa. |
 | msg       | string | no        |         | Mensaje de error personalizado que se muestra si la validación falla.                      |
 
 ### Returns
@@ -606,9 +606,9 @@ validator.isRegex(
 
 Método para habilitar la validación 'isEmail'. Establece la regla de que los datos deben ser un correo electrónico válido.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                           |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                           |
 | --------- | ------ | --------- | ------- | --------------------------------------------------------------------- |
 | msg       | string | no        |         | Mensaje de error personalizado que se muestra si la validación falla. |
 
@@ -631,9 +631,9 @@ validator.isEmail("Por favor, ingresa un correo electrónico válido");
 
 Método para habilitar la validación 'onCustom'. Establece la regla de que los datos deben cumplir con una validación personalizada definida por una función.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                                | Requerido | Default | Descripcion                                                                                                           |
+| Parámetro | Tipo                                | Requerido | Default | Descripcion                                                                                                           |
 | --------- | ----------------------------------- | --------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
 | data      | (data: T) =\> true \| ErrorFenextjs | sí        |         | Función que define la validación personalizada. Si la validación falla, debe retornar un error de tipo ErrorFenextjs. |
 | msg       | string                              | no        |         | Mensaje de error personalizado que se muestra si la validación falla.                                                 |
@@ -660,9 +660,9 @@ validator.isCustom((data) => {
 
 Método para definir la validación 'isOr'. Establece la regla de que los datos deben cumplir al menos una validación de las proporcionadas.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                     | Requerido | Default | Descripcion                                                                                              |
+| Parámetro | Tipo                     | Requerido | Default | Descripcion                                                                                              |
 | --------- | ------------------------ | --------- | ------- | -------------------------------------------------------------------------------------------------------- |
 | d         | FenextjsValidatorClass[] | sí        |         | Lista de instancias de FenextjsValidatorClass que representan las validaciones a comparar con los datos. |
 | msg       | string                   | no        |         | Mensaje de error personalizado que se muestra si la validación falla.                                    |
@@ -691,9 +691,9 @@ validator.isOr(
 
 Método para habilitar la validación 'isEnum'. Establece la regla de que los datos deben coincidir con uno de los valores especificados en un objeto enumerado.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                                                                                      |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                                                                      |
 | --------- | ------ | --------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | data      | object | sí        |         | Objeto que define los valores permitidos para la validación. Los datos deben coincidir con uno de estos valores. |
 | msg       | string | no        |         | Mensaje de error personalizado que se muestra si la validación falla.                                            |
@@ -721,9 +721,9 @@ validator.isEnum(enumValues, "El valor debe estar en el enum especificado");
 
 Método para validar los datos proporcionados según las reglas establecidas. Ejecuta todas las reglas de validación habilitadas previamente para los datos.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo | Requerido | Default | Descripcion                                                                                                     |
+| Parámetro | Tipo | Requerido | Default | Descripcion                                                                                                     |
 | --------- | ---- | --------- | ------- | --------------------------------------------------------------------------------------------------------------- |
 | d         | T    | sí        |         | Datos que se deben validar, los cuales serán evaluados contra las reglas de validación previamente habilitadas. |
 

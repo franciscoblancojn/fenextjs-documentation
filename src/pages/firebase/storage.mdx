@@ -6,9 +6,9 @@ Clase para interactuar con Firebase Storage, proporcionando métodos para cargar
 
 Define la referencia de almacenamiento en la ruta especificada.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                  |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                  |
 | --------- | ------ | --------- | ------- | -------------------------------------------- |
 | path      | string | sí        |         | Ruta en Firebase Storage para la referencia. |
 
@@ -16,9 +16,9 @@ Define la referencia de almacenamiento en la ruta especificada.
 
 Sube un archivo en formato Base64 a la referencia actual en Firebase Storage.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo   | Requerido | Default | Descripcion                                   |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                   |
 | --------- | ------ | --------- | ------- | --------------------------------------------- |
 | base64    | string | sí        |         | Cadena en formato Base64 del archivo a subir. |
 
@@ -48,9 +48,9 @@ fb.storage.Ref("/images/avatar.png").onDelete();
 
 Obtiene el archivo en la referencia actual de Firebase Storage en formato Base64.
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo             | Requerido | Default | Descripcion                                                                             |
+| Parámetro | Tipo             | Requerido | Default | Descripcion                                                                             |
 | --------- | ---------------- | --------- | ------- | --------------------------------------------------------------------------------------- |
 | props     | onGetBase64Props | no        |         | Opciones para personalizar el formato de datos (por defecto: 'data:image/png;base64,'). |
 

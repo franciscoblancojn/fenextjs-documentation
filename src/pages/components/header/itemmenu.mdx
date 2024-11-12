@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=header-itemmenu--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente ItemMenu, se puede hacer desde fenextjs
 
@@ -19,24 +19,24 @@ Para importar el componente ItemMenu, se puede hacer desde fenextjs
 import { ItemMenu } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro     | Tipo                                  | Requerido | Default     | Descripcion                                              |
-| ------------- | ------------------------------------- | --------- | ----------- | -------------------------------------------------------- |
-| url           | string                                | sí        |             | URL de la página asociada al ítem del menú.              |
-| text          | ReactNode                             | sí        |             | Texto que representa el ítem del menú.                   |
-| icon          | ReactNode                             | no        | \<\>\</\>   | Icono a mostrar junto al texto del menú.                 |
-| subItems      | Array\<Omit\<ItemMenuProps, '\_t'\>\> | no        |             | Submenús anidados dentro de este ítem de menú.           |
-| defaultActive | boolean                               | no        | false       | Indica si el submenú está activo por defecto.            |
-| iconArrow     | ReactNode                             | no        | \<Arrow /\> | Icono de flecha que indica la expansión del submenú.     |
-| nameNumber    | number                                | no        | 1           | Número de nivel de jerarquía del ítem de menú.           |
-| typeCollapse  | 'radio' \| 'checkbox'                 | no        |             | Tipo de comportamiento del colapso en los submenús.      |
-| isLink        | boolean                               | no        | true        | Determina si el componente se renderiza como un enlace.  |
-| onClick       | function                              | no        |             | Función que se ejecuta al hacer clic en el ítem de menú. |
-| className     | string                                | no        | ''          | Clase CSS para el contenedor principal del ítem.         |
-| classNameA    | string                                | no        | ''          | Clase CSS para el elemento de enlace del ítem.           |
-| classNameIcon | string                                | no        | ''          | Clase CSS para el icono del ítem.                        |
-| classNameText | string                                | no        | ''          | Clase CSS para el texto del ítem.                        |
+| Parámetro     | Tipo                                  | Requerido | Default     | Descripcion                                               |
+| ------------- | ------------------------------------- | --------- | ----------- | --------------------------------------------------------- |
+| url           | string                                | sí        |             | URL de la página asociada al ítem del menú.               |
+| text          | ReactNode                             | sí        |             | Texto que representa el ítem del menú.                    |
+| icon          | ReactNode                             | no        | \<\>\</\>   | Icono a mostrar junto al texto del menú.                  |
+| subItems      | Array\<Omit\<ItemMenuProps, '\_t'\>\> | no        |             | Submenús anidados dentro de este ítem de menú.            |
+| defaultActive | boolean                               | no        | false       | Indica si el submenú está activo por defecto.             |
+| iconArrow     | ReactNode                             | no        | \<Arrow /\> | Icono de flecha que indica la expansión del submenú.      |
+| nameNumber    | number                                | no        | 1           | Número de nivel de jerarquía del ítem de menú.            |
+| typeCollapse  | 'radio' \| 'checkbox'                 | no        |             | Tipo de comportamiento del colapso en los submenús.       |
+| isLink        | boolean                               | no        | true        | Determina si el componente se renderiza como un enlace.   |
+| onClick       | function                              | no        |             | Función que se ejecuta al hacer click en el ítem de menú. |
+| className     | string                                | no        | ''          | Clase CSS para el contenedor principal del ítem.          |
+| classNameA    | string                                | no        | ''          | Clase CSS para el elemento de enlace del ítem.            |
+| classNameIcon | string                                | no        | ''          | Clase CSS para el icono del ítem.                         |
+| classNameText | string                                | no        | ''          | Clase CSS para el texto del ítem.                         |
 
 ### Storybook
 

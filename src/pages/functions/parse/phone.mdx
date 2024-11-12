@@ -6,7 +6,7 @@ Conjunto de funciones para convertir entre un objeto `PhoneProps` parcial y su r
 
 Función que convierte un objeto parcial de tipo `PhoneProps` en una cadena JSON.
 
-### Importacion
+### Importación
 
 Para importar el componente parsePhone_to_String, se puede hacer desde fenextjs
 
@@ -14,9 +14,9 @@ Para importar el componente parsePhone_to_String, se puede hacer desde fenextjs
 import { parsePhone_to_String } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                                       | Requerido | Default | Descripcion                                                  |
+| Parámetro | Tipo                                       | Requerido | Default | Descripcion                                                  |
 | --------- | ------------------------------------------ | --------- | ------- | ------------------------------------------------------------ |
 | data      | Partial\<PhoneProps\> \| undefined \| null | sí        |         | Objeto `PhoneProps` parcial que se convertirá a cadena JSON. |
 
@@ -40,7 +40,7 @@ console.log(jsonString);
 
 Función que convierte una cadena JSON en un objeto parcial de tipo `PhoneProps`. Si la conversión falla, retorna un objeto con `number`, `code` y `tel` parseados de la cadena.
 
-### Importacion
+### Importación
 
 Para importar el componente parseString_to_Phone, se puede hacer desde fenextjs
 
@@ -48,9 +48,9 @@ Para importar el componente parseString_to_Phone, se puede hacer desde fenextjs
 import { parseString_to_Phone } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                        | Requerido | Default | Descripcion                                                |
+| Parámetro | Tipo                        | Requerido | Default | Descripcion                                                |
 | --------- | --------------------------- | --------- | ------- | ---------------------------------------------------------- |
 | data      | string \| undefined \| null | sí        |         | Cadena JSON que representa un objeto `PhoneProps` parcial. |
 

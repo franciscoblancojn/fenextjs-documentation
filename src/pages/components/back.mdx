@@ -1,6 +1,6 @@
 # Back
 
-El componente Back es una representación visual de un botón de retroceso (atrás) que permite al usuario navegar a la página anterior en la historia del navegador, utilizar la funcionalidad de Next.js Router, redirigir a una URL específica o simplemente ejecutar una función personalizada al hacer clic en el botón.
+El componente Back es una representación visual de un botón de retroceso (atrás) que permite al usuario navegar a la página anterior en la historia del navegador, utilizar la funcionalidad de Next.js Router, redirigir a una URL específica o simplemente ejecutar una función personalizada al hacer click en el botón.
 
 import { Iframe } from "@/components/Iframe";
 
@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-back--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente Back, se puede hacer desde fenextjs
 
@@ -19,16 +19,16 @@ Para importar el componente Back, se puede hacer desde fenextjs
 import { Back } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro           | Tipo                                      | Requerido | Default             | Descripcion                                                                                                           |
+| Parámetro           | Tipo                                      | Requerido | Default             | Descripcion                                                                                                           |
 | ------------------- | ----------------------------------------- | --------- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | loader              | boolean                                   | no        | false               | Indica si el componente está en estado de carga, mostrando un indicador de spinner y deshabilitando su funcionalidad. |
 | disabled            | boolean                                   | no        | false               | Indica si el botón está deshabilitado.                                                                                |
-| onClick             | function                                  | no        | undefined           | Función personalizada que se ejecuta al hacer clic en el botón.                                                       |
+| onClick             | function                                  | no        | undefined           | Función personalizada que se ejecuta al hacer click en el botón.                                                      |
 | icon                | ReactNode                                 | no        | \<PaginationPre /\> | Icono que se muestra dentro del botón.                                                                                |
 | children            | ReactNode                                 | no        | 'Back'              | Contenido o texto que se muestra dentro del botón.                                                                    |
-| typeOnBack          | 'history' \| 'router' \| 'link' \| 'none' | no        | 'history'           | Tipo de acción a ejecutar al hacer clic en el botón.                                                                  |
+| typeOnBack          | 'history' \| 'router' \| 'link' \| 'none' | no        | 'history'           | Tipo de acción a ejecutar al hacer click en el botón.                                                                 |
 | link                | string                                    | no        | ''                  | URL a la que redirigir si 'typeOnBack' es 'link'.                                                                     |
 | useHistoryMinLenght | boolean                                   | no        | false               | Determina si se debe mostrar el botón solo si el historial del navegador tiene una longitud mínima.                   |
 | minLenght           | number                                    | no        | 2                   | Longitud mínima del historial del navegador para mostrar el botón.                                                    |

@@ -1,6 +1,6 @@
 # Copy
 
-El componente Copy permite copiar un texto al portapapeles cuando se hace clic en él, con la opción de mostrar una notificación al usuario.
+El componente Copy permite copiar un texto al portapapeles cuando se hace click en él, con la opción de mostrar una notificación al usuario.
 
 import { Iframe } from "@/components/Iframe";
 
@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=copy-copy--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente Copy, se puede hacer desde fenextjs
 
@@ -19,15 +19,15 @@ Para importar el componente Copy, se puede hacer desde fenextjs
 import { Copy } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro      | Tipo                  | Requerido | Default                                                | Descripcion                                                          |
-| -------------- | --------------------- | --------- | ------------------------------------------------------ | -------------------------------------------------------------------- |
-| text           | string                | no        | ''                                                     | Texto que se copiará al portapapeles al hacer clic en el componente. |
-| children       | ReactNode             | no        | undefined                                              | El contenido que se mostrará dentro del componente Copy.             |
-| onClickForCopy | function              | no        | undefined                                              | Función personalizada que se ejecuta después de copiar el texto.     |
-| notification   | NotificationDataProps | no        | \{ message: 'Copy', type: RequestResultTypeProps.OK \} | Configuración de la notificación que se muestra al copiar el texto.  |
-| className      | string                | no        | ''                                                     | Clase CSS para personalizar el contenedor del componente.            |
+| Parámetro      | Tipo                  | Requerido | Default                                                | Descripcion                                                           |
+| -------------- | --------------------- | --------- | ------------------------------------------------------ | --------------------------------------------------------------------- |
+| text           | string                | no        | ''                                                     | Texto que se copiará al portapapeles al hacer click en el componente. |
+| children       | ReactNode             | no        | undefined                                              | El contenido que se mostrará dentro del componente Copy.              |
+| onClickForCopy | function              | no        | undefined                                              | Función personalizada que se ejecuta después de copiar el texto.      |
+| notification   | NotificationDataProps | no        | \{ message: 'Copy', type: RequestResultTypeProps.OK \} | Configuración de la notificación que se muestra al copiar el texto.   |
+| className      | string                | no        | ''                                                     | Clase CSS para personalizar el contenedor del componente.             |
 
 ### Storybook
 

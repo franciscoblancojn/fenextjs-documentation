@@ -6,7 +6,7 @@ Conjunto de funciones y tipos para manejar la conversión de enums a valores esp
 
 Función que convierte un valor de enum a un valor específico (`V`) usando un mapeo proporcionado.
 
-### Importacion
+### Importación
 
 Para importar el componente parseEnum_to_V, se puede hacer desde fenextjs
 
@@ -14,9 +14,9 @@ Para importar el componente parseEnum_to_V, se puede hacer desde fenextjs
 import { parseEnum_to_V } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                        | Requerido | Default | Descripcion                                                                                    |
+| Parámetro | Tipo                        | Requerido | Default | Descripcion                                                                                    |
 | --------- | --------------------------- | --------- | ------- | ---------------------------------------------------------------------------------------------- |
 | sw        | parseEnum_to_V_SW\<T, V\>   | sí        |         | Objeto de mapeo entre claves del enum y sus valores.                                           |
 | options   | parseEnum_to_V_Options\<V\> | no        |         | Opciones adicionales, incluyendo el valor que se retorna cuando el valor es nulo o indefinido. |
@@ -41,7 +41,7 @@ const status = parseStatus("ACTIVE"); // Retorna "Activo"
 
 Función que convierte un valor de enum a una cadena usando un mapeo proporcionado.
 
-### Importacion
+### Importación
 
 Para importar el componente parseEnum_to_String, se puede hacer desde fenextjs
 
@@ -49,9 +49,9 @@ Para importar el componente parseEnum_to_String, se puede hacer desde fenextjs
 import { parseEnum_to_String } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro | Tipo                        | Requerido | Default | Descripcion                                                                                 |
+| Parámetro | Tipo                        | Requerido | Default | Descripcion                                                                                 |
 | --------- | --------------------------- | --------- | ------- | ------------------------------------------------------------------------------------------- |
 | sw        | parseEnum_to_String_SW\<T\> | sí        |         | Objeto de mapeo entre claves del enum y sus representaciones en cadena.                     |
 | options   | parseEnum_to_String_Options | no        |         | Opciones adicionales para definir un valor de retorno en caso de que sea nulo o indefinido. |

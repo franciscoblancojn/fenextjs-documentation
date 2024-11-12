@@ -1,6 +1,6 @@
 # Img
 
-El componente Img renderiza una imagen con soporte para múltiples resoluciones, capas visuales, y un cargador opcional. También permite definir acciones personalizadas en caso de error o al hacer clic sobre la imagen.
+El componente Img renderiza una imagen con soporte para múltiples resoluciones, capas visuales, y un cargador opcional. También permite definir acciones personalizadas en caso de error o al hacer click sobre la imagen.
 
 import { Iframe } from "@/components/Iframe";
 
@@ -11,7 +11,7 @@ import { Iframe } from "@/components/Iframe";
   src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=img-img--index&viewMode=story"
 />
 
-### Importacion
+### Importación
 
 Para importar el componente Img, se puede hacer desde fenextjs
 
@@ -19,9 +19,9 @@ Para importar el componente Img, se puede hacer desde fenextjs
 import { Img } from "fenextjs";
 ```
 
-### Parametros
+### Parámetros
 
-| Parametro    | Tipo                                                    | Requerido | Default   | Descripcion                                                                      |
+| Parámetro    | Tipo                                                    | Requerido | Default   | Descripcion                                                                      |
 | ------------ | ------------------------------------------------------- | --------- | --------- | -------------------------------------------------------------------------------- |
 | src          | string                                                  | sí        |           | La URL de la imagen a mostrar.                                                   |
 | alt          | string                                                  | no        | undefined | Texto alternativo para la imagen.                                                |
@@ -35,7 +35,7 @@ import { Img } from "fenextjs";
 | imgIf404     | string                                                  | no        | undefined | URL de la imagen que se mostrará en caso de error de carga.                      |
 | layers       | CSSProperties[]                                         | no        | []        | Capas CSS que se aplican como filtros o estilos adicionales a la imagen.         |
 | onErrorImg   | (e: SyntheticEvent\<HTMLImageElement, Event\>) =\> void | no        | undefined | Función personalizada que se ejecuta cuando ocurre un error al cargar la imagen. |
-| onClick      | () =\> void                                             | no        | undefined | Función personalizada que se ejecuta al hacer clic en la imagen.                 |
+| onClick      | () =\> void                                             | no        | undefined | Función personalizada que se ejecuta al hacer click en la imagen.                |
 | loader       | boolean                                                 | no        | false     | Indica si se debe mostrar un cargador mientras se carga la imagen.               |
 | className    | string                                                  | no        | ''        | Clase CSS para personalizar el contenedor del componente.                        |
 | classNameImg | string                                                  | no        | ''        | Clase CSS para personalizar la imagen en sí.                                     |
