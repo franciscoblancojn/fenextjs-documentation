@@ -11,6 +11,9 @@
   "usecsc": {
     "title": "useCSC"
   },
+  "usedata": {
+    "title": "useData"
+  },
   "usedatalayer": {
     "title": "useDatalayer"
   },

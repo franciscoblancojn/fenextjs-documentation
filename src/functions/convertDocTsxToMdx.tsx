@@ -26,7 +26,7 @@ export function convertDocTsxToMdx(
     useImport,
     useBreadcrumb,
     html,
-    returns
+    returns,
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -76,16 +76,6 @@ breadcrumb: false
       mdxContent += `| ${prop.id} | ${fixCharacter(prop.type)} | ${prop.require ? "sí" : "no"} | ${fixCharacter(prop.default || "")} | ${fixCharacter(prop.description)} |\n`;
     });
   }
-  if (returns && returns.length > 0) {
-    // Sección de Parámetros
-    mdxContent += `### Returns\n\n`;
-    mdxContent += `| Parametro | Tipo | Descripcion |\n`;
-    mdxContent += `| --------- | ---- | ----------- |\n`;
-
-    returns.forEach((prop: any) => {
-      mdxContent += `| ${prop.id} | ${fixCharacter(prop.type)}  | ${fixCharacter(prop.description)} |\n`;
-    });
-  }
 
   // Sección de Extras (Redireccionamiento)
   if (extras && extras.length > 0) {
@@ -100,6 +90,16 @@ breadcrumb: false
           mdxContent += `| ${Object.values(item).map(fixCharacter).join(" | ")} |\n`;
         });
       }
+    });
+  }
+  if (returns && returns.length > 0) {
+    // Sección de Parámetros
+    mdxContent += `### Returns\n\n`;
+    mdxContent += `| Parametro | Tipo | Descripcion |\n`;
+    mdxContent += `| --------- | ---- | ----------- |\n`;
+
+    returns.forEach((prop: any) => {
+      mdxContent += `| ${prop.id} | ${fixCharacter(prop.type)}  | ${fixCharacter(prop.description)} |\n`;
     });
   }
 
