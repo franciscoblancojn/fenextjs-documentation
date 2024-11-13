@@ -55,7 +55,7 @@ import { InputText } from "fenextjs";
 | isChange            | boolean \| undefined                                                                             | no        | undefined               | Indica si el valor ha cambiado.                                              |
 | useLoader           | boolean                                                                                          | no        | true                    | Indica si se debe usar el cargador.                                          |
 | inputMode           | 'none' \| 'text' \| 'tel' \| 'url' \| 'email' \| 'numeric' \| 'decimal' \| 'search' \| undefined | no        | undefined               | Modo de entrada del campo.                                                   |
-| autoComplete        | boolean                                                                                          | no        | false                   | Indica si se debe habilitar la autocompletación.                             |
+| autoComplete        | boolean \| string \| 'off' \| 'on'                                                               | no        | off                     | Indica si se debe habilitar la autocompletación.                             |
 | onKeyDown           | function                                                                                         | no        | undefined               | Función para manejar eventos de tecla presionada.                            |
 | onWheel             | function                                                                                         | no        | undefined               | Función para manejar eventos de rueda del mouse.                             |
 | maxLength           | number                                                                                           | no        | undefined               | Longitud máxima para el campo de entrada.                                    |
@@ -107,7 +107,7 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - InputText con autocompletado
 
 ```tsx copy
-<InputText autoComplete={true} />
+<InputText autoComplete={"on"} />
 ```
 
 - InputText con expresión regular
