@@ -21,27 +21,28 @@ import { useData } from "fenextjs";
 
 Opciones para personalizar el comportamiento del hook.
 
-| Nombre                              | Descripcion                                                                                |
-| ----------------------------------- | ------------------------------------------------------------------------------------------ |
-| data                                | Datos opcionales para sobrescribir los datos predeterminados.                              |
-| refreshDataIfChangeDefaultData      | Opciones para refrescar los datos si los datos predeterminados cambian.                    |
-| onChangeDataAfter                   | Función de callback que se llama después de que los datos cambian.                         |
-| onDeleteDataAfter                   | Función de callback que se llama después de que los datos se eliminan.                     |
-| onMemo                              | Función de memoización para transformar los datos antes de pasarlos como valor memorizado. |
-| validator                           | Instancia de clase validadora para validar los datos de data.                              |
-| validatorMemo                       | Instancia de clase validadora para validar los datos de dataMemo.                          |
-| onSubmitData                        | Función de callback para enviar los datos.                                                 |
-| onAfterSubmitDataOk                 | Función de callback que se llama después de un envío éxitoso de datos.                     |
-| onAfterSubmitParseError             | Función de callback para manejar errores de análisis.                                      |
-| onAfterSubmitDataError              | Función de callback para manejar errores después de enviar los datos.                      |
-| afterSubmitDataSetIsChangeFalse     | Determinar si se cambia el valor de isChange despues del terminar onSubmitData.            |
-| onSubmitDataMemo                    | Función de callback para enviar los datos de dataMemo.                                     |
-| onAfterSubmitDataMemoOk             | Función de callback que se llama después de un envío éxitoso de datos de dataMemo.         |
-| onAfterSubmitParseErrorMemo         | Función de callback para manejar errores de análisis de dataMemo.                          |
-| onAfterSubmitDataMemoError          | Función de callback para manejar errores después de enviar los datos de dataMemo.          |
-| afterSubmitDataMemoSetIsChangeFalse | Determinar si se cambia el valor de isChange despues del terminar onSubmitDataMemo.        |
-| autoOnValidate                      | Indicador para validar automáticamente los datos.                                          |
-| env_log                             | Objetos que determinar que variables se muestran en la consola.                            |
+| Nombre                              | Descripcion                                                                                                                                                                                                                         |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| data                                | Datos opcionales para sobrescribir los datos predeterminados.                                                                                                                                                                       |
+| refreshDataIfChangeDefaultData      | Opciones para refrescar los datos si los datos predeterminados cambian.                                                                                                                                                             |
+| onChangeDataAfter                   | Función de callback que se llama después de que los datos cambian.                                                                                                                                                                  |
+| onDeleteDataAfter                   | Función de callback que se llama después de que los datos se eliminan.                                                                                                                                                              |
+| onMemo                              | Función de memoización para transformar los datos antes de pasarlos como valor memorizado.                                                                                                                                          |
+| validator                           | Instancia de clase validadora para validar los datos de data.                                                                                                                                                                       |
+| validatorMemo                       | Instancia de clase validadora para validar los datos de dataMemo.                                                                                                                                                                   |
+| onSubmitData                        | Función de callback para enviar los datos.                                                                                                                                                                                          |
+| onAfterSubmitDataOk                 | Función de callback que se llama después de un envío éxitoso de datos.                                                                                                                                                              |
+| onAfterSubmitParseError             | Función de callback para manejar errores de análisis.                                                                                                                                                                               |
+| onAfterSubmitDataError              | Función de callback para manejar errores después de enviar los datos.                                                                                                                                                               |
+| afterSubmitDataSetIsChangeFalse     | Determinar si se cambia el valor de isChange despues del terminar onSubmitData.                                                                                                                                                     |
+| onSubmitDataMemo                    | Función de callback para enviar los datos de dataMemo.                                                                                                                                                                              |
+| onAfterSubmitDataMemoOk             | Función de callback que se llama después de un envío éxitoso de datos de dataMemo.                                                                                                                                                  |
+| onAfterSubmitParseErrorMemo         | Función de callback para manejar errores de análisis de dataMemo.                                                                                                                                                                   |
+| onAfterSubmitDataMemoError          | Función de callback para manejar errores después de enviar los datos de dataMemo.                                                                                                                                                   |
+| afterSubmitDataMemoSetIsChangeFalse | Determinar si se cambia el valor de isChange despues del terminar onSubmitDataMemo.                                                                                                                                                 |
+| autoOnValidate                      | Indicador para validar automáticamente los datos.                                                                                                                                                                                   |
+| env_log                             | Objetos que determinar que variables se muestran en la consola.                                                                                                                                                                     |
+| useGlobalContext                    | Activar contexto global para que la data que se maneje en distintos useData, con el mismo nombre de useGlobalContext, este sincronizada. (Solo funciona despues que window cargue). **No se recomienda usar para datos sencibles**. |
 
 ### useDataOptionsRefreshDataIfChangeDefaultDataOptions
 
@@ -192,8 +193,44 @@ const {
         full={true}
         size="extra-strong"
     >
-        {_t('Entrar')}
+        Entrar
     </Button>
 </FormBase>
+
+```
+
+- Usando useGlobalContext
+
+```tsx copy
+const DATA1 = useData<string>(
+    "",
+    {
+        useGlobalContext:"name-of-context-custom"
+    },
+);
+const DATA2 = useData<string>(
+    "",
+    {
+        useGlobalContext:"name-of-context-custom"
+    },
+);
+
+<Title>DATA1 value = {DATA1.data}</Title>
+<Title>DATA2 value = {DATA2.data}</Title>
+
+<Button
+    onClick={()=>{
+        DATA1.setData("value1")
+    }}
+>
+    setData1 to "value1"
+</Button>
+<Button
+    onClick={()=>{
+        DATA2.setData("value2")
+    }}
+>
+    setData2 to "value2"
+</Button>
 
 ```
