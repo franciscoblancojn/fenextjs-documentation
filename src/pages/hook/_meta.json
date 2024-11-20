@@ -52,5 +52,11 @@
   },
   "usevalidator": {
     "title": "useValidator"
+  },
+  "uselocalstorage": {
+    "title": "useLocalStorage"
+  },
+  "usesessionstorage": {
+    "title": "useSessionStorage"
   }
 }
