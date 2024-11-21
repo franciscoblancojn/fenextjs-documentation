@@ -27,6 +27,7 @@ export function convertDocTsxToMdx(
     useBreadcrumb,
     html,
     returns,
+    extrasReturns,
   } = docTsx;
 
   const URL_STORYBOOK_IFRAME =
@@ -103,6 +104,20 @@ breadcrumb: false
     });
   }
 
+  if (extrasReturns && extrasReturns.length > 0) {
+    extrasReturns.forEach((extra: any) => {
+      mdxContent += `\n### ${extra.title}\n\n${extra.description}\n\n`;
+      if (extra.tableItems && extra.tableItems.length > 0) {
+        mdxContent += `| ${Object.keys(extra.tableItems[0]).join(" | ")} |\n`;
+        mdxContent += `| ${Object.keys(extra.tableItems[0])
+          .map(() => "---")
+          .join(" | ")} |\n`;
+        extra.tableItems.forEach((item: any) => {
+          mdxContent += `| ${Object.values(item).map(fixCharacter).join(" | ")} |\n`;
+        });
+      }
+    });
+  }
   if (options?.useStorybook) {
     // Sección de Storybook (puede ser estática)
     mdxContent += `\n### Storybook\n\n`;
