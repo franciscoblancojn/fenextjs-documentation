@@ -12,7 +12,6 @@
     "lint": "npx eslint src",
     "lint:fix": "npm run lint -- --fix",
     "format": "npm run prettier:fix && npm run lint:fix",
-    "fle": "npm run flb && npm run export",
     "flb": "npm run format && npm run lint && npm run build",
     "sass-index-min": "sass ./styles/index.scss:./styles/index.css --style compressed",
     "sass-index": "sass ./styles/index.scss:./styles/index.css",
@@ -25,7 +24,9 @@
     "update-package": "ncu -u !next",
     "update": "npm run update-package && npm run remove && npm run bun-i && npm run flb",
     "u": "npm run update",
-    "generate": "bun ./src/scripts/generateDoc.tsx"
+    "generate": "bun ./src/scripts/generateDoc.tsx",
+    "remove-next-out":"rm -r .next && rm -r out",
+    "fle": "npm run remove-next-out && npm run generate && npm run flb && npm run export"
   },
   "repository": {
     "type": "git",
