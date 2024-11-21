@@ -58,5 +58,8 @@
   },
   "usesessionstorage": {
     "title": "useSessionStorage"
+  },
+  "usehistory": {
+    "title": "useHistory"
   }
 }
