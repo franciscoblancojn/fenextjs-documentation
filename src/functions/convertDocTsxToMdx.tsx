@@ -16,6 +16,7 @@ export function convertDocTsxToMdx(
   const {
     name,
     description,
+    code,
     props,
     extras,
     useExample,
@@ -82,6 +83,10 @@ breadcrumb: false
   if (extras && extras.length > 0) {
     extras.forEach((extra: any) => {
       mdxContent += `\n### ${extra.title}\n\n${extra.description}\n\n`;
+      if (extra?.code) {
+        mdxContent += `\`\`\`tsx copy\n${extra?.code}\n\`\`\`\n\n`;
+      }
+
       if (extra.tableItems && extra.tableItems.length > 0) {
         mdxContent += `| ${Object.keys(extra.tableItems[0]).join(" | ")} |\n`;
         mdxContent += `| ${Object.keys(extra.tableItems[0])
@@ -126,6 +131,9 @@ breadcrumb: false
 
   if (html) {
     mdxContent += `${html}\n\n`;
+  }
+  if (code) {
+    mdxContent += `\`\`\`tsx copy\n${code}\n\`\`\`\n\n`;
   }
 
   if (options?.useUses && useExample && useExample.length > 0) {

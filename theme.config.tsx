@@ -10,6 +10,15 @@ const config: DocsThemeConfig = {
   footer: {
     text: <Logo/>,
   },
+  editLink:{
+    component:null
+  },
+  feedback:{
+    content:null
+  },
+  toc:{
+    title:"En esta pagina"
+  }
   
 };
 

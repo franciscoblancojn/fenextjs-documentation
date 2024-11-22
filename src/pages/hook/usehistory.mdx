@@ -16,6 +16,20 @@ import { useHistory } from "fenextjs";
 | --------- | ------ | --------- | ------------------ | ------------------------------------------------------------------------------------ |
 | name      | string | no        | "fenextjs-history" | Clave utilizada para almacenar el historial de rutas en el almacenamiento de sesión. |
 
+### **NOTA**
+
+Para que useHistory funcione correctamente debe ser ejecutado en \_app o el layout mas superior que se posea.
+
+```tsx copy
+import type { AppProps } from "next/app";
+import { useHistory } from "fenextjs";
+
+export default function App({ Component, pageProps }: AppProps) {
+  useHistory({});
+  return <Component {...pageProps} />;
+}
+```
+
 ### Returns
 
 | Parametro   | Tipo                                    | Descripcion                                                                             |
