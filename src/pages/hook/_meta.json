@@ -61,5 +61,8 @@
   },
   "usehistory": {
     "title": "useHistory"
+  },
+  "useonline": {
+    "title": "useOnline"
   }
 }
