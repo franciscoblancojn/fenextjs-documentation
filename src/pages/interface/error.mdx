@@ -12,11 +12,12 @@ import { ErrorProps } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo                 | Requerido | Default   | Descripcion                                                         |
-| --------- | -------------------- | --------- | --------- | ------------------------------------------------------------------- |
-| code      | ErrorCode (opcional) | no        | undefined | Código del error específico, definido en el enumerador `ErrorCode`. |
-| message   | string (opcional)    | no        | undefined | Mensaje descriptivo del error.                                      |
-| data      | D (opcional)         | no        | undefined | Datos adicionales sobre el error, de tipo genérico `D`.             |
+| Parámetro | Tipo      | Requerido | Default   | Descripcion                                                         |
+| --------- | --------- | --------- | --------- | ------------------------------------------------------------------- |
+| code      | ErrorCode | no        | undefined | Código del error específico, definido en el enumerador `ErrorCode`. |
+| message   | string    | no        | undefined | Mensaje descriptivo del error.                                      |
+| data      | D         | no        | undefined | Datos adicionales sobre el error, de tipo genérico `D`.             |
+| content   | any       | no        | undefined | Contenido que se muestra sustituyendo 'message'.                    |
 
 ### ErrorCode
 
