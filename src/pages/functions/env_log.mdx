@@ -12,17 +12,19 @@ import { env_log } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| data | any | sí |  | El mensaje de log que se imprimirá en la consola. |
-| options | Object | no |  | Opciones para personalizar el mensaje de log. |
-| options.name | string | no |  | Nombre que aparece junto al mensaje de log en la consola, en mayúsculas. |
-| options.color | string | no |  | Color del texto del mensaje de log en la consola. El valor predeterminado es 'white'. |
+| Parámetro     | Tipo   | Requerido | Default | Descripcion                                                                           |
+| ------------- | ------ | --------- | ------- | ------------------------------------------------------------------------------------- |
+| data          | any    | sí        |         | El mensaje de log que se imprimirá en la consola.                                     |
+| options       | Object | no        |         | Opciones para personalizar el mensaje de log.                                         |
+| options.name  | string | no        |         | Nombre que aparece junto al mensaje de log en la consola, en mayúsculas.              |
+| options.color | string | no        |         | Color del texto del mensaje de log en la consola. El valor predeterminado es 'white'. |
+
 ### Returns
 
-| Parametro | Tipo | Descripcion |
-| --------- | ---- | ----------- |
-| void | void  | Esta función no tiene valor de retorno. |
+| Parametro | Tipo | Descripcion                             |
+| --------- | ---- | --------------------------------------- |
+| void      | void | Esta función no tiene valor de retorno. |
+
 ### Usos
 
 - Imprimir mensaje de log básico
@@ -36,4 +38,3 @@ env_log("This is a log message");
 ```tsx copy
 env_log("This is a log message", { name: "Info", color: "blue" });
 ```
-

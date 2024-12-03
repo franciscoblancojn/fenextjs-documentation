@@ -16,14 +16,16 @@ import { parseCity_to_String } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| data | CityProps \| undefined \| null | sí |  | Objeto `CityProps` que se convertirá a cadena JSON. |
+| Parámetro | Tipo                           | Requerido | Default | Descripcion                                         |
+| --------- | ------------------------------ | --------- | ------- | --------------------------------------------------- |
+| data      | CityProps \| undefined \| null | sí        |         | Objeto `CityProps` que se convertirá a cadena JSON. |
+
 ### Returns
 
-| Parametro | Tipo | Descripcion |
-| --------- | ---- | ----------- |
-| jsonString | string \| undefined  | Cadena JSON que representa el objeto `CityProps` o `undefined` si el objeto es nulo o indefinido. |
+| Parametro  | Tipo                | Descripcion                                                                                       |
+| ---------- | ------------------- | ------------------------------------------------------------------------------------------------- |
+| jsonString | string \| undefined | Cadena JSON que representa el objeto `CityProps` o `undefined` si el objeto es nulo o indefinido. |
+
 ### Usos
 
 - Convertir un objeto CityProps a cadena
@@ -33,8 +35,6 @@ const city = { id: 1, id_country: 10, id_state: 5, text: "New York" };
 const jsonString = parseCity_to_String(city);
 console.log(jsonString);
 ```
-
-
 
 ## parseString_to_City
 
@@ -50,23 +50,23 @@ import { parseString_to_City } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| data | string \| undefined \| null | sí |  | Cadena JSON que representa un objeto `CityProps`. |
+| Parámetro | Tipo                        | Requerido | Default | Descripcion                                       |
+| --------- | --------------------------- | --------- | ------- | ------------------------------------------------- |
+| data      | string \| undefined \| null | sí        |         | Cadena JSON que representa un objeto `CityProps`. |
+
 ### Returns
 
-| Parametro | Tipo | Descripcion |
-| --------- | ---- | ----------- |
-| cityObject | CityProps \| undefined  | Objeto `CityProps` resultante de la cadena JSON, o un objeto con valores predeterminados en caso de error o datos nulos. |
+| Parametro  | Tipo                   | Descripcion                                                                                                              |
+| ---------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| cityObject | CityProps \| undefined | Objeto `CityProps` resultante de la cadena JSON, o un objeto con valores predeterminados en caso de error o datos nulos. |
+
 ### Usos
 
 - Convertir una cadena JSON a un objeto CityProps
 
 ```tsx copy
-const jsonString = '{"id": 1, "id_country": 10, "id_state": 5, "text": "New York"}';
+const jsonString =
+  '{"id": 1, "id_country": 10, "id_state": 5, "text": "New York"}';
 const city = parseString_to_City(jsonString);
 console.log(city);
 ```
-
-
-

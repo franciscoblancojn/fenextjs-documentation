@@ -2,11 +2,14 @@
 
 El componente Modal permite crear una ventana modal personalizable con opciones de activación, cierre y renderizado condicional, heredando propiedades de ModalBase.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=modal-modal--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=modal-modal--index&viewMode=story"
+/>
 
 ### Importación
 
@@ -18,25 +21,25 @@ import { Modal } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| ElementActionModalActive | ReactNode | no | undefined | Elemento que activa el modal al hacer clic. |
-| disabledElementActionModalActive | boolean | no | false | Indica si el elemento activador del modal está deshabilitado. |
-| onActive | function | no | undefined | Función que se ejecuta cuando el modal se activa. |
-| activeByNameLocalStorage | boolean | no | false | Indica si el estado activo del modal se almacena en localStorage. |
-| activeByNameContentLocalStorage | boolean | no | false | Determina si el contenido del modal activo se almacena en localStorage. |
-| classNameElementActionModalActive | string | no | '' | Clase CSS para el elemento activador del modal. |
-| classNameModal | ModalBaseClassProps | no | \{\} | Objeto que contiene las clases CSS personalizables del modal. |
-| children | ReactNode | no | undefined | Contenido o elementos a mostrar dentro del modal. |
-| active | boolean | no | undefined | Determina si el modal está activo. |
-| onClose | function | no | undefined | Función que se ejecuta al cerrar el modal. |
-| type | 'top' \| 'left' \| 'right' \| 'bottom' \| 'center' \| 'full' \| 'layout-grid' \| 'top-right' \| 'top-left' \| 'bottom-right' \| 'bottom-left' | no | 'center' | Define el tipo o la posición del modal. |
-| typeClose | 'out' \| 'inset' \| 'none' | no | 'out' | Especifica el tipo de botón de cierre para el modal. |
-| disabledClose | boolean | no | false | Indica si el cierre del modal está deshabilitado. |
-| useRender | boolean | sí | false | Determina si el modal usa renderizado condicional. |
-| name | string | no | undefined | Nombre identificador del modal. |
-| nameLocalStorage | string | no | undefined | Clave de almacenamiento en localStorage para el estado del modal. |
-| closeComponent | ReactNode | no | undefined | Componente personalizado de cierre para el modal. |
+| Parámetro                         | Tipo                                                                                                                                          | Requerido | Default   | Descripcion                                                             |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------- | ----------------------------------------------------------------------- |
+| ElementActionModalActive          | ReactNode                                                                                                                                     | no        | undefined | Elemento que activa el modal al hacer clic.                             |
+| disabledElementActionModalActive  | boolean                                                                                                                                       | no        | false     | Indica si el elemento activador del modal está deshabilitado.           |
+| onActive                          | function                                                                                                                                      | no        | undefined | Función que se ejecuta cuando el modal se activa.                       |
+| activeByNameLocalStorage          | boolean                                                                                                                                       | no        | false     | Indica si el estado activo del modal se almacena en localStorage.       |
+| activeByNameContentLocalStorage   | boolean                                                                                                                                       | no        | false     | Determina si el contenido del modal activo se almacena en localStorage. |
+| classNameElementActionModalActive | string                                                                                                                                        | no        | ''        | Clase CSS para el elemento activador del modal.                         |
+| classNameModal                    | ModalBaseClassProps                                                                                                                           | no        | \{\}      | Objeto que contiene las clases CSS personalizables del modal.           |
+| children                          | ReactNode                                                                                                                                     | no        | undefined | Contenido o elementos a mostrar dentro del modal.                       |
+| active                            | boolean                                                                                                                                       | no        | undefined | Determina si el modal está activo.                                      |
+| onClose                           | function                                                                                                                                      | no        | undefined | Función que se ejecuta al cerrar el modal.                              |
+| type                              | 'top' \| 'left' \| 'right' \| 'bottom' \| 'center' \| 'full' \| 'layout-grid' \| 'top-right' \| 'top-left' \| 'bottom-right' \| 'bottom-left' | no        | 'center'  | Define el tipo o la posición del modal.                                 |
+| typeClose                         | 'out' \| 'inset' \| 'none'                                                                                                                    | no        | 'out'     | Especifica el tipo de botón de cierre para el modal.                    |
+| disabledClose                     | boolean                                                                                                                                       | no        | false     | Indica si el cierre del modal está deshabilitado.                       |
+| useRender                         | boolean                                                                                                                                       | sí        | false     | Determina si el modal usa renderizado condicional.                      |
+| name                              | string                                                                                                                                        | no        | undefined | Nombre identificador del modal.                                         |
+| nameLocalStorage                  | string                                                                                                                                        | no        | undefined | Clave de almacenamiento en localStorage para el estado del modal.       |
+| closeComponent                    | ReactNode                                                                                                                                     | no        | undefined | Componente personalizado de cierre para el modal.                       |
 
 ### Storybook
 
@@ -67,4 +70,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Modal active={true} type="top-right" />
 ```
-

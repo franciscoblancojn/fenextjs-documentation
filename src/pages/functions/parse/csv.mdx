@@ -12,14 +12,16 @@ import { parseCsvToJson } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| csv | string | sí |  | Cadena de texto que contiene el contenido del archivo CSV. |
+| Parámetro | Tipo   | Requerido | Default | Descripcion                                                |
+| --------- | ------ | --------- | ------- | ---------------------------------------------------------- |
+| csv       | string | sí        |         | Cadena de texto que contiene el contenido del archivo CSV. |
+
 ### Returns
 
-| Parametro | Tipo | Descripcion |
-| --------- | ---- | ----------- |
-| result | \{ headers: string[], data: any[] \}  | Objeto que contiene los encabezados y los datos convertidos a formato JSON. Si ocurre un error durante el procesamiento, retorna un objeto vacío. |
+| Parametro | Tipo                                 | Descripcion                                                                                                                                       |
+| --------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| result    | \{ headers: string[], data: any[] \} | Objeto que contiene los encabezados y los datos convertidos a formato JSON. Si ocurre un error durante el procesamiento, retorna un objeto vacío. |
+
 ### Usos
 
 - Convertir un archivo CSV en formato JSON
@@ -31,4 +33,3 @@ const csvData = '"Name","Age","Profession"
 const parsedData = parseCsvToJson(csvData);
 console.log(parsedData); // { headers: ["Name", "Age", "Profession"], data: [{ Name: "John", Age: 25, Profession: "Engineer" }, { Name: "Jane", Age: 30, Profession: "Designer" }] }
 ```
-

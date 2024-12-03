@@ -12,7 +12,7 @@ import { ErrorUserTokenInvalid } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| code | ErrorCode | no | ErrorCode.USER_TOKEN_INVALID | Código de error específico que indica que el token de usuario proporcionado es inválido. |
-| message | string | no | "Invalid Token" | Mensaje de error que describe la naturaleza del problema cuando el token de usuario no es válido. |
+| Parámetro | Tipo      | Requerido | Default                      | Descripcion                                                                                       |
+| --------- | --------- | --------- | ---------------------------- | ------------------------------------------------------------------------------------------------- |
+| code      | ErrorCode | no        | ErrorCode.USER_TOKEN_INVALID | Código de error específico que indica que el token de usuario proporcionado es inválido.          |
+| message   | string    | no        | "Invalid Token"              | Mensaje de error que describe la naturaleza del problema cuando el token de usuario no es válido. |

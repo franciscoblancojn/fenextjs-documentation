@@ -12,7 +12,7 @@ import { ErrorPageNotFound } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| code | ErrorCode | no | ErrorCode.PAGE_NOT_FOUND | Código de error específico que indica que la página solicitada no se encuentra en el servidor. |
-| message | string | no | "Page not Found" | Mensaje de error que describe la naturaleza del problema cuando la página solicitada no está disponible. |
+| Parámetro | Tipo      | Requerido | Default                  | Descripcion                                                                                              |
+| --------- | --------- | --------- | ------------------------ | -------------------------------------------------------------------------------------------------------- |
+| code      | ErrorCode | no        | ErrorCode.PAGE_NOT_FOUND | Código de error específico que indica que la página solicitada no se encuentra en el servidor.           |
+| message   | string    | no        | "Page not Found"         | Mensaje de error que describe la naturaleza del problema cuando la página solicitada no está disponible. |

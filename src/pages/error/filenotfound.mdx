@@ -12,7 +12,7 @@ import { ErrorFileNotFound } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| code | ErrorCode | no | ErrorCode.FILE_NOT_FOUND | Código de error específico que indica que el archivo no se encontró. |
-| message | string | no | "File not Found" | Mensaje de error que describe la ausencia del archivo solicitado. |
+| Parámetro | Tipo      | Requerido | Default                  | Descripcion                                                          |
+| --------- | --------- | --------- | ------------------------ | -------------------------------------------------------------------- |
+| code      | ErrorCode | no        | ErrorCode.FILE_NOT_FOUND | Código de error específico que indica que el archivo no se encontró. |
+| message   | string    | no        | "File not Found"         | Mensaje de error que describe la ausencia del archivo solicitado.    |

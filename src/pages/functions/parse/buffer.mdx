@@ -12,14 +12,16 @@ import { parseBufferToBase64 } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| buffer | ArrayBuffer | sí |  | El buffer de datos que se convertirá a una cadena Base64. |
+| Parámetro | Tipo        | Requerido | Default | Descripcion                                               |
+| --------- | ----------- | --------- | ------- | --------------------------------------------------------- |
+| buffer    | ArrayBuffer | sí        |         | El buffer de datos que se convertirá a una cadena Base64. |
+
 ### Returns
 
-| Parametro | Tipo | Descripcion |
-| --------- | ---- | ----------- |
-| base64String | string  | Cadena Base64 que representa los datos del `ArrayBuffer`. |
+| Parametro    | Tipo   | Descripcion                                               |
+| ------------ | ------ | --------------------------------------------------------- |
+| base64String | string | Cadena Base64 que representa los datos del `ArrayBuffer`. |
+
 ### Usos
 
 - Convertir un ArrayBuffer a Base64
@@ -29,4 +31,3 @@ const buffer = new ArrayBuffer(8);
 const base64String = parseBufferToBase64(buffer);
 console.log(base64String);
 ```
-

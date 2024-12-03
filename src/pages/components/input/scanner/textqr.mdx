@@ -2,11 +2,14 @@
 
 El componente InputScannerTextQr combina un campo de texto con un escáner QR. Permite al usuario ingresar texto manualmente o escanear un código QR para rellenar el campo de texto.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-scanner-inputscannertextqr--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-scanner-inputscannertextqr--index&viewMode=story"
+/>
 
 ### Importación
 
@@ -18,15 +21,15 @@ import { InputScannerTextQr } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| className | string | no | '' | Clase CSS para personalizar el contenedor principal del componente. |
-| defaultValue | string | no | '' | Valor predeterminado del campo de texto. |
-| onChange | (value: string) =\> void | no | undefined | Función que se ejecuta cuando el valor del campo de texto cambia, pasando el nuevo valor. |
-| icon | ReactNode | no | undefined | Ícono que se muestra junto al campo de texto, en este caso, el escáner QR. |
-| onChangeCameraContent | ReactNode | no | \<CameraChange /\> | Contenido personalizado para el botón que permite cambiar entre cámaras en el escáner QR. |
-| buttonToggleFlashContent | ReactNode | no | \<Bolt /\> | Contenido personalizado para el botón que activa o desactiva el flash de la cámara en el escáner QR. |
-| buttonScannerContent | ReactNode | no | \<Qr /\> | Contenido personalizado para el botón que activa el escáner QR. |
+| Parámetro                | Tipo                     | Requerido | Default            | Descripcion                                                                                          |
+| ------------------------ | ------------------------ | --------- | ------------------ | ---------------------------------------------------------------------------------------------------- |
+| className                | string                   | no        | ''                 | Clase CSS para personalizar el contenedor principal del componente.                                  |
+| defaultValue             | string                   | no        | ''                 | Valor predeterminado del campo de texto.                                                             |
+| onChange                 | (value: string) =\> void | no        | undefined          | Función que se ejecuta cuando el valor del campo de texto cambia, pasando el nuevo valor.            |
+| icon                     | ReactNode                | no        | undefined          | Ícono que se muestra junto al campo de texto, en este caso, el escáner QR.                           |
+| onChangeCameraContent    | ReactNode                | no        | \<CameraChange /\> | Contenido personalizado para el botón que permite cambiar entre cámaras en el escáner QR.            |
+| buttonToggleFlashContent | ReactNode                | no        | \<Bolt /\>         | Contenido personalizado para el botón que activa o desactiva el flash de la cámara en el escáner QR. |
+| buttonScannerContent     | ReactNode                | no        | \<Qr /\>           | Contenido personalizado para el botón que activa el escáner QR.                                      |
 
 ### Storybook
 
@@ -43,7 +46,10 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Escáner de texto y QR con valor predeterminado
 
 ```tsx copy
-<InputScannerTextQr defaultValue="Texto inicial" onChange={(value) => console.log(value)} />
+<InputScannerTextQr
+  defaultValue="Texto inicial"
+  onChange={(value) => console.log(value)}
+/>
 ```
 
 - Escáner de texto y QR con icono personalizado
@@ -51,4 +57,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <InputScannerTextQr icon={<div>Escanear QR</div>} />
 ```
-
