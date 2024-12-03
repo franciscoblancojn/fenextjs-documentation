@@ -37,6 +37,8 @@ interface LanguageListProps<Langs extends string[]> {
 | Parametro      | Tipo                           | Descripcion                                                                                                                  |
 | -------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | onTranslate    | (word?: any) =\> any           | Función que recibe una palabra y devuelve su traducción en el idioma actual o la traducción alternativa, si no se encuentra. |
+| load           | boolean                        | Variable que determina si currentLang temino de cargar.                                                                      |
+| currentLang    | Langs[number]                  | El idioma actual seleccionado.                                                                                               |
 | setCurrentLang | (lang: Langs[number]) =\> void | Función para cambiar el idioma actual.                                                                                       |
 
 ### Usos
