@@ -12,16 +12,14 @@ import { stringifyCircular } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo   | Requerido | Default | Descripcion                                                                      |
-| --------- | ------ | --------- | ------- | -------------------------------------------------------------------------------- |
-| obj       | object | sí        |         | Objeto que se convertirá a cadena JSON, con detección de referencias circulares. |
-
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| obj | object | sí |  | Objeto que se convertirá a cadena JSON, con detección de referencias circulares. |
 ### Returns
 
-| Parametro  | Tipo   | Descripcion                                                          |
-| ---------- | ------ | -------------------------------------------------------------------- |
-| jsonString | string | Cadena JSON resultante del objeto, omitiendo referencias circulares. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| jsonString | string  | Cadena JSON resultante del objeto, omitiendo referencias circulares. |
 ### Usos
 
 - Convertir objeto con referencias circulares a JSON
@@ -32,3 +30,4 @@ obj.self = obj;
 const jsonString = stringifyCircular(obj);
 console.log(jsonString);
 ```
+

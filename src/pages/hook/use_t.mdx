@@ -12,17 +12,15 @@ import { use_T } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo        | Requerido | Default | Descripcion                                                             |
-| --------- | ----------- | --------- | ------- | ----------------------------------------------------------------------- |
-| \_t       | \_TFunciton | no        |         | Función opcional para transformar el mensaje de entrada.                |
-| useT      | boolean     | no        | true    | Indica si se debe aplicar la función `_t` en la validación del mensaje. |
-
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| _t | _TFunciton | no |  | Función opcional para transformar el mensaje de entrada. |
+| useT | boolean | no | true | Indica si se debe aplicar la función `_t` en la validación del mensaje. |
 ### Returns
 
-| Parametro | Tipo                   | Descripcion                                                                            |
-| --------- | ---------------------- | -------------------------------------------------------------------------------------- |
-| \_t       | (message: any) =\> any | Función que transforma el mensaje de entrada basado en la configuración proporcionada. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| _t | (message: any) =\> any  | Función que transforma el mensaje de entrada basado en la configuración proporcionada. |
 ### Usos
 
 - Validar mensaje
@@ -38,3 +36,4 @@ _t("Mensaje a validar"); // Devuelve mensaje en mayúsculas
 const { _t } = use_T({ _t: (msg) => msg.toUpperCase(), useT: false });
 _t("Mensaje sin transformación"); // Devuelve mensaje sin aplicar _t
 ```
+

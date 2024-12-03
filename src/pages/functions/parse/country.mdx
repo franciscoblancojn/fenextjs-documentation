@@ -16,16 +16,14 @@ import { parseCountry_to_String } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo                              | Requerido | Default | Descripcion                                            |
-| --------- | --------------------------------- | --------- | ------- | ------------------------------------------------------ |
-| data      | CountryProps \| undefined \| null | sí        |         | Objeto `CountryProps` que se convertirá a cadena JSON. |
-
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | CountryProps \| undefined \| null | sí |  | Objeto `CountryProps` que se convertirá a cadena JSON. |
 ### Returns
 
-| Parametro  | Tipo                | Descripcion                                                                                          |
-| ---------- | ------------------- | ---------------------------------------------------------------------------------------------------- |
-| jsonString | string \| undefined | Cadena JSON que representa el objeto `CountryProps` o `undefined` si el objeto es nulo o indefinido. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| jsonString | string \| undefined  | Cadena JSON que representa el objeto `CountryProps` o `undefined` si el objeto es nulo o indefinido. |
 ### Usos
 
 - Convertir un objeto CountryProps a cadena
@@ -35,6 +33,8 @@ const country = { id: 1, code: "US", text: "United States" };
 const jsonString = parseCountry_to_String(country);
 console.log(jsonString);
 ```
+
+
 
 ## parseString_to_Country
 
@@ -50,16 +50,14 @@ import { parseString_to_Country } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo                        | Requerido | Default | Descripcion                                          |
-| --------- | --------------------------- | --------- | ------- | ---------------------------------------------------- |
-| data      | string \| undefined \| null | sí        |         | Cadena JSON que representa un objeto `CountryProps`. |
-
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| data | string \| undefined \| null | sí |  | Cadena JSON que representa un objeto `CountryProps`. |
 ### Returns
 
-| Parametro     | Tipo                      | Descripcion                                                                                                                                                                                                              |
-| ------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| countryObject | CountryProps \| undefined | Objeto `CountryProps` resultante de la cadena JSON, o un objeto con valores predeterminados en caso de error o datos nulos. Si el objeto no tiene una imagen asignada, se obtiene usando la función `getRuteCountryImg`. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| countryObject | CountryProps \| undefined  | Objeto `CountryProps` resultante de la cadena JSON, o un objeto con valores predeterminados en caso de error o datos nulos. Si el objeto no tiene una imagen asignada, se obtiene usando la función `getRuteCountryImg`. |
 ### Usos
 
 - Convertir una cadena JSON a un objeto CountryProps y obtener la imagen del país
@@ -69,3 +67,6 @@ const jsonString = '{"id": 1, "code": "US", "text": "United States"}';
 const country = parseString_to_Country(jsonString);
 console.log(country);
 ```
+
+
+

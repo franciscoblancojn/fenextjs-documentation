@@ -12,7 +12,7 @@ import { ErrorNotImplemented } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo      | Requerido | Default                   | Descripcion                                                                                                    |
-| --------- | --------- | --------- | ------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| code      | ErrorCode | no        | ErrorCode.NOT_IMPLEMENTED | Código de error específico que indica que el servidor no soporta el método solicitado.                         |
-| message   | string    | no        | "Not Implemented"         | Mensaje de error que describe la naturaleza del problema cuando un método no está implementado en el servidor. |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| code | ErrorCode | no | ErrorCode.NOT_IMPLEMENTED | Código de error específico que indica que el servidor no soporta el método solicitado. |
+| message | string | no | "Not Implemented" | Mensaje de error que describe la naturaleza del problema cuando un método no está implementado en el servidor. |

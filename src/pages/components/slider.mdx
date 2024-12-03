@@ -2,14 +2,11 @@
 
 El componente Slider permite crear un carrusel de elementos con opciones de personalización de cantidad de ítems visibles, tiempo de animación y bucle automático. Incluye controles de navegación y estilos personalizados.
 
-import { Iframe } from "@/components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=slider-slider--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=slider-slider--index&viewMode=story" />
 
 ### Importación
 
@@ -21,24 +18,24 @@ import { Slider } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro          | Tipo        | Requerido | Default | Descripcion                                                                          |
-| ------------------ | ----------- | --------- | ------- | ------------------------------------------------------------------------------------ |
-| className          | string      | no        | ''      | Clase CSS para personalizar el contenedor principal del componente Slider.           |
-| classNameContent   | string      | no        | ''      | Clase CSS para personalizar el contenedor de contenido del slider.                   |
-| classNameItem      | string      | no        | ''      | Clase CSS para personalizar cada ítem dentro del slider.                             |
-| classNameDogs      | string      | no        | ''      | Clase CSS para personalizar el contenedor de elementos de slider.                    |
-| classNameDog       | string      | no        | ''      | Clase CSS para personalizar un elemento individual dentro del contenedor de slider.  |
-| classNameArrows    | string      | no        | ''      | Clase CSS para personalizar las flechas de navegación del slider.                    |
-| classNameArrowPre  | string      | no        | ''      | Clase CSS para personalizar la flecha de navegación anterior.                        |
-| classNameArrowNext | string      | no        | ''      | Clase CSS para personalizar la flecha de navegación siguiente.                       |
-| items              | ReactNode[] | no        | []      | Arreglo de elementos que se mostrarán dentro del slider.                             |
-| nItemsDesktop      | number      | no        | 3       | Número de elementos visibles en pantallas de escritorio.                             |
-| nItemsTable        | number      | no        | 2       | Número de elementos visibles en pantallas de tabletas.                               |
-| nItemsPhone        | number      | no        | 1       | Número de elementos visibles en pantallas de teléfonos.                              |
-| timeDelay          | number      | no        | 4000    | Tiempo de espera en milisegundos antes de avanzar automáticamente al siguiente ítem. |
-| timeAnimation      | number      | no        | 500     | Duración de la animación en milisegundos para mover el slider.                       |
-| loop               | boolean     | no        | true    | Determina si el slider se reproduce en bucle o se detiene al final.                  |
-| separationItems    | number      | no        | 16      | Espacio de separación en píxeles entre cada ítem del slider.                         |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para personalizar el contenedor principal del componente Slider. |
+| classNameContent | string | no | '' | Clase CSS para personalizar el contenedor de contenido del slider. |
+| classNameItem | string | no | '' | Clase CSS para personalizar cada ítem dentro del slider. |
+| classNameDogs | string | no | '' | Clase CSS para personalizar el contenedor de elementos de slider. |
+| classNameDog | string | no | '' | Clase CSS para personalizar un elemento individual dentro del contenedor de slider. |
+| classNameArrows | string | no | '' | Clase CSS para personalizar las flechas de navegación del slider. |
+| classNameArrowPre | string | no | '' | Clase CSS para personalizar la flecha de navegación anterior. |
+| classNameArrowNext | string | no | '' | Clase CSS para personalizar la flecha de navegación siguiente. |
+| items | ReactNode[] | no | [] | Arreglo de elementos que se mostrarán dentro del slider. |
+| nItemsDesktop | number | no | 3 | Número de elementos visibles en pantallas de escritorio. |
+| nItemsTable | number | no | 2 | Número de elementos visibles en pantallas de tabletas. |
+| nItemsPhone | number | no | 1 | Número de elementos visibles en pantallas de teléfonos. |
+| timeDelay | number | no | 4000 | Tiempo de espera en milisegundos antes de avanzar automáticamente al siguiente ítem. |
+| timeAnimation | number | no | 500 | Duración de la animación en milisegundos para mover el slider. |
+| loop | boolean | no | true | Determina si el slider se reproduce en bucle o se detiene al final. |
+| separationItems | number | no | 16 | Espacio de separación en píxeles entre cada ítem del slider. |
 
 ### Storybook
 
@@ -69,3 +66,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Slider separationItems={32} />
 ```
+

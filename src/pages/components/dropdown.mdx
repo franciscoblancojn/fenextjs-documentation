@@ -2,14 +2,11 @@
 
 El componente DropDown proporciona un menú desplegable ajustable que puede cambiar su posición según el espacio disponible alrededor del contenedor.
 
-import { Iframe } from "@/components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=dropdown-dropdown--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=dropdown-dropdown--index&viewMode=story" />
 
 ### Importación
 
@@ -21,40 +18,40 @@ import { DropDown } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro                | Tipo                      | Requerido | Default     | Descripcion                                                                                  |
-| ------------------------ | ------------------------- | --------- | ----------- | -------------------------------------------------------------------------------------------- |
-| loader                   | boolean                   | no        | false       | Indica si el componente está en estado de carga, mostrando un ícono de cargando.             |
-| disabled                 | boolean                   | no        | false       | Determina si el componente está deshabilitado, evitando que el usuario lo pueda interactuar. |
-| defaultActive            | boolean                   | no        | false       | Determina si el DropDown estará activado de manera predeterminada.                           |
-| active                   | boolean                   | no        | undefined   | Estado activo controlado externamente.                                                       |
-| id                       | string                    | no        |             | ID único del componente.                                                                     |
-| name                     | string                    | no        | ''          | Nombre del componente.                                                                       |
-| status                   | 'none' \| 'error' \| 'ok' | no        | 'none'      | Estado del DropDown, puede ser 'none', 'error' o 'ok'.                                       |
-| type                     | 'radio' \| 'checkbox'     | no        | 'checkbox'  | Define el tipo de interacción del componente, ya sea tipo 'radio' o 'checkbox'.              |
-| show                     | 'checked' \| 'focus'      | no        | 'checked'   | Controla cómo se muestra el contenido del DropDown, ya sea cuando está 'checked' o 'focus'.  |
-| header                   | ReactNode                 | sí        |             | El contenido del encabezado del DropDown.                                                    |
-| onChange                 | (value: boolean) =\> void | no        |             | Función que se ejecuta cuando el estado activo del DropDown cambia.                          |
-| iconArrow                | ReactNode                 | no        | \<Arrow /\> | Ícono que se mostrará como la flecha de colapso.                                             |
-| rotateIcon               | boolean                   | no        | true        | Indica si el ícono debe rotar al expandirse el DropDown.                                     |
-| useActiveForShowChildren | boolean                   | no        | false       | Si está habilitado, el contenido solo se mostrará cuando el DropDown esté activo.            |
-| children                 | ReactNode                 | no        |             | El contenido dentro del cuerpo del DropDown.                                                 |
-| className                | string                    | no        | ''          | Clase CSS personalizada para el componente DropDown.                                         |
-| classNameHeader          | string                    | no        | ''          | Clase CSS personalizada para el encabezado del DropDown.                                     |
-| classNameHeaderContent   | string                    | no        | ''          | Clase CSS personalizada para el contenido del encabezado del DropDown.                       |
-| classNameHeaderIcon      | string                    | no        | ''          | Clase CSS personalizada para el ícono del encabezado del DropDown.                           |
-| classNameBody            | string                    | no        | ''          | Clase CSS personalizada para el cuerpo del DropDown.                                         |
-| classNameDropDown        | string                    | no        | ''          | Clase CSS para personalizar el contenedor del DropDown.                                      |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| loader | boolean | no | false | Indica si el componente está en estado de carga, mostrando un ícono de cargando. |
+| disabled | boolean | no | false | Determina si el componente está deshabilitado, evitando que el usuario lo pueda interactuar. |
+| defaultActive | boolean | no | false | Determina si el DropDown estará activado de manera predeterminada. |
+| active | boolean | no | undefined | Estado activo controlado externamente. |
+| id | string | no |  | ID único del componente. |
+| name | string | no | '' | Nombre del componente. |
+| status | 'none' \| 'error' \| 'ok' | no | 'none' | Estado del DropDown, puede ser 'none', 'error' o 'ok'. |
+| type | 'radio' \| 'checkbox' | no | 'checkbox' | Define el tipo de interacción del componente, ya sea tipo 'radio' o 'checkbox'. |
+| show | 'checked' \| 'focus' | no | 'checked' | Controla cómo se muestra el contenido del DropDown, ya sea cuando está 'checked' o 'focus'. |
+| header | ReactNode | sí |  | El contenido del encabezado del DropDown. |
+| onChange | (value: boolean) =\> void | no |  | Función que se ejecuta cuando el estado activo del DropDown cambia. |
+| iconArrow | ReactNode | no | \<Arrow /\> | Ícono que se mostrará como la flecha de colapso. |
+| rotateIcon | boolean | no | true | Indica si el ícono debe rotar al expandirse el DropDown. |
+| useActiveForShowChildren | boolean | no | false | Si está habilitado, el contenido solo se mostrará cuando el DropDown esté activo. |
+| children | ReactNode | no |  | El contenido dentro del cuerpo del DropDown. |
+| className | string | no | '' | Clase CSS personalizada para el componente DropDown. |
+| classNameHeader | string | no | '' | Clase CSS personalizada para el encabezado del DropDown. |
+| classNameHeaderContent | string | no | '' | Clase CSS personalizada para el contenido del encabezado del DropDown. |
+| classNameHeaderIcon | string | no | '' | Clase CSS personalizada para el ícono del encabezado del DropDown. |
+| classNameBody | string | no | '' | Clase CSS personalizada para el cuerpo del DropDown. |
+| classNameDropDown | string | no | '' | Clase CSS para personalizar el contenedor del DropDown. |
 
 ### Ajustes Espaciales
 
 El componente DropDown ajusta su posición automáticamente según el espacio disponible en su contenedor. Los posibles ajustes son:
 
-| Dirección | Descripción                                                                 |
-| --------- | --------------------------------------------------------------------------- |
-| left      | El DropDown se alinea a la izquierda si hay más espacio disponible.         |
-| right     | El DropDown se alinea a la derecha si hay más espacio disponible.           |
-| up        | El DropDown se despliega hacia arriba si hay más espacio disponible arriba. |
-| down      | El DropDown se despliega hacia abajo si hay más espacio disponible abajo.   |
+| Dirección | Descripción |
+| --- | --- |
+| left | El DropDown se alinea a la izquierda si hay más espacio disponible. |
+| right | El DropDown se alinea a la derecha si hay más espacio disponible. |
+| up | El DropDown se despliega hacia arriba si hay más espacio disponible arriba. |
+| down | El DropDown se despliega hacia abajo si hay más espacio disponible abajo. |
 
 ### Storybook
 
@@ -73,3 +70,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <DropDown show="always">Contenido siempre visible</DropDown>
 ```
+

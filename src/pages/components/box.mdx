@@ -2,14 +2,11 @@
 
 El componente Box actúa como un contenedor básico que encapsula su contenido, permitiendo aplicar estilos personalizados mediante clases adicionales.
 
-import { Iframe } from "@/components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=box-box--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=box-box--index&viewMode=story" />
 
 ### Importación
 
@@ -21,10 +18,10 @@ import { Box } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo      | Requerido | Default | Descripcion                                                |
-| --------- | --------- | --------- | ------- | ---------------------------------------------------------- |
-| children  | ReactNode | sí        |         | El contenido que se renderizará dentro del componente Box. |
-| className | string    | no        | ""      | Clase personalizada para el componente Box.                |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| children | ReactNode | sí |  | El contenido que se renderizará dentro del componente Box. |
+| className | string | no | "" | Clase personalizada para el componente Box. |
 
 ### Storybook
 
@@ -43,3 +40,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Box className="custom-class">Contenido con clase personalizada</Box>
 ```
+

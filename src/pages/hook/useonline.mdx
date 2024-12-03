@@ -12,17 +12,15 @@ import { useOnline } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo        | Requerido | Default | Descripcion                                                                             |
-| --------- | ----------- | --------- | ------- | --------------------------------------------------------------------------------------- |
-| onOnline  | () =\> void | no        |         | Función que se ejecuta automáticamente cuando el usuario vuelve a estar en línea.       |
-| onOffline | () =\> void | no        |         | Función que se ejecuta automáticamente cuando el usuario pierde la conexión a internet. |
-
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| onOnline | () =\> void | no |  | Función que se ejecuta automáticamente cuando el usuario vuelve a estar en línea. |
+| onOffline | () =\> void | no |  | Función que se ejecuta automáticamente cuando el usuario pierde la conexión a internet. |
 ### Returns
 
-| Parametro | Tipo    | Descripcion                                                                                                         |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
-| isOnline  | boolean | Estado que indica si el usuario está conectado a internet. Retorna `true` si está en línea y `false` si no lo está. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| isOnline | boolean  | Estado que indica si el usuario está conectado a internet. Retorna `true` si está en línea y `false` si no lo está. |
 ### Usos
 
 - Detectar estado de conexión
@@ -31,7 +29,7 @@ import { useOnline } from "fenextjs";
 const { isOnline } = useOnline();
 
 useEffect(() => {
-  console.log("Estado de conexión:", isOnline ? "En línea" : "Desconectado");
+    console.log("Estado de conexión:", isOnline ? "En línea" : "Desconectado");
 }, [isOnline]);
 ```
 
@@ -39,7 +37,8 @@ useEffect(() => {
 
 ```tsx copy
 useOnline({
-  onOnline: () => console.log("El usuario está en línea."),
-  onOffline: () => console.log("El usuario está desconectado."),
+    onOnline: () => console.log("El usuario está en línea."),
+    onOffline: () => console.log("El usuario está desconectado."),
 });
 ```
+

@@ -2,14 +2,11 @@
 
 El componente Notification permite mostrar mensajes de notificación personalizados, con distintos tipos de resultados y estilos para cada tipo.
 
-import { Iframe } from "@/components/Iframe";
+import { Iframe } from "@/components/Iframe"; 
 
 ### Ejemplo
 
-<Iframe
-  minHeightIframe="30dvh"
-  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=notification-notification--index&viewMode=story"
-/>
+<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=notification-notification--index&viewMode=story" />
 
 ### Importación
 
@@ -21,11 +18,11 @@ import { Notification } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo                                                          | Requerido | Default                       | Descripcion                                                            |
-| --------- | ------------------------------------------------------------- | --------- | ----------------------------- | ---------------------------------------------------------------------- |
-| className | string                                                        | no        | ''                            | Clase CSS para el contenedor del componente.                           |
-| type      | RequestResultTypeProps \| keyof typeof RequestResultTypeProps | no        | RequestResultTypeProps.NORMAL | Tipo de notificación, que define el estilo y el propósito del mensaje. |
-| children  | ReactNode                                                     | no        | undefined                     | Contenido o mensaje que se mostrará dentro de la notificación.         |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| className | string | no | '' | Clase CSS para el contenedor del componente. |
+| type | RequestResultTypeProps \| keyof typeof RequestResultTypeProps | no | RequestResultTypeProps.NORMAL | Tipo de notificación, que define el estilo y el propósito del mensaje. |
+| children | ReactNode | no | undefined | Contenido o mensaje que se mostrará dentro de la notificación. |
 
 ### Storybook
 
@@ -50,3 +47,4 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Notification type="ERROR">Error en la operación</Notification>
 ```
+
