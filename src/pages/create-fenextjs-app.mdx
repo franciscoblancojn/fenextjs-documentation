@@ -1,0 +1,88 @@
+# create-fenextjs-app
+
+Una CLI para crear rápidamente proyectos basados en Fenextjs con templates predefinidos.
+
+## Instalación
+
+Asegúrate de tener [Nodejs](https://nodejs.org) instalado en tu sistema.
+
+Instala el paquete globalmente:
+
+```bash
+npm install -g create-fenextjs-app
+```
+
+## Uso
+
+Para inicializar un nuevo proyecto, simplemente ejecuta:
+
+```bash
+create-fenextjs-app init projectName
+```
+
+Reemplaza "projectName" con el nombre de tu proyecto.
+
+## Ejemplo
+
+```bash
+create-fenextjs-app init mi-nuevo-proyecto
+```
+
+Esto hará lo siguiente:
+
+- Clonará la plantilla base desde el repositorio oficial de Fenextjs.
+- Eliminará el directorio .git del repositorio clonado.
+- Inicializará un nuevo repositorio Git en el proyecto.
+
+## Requisitos
+
+- **Git**: Asegúrate de tener Git instalado y configurado en tu sistema.
+- **Nodejs**: Requerido para ejecutar el CLI.
+
+## Estructura del proyecto
+
+Una vez creado el proyecto, tendrás una estructura similar a esta:
+
+```
+mi-nuevo-proyecto/
+├── .storybook/
+│   ├── main.ts
+│   └── preview.tsx
+├── public/
+├── src
+│   ├── components/
+│   ├── languages/
+│   ├── pages/
+│   └── ui-fenextjs/
+├── styles/
+├── .eslintrc.json
+├── .gitignore
+├── next.config.js
+├── package.json
+├── README.md
+└── tsconfig.json
+```
+
+## Estilos
+
+Cuando agregues o cambies estilos ejecuta el siguiente comando para actualizar CSS:
+
+```bash
+npm run sass
+```
+
+## Compilar
+
+Para compilar el proyecto y asegurarte que cumpla con los estándares de format y lint, puedes usar el siguiente comando:
+
+```bash
+npm run flb
+```
+
+## Actualización
+
+Una vez creado el proyecto, si necesitas actualizar fenextjs puedes ejecutar el siguiente comando dentro de "projectName"
+
+```bash
+npm run u
+```
