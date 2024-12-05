@@ -3,6 +3,10 @@
     "title": "Introducción",
     "index": 1
   },
+  "create-fenextjs-app": {
+    "title": "Create Fenextjs App",
+    "index": 2
+  },
   "components": {
     "title": "Componentes",
     "index": 2
