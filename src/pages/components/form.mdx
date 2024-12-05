@@ -1,6 +1,6 @@
 # Form
 
-El componente Form es un formulario que permite manejar envíos de datos, con soporte para mostrar loaders, manejar deshabilitación, y ejecutar funciones tras el envío éxitoso o en caso de error.
+El componente Form es un formulario que permite capturar datos del usuario. Ofrece funcionalidad para manejar el envío de formularios, opcionalmente realizar una acción al enviarlo y manejar un estado deshabilitado.
 
 import { Iframe } from "@/components/Iframe";
 
@@ -21,25 +21,21 @@ import { Form } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro     | Tipo                                               | Requerido | Default   | Descripcion                                                              |
-| ------------- | -------------------------------------------------- | --------- | --------- | ------------------------------------------------------------------------ |
-| id            | string                                             | no        | ''        | Identificador único para el formulario, útil para eventos o seguimiento. |
-| data          | any                                                | sí        | undefined | Datos iniciales que el formulario manejará durante el envío.             |
-| onSubmit      | RequestProps\<D, R, E, T\>                         | no        | undefined | Función para manejar el envío de datos del formulario.                   |
-| onAfterSubmit | (data: RequestResultDataProps\<R, E, T\>) =\> void | no        | undefined | Función que se ejecuta después de un envío éxitoso del formulario.       |
-| disabled      | boolean                                            | no        | true      | Indica si el formulario está deshabilitado, bloqueando su envío.         |
-| loader        | boolean                                            | no        | false     | Muestra un loader mientras el formulario está siendo enviado.            |
-| className     | string                                             | no        | ''        | Clase CSS para aplicar estilos personalizados al formulario.             |
-| children      | ReactNode                                          | no        | undefined | Contenido que se renderiza dentro del formulario, como inputs o botones. |
+| Parámetro | Tipo                   | Requerido | Default           | Descripcion                                                                                                                  |
+| --------- | ---------------------- | --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| id        | string                 | no        | ''                | ID único para identificar el formulario, usado para personalizar la acción en eventos.                                       |
+| onSubmit  | () =\> Promise\<void\> | no        | async () =\> \{\} | Función personalizada que se ejecuta al enviar el formulario. Debe ser una función asíncrona que realice la acción de envío. |
+| disabled  | boolean                | no        | true              | Indica si el formulario está deshabilitado, lo que previene la acción de envío.                                              |
+| className | string                 | no        | ''                | Clase CSS para personalizar el estilo del formulario.                                                                        |
+| children  | ReactNode              | no        | undefined         | Contenido o elementos dentro del formulario, típicamente los campos de entrada.                                              |
 
-### Gestión de Envío
+### Eventos de tracking
 
-El componente maneja el envío de datos mediante la función 'onSubmit', y permite realizar acciones adicionales mediante 'onAfterSubmit' tras el éxito o fallo en el envío.
+Cuando el formulario tiene un 'id' definido y se envía correctamente, se registra un evento en el Data Layer.
 
-| Propiedad     | Uso                                                                         | Descripción                                                                                           |
-| ------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| onSubmit      | Maneja el envío de datos y devuelve el resultado de la operación.           | Función que puede incluir lógica personalizada para gestionar los datos que se envían.                |
-| onAfterSubmit | Ejecuta acciones después del envío éxitoso, como el seguimiento de eventos. | Función opcional que recibe los datos del resultado del envío y permite manejar la lógica post-envío. |
+| Evento      | Descripción                                                            |
+| ----------- | ---------------------------------------------------------------------- |
+| form-\{id\} | Evento de tracking cuando se envía el formulario con un 'id' definido. |
 
 ### Storybook
 
@@ -47,29 +43,30 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 
 ### Usos
 
-- Uso básico
+- Formulario básico
 
 ```tsx copy
-<Form data={{ field: "value" }} onSubmit={(data) => console.log(data)}>
-  Enviar
+<Form>
+  <InputText name="example" />
 </Form>
 ```
 
-- Formulario con deshabilitación y loader
-
-```tsx copy
-<Form data={{ field: "value" }} disabled={true} loader={true}>
-  Enviar
-</Form>
-```
-
-- Formulario con acción después del envío
+- Formulario con acción personalizada
 
 ```tsx copy
 <Form
-  data={{ field: "value" }}
-  onAfterSubmit={(result) => console.log("Envío éxitoso", result)}
+  onSubmit={async () => {
+    console.log("Formulario enviado");
+  }}
 >
-  Enviar
+  <InputText name="example" />
+</Form>
+```
+
+- Formulario deshabilitado
+
+```tsx copy
+<Form disabled={true}>
+  <InputText name="example" />
 </Form>
 ```
