@@ -5,7 +5,7 @@ import { Logo } from "./src/components/Logo";
 const config: DocsThemeConfig = {
   logo: <span><Logo/></span>,
   project: {
-    link: "https://github.com/franciscoblancojn/fenextjs",
+    link: "https://github.com/fenextjs/fenextjs",
   },
   footer: {
     text: <Logo/>,
