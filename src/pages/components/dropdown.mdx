@@ -81,9 +81,15 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - DropDown usando useActionDropDown
 
 ```tsx copy
-const {onActive,onClose,onToogle} = useActionDropDown({name:"NAME_DROPDOWN"})
+const { onActive, onClose, onToogle } = useActionDropDown({ name:"NAME_DROPDOWN" })
+
 <Button onClick={onToogle}>onToogle</Button>
 <Button onClick={onActive}>onActive</Button>
 <Button onClick={onClose}>onClose</Button>
-<DropDown name="NAME_DROPDOWN"  header={<span>Personalizado</span>}>Contenido</DropDown>
+
+<DropDown
+    name="NAME_DROPDOWN"
+    header={<span>Personalizado</span>}>
+        Contenido
+</DropDown>
 ```
