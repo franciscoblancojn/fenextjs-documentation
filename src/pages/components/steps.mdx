@@ -33,6 +33,8 @@ import { Steps } from "fenextjs";
 | disabledBtnNext       | boolean                                    | no        | false      | Deshabilita el botón de avance.                                                                      |
 | onPrev                | (step: number) =\> Promise\<void\> \| void | no        | undefined  | Función que se ejecuta al hacer click en el botón de retroceso.                                      |
 | onNext                | (step: number) =\> Promise\<void\> \| void | no        | undefined  | Función que se ejecuta al hacer click en el botón de avance.                                         |
+| onPrevDisabled        | () =\> void                                | no        | undefined  | Función que se ejecuta al hacer click en el botón de retroceso cuando esta deshabilitado.            |
+| onNextDisabled        | () =\> void                                | no        | undefined  | Función que se ejecuta al hacer click en el botón de avance cuando esta deshabilitado.               |
 | onSetStep             | (step: number) =\> void                    | no        | undefined  | Función que se ejecuta al establecer un nuevo paso.                                                  |
 | stepPos               | 'top' \| 'left' \| 'right'                 | no        | 'left'     | Posición de la lista de pasos.                                                                       |
 | showCurrentStepNStep  | boolean                                    | no        | false      | Muestra el paso actual junto al total de pasos.                                                      |
