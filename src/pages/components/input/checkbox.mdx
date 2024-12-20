@@ -2,11 +2,14 @@
 
 El componente InputCheckbox es un campo de entrada de tipo checkbox que permite al usuario seleccionar o deseleccionar una opción. Puede mostrar etiquetas y manejar validaciones, así como valores personalizados para las opciones activas e inactivas.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcheckbox--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=input-inputcheckbox--index&viewMode=story"
+/>
 
 ### Importación
 
@@ -18,25 +21,25 @@ import { InputCheckbox } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| label | ReactNode | no | '' | Etiqueta que se muestra al lado del checkbox. |
-| labelPosition | 'right' \| 'left' | no | 'right' | Posición de la etiqueta en relación con el checkbox. |
-| name | string | no | '' | Atributo name del elemento input checkbox. |
-| onChange | (checked: boolean) =\> void | no | undefined | Función que se ejecuta cuando se alterna el checkbox, recibe un valor booleano que indica si está seleccionado. |
-| defaultValue | boolean | no | false | Valor predeterminado del checkbox cuando se renderiza por primera vez. |
-| value | boolean | no | undefined | Valor controlado del checkbox. |
-| disabled | boolean | no | false | Indica si el checkbox está deshabilitado. |
-| onValidateCheck | () =\> Promise\<void\> \| void | no | undefined | Función que se ejecuta para validar el checkbox. |
-| optional | boolean | no | false | Indica si el checkbox es opcional. |
-| optionalText | string | no | '(optional)' | Texto que se muestra si el checkbox es opcional. |
-| required | boolean | no | false | Indica si el checkbox es obligatorio. |
-| requiredText | string | no | '*' | Texto que se muestra si el checkbox es obligatorio. |
-| onActive | () =\> void | no | undefined | Función que se ejecuta cuando el checkbox se activa. |
-| onInactive | () =\> void | no | undefined | Función que se ejecuta cuando el checkbox se desactiva. |
-| valueActive | VT | no | undefined | Valor a pasar cuando el checkbox se activa. |
-| valueInactive | VF | no | undefined | Valor a pasar cuando el checkbox se desactiva. |
-| icon | ReactNode | no | \<Check /\> | Ícono que se muestra junto al checkbox. |
+| Parámetro       | Tipo                           | Requerido | Default      | Descripcion                                                                                                     |
+| --------------- | ------------------------------ | --------- | ------------ | --------------------------------------------------------------------------------------------------------------- |
+| label           | ReactNode                      | no        | ''           | Etiqueta que se muestra al lado del checkbox.                                                                   |
+| labelPosition   | 'right' \| 'left'              | no        | 'right'      | Posición de la etiqueta en relación con el checkbox.                                                            |
+| name            | string                         | no        | ''           | Atributo name del elemento input checkbox.                                                                      |
+| onChange        | (checked: boolean) =\> void    | no        | undefined    | Función que se ejecuta cuando se alterna el checkbox, recibe un valor booleano que indica si está seleccionado. |
+| defaultValue    | boolean                        | no        | false        | Valor predeterminado del checkbox cuando se renderiza por primera vez.                                          |
+| value           | boolean                        | no        | undefined    | Valor controlado del checkbox.                                                                                  |
+| disabled        | boolean                        | no        | false        | Indica si el checkbox está deshabilitado.                                                                       |
+| onValidateCheck | () =\> Promise\<void\> \| void | no        | undefined    | Función que se ejecuta para validar el checkbox.                                                                |
+| optional        | boolean                        | no        | false        | Indica si el checkbox es opcional.                                                                              |
+| optionalText    | string                         | no        | '(optional)' | Texto que se muestra si el checkbox es opcional.                                                                |
+| required        | boolean                        | no        | false        | Indica si el checkbox es obligatorio.                                                                           |
+| requiredText    | string                         | no        | '\*'         | Texto que se muestra si el checkbox es obligatorio.                                                             |
+| onActive        | () =\> void                    | no        | undefined    | Función que se ejecuta cuando el checkbox se activa.                                                            |
+| onInactive      | () =\> void                    | no        | undefined    | Función que se ejecuta cuando el checkbox se desactiva.                                                         |
+| valueActive     | VT                             | no        | undefined    | Valor a pasar cuando el checkbox se activa.                                                                     |
+| valueInactive   | VF                             | no        | undefined    | Valor a pasar cuando el checkbox se desactiva.                                                                  |
+| icon            | ReactNode                      | no        | \<Check /\>  | Ícono que se muestra junto al checkbox.                                                                         |
 
 ### Storybook
 
@@ -65,6 +68,9 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Checkbox opcional con texto
 
 ```tsx copy
-<InputCheckbox label="Este es opcional" optional={true} optionalText="(opcional)" />
+<InputCheckbox
+  label="Este es opcional"
+  optional={true}
+  optionalText="(opcional)"
+/>
 ```
-

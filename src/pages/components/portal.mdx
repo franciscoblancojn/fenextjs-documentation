@@ -2,11 +2,14 @@
 
 El componente Portal permite renderizar sus elementos secundarios (`children`) en un contenedor DOM específico, separado de la jerarquía DOM principal de la aplicación. Utiliza `ReactDOM.createPortal` para realizar esta funcionalidad.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-portal--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-portal--index&viewMode=story"
+/>
 
 ### Importación
 
@@ -18,10 +21,10 @@ import { Portal } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| container | Element \| DocumentFragment | no | document.body | Elemento DOM donde se montarán los elementos secundarios. Si no se proporciona, el `body` del documento se usa como contenedor predeterminado. |
-| children | ReactNode | sí | N/A | Contenido que se renderizará dentro del portal. |
+| Parámetro | Tipo                        | Requerido | Default       | Descripcion                                                                                                                                    |
+| --------- | --------------------------- | --------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| container | Element \| DocumentFragment | no        | document.body | Elemento DOM donde se montarán los elementos secundarios. Si no se proporciona, el `body` del documento se usa como contenedor predeterminado. |
+| children  | ReactNode                   | sí        | N/A           | Contenido que se renderizará dentro del portal.                                                                                                |
 
 ### Storybook
 
@@ -32,12 +35,15 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Portal básico
 
 ```tsx copy
-<Portal><div>Contenido en Portal</div></Portal>
+<Portal>
+  <div>Contenido en Portal</div>
+</Portal>
 ```
 
 - Portal con contenedor específico
 
 ```tsx copy
-<Portal container={document.getElementById("mi-contenedor")}><div>Contenido en un contenedor específico</div></Portal>
+<Portal container={document.getElementById("mi-contenedor")}>
+  <div>Contenido en un contenedor específico</div>
+</Portal>
 ```
-

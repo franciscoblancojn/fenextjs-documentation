@@ -12,20 +12,26 @@ import { GetSpaceParent } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| element | HTMLElement | sí |  | Elemento HTML para el cual se calcularán los espacios relativos a su contenedor padre. |
+| Parámetro | Tipo        | Requerido | Default | Descripcion                                                                            |
+| --------- | ----------- | --------- | ------- | -------------------------------------------------------------------------------------- |
+| element   | HTMLElement | sí        |         | Elemento HTML para el cual se calcularán los espacios relativos a su contenedor padre. |
+
 ### Returns
 
-| Parametro | Tipo | Descripcion |
-| --------- | ---- | ----------- |
-| spaces | \{ spaceTop: number; spaceLeft: number; spaceRight: number; spaceBottom: number; \}  | Objeto que contiene las distancias (en píxeles) entre el elemento y los bordes superior, izquierdo, derecho y inferior de su contenedor padre. |
+| Parametro | Tipo                                                                                | Descripcion                                                                                                                                    |
+| --------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| spaces    | \{ spaceTop: number; spaceLeft: number; spaceRight: number; spaceBottom: number; \} | Objeto que contiene las distancias (en píxeles) entre el elemento y los bordes superior, izquierdo, derecho y inferior de su contenedor padre. |
+
 ### Usos
 
 - Calcular espacios de un elemento dentro de su contenedor padre
 
 ```tsx copy
 const spaces = GetSpaceParent(document.getElementById("myElement"));
-console.log(spaces.spaceTop, spaces.spaceLeft, spaces.spaceRight, spaces.spaceBottom);
+console.log(
+  spaces.spaceTop,
+  spaces.spaceLeft,
+  spaces.spaceRight,
+  spaces.spaceBottom,
+);
 ```
-

@@ -11,10 +11,11 @@ export interface convertDocTsxToMdxProps {
 
 export function convertDocTsxToMdx(
   docTsx: any,
+  NAME: string,
   options: convertDocTsxToMdxProps,
 ): {
-  mdxContent : string,
-  mdxReadme: string
+  mdxContent: string;
+  mdxReadme: string;
 } {
   const {
     name,
@@ -41,20 +42,22 @@ export function convertDocTsxToMdx(
   let mdxReadme = "";
   let mdxContent = "";
 
+  let Breadcrumb = "";
   if (useBreadcrumb === false) {
-    mdxContent += `---
+    Breadcrumb = `---
 breadcrumb: false
 ---
 `;
+    mdxContent += Breadcrumb;
   }
 
   mdxContent += `#${options.subTitle === true ? "#" : ""} ${name}\n\n${description}\n\n`;
-  let ModuleStorybook = ""
+  let ModuleStorybook = "";
   if (options.useStorybook) {
     ModuleStorybook += `import { Iframe } from "@/components/Iframe"; \n\n`;
     // Sección de Ejemplo (puede ser estática)
     ModuleStorybook += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
-    mdxContent+=ModuleStorybook
+    mdxContent += ModuleStorybook;
   }
 
   if (
@@ -134,7 +137,6 @@ breadcrumb: false
     mdxContent += `\n### Storybook\n\n`;
     mdxContent += `Para ver el storybook del componente lo puede hacer con este [link](${URL_STORYBOOK})\n\n`;
   }
-
   if (html) {
     mdxContent += `${html}\n\n`;
   }
@@ -155,7 +157,10 @@ breadcrumb: false
     // mdxContent += `### Funciones\n\n`;
 
     functions.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example, { ...options, subTitle: true });
+      mdxContent += convertDocTsxToMdx(example, NAME, {
+        ...options,
+        subTitle: true,
+      }).mdxContent;
       mdxContent += `\n\n`;
     });
   }
@@ -163,7 +168,10 @@ breadcrumb: false
     // mdxContent += `### Funciones\n\n`;
 
     interfaces.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example, { ...options, subTitle: true });
+      mdxContent += convertDocTsxToMdx(example, NAME, {
+        ...options,
+        subTitle: true,
+      }).mdxContent;
       mdxContent += `\n\n`;
     });
   }
@@ -171,15 +179,22 @@ breadcrumb: false
     // mdxContent += `### Funciones\n\n`;
 
     properties.forEach((example: any) => {
-      mdxContent += convertDocTsxToMdx(example, { ...options, subTitle: true });
+      mdxContent += convertDocTsxToMdx(example, NAME, {
+        ...options,
+        subTitle: true,
+      }).mdxContent;
       mdxContent += `\n\n`;
     });
   }
 
-
-  mdxReadme = mdxContent.replace(ModuleStorybook,"")
+  mdxReadme = mdxContent.replace(ModuleStorybook, "").replace(Breadcrumb, "");
+  if (NAME == "img-placeholder") {
+    const urlImg = html.replace(/.*src="([^"]+)".*/, "$1");
+    const img = `![alt ${name}](${urlImg})`;
+    mdxReadme = mdxReadme.replace(html, img);
+  }
   return {
     mdxContent,
-    mdxReadme
+    mdxReadme,
   };
 }

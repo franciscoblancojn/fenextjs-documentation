@@ -2,11 +2,14 @@
 
 El componente Form es un formulario que permite capturar datos del usuario. Ofrece funcionalidad para manejar el envío de formularios, opcionalmente realizar una acción al enviarlo y manejar un estado deshabilitado.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-form--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=component-form--index&viewMode=story"
+/>
 
 ### Importación
 
@@ -18,20 +21,20 @@ import { Form } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| id | string | no | '' | ID único para identificar el formulario, usado para personalizar la acción en eventos. |
-| onSubmit | () =\> Promise\<void\> | no | async () =\> \{\} | Función personalizada que se ejecuta al enviar el formulario. Debe ser una función asíncrona que realice la acción de envío. |
-| disabled | boolean | no | true | Indica si el formulario está deshabilitado, lo que previene la acción de envío. |
-| className | string | no | '' | Clase CSS para personalizar el estilo del formulario. |
-| children | ReactNode | no | undefined | Contenido o elementos dentro del formulario, típicamente los campos de entrada. |
+| Parámetro | Tipo                   | Requerido | Default           | Descripcion                                                                                                                  |
+| --------- | ---------------------- | --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| id        | string                 | no        | ''                | ID único para identificar el formulario, usado para personalizar la acción en eventos.                                       |
+| onSubmit  | () =\> Promise\<void\> | no        | async () =\> \{\} | Función personalizada que se ejecuta al enviar el formulario. Debe ser una función asíncrona que realice la acción de envío. |
+| disabled  | boolean                | no        | true              | Indica si el formulario está deshabilitado, lo que previene la acción de envío.                                              |
+| className | string                 | no        | ''                | Clase CSS para personalizar el estilo del formulario.                                                                        |
+| children  | ReactNode              | no        | undefined         | Contenido o elementos dentro del formulario, típicamente los campos de entrada.                                              |
 
 ### Eventos de tracking
 
 Cuando el formulario tiene un 'id' definido y se envía correctamente, se registra un evento en el Data Layer.
 
-| Evento | Descripción |
-| --- | --- |
+| Evento      | Descripción                                                            |
+| ----------- | ---------------------------------------------------------------------- |
 | form-\{id\} | Evento de tracking cuando se envía el formulario con un 'id' definido. |
 
 ### Storybook
@@ -43,18 +46,27 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Formulario básico
 
 ```tsx copy
-<Form><InputText name="example" /></Form>
+<Form>
+  <InputText name="example" />
+</Form>
 ```
 
 - Formulario con acción personalizada
 
 ```tsx copy
-<Form onSubmit={async () => { console.log("Formulario enviado"); }}><InputText name="example" /></Form>
+<Form
+  onSubmit={async () => {
+    console.log("Formulario enviado");
+  }}
+>
+  <InputText name="example" />
+</Form>
 ```
 
 - Formulario deshabilitado
 
 ```tsx copy
-<Form disabled={true}><InputText name="example" /></Form>
+<Form disabled={true}>
+  <InputText name="example" />
+</Form>
 ```
-

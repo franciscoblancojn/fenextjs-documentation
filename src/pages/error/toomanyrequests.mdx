@@ -12,7 +12,7 @@ import { ErrorTooManyRequests } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| code | ErrorCode | no | ErrorCode.TOO_MANY_REQUESTS | Código de error específico que indica que se ha excedido el límite de solicitudes permitidas. |
-| message | string | no | "Too Many Requests" | Mensaje de error que describe la naturaleza del problema cuando se excede el límite de solicitudes. |
+| Parámetro | Tipo      | Requerido | Default                     | Descripcion                                                                                         |
+| --------- | --------- | --------- | --------------------------- | --------------------------------------------------------------------------------------------------- |
+| code      | ErrorCode | no        | ErrorCode.TOO_MANY_REQUESTS | Código de error específico que indica que se ha excedido el límite de solicitudes permitidas.       |
+| message   | string    | no        | "Too Many Requests"         | Mensaje de error que describe la naturaleza del problema cuando se excede el límite de solicitudes. |

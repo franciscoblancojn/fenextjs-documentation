@@ -2,11 +2,14 @@
 
 El componente Counter muestra un número que se incrementa o decrementa gradualmente hasta alcanzar un valor final. También puede mostrar un texto adicional opcional.
 
-import { Iframe } from "@/components/Iframe"; 
+import { Iframe } from "@/components/Iframe";
 
 ### Ejemplo
 
-<Iframe minHeightIframe="30dvh" src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=counter-counter--index&viewMode=story" />
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=counter-counter--index&viewMode=story"
+/>
 
 ### Importación
 
@@ -18,16 +21,16 @@ import { Counter } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| number | number | sí | 0 | El número que se mostrará y que será incrementado o decrementado gradualmente. |
-| text | ReactNode | no | undefined | Texto adicional que se puede mostrar junto con el contador. |
-| time | number | no | 1000 | Tiempo en milisegundos para alcanzar el número final. |
-| decimal | number | no | 2 | Cantidad de decimales a mostrar en el número. |
-| parseNumber | (n: number) =\> ReactNode | no | parseNumberCount | Función personalizada para formatear el número antes de mostrarlo. |
-| className | string | no | '' | Clase CSS para personalizar el contenedor del componente. |
-| classNameNumber | string | no | '' | Clase CSS para personalizar la apariencia del número. |
-| classNameText | string | no | '' | Clase CSS para personalizar la apariencia del texto. |
+| Parámetro       | Tipo                      | Requerido | Default          | Descripcion                                                                    |
+| --------------- | ------------------------- | --------- | ---------------- | ------------------------------------------------------------------------------ |
+| number          | number                    | sí        | 0                | El número que se mostrará y que será incrementado o decrementado gradualmente. |
+| text            | ReactNode                 | no        | undefined        | Texto adicional que se puede mostrar junto con el contador.                    |
+| time            | number                    | no        | 1000             | Tiempo en milisegundos para alcanzar el número final.                          |
+| decimal         | number                    | no        | 2                | Cantidad de decimales a mostrar en el número.                                  |
+| parseNumber     | (n: number) =\> ReactNode | no        | parseNumberCount | Función personalizada para formatear el número antes de mostrarlo.             |
+| className       | string                    | no        | ''               | Clase CSS para personalizar el contenedor del componente.                      |
+| classNameNumber | string                    | no        | ''               | Clase CSS para personalizar la apariencia del número.                          |
+| classNameText   | string                    | no        | ''               | Clase CSS para personalizar la apariencia del texto.                           |
 
 ### Storybook
 
@@ -52,4 +55,3 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <Counter number={500} time={2000} />
 ```
-

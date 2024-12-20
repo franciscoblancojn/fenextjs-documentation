@@ -12,7 +12,7 @@ import { ErrorServerError } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| code | ErrorCode | no | ErrorCode.SERVER_ERROR | Código de error específico que indica que el servidor encontró un error inesperado. |
-| message | string | no | "Internal Server Error" | Mensaje de error que describe la naturaleza del problema cuando el servidor encuentra un error interno. |
+| Parámetro | Tipo      | Requerido | Default                 | Descripcion                                                                                             |
+| --------- | --------- | --------- | ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| code      | ErrorCode | no        | ErrorCode.SERVER_ERROR  | Código de error específico que indica que el servidor encontró un error inesperado.                     |
+| message   | string    | no        | "Internal Server Error" | Mensaje de error que describe la naturaleza del problema cuando el servidor encuentra un error interno. |

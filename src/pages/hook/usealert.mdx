@@ -12,16 +12,18 @@ import { useAlert } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| name | string | no | "fenextjs-alert" | Nombre único que identifica la alerta para gestionar acciones específicas. |
+| Parámetro | Tipo   | Requerido | Default          | Descripcion                                                                |
+| --------- | ------ | --------- | ---------------- | -------------------------------------------------------------------------- |
+| name      | string | no        | "fenextjs-alert" | Nombre único que identifica la alerta para gestionar acciones específicas. |
+
 ### Returns
 
-| Parametro | Tipo | Descripcion |
-| --------- | ---- | ----------- |
-| alert | AlertProps\<T\> \| undefined  | Objeto de alerta actual, que puede contener cualquier tipo de dato definido por AlertProps\<T\> o estar indefinido si no hay alerta activa. |
-| setAlert | (detail?: AlertProps\<T\>) =\> void  | Función que ejecuta una nueva alerta, almacenando la información pasada como detalle. |
-| onClearAlert | () =\> void  | Función para limpiar la alerta actual, estableciendo su valor como indefinido. |
+| Parametro    | Tipo                                | Descripcion                                                                                                                                 |
+| ------------ | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| alert        | AlertProps\<T\> \| undefined        | Objeto de alerta actual, que puede contener cualquier tipo de dato definido por AlertProps\<T\> o estar indefinido si no hay alerta activa. |
+| setAlert     | (detail?: AlertProps\<T\>) =\> void | Función que ejecuta una nueva alerta, almacenando la información pasada como detalle.                                                       |
+| onClearAlert | () =\> void                         | Función para limpiar la alerta actual, estableciendo su valor como indefinido.                                                              |
+
 ### Usos
 
 - Detectar alerta
@@ -37,4 +39,3 @@ setAlert({ message: "Nueva alerta", type: "info" });
 const { onClearAlert } = useAlert();
 onClearAlert();
 ```
-
