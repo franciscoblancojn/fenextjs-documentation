@@ -28,15 +28,16 @@ const onGenerateDoc = async ({
   for await (const PATH of glob.scan(URL_BASE)) {
     let path = PATH;
     console.log(`${name} ---- ` + path);
-    const FILE = require("../../" + URL_BASE + "/" + path);
+    const URL_FILE_DOC = "../../" + URL_BASE + "/" + path
+    const FILE = require(URL_FILE_DOC);
     const doc = FILE.default;
     if (options.useStorybook) {
       try {
         const STORYBOOK = require(
           "../../" +
-            URL_BASE +
-            "/" +
-            `${path}`.replaceAll("_.doc.tsx", "_.stories.tsx"),
+          URL_BASE +
+          "/" +
+          `${path}`.replaceAll("_.doc.tsx", "_.stories.tsx"),
         );
         const storybook = STORYBOOK.default;
         const idStorybook = `${storybook.title}`
@@ -49,7 +50,7 @@ const onGenerateDoc = async ({
       }
     }
 
-    const mdx = convertDocTsxToMdx(doc, options);
+    const { mdxContent: mdx, mdxReadme } = convertDocTsxToMdx(doc, options);
 
     if (path == "_t/_.doc.tsx") {
       path = "t/_.doc.tsx";
@@ -59,7 +60,16 @@ const onGenerateDoc = async ({
       .replaceAll("/_.doc.tsx", ".mdx")
       .toLowerCase();
 
-    await Bun_.write(FILEDOC, mdx);
+    const FILEREADME = URL_FILE_DOC.replace("_.doc.tsx", "README.md").replace("../../../", "../")
+
+    await Bun_.write(FILEDOC, mdx, {
+      createDirs: true,
+    });
+    // console.log(FILEREADME);
+
+    await Bun_.write(FILEREADME, mdxReadme, {
+      createDirs: true,
+    });
   }
 
   console.log("---------------------------");

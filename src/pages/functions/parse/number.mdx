@@ -12,16 +12,14 @@ import { parseNumber } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo             | Requerido | Default | Descripcion                                                    |
-| --------- | ---------------- | --------- | ------- | -------------------------------------------------------------- |
-| n         | number \| string | sí        |         | El número o cadena que se debe analizar y convertir en número. |
-
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| n | number \| string | sí |  | El número o cadena que se debe analizar y convertir en número. |
 ### Returns
 
-| Parametro    | Tipo   | Descripcion                                                                                                          |
-| ------------ | ------ | -------------------------------------------------------------------------------------------------------------------- |
-| parsedNumber | number | El número resultante después de analizar la cadena o número de entrada. Si no es posible convertirlo, se devuelve 0. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| parsedNumber | number  | El número resultante después de analizar la cadena o número de entrada. Si no es posible convertirlo, se devuelve 0. |
 ### Usos
 
 - Convertir un número
@@ -44,3 +42,4 @@ console.log(result); // 1234.56
 const result = parseNumber("abc");
 console.log(result); // 0
 ```
+

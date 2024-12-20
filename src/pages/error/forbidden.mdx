@@ -12,7 +12,7 @@ import { ErrorForbidden } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo      | Requerido | Default             | Descripcion                                                         |
-| --------- | --------- | --------- | ------------------- | ------------------------------------------------------------------- |
-| code      | ErrorCode | no        | ErrorCode.FORBIDDEN | Código de error específico que indica que el acceso está prohibido. |
-| message   | string    | no        | "Forbidden"         | Mensaje de error que describe la restricción de acceso.             |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| code | ErrorCode | no | ErrorCode.FORBIDDEN | Código de error específico que indica que el acceso está prohibido. |
+| message | string | no | "Forbidden" | Mensaje de error que describe la restricción de acceso. |

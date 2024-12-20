@@ -24,6 +24,7 @@
     "update-package": "ncu -u !next",
     "update": "npm run update-package && npm run remove && npm run bun-i && npm run flb",
     "u": "npm run update",
+    "test": "bun ./src/scripts/test.tsx",
     "generate": "bun ./src/scripts/generateDoc.tsx",
     "remove-next":"rm -r .next || true",
     "remove-out":"rm -r out || true",

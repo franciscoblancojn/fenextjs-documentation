@@ -12,7 +12,7 @@ import { ErrorRequestTimeout } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo      | Requerido | Default                   | Descripcion                                                                                                       |
-| --------- | --------- | --------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| code      | ErrorCode | no        | ErrorCode.REQUEST_TIMEOUT | Código de error específico que indica que el servidor no recibió una solicitud completa en el tiempo esperado.    |
-| message   | string    | no        | "Request Timeout"         | Mensaje de error que describe la naturaleza del problema cuando se excede el tiempo de espera para una solicitud. |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| code | ErrorCode | no | ErrorCode.REQUEST_TIMEOUT | Código de error específico que indica que el servidor no recibió una solicitud completa en el tiempo esperado. |
+| message | string | no | "Request Timeout" | Mensaje de error que describe la naturaleza del problema cuando se excede el tiempo de espera para una solicitud. |

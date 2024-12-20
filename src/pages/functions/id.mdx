@@ -12,10 +12,9 @@ import { generateRandomID } from "fenextjs";
 
 ### Returns
 
-| Parametro | Tipo   | Descripcion                                                                 |
-| --------- | ------ | --------------------------------------------------------------------------- |
-| randomID  | string | Una cadena única generada combinando el tiempo actual y un valor aleatorio. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| randomID | string  | Una cadena única generada combinando el tiempo actual y un valor aleatorio. |
 ### Usos
 
 - Generar un ID único
@@ -24,3 +23,4 @@ import { generateRandomID } from "fenextjs";
 const uniqueID = generateRandomID();
 console.log(uniqueID);
 ```
+

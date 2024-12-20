@@ -12,27 +12,25 @@ import { useNotification } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo   | Requerido | Default | Descripcion                                                                                    |
-| --------- | ------ | --------- | ------- | ---------------------------------------------------------------------------------------------- |
-| time      | number | no        |         | Tiempo en milisegundos durante el cual la notificación se muestra. Valor predeterminado: 2000. |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| time | number | no |  | Tiempo en milisegundos durante el cual la notificación se muestra. Valor predeterminado: 2000. |
 
 ### NotificationDataProps
 
 Propiedades de los datos de notificación, que incluyen el tipo y mensaje de la notificación.
 
-| Nombre  | Descripcion                                                                                        | Default                 |
-| ------- | -------------------------------------------------------------------------------------------------- | ----------------------- |
-| type    | El tipo de la notificación. Puede ser un valor de RequestResultTypeProps o una clave de este tipo. | undefined               |
-| message | Mensaje de texto que se muestra en la notificación.                                                | No aplica (obligatorio) |
-
+| Nombre | Descripcion | Default |
+| --- | --- | --- |
+| type | El tipo de la notificación. Puede ser un valor de RequestResultTypeProps o una clave de este tipo. | undefined |
+| message | Mensaje de texto que se muestra en la notificación. | No aplica (obligatorio) |
 ### Returns
 
-| Parametro    | Tipo                                                                   | Descripcion                                                                                                                    |
-| ------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| notification | NotificationDataProps \| undefined                                     | El objeto de notificación actual que contiene los datos de la notificación activa, si la hay.                                  |
-| pop          | (props: NotificationDataProps, options?: NotificationOptions) =\> void | Función que muestra una notificación con los datos especificados y la oculta después de que transcurre el tiempo especificado. |
-| reset        | () =\> void                                                            | Función que reinicia la notificación al estado predeterminado.                                                                 |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| notification | NotificationDataProps \| undefined  | El objeto de notificación actual que contiene los datos de la notificación activa, si la hay. |
+| pop | (props: NotificationDataProps, options?: NotificationOptions) =\> void  | Función que muestra una notificación con los datos especificados y la oculta después de que transcurre el tiempo especificado. |
+| reset | () =\> void  | Función que reinicia la notificación al estado predeterminado. |
 ### Usos
 
 - Mostrar una notificación
@@ -48,3 +46,4 @@ pop({ message: "Notificación de éxito", type: "success" });
 const { reset } = useNotification();
 reset();
 ```
+

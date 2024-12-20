@@ -12,7 +12,10 @@ export interface convertDocTsxToMdxProps {
 export function convertDocTsxToMdx(
   docTsx: any,
   options: convertDocTsxToMdxProps,
-): string {
+): {
+  mdxContent : string,
+  mdxReadme: string
+} {
   const {
     name,
     description,
@@ -35,6 +38,7 @@ export function convertDocTsxToMdx(
     BASE_URL_STORYBOOK_IFRAME + docTsx.idStorybook + "--index";
   const URL_STORYBOOK = BASE_URL_STORYBOOK + docTsx.idStorybook + "--index";
 
+  let mdxReadme = "";
   let mdxContent = "";
 
   if (useBreadcrumb === false) {
@@ -45,10 +49,12 @@ breadcrumb: false
   }
 
   mdxContent += `#${options.subTitle === true ? "#" : ""} ${name}\n\n${description}\n\n`;
+  let ModuleStorybook = ""
   if (options.useStorybook) {
-    mdxContent += `import { Iframe } from "@/components/Iframe"; \n\n`;
+    ModuleStorybook += `import { Iframe } from "@/components/Iframe"; \n\n`;
     // Sección de Ejemplo (puede ser estática)
-    mdxContent += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
+    ModuleStorybook += `### Ejemplo\n\n<Iframe minHeightIframe="${minHeightIframe ?? "30dvh"}" src="${URL_STORYBOOK_IFRAME}&viewMode=story" />\n\n`;
+    mdxContent+=ModuleStorybook
   }
 
   if (
@@ -170,5 +176,10 @@ breadcrumb: false
     });
   }
 
-  return mdxContent;
+
+  mdxReadme = mdxContent.replace(ModuleStorybook,"")
+  return {
+    mdxContent,
+    mdxReadme
+  };
 }

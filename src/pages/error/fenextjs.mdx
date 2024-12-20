@@ -12,10 +12,10 @@ import { ErrorFenextjs } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo      | Requerido | Default         | Descripcion                                                                                  |
-| --------- | --------- | --------- | --------------- | -------------------------------------------------------------------------------------------- |
-| code      | ErrorCode | no        | ErrorCode.ERROR | Código de error específico que identifica el tipo de error.                                  |
-| message   | string    | no        | ""              | Mensaje de error que describe la naturaleza del problema.                                    |
-| msg       | string    | no        | ""              | Mensaje adicional del error, sin formato ni modificación.                                    |
-| input     | string    | no        |                 | Texto opcional que proporciona información adicional sobre el error o el input que lo causó. |
-| data      | D         | no        |                 | Datos adicionales que pueden acompañar al error, parametrizables según el tipo `D`.          |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| code | ErrorCode | no | ErrorCode.ERROR | Código de error específico que identifica el tipo de error. |
+| message | string | no | "" | Mensaje de error que describe la naturaleza del problema. |
+| msg | string | no | "" | Mensaje adicional del error, sin formato ni modificación. |
+| input | string | no |  | Texto opcional que proporciona información adicional sobre el error o el input que lo causó. |
+| data | D | no |  | Datos adicionales que pueden acompañar al error, parametrizables según el tipo `D`. |

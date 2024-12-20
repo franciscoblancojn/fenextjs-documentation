@@ -12,7 +12,7 @@ import { ErrorDatabaseError } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo      | Requerido | Default                  | Descripcion                                                                   |
-| --------- | --------- | --------- | ------------------------ | ----------------------------------------------------------------------------- |
-| code      | ErrorCode | no        | ErrorCode.DATABASE_ERROR | Código de error específico que representa un problema en la base de datos.    |
-| message   | string    | no        | "Database Error"         | Mensaje de error que describe la naturaleza del problema en la base de datos. |
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| code | ErrorCode | no | ErrorCode.DATABASE_ERROR | Código de error específico que representa un problema en la base de datos. |
+| message | string | no | "Database Error" | Mensaje de error que describe la naturaleza del problema en la base de datos. |
