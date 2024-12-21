@@ -29,7 +29,7 @@
     "remove-next":"rm -r .next || true",
     "remove-out":"rm -r out || true",
     "remove-next-out":"npm run remove-next && npm run remove-out",
-    "fle": "npm run remove-next-out && npm run generate && npm run flb && npm run export"
+    "fle": "bun i && npm run remove-next-out && npm run generate && npm run flb && npm run export"
   },
   "repository": {
     "type": "git",
