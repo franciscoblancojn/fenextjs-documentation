@@ -1,6 +1,6 @@
-# Back
+# FilterDate
 
-El componente Back representa un botón de retroceso que permite al usuario navegar a la página anterior en el historial del navegador, utilizar el Router de Next.js, redirigir a una URL específica, ejecutar una función personalizada o realizar una acción personalizada de 'fenextjs-history'.
+El componente FilterDate permite filtrar datos por fecha o por rango de fechas. Ofrece opciones configurables para seleccionar fechas, personalizar el formato, y manejar acciones mediante hooks como `useData` y `useDate`.
 
 import { Iframe } from "@/components/Iframe";
 
@@ -13,57 +13,38 @@ import { Iframe } from "@/components/Iframe";
 
 ### Importación
 
-Para importar el componente Back, se puede hacer desde fenextjs
+Para importar el componente FilterDate, se puede hacer desde fenextjs
 
 ```tsx copy
-import { Back } from "fenextjs";
+import { FilterDate } from "fenextjs";
 ```
 
 ### Parámetros
 
-| Parámetro           | Tipo                                                            | Requerido | Default                | Descripcion                                                                                                            |
-| ------------------- | --------------------------------------------------------------- | --------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| loader              | boolean                                                         | no        | false                  | Indica si el componente está en estado de carga, mostrando un indicador de 'Loader' y deshabilitando su funcionalidad. |
-| disabled            | boolean                                                         | no        | false                  | Indica si el botón está deshabilitado.                                                                                 |
-| onClick             | (e?: any) =\> void                                              | no        | undefined              | Función personalizada que se ejecuta al hacer clic en el botón.                                                        |
-| icon                | ReactNode                                                       | no        | \<SvgPaginationPre /\> | Icono que se muestra dentro del botón.                                                                                 |
-| children            | ReactNode                                                       | no        | 'Back'                 | Contenido o texto que se muestra dentro del botón.                                                                     |
-| typeOnBack          | 'fenextjs-history' \| 'history' \| 'router' \| 'link' \| 'none' | no        | 'history'              | Define el tipo de acción que se ejecutará al hacer clic en el botón.                                                   |
-| link                | string                                                          | no        | ''                     | URL a la que redirigir si 'typeOnBack' es 'link'.                                                                      |
-| useHistoryMinLenght | boolean                                                         | no        | false                  | Determina si se debe mostrar el botón solo si el historial del navegador tiene una longitud mínima.                    |
-| minLenght           | number                                                          | no        | 2                      | Longitud mínima del historial del navegador para mostrar el botón.                                                     |
-| onValidateRuteBack  | (path: string) =\> boolean                                      | no        | undefined              | Función para validar el retroceso cuando 'typeOnBack' es 'fenextjs-history'.                                           |
-| className           | string                                                          | no        | ''                     | Clase CSS para personalizar el contenedor del botón.                                                                   |
-| classNameDisabled   | string                                                          | no        | ''                     | Clase CSS para el estado deshabilitado del botón.                                                                      |
-| classNameIcon       | string                                                          | no        | ''                     | Clase CSS para el icono del botón.                                                                                     |
-| classNameContent    | string                                                          | no        | ''                     | Clase CSS para el contenido del botón.                                                                                 |
-| classNameLoader     | string                                                          | no        | ''                     | Clase CSS para el componente 'Loader'.                                                                                 |
-
-### Redireccionamiento
-
-Dependiendo del valor de 'typeOnBack', la redirección se ejecutará de la siguiente manera:
-
-| Tipo de back     | Redireccion                    | Descripción                                                           |
-| ---------------- | ------------------------------ | --------------------------------------------------------------------- |
-| fenextjs-history | onBack(\{onValidateRuteBack\}) | Acción personalizada utilizando el hook 'useHistory' de 'fenextjs'.   |
-| history          | history.back()                 | Redirección a la página anterior mediante el historial del navegador. |
-| router           | router.back()                  | Redirección utilizando el router de Next.js.                          |
-| link             | router.push(link)              | Redirección a una URL específica.                                     |
-| none             | Ninguna acción                 | No se realiza ninguna redirección.                                    |
-
-### **NOTA**
-
-Para que `typeOnBack='fenextjs-history'` funcione correctamente debe ser ejecutado useHistory en \_app o el layout mas superior que se posea.
-
-```tsx copy
-import type { AppProps } from "next/app";
-import { useHistory } from "fenextjs";
-
-export default function App({ Component, pageProps }: AppProps) {
-  useHistory({});
-  return <Component {...pageProps} />;
-}
-```
+| Parámetro           | Tipo                                                                        | Requerido | Default              | Descripcion                                                                  |
+| ------------------- | --------------------------------------------------------------------------- | --------- | -------------------- | ---------------------------------------------------------------------------- |
+| defaultValue        | FilterDateDataProps                                                         | no        | \{\}                 | Valor inicial del filtro de fecha, incluyendo tipo, fecha o rango de fechas. |
+| onChange            | (data: FilterDateDataProps) =\> void                                        | no        | undefined            | Función que se ejecuta cuando cambia el valor del filtro de fecha.           |
+| formatDateOption    | FenextjsDateFormatOptions                                                   | no        | \{\}                 | Opciones de formato para mostrar las fechas seleccionadas.                   |
+| textValue           | string                                                                      | no        | 'Filtrar por fecha:' | Texto principal que describe el propósito del filtro.                        |
+| textFilterByDate    | string                                                                      | no        | 'Filtar por fecha'   | Texto que se muestra para la opción de filtro por fecha.                     |
+| textFilterByRange   | string                                                                      | no        | 'Filtar por rango'   | Texto que se muestra para la opción de filtro por rango de fechas.           |
+| textBtnToday        | string                                                                      | no        | 'Hoy'                | Texto del botón para seleccionar la fecha actual.                            |
+| textBtnWeek         | string                                                                      | no        | 'Esta Semana'        | Texto del botón para seleccionar la semana actual.                           |
+| iconTrash           | ReactNode                                                                   | no        | \<SvgTrash /\>       | Icono que se muestra como indicador para eliminar filtros.                   |
+| extraListBtn        | (data: ReturnType\<typeof useData\<FilterDateDataProps\>\>) =\> ReactNode[] | no        | []                   | Lista de botones personalizados que se pueden agregar dinámicamente.         |
+| nMonthShow          | number                                                                      | no        | 2                    | Número de meses visibles en el calendario.                                   |
+| className           | string                                                                      | no        | ''                   | Clase CSS para personalizar el contenedor principal.                         |
+| classNameDropDown   | DropDownClassProps                                                          | no        | \{\}                 | Clase CSS para personalizar el menú desplegable.                             |
+| classNameCollapse   | InputCalendarClassProps                                                     | no        | \{\}                 | Clase CSS para personalizar el calendario desplegable.                       |
+| classNameBtnToday   | ButtonClassProps                                                            | no        | \{\}                 | Clase CSS para personalizar el botón 'Hoy'.                                  |
+| classNameBtnWeek    | ButtonClassProps                                                            | no        | \{\}                 | Clase CSS para personalizar el botón 'Esta Semana'.                          |
+| classNameTextValue  | Pick\<TextProps, 'tag' \| 'className'\>                                     | no        | \{\}                 | Clase CSS para personalizar el texto principal.                              |
+| classNameTextSwich  | Pick\<TextProps, 'tag' \| 'className'\>                                     | no        | \{\}                 | Clase CSS para personalizar los textos de los interruptores.                 |
+| classNameInputSwich | InputSwichClassProps                                                        | no        | \{\}                 | Clase CSS para personalizar los interruptores.                               |
+| classNameContentTop | string                                                                      | no        | ''                   | Clase CSS para personalizar el contenedor superior del contenido.            |
+| classNameLabelSwich | string                                                                      | no        | ''                   | Clase CSS para personalizar las etiquetas de los interruptores.              |
+| classNameClear      | string                                                                      | no        | ''                   | Clase CSS para personalizar el icono de limpiar filtros.                     |
 
 ### Storybook
 
@@ -74,32 +55,32 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 - Básico
 
 ```tsx copy
-<Back />
+<FilterDate />
 ```
 
-- Back con texto personalizado
+- Con valores iniciales
 
 ```tsx copy
-<Back>Go Back</Back>
+<FilterDate
+  defaultValue={{ type: "range", dateRange: [new Date(), new Date()] }}
+/>
 ```
 
-- Back con acción personalizada
+- Con botón extra
 
 ```tsx copy
-<Back onClick={() => console.log("Botón clickeado")}>Volver</Back>
+<FilterDate extraListBtn={[({ data }) => <button>Extra</button>]} />
 ```
 
-- Back deshabilitado
+- Con formato personalizado
 
 ```tsx copy
-<Back disabled={true} />
-```
-
-- Back con validación personalizada
-
-```tsx copy
-<Back
-  typeOnBack="fenextjs-history"
-  onValidateRuteBack={(path) => path !== "/home"}
+<FilterDate
+  formatDateOption={{
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }}
 />
 ```

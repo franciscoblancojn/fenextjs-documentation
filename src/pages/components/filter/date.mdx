@@ -1,0 +1,72 @@
+# FilterDate
+
+El componente FilterDate es un formulario que permite capturar datos del usuario. Ofrece funcionalidad para manejar el envío de formularios, opcionalmente realizar una acción al enviarlo y manejar un estado deshabilitado.
+
+import { Iframe } from "@/components/Iframe";
+
+### Ejemplo
+
+<Iframe
+  minHeightIframe="30dvh"
+  src="https://fenextjs-component-storybook.vercel.app/iframe.html?args=&id=filter-date--index&viewMode=story"
+/>
+
+### Importación
+
+Para importar el componente FilterDate, se puede hacer desde fenextjs
+
+```tsx copy
+import { FilterDate } from "fenextjs";
+```
+
+### Parámetros
+
+| Parámetro | Tipo                   | Requerido | Default           | Descripcion                                                                                                                  |
+| --------- | ---------------------- | --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| id        | string                 | no        | ''                | ID único para identificar el formulario, usado para personalizar la acción en eventos.                                       |
+| onSubmit  | () =\> Promise\<void\> | no        | async () =\> \{\} | Función personalizada que se ejecuta al enviar el formulario. Debe ser una función asíncrona que realice la acción de envío. |
+| disabled  | boolean                | no        | true              | Indica si el formulario está deshabilitado, lo que previene la acción de envío.                                              |
+| className | string                 | no        | ''                | Clase CSS para personalizar el estilo del formulario.                                                                        |
+| children  | ReactNode              | no        | undefined         | Contenido o elementos dentro del formulario, típicamente los campos de entrada.                                              |
+
+### Eventos de tracking
+
+Cuando el formulario tiene un 'id' definido y se envía correctamente, se registra un evento en el Data Layer.
+
+| Evento      | Descripción                                                            |
+| ----------- | ---------------------------------------------------------------------- |
+| form-\{id\} | Evento de tracking cuando se envía el formulario con un 'id' definido. |
+
+### Storybook
+
+Para ver el storybook del componente lo puede hacer con este [link](https://fenextjs-component-storybook.vercel.app/?path=/story/filter-date--index)
+
+### Usos
+
+- FilterDateulario básico
+
+```tsx copy
+<FilterDate>
+  <InputText name="example" />
+</FilterDate>
+```
+
+- FilterDateulario con acción personalizada
+
+```tsx copy
+<FilterDate
+  onSubmit={async () => {
+    console.log("FilterDateulario enviado");
+  }}
+>
+  <InputText name="example" />
+</FilterDate>
+```
+
+- FilterDateulario deshabilitado
+
+```tsx copy
+<FilterDate disabled={true}>
+  <InputText name="example" />
+</FilterDate>
+```
