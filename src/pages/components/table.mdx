@@ -21,32 +21,34 @@ import { Table } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro                  | Tipo                                                                 | Requerido | Default                             | Descripcion                                                      |
-| -------------------------- | -------------------------------------------------------------------- | --------- | ----------------------------------- | ---------------------------------------------------------------- |
-| classNameContent           | string                                                               | no        | ""                                  | Clase CSS para el contenedor principal de la tabla.              |
-| classNameContentTable      | string                                                               | no        | ""                                  | Clase CSS para el contenedor del elemento de la tabla.           |
-| classNameTable             | string                                                               | no        | ""                                  | Clase CSS para el elemento de la tabla.                          |
-| classNameTHead             | string                                                               | no        | ""                                  | Clase CSS para el encabezado de la tabla.                        |
-| classNameTBody             | string                                                               | no        | ""                                  | Clase CSS para el cuerpo de la tabla.                            |
-| classNameThr               | string                                                               | no        | ""                                  | Clase CSS para las filas del encabezado de la tabla.             |
-| classNameTr                | string                                                               | no        | ""                                  | Clase CSS para las filas de la tabla.                            |
-| classNameTh                | string                                                               | no        | ""                                  | Clase CSS para las celdas del encabezado de la tabla.            |
-| classNameTd                | string                                                               | no        | ""                                  | Clase CSS para las celdas del cuerpo de la tabla.                |
-| classNameContentPagination | string                                                               | no        | ""                                  | Clase CSS para el contenedor de la paginación.                   |
-| classNameLoader            | string                                                               | no        | ""                                  | Clase CSS para el elemento del cargador.                         |
-| name                       | string                                                               | sí        |                                     | Nombre de la tabla.                                              |
-| items                      | T[]                                                                  | sí        |                                     | Arreglo de datos a mostrar en la tabla.                          |
-| header                     | TableHeader\<T\>                                                     | sí        |                                     | Configuración del encabezado de la tabla.                        |
-| pagination                 | PaginationProps                                                      | no        |                                     | Propiedades opcionales de la paginación de la tabla.             |
-| showPagination             | boolean                                                              | no        | true                                | Indica si se debe mostrar la paginación en la tabla.             |
-| loader                     | boolean                                                              | no        | false                               | Muestra un cargador mientras se cargan los datos de la tabla.    |
-| typeLoader                 | "spinner" \| "line"                                                  | no        | "line"                              | Tipo de cargador a mostrar.                                      |
-| useCheckbox                | boolean                                                              | no        | true                                | Si se deben incluir casillas de verificación en la tabla.        |
-| onChecked                  | (items: T[]) =\> void                                                | no        |                                     | Función a ejecutar al seleccionar elementos de la tabla.         |
-| onOrderBy                  | (order: \{ id: keyof T; order: "ASC" \| "DESC" \}) =\> void          | no        |                                     | Función a ejecutar para ordenar los datos de la tabla.           |
-| notResult                  | ReactNode                                                            | no        | \<div\>There is not results\</div\> | Componente a mostrar cuando no hay resultados en la tabla.       |
-| actionsCheckbox            | Omit\<TableActionCheckboxProps\<T\>, "actionAllCheckbox" \| "data"\> | no        |                                     | Propiedades para las acciones de selección múltiple de la tabla. |
-| actionsCheckboxSelectAll   | ReactNode                                                            | no        | "Select All"                        | Componente para seleccionar todas las casillas de verificación.  |
+| Parámetro                  | Tipo                                                                 | Requerido | Default                             | Descripcion                                                             |
+| -------------------------- | -------------------------------------------------------------------- | --------- | ----------------------------------- | ----------------------------------------------------------------------- |
+| classNameContent           | string                                                               | no        | ""                                  | Clase CSS para el contenedor principal de la tabla.                     |
+| classNameContentTable      | string                                                               | no        | ""                                  | Clase CSS para el contenedor del elemento de la tabla.                  |
+| classNameTable             | string                                                               | no        | ""                                  | Clase CSS para el elemento de la tabla.                                 |
+| classNameTHead             | string                                                               | no        | ""                                  | Clase CSS para el encabezado de la tabla.                               |
+| classNameTBody             | string                                                               | no        | ""                                  | Clase CSS para el cuerpo de la tabla.                                   |
+| classNameThr               | string                                                               | no        | ""                                  | Clase CSS para las filas del encabezado de la tabla.                    |
+| classNameTr                | string                                                               | no        | ""                                  | Clase CSS para las filas de la tabla.                                   |
+| classNameTh                | string                                                               | no        | ""                                  | Clase CSS para las celdas del encabezado de la tabla.                   |
+| classNameTd                | string                                                               | no        | ""                                  | Clase CSS para las celdas del cuerpo de la tabla.                       |
+| classNameContentPagination | string                                                               | no        | ""                                  | Clase CSS para el contenedor de la paginación.                          |
+| classNameLoader            | string                                                               | no        | ""                                  | Clase CSS para el elemento del cargador.                                |
+| name                       | string                                                               | sí        |                                     | Nombre de la tabla.                                                     |
+| items                      | T[]                                                                  | sí        |                                     | Arreglo de datos a mostrar en la tabla.                                 |
+| header                     | TableHeader\<T\>                                                     | sí        |                                     | Configuración del encabezado de la tabla.                               |
+| pagination                 | PaginationProps                                                      | no        |                                     | Propiedades opcionales de la paginación de la tabla.                    |
+| showPagination             | boolean                                                              | no        | true                                | Indica si se debe mostrar la paginación en la tabla.                    |
+| loader                     | boolean                                                              | no        | false                               | Muestra un cargador mientras se cargan los datos de la tabla.           |
+| typeLoader                 | "spinner" \| "line"                                                  | no        | "line"                              | Tipo de cargador a mostrar.                                             |
+| useCheckbox                | boolean                                                              | no        | true                                | Si se deben incluir casillas de verificación en la tabla.               |
+| onChecked                  | (items: T[]) =\> void                                                | no        |                                     | Función a ejecutar al seleccionar elementos de la tabla.                |
+| onOrderBy                  | (order: \{ id: keyof T; order: "ASC" \| "DESC" \}) =\> void          | no        |                                     | Función a ejecutar para ordenar los datos de la tabla.                  |
+| notResult                  | ReactNode                                                            | no        | \<div\>There is not results\</div\> | Componente a mostrar cuando no hay resultados en la tabla.              |
+| actionsCheckbox            | Omit\<TableActionCheckboxProps\<T\>, "actionAllCheckbox" \| "data"\> | no        |                                     | Propiedades para las acciones de selección múltiple de la tabla.        |
+| actionsCheckboxSelectAll   | ReactNode                                                            | no        | "Select All"                        | Componente para seleccionar todas las casillas de verificación.         |
+| isCollapse                 | boolean                                                              | no        |                                     | Indica si la columna tiene funcionalidad de colapso.                    |
+| collapseProps              | Omit\<CollapseProps, "children"\>                                    | no        |                                     | Propiedades del componente Collapse utilizadas en columnas colapsables. |
 
 ### Storybook
 
@@ -103,5 +105,36 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
   ]}
   loader={true}
   typeLoader="spinner"
+/>
+```
+
+- Tabla con columna colapsable
+
+```tsx copy
+<Table
+  name="collapsibleTable"
+  items={[
+    { id: 1, name: "Row 1", files: ["file 1", "file 2"] },
+    { id: 2, name: "Row 2", files: [] },
+  ]}
+  header={[
+    { id: "name", th: "Nombre" },
+    {
+      id: "files",
+      th: "Archivos",
+      isCollapse: true,
+      collapseProps: {
+        header: "Ver Archivos",
+      },
+      parse: (data) => {
+        return (
+          <>
+            {data.files.map((file) => `Archivo: ${file}`)}
+            {data.files.length == 0 ? "No hay archivos" : ""}
+          </>
+        );
+      },
+    },
+  ]}
 />
 ```
