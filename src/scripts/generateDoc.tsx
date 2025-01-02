@@ -217,6 +217,14 @@ const main = async () => {
       useUses: true,
     },
   });
+  await onGenerateDoc({
+    name: "Export",
+    URL_BASE: "../fenextjs-export/src",
+    page: "export",
+    options: {
+      useUses: true,
+    },
+  });
 
   await onGenerateDocSvg();
 };
