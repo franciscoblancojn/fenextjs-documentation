@@ -69,12 +69,21 @@ const onGenerateDoc = async ({
       "../",
     );
 
+    const FILEREADME_ALL = FILEREADME.replace("/src", "/")
+      .replace("fenextjs-", "fenextjs/src/")
+      .replace("//", "/");
+
     await Bun_.write(FILEDOC, mdx, {
       createDirs: true,
     });
     // console.log(FILEREADME);
 
     await Bun_.write(FILEREADME, mdxReadme, {
+      createDirs: true,
+    });
+    // console.log("FILEREADME_ALL",FILEREADME_ALL);
+
+    await Bun_.write(FILEREADME_ALL, mdxReadme, {
       createDirs: true,
     });
   }

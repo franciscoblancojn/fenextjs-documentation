@@ -2,7 +2,7 @@
   width: 130px;
 
   --color-1: #0f172a;
-  --color-2: #60c5ff;
+  --color-2: #007ec7;
 
   &.strong {
     width: 230px;
@@ -12,6 +12,6 @@
 @at-root html[class~="dark"] {
   .logo {
     --color-1: #f1f5f9;
-    --color-2: hsl(202 100% 39% / 1);
+    --color-2: #60c5ff;
   }
 }
