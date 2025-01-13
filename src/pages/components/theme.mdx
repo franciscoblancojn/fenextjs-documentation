@@ -28,10 +28,10 @@ import { Theme } from "fenextjs";
 
 ### **NOTA**
 
-Fenextjs usa por defecto el `Tema Automático del Navegador`. En caso de que quieras deshabilitar esta funcionalidad sin usar el componente `Theme`, puedes agregar esta propiedad: `fenext-prefers-color-scheme-disabled` en cualquier etiqueta de HTML.
+Fenextjs usa por defecto el `Tema Automático del Navegador`. En caso de que quieras deshabilitar esta funcionalidad sin usar el componente `Theme`, puedes agregar esta propiedad: `data-fenext-prefers-color-scheme-disabled` en cualquier etiqueta de HTML.
 
 ```tsx copy
-<body fenext-prefers-color-scheme-disabled>
+<body data-fenext-prefers-color-scheme-disabled>
     contenido
 </body>
 
@@ -39,7 +39,7 @@ Fenextjs usa por defecto el `Tema Automático del Navegador`. En caso de que qui
 
 <body>
     contenido
-    <div fenext-prefers-color-scheme-disabled/>
+    <div data-fenext-prefers-color-scheme-disabled/>
 </body>
 
 ```
