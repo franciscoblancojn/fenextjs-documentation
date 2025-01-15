@@ -430,3 +430,27 @@ const compareResult = fenextDate.onCompareDate({
 }); // Compara el año, mes y día de las dos fechas
 console.log(compareResult);
 ```
+
+## onGetDifDate
+
+Obtiene la difereciona entre 2 fechas, si no se proporciona date se usa el valor actual de la clase.
+
+### Parámetros
+
+| Parámetro   | Tipo | Requerido | Default | Descripcion                                                                 |
+| ----------- | ---- | --------- | ------- | --------------------------------------------------------------------------- |
+| dateCompare | Date | sí        |         | La fecha con la que se va obtener la diferencia con date o la fecha actual. |
+| date        | Date | sí        |         | La fecha con la que se va obtener la diferencia con dateCompare.            |
+
+### Usos
+
+- Obtiene la difereciona entre 2 fechas
+
+```tsx copy
+const fenextDate = new FenextjsDate(new Date());
+const difResult = fenextDate.onGetDifDate({
+  dateCompare: new Date(2023, 1, 1),
+  date: new Date(2024, 1, 1),
+});
+console.log(difResult);
+```
