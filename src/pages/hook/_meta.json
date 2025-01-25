@@ -17,6 +17,9 @@
   "usedata": {
     "title": "useData"
   },
+  "usestateglobalcontext": {
+    "title": "useStateGlobalContext"
+  },
   "usedatalayer": {
     "title": "useDatalayer"
   },

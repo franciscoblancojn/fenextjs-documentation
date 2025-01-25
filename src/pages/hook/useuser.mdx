@@ -17,7 +17,9 @@ import { useUser } from "fenextjs";
 | varName            | string                                     | no        |         | Nombre de la variable de almacenamiento en `localStorage` para guardar el usuario. |
 | onValidateUser     | (user: U \| null \| undefined) =\> boolean | no        |         | Función personalizada para validar el objeto de usuario.                           |
 | urlRedirectInLogut | string                                     | no        |         | URL de redirección al cerrar sesión.                                               |
+| urlRedirectInLogin | string                                     | no        |         | URL de redirección al iniciar sesión.                                              |
 | onLogOut           | () =\> void                                | no        |         | Función que se ejecuta al cerrar sesión.                                           |
+| onLogin            | () =\> void                                | no        |         | Función que se ejecuta al iniciar sesión.                                          |
 
 ### Returns
 
