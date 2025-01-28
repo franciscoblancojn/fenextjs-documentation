@@ -31,12 +31,11 @@ import { PaginationItemPage } from "fenextjs";
 | classNameNext                              | string                  | no        | ''                                                                                                             | Clase CSS para el botón de la página siguiente.                                               |
 | classNameDown                              | string                  | no        | ''                                                                                                             | Clase CSS para el botón 'Go Down'.                                                            |
 | icons                                      | object                  | no        | \{ up: \<PaginationUp /\>, pre: \<PaginationPre /\>, next: \<PaginationNext /\>, down: \<PaginationDown /\> \} | Objetos de iconos personalizados para cada botón de la paginación.                            |
-| defaultPage                                | number                  | no        | 0                                                                                                              | Página por defecto a mostrar al montar el componente.                                         |
 | nItems                                     | number                  | sí        |                                                                                                                | Número total de elementos a paginar.                                                          |
-| nItemsPage                                 | number                  | no        | 10                                                                                                             | Número de elementos a mostrar por página.                                                     |
 | disabled                                   | boolean                 | no        | false                                                                                                          | Deshabilita la navegación del componente si se establece en true.                             |
+| paginationName                             | string                  | no        | undefined                                                                                                      | Nombre unico para el uso de usePagination.                                                    |
 | hiddenIfNItemsSmallerThanOrEqualNItemsPage | boolean                 | no        | true                                                                                                           | Oculta la paginación si el número de elementos es menor o igual que los elementos por página. |
-| onChangePage                               | (page: number) =\> void | no        |                                                                                                                | Función de callback que se llama cuando cambia la página.                                     |
+| onChange                                   | (page: number) =\> void | no        |                                                                                                                | Función de callback que se llama cuando cambia la página.                                     |
 
 ### Storybook
 
@@ -61,6 +60,6 @@ Para ver el storybook del componente lo puede hacer con este [link](https://fene
 ```tsx copy
 <PaginationItemPage
   nItems={50}
-  onChangePage={(page) => console.log("Página actual:", page)}
+  onChange={(page) => console.log("Página actual:", page)}
 />
 ```

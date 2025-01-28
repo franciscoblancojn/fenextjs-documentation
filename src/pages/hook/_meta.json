@@ -20,6 +20,9 @@
   "usestateglobalcontext": {
     "title": "useStateGlobalContext"
   },
+  "usepagination": {
+    "title": "usePagination"
+  },
   "usedatalayer": {
     "title": "useDatalayer"
   },

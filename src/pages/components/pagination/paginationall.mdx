@@ -21,21 +21,14 @@ import { Pagination } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro         | Tipo                                    | Requerido | Default | Descripcion                                                                                   |
-| ----------------- | --------------------------------------- | --------- | ------- | --------------------------------------------------------------------------------------------- |
-| className         | string                                  | no        | ''      | Clase CSS para el contenedor principal de la paginación.                                      |
-| classNameItemPage | PaginationItemPageClassProps            | no        | \{\}    | Objeto con las clases CSS para personalizar el componente de cada página.                     |
-| classNameNPage    | PaginationNPageClassProps               | no        | \{\}    | Objeto con las clases CSS para personalizar el componente de selección de número de página.   |
-| showItemPage      | boolean                                 | no        | true    | Determina si se debe mostrar el componente de cada página en la paginación.                   |
-| showNPage         | boolean                                 | no        | true    | Determina si se debe mostrar el componente de selección de número de página en la paginación. |
-| listNpage         | Array\<\{ id: string; text: string \}\> | no        | [       |
-
-                \{ id: "10", text: "10" \},
-                \{ id: "20", text: "20" \},
-                \{ id: "50", text: "50" \},
-                \{ id: "100", text: "100" \},
-                \{ id: "all", text: "All" \}
-            ] | Lista de opciones de número de página para mostrar en la selección de paginación. |
+| Parámetro               | Tipo                    | Requerido | Default   | Descripcion                                                                                   |
+| ----------------------- | ----------------------- | --------- | --------- | --------------------------------------------------------------------------------------------- |
+| className               | string                  | no        | ''        | Clase CSS para el contenedor principal de la paginación.                                      |
+| PaginationItemPageProps | PaginationItemPageProps | sí        |           | Objeto de configuracion para PaginationItemPage.                                              |
+| PaginationNPageProps    | PaginationNPageProps    | no        | \{\}      | Objeto de configuracion para PaginationNPage.                                                 |
+| paginationName          | string                  | no        | undefined | Nombre unico para el uso de usePagination.                                                    |
+| showItemPage            | boolean                 | no        | true      | Determina si se debe mostrar el componente de cada página en la paginación.                   |
+| showNPage               | boolean                 | no        | true      | Determina si se debe mostrar el componente de selección de número de página en la paginación. |
 
 ### Storybook
 
