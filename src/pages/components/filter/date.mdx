@@ -23,6 +23,7 @@ import { FilterDate } from "fenextjs";
 
 | Parámetro           | Tipo                                                                        | Requerido | Default              | Descripcion                                                                  |
 | ------------------- | --------------------------------------------------------------------------- | --------- | -------------------- | ---------------------------------------------------------------------------- |
+| nameFilter          | string                                                                      | no        | undefined            | Nombre único para el filtro, utilizado en el contexto global.                |
 | defaultValue        | FilterDateDataProps                                                         | no        | \{\}                 | Valor inicial del filtro de fecha, incluyendo tipo, fecha o rango de fechas. |
 | onChange            | (data: FilterDateDataProps) =\> void                                        | no        | undefined            | Función que se ejecuta cuando cambia el valor del filtro de fecha.           |
 | formatDateOption    | FenextjsDateFormatOptions                                                   | no        | \{\}                 | Opciones de formato para mostrar las fechas seleccionadas.                   |

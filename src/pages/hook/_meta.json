@@ -23,6 +23,9 @@
   "usepagination": {
     "title": "usePagination"
   },
+  "usefilter": {
+    "title": "useFilter"
+  },
   "usedatalayer": {
     "title": "useDatalayer"
   },

@@ -12,7 +12,7 @@ import { PaginationDataProps } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo              | Requerido | Default   | Descripcion                     |
-| --------- | ----------------- | --------- | --------- | ------------------------------- |
-| page      | number (opcional) | no        | undefined | Pagina actual.                  |
-| npage     | number (opcional) | no        | undefined | Numero de elementos por pagina. |
+| Parámetro | Tipo   | Requerido | Default   | Descripcion                     |
+| --------- | ------ | --------- | --------- | ------------------------------- |
+| page      | number | no        | undefined | Pagina actual.                  |
+| npage     | number | no        | undefined | Numero de elementos por pagina. |
