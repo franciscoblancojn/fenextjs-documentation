@@ -79,5 +79,11 @@
   },
   "uselanguage": {
     "title": "useLanguage"
+  },
+  "useRouter": {
+    "title": "useRouter"
+  },
+  "useWindowRouter": {
+    "title": "useWindowRouter"
   }
 }
