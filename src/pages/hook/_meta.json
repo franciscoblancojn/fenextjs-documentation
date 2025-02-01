@@ -80,10 +80,10 @@
   "uselanguage": {
     "title": "useLanguage"
   },
-  "useRouter": {
+  "userouter": {
     "title": "useRouter"
   },
-  "useWindowRouter": {
+  "usewindowrouter": {
     "title": "useWindowRouter"
   }
 }
