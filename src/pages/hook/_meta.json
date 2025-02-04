@@ -85,5 +85,17 @@
   },
   "usewindowrouter": {
     "title": "useWindowRouter"
+  },
+  "useapierror": {
+    "title": "useApiError"
+  },
+  "useapimutation": {
+    "title": "useApiMutation"
+  },
+  "useapiquery": {
+    "title": "useApiQuery"
+  },
+  "userefresh": {
+    "title": "useRefresh"
   }
 }
