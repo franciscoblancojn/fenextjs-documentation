@@ -56,10 +56,9 @@ Dependiendo del valor de 'typeOnBack', la redirección se ejecutará de la sigui
 Para que `typeOnBack='fenextjs-history'` funcione correctamente debe ser ejecutado useHistory en \_app o el layout mas superior que se posea.
 
 ```tsx copy
-import type { AppProps } from "next/app";
 import { useHistory } from "fenextjs";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   useHistory({});
   return <Component {...pageProps} />;
 }

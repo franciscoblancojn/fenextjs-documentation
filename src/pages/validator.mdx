@@ -633,10 +633,10 @@ Método para habilitar la validación 'onCustom'. Establece la regla de que los 
 
 ### Parámetros
 
-| Parámetro | Tipo                                | Requerido | Default | Descripcion                                                                                                           |
-| --------- | ----------------------------------- | --------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| data      | (data: T) =\> true \| ErrorFenextjs | sí        |         | Función que define la validación personalizada. Si la validación falla, debe retornar un error de tipo ErrorFenextjs. |
-| msg       | string                              | no        |         | Mensaje de error personalizado que se muestra si la validación falla.                                                 |
+| Parámetro | Tipo                                                                 | Requerido | Default | Descripcion                                                                                                           |
+| --------- | -------------------------------------------------------------------- | --------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
+| data      | (data: T, parent?: FenextjsValidatorClass) =\> true \| ErrorFenextjs | sí        |         | Función que define la validación personalizada. Si la validación falla, debe retornar un error de tipo ErrorFenextjs. |
+| msg       | string                                                               | no        |         | Mensaje de error personalizado que se muestra si la validación falla.                                                 |
 
 ### Returns
 
